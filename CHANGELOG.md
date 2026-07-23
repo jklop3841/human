@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.4.0-chapter-03 — 2026-07-24
+
+- 写入第三章日记《Agent 谱系资本——未来人类怎样拥有 AI 财富》；
+- 固化正式观点 `HUMAN-ECONOMY-001`《Agent谱系资本：AI时代的财富标准假说》；
+- 发布实验性标准 `HUMAN-PROTOCOL-001` / `PIRS 0.1`；
+- 区分权利主体、协议、Agent产物、运行实例、授权和结算六种身份；
+- 建立 APC-0 至 APC-6 七级成熟度和多维 Agent 资本向量；
+- 定义调用、评测、信誉和结算的分层计数器，明确哈希、签名和离线计量的边界；
+- 新增协议清单、Agent清单、授权、调用收据、评测证明、信誉快照和结算收据七类 JSON Schema、符合性规则与示例；
+- 研究并映射 2025—2026 年 A2A、MCP、AI Agent 授权、AP2、FIDO、MPP、x402、OpenTelemetry、SLSA、GitHub Attestations 与 SPDX 等技术趋势；
+- 新增可移植 Agent Skill `evaluate-agent-capital`，并完成独立反例前向测试；
+- 将仓库版本升级为 `0.4.0-chapter-03`。
+
 ## 0.3.0-chapter-02 — 2026-07-23
 
 - 写入第二章日记《脏现实——我怎样理解一个真正运行的世界》；
