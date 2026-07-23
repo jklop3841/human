@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1.0",
+  "snapshot_id": "synthetic_empty_reputation_snapshot",
+  "agent": {
+    "agent_id": "pirs:example.invalid/synthetic-agent@0.0.0#sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "version": "0.0.0",
+    "artifact_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "window": {
+    "start": "2026-07-01T00:00:00Z",
+    "end": "2026-07-23T23:59:59Z"
+  },
+  "counters": {
+    "raw_invocations": 0,
+    "verified_invocations": 0,
+    "completed_invocations": 0,
+    "evaluated_invocations": 0,
+    "verified_successes": 0,
+    "paid_invocations": 0,
+    "unique_tenants": 0,
+    "independent_evaluators": 0
+  },
+  "outcomes": {
+    "task_coverage": 0,
+    "median_lift": 0,
+    "success_rate_low": 0,
+    "success_rate_high": 0,
+    "critical_failures": 0
+  },
+  "operations": {
+    "average_runtime_cost": 0,
+    "currency": "USD",
+    "p95_latency_ms": 0,
+    "compatible_runtimes": 0
+  },
+  "adoption": {
+    "paid_tenants": 0,
+    "enterprise_tenants": 0
+  },
+  "governance": {
+    "apc_level": "APC-0",
+    "last_maintenance_at": "2026-07-23T12:00:00Z",
+    "revoked_versions": 0
+  },
+  "methodology_uri": "https://example.invalid/synthetic-method",
+  "source_digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "generated_at": "2026-07-24T02:00:00Z",
+  "signature": {
+    "method": "illustrative-only",
+    "key_id": "example-aggregator-key-1",
+    "value": "not-a-real-signature"
+  }
+}
