@@ -35,11 +35,14 @@ Human 不是标准答案库，也不是要求他人服从的教义。
 | `museum/` | 人生经历、原始材料与时代切片 |
 | `worldview/` | 按主题整理的观点与概念 |
 | `reasoning/` | 思想指纹、建模方法与判断协议 |
+| `protocols/` | 可实现的协议规范、Schema、符合性规则与示例 |
+| `research/` | 支撑或反驳仓库理论的外部资料 |
+| `skills/` | 可供 Agent 直接调用的操作技能 |
 | `predictions/` | 带日期、期限和复盘条件的预测 |
 | `contradictions/` | 自我矛盾、反例、失败判断与修订 |
 | `cases/` | 支撑或挑战观点的现实案例 |
-| `agent/` | Agent 加载协议、引用方式与安全边界 |
-| `schemas/` | 机器可读的数据结构 |
+| `agent/` | Agent 加载协议、注册表、引用方式与安全边界 |
+| `schemas/` | 仓库级机器可读数据结构 |
 | `templates/` | 新增观点、预测和案例的模板 |
 | `indexes/` | 主题、时间、概念与文件索引 |
 
@@ -59,7 +62,7 @@ Human 不是标准答案库，也不是要求他人服从的教义。
 
 ## 当前版本
 
-`0.3.0-chapter-02`：写入“脏现实结构场论”和“现实结构编译协议”，并发布可供 Agent 调用的 `analyze-dirty-reality` Skill。
+`0.4.0-chapter-03`：提出“Agent 谱系资本（APC）”作为 AI 时代财富标准候选，并发布实验性 `PIRS 0.1` 协议、七类机器对象及 `evaluate-agent-capital` Skill。
 
 ## 权利说明
 
