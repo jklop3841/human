@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.0-chapter-01 — 2026-07-23
+
+- 写入第一章日记《人类说服性说理原则》；
+- 固化正式观点 `HUMAN-INFLUENCE-001`《人类影响的认知轨迹理论》；
+- 新增可移植 Agent Skill `write-persuasive-narratives`；
+- 新增完整理论、40岁失业与AI、餐馆侧面证明、企业工作流等参考案例；
+- 新增 Agent 技能注册表和 `influence` 主题索引；
+- 完成独立 Agent 前向测试，验证技能可以把硬性说教改写为认知轨迹型内容。
+
 ## 0.1.0-foundation — 2026-07-23
 
 - 建立项目说明与目录结构；
