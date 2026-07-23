@@ -1,0 +1,53 @@
+schema_version: "0.1.0"
+standard: "PIRS"
+profile: "CORE"
+status: "experimental"
+requirements:
+  identity:
+    - id: "PIRS-ID-001"
+      level: "MUST"
+      statement: "Agent和Protocol具有稳定ID、语义版本和内容摘要。"
+    - id: "PIRS-ID-002"
+      level: "MUST"
+      statement: "声明验证密钥、有效期、轮换和撤销方式。"
+  lineage:
+    - id: "PIRS-LIN-001"
+      level: "MUST"
+      statement: "派生Agent具有新ID和摘要，并引用父级与修改摘要。"
+  metering:
+    - id: "PIRS-MET-001"
+      level: "MUST"
+      statement: "每次可信调用具有唯一ID、幂等键、Runtime身份和签名收据。"
+    - id: "PIRS-MET-002"
+      level: "MUST"
+      statement: "分别统计raw、verified、completed、evaluated、successful和paid调用。"
+    - id: "PIRS-MET-003"
+      level: "MUST_NOT"
+      statement: "不得将完全离线自报调用标记为独立验证调用。"
+  evaluation:
+    - id: "PIRS-EVAL-001"
+      level: "MUST"
+      statement: "效果声明绑定版本化评测套件、基线、样本和评测者。"
+    - id: "PIRS-EVAL-002"
+      level: "MUST"
+      statement: "公开失败、排除项、成本、延迟和不确定性。"
+  economics:
+    - id: "PIRS-ECO-001"
+      level: "MUST"
+      statement: "区分Agent系统内身份与自然人或组织的法律权利主体。"
+    - id: "PIRS-ECO-002"
+      level: "SHOULD"
+      statement: "结算记录声明贡献者、运行方和评测方的分配规则。"
+  privacy:
+    - id: "PIRS-PRIV-001"
+      level: "MUST"
+      statement: "公开收据默认只保留摘要、分类和必要指标，不暴露提示、输出和凭证。"
+  governance:
+    - id: "PIRS-GOV-001"
+      level: "MUST"
+      statement: "保留版本、撤销、失败和安全事件历史。"
+  evidence:
+    - id: "PIRS-EVID-001"
+      level: "MUST"
+      statement: "对创造者、产物、运行、调用、评测和结算关系分别标注证据等级。"
+
