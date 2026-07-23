@@ -1,0 +1,4 @@
+interface:
+  display_name: "人类说服性说理"
+  short_description: "通过认知轨迹、侧面证明与自我发现编写可信且不说教的说服内容"
+  default_prompt: "Use $write-persuasive-narratives to turn this viewpoint into a non-preachy persuasive narrative."
