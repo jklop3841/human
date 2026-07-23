@@ -59,7 +59,7 @@ Human 不是标准答案库，也不是要求他人服从的教义。
 
 ## 当前版本
 
-`0.1.0-foundation`：建立认知博物馆、观点记录和 Agent 调用的最小骨架。
+`0.3.0-chapter-02`：写入“脏现实结构场论”和“现实结构编译协议”，并发布可供 Agent 调用的 `analyze-dirty-reality` Skill。
 
 ## 权利说明
 
