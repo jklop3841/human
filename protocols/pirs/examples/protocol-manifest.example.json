@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1.0",
+  "protocol_id": "pirs:example.invalid/synthetic-protocol@0.0.0#sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "name": "Synthetic PIRS Protocol",
+  "version": "0.0.0",
+  "authority": "example.invalid",
+  "artifact_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "published_at": "2026-07-24T00:00:00Z",
+  "status": "experimental",
+  "description": "用于演示PIRS对象关系的非生产示例。",
+  "entrypoint": "SKILL.md",
+  "license": {
+    "specification": "LicenseRef-UNLICENSED-EXAMPLE",
+    "runtime": "LicenseRef-UNLICENSED-EXAMPLE",
+    "attribution_required": false,
+    "terms_uri": "https://example.invalid/no-license-grant"
+  },
+  "interfaces": ["skill"],
+  "compatibility": [
+    {
+      "runtime": "synthetic-runtime",
+      "status": "self-declared",
+      "evidence_uri": "https://example.invalid/no-evidence"
+    }
+  ],
+  "evaluation": {
+    "suite_id": "pirs-example-suite",
+    "suite_version": "0.1.0",
+    "baseline_required": true
+  },
+  "verification": {
+    "signature_method": "illustrative-only",
+    "signature_uri": "https://example.invalid/no-signature",
+    "provenance_uri": "https://example.invalid/no-provenance",
+    "revocation_uri": "https://example.invalid/no-revocation"
+  }
+}
