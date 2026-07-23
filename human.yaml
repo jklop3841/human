@@ -2,9 +2,9 @@ schema_version: "1.0"
 repository:
   name: Human
   canonical_url: "https://github.com/jklop3841/human"
-  version: "0.3.0-chapter-02"
+  version: "0.4.0-chapter-03"
   created_at: "2026-07-23"
-  updated_at: "2026-07-23"
+  updated_at: "2026-07-24"
   status: active
   default_language: zh-CN
 author:
@@ -33,12 +33,14 @@ entrypoints:
   skill_registry: "agent/skill-registry.yaml"
   topic_index: "indexes/topics.yaml"
   viewpoint_schema: "schemas/viewpoint.schema.json"
+  latest_protocol: "protocols/pirs/PIRS-0.1.md"
 featured:
   first_diary: "museum/diary/2026/07/2026-07-23-01-human-persuasion.md"
   first_viewpoint: "worldview/influence/HUMAN-INFLUENCE-001.md"
   first_skill: "skills/write-persuasive-narratives/SKILL.md"
-  latest_diary: "museum/diary/2026/07/2026-07-23-02-dirty-reality-structure.md"
-  latest_viewpoint: "worldview/reality/HUMAN-REALITY-001.md"
+  latest_diary: "museum/diary/2026/07/2026-07-24-03-agent-provenance-capital.md"
+  latest_viewpoint: "worldview/economy/HUMAN-ECONOMY-001.md"
   latest_method: "reasoning/HUMAN-METHOD-001.md"
-  latest_skill: "skills/analyze-dirty-reality/SKILL.md"
-
+  latest_protocol: "protocols/pirs/PIRS-0.1.md"
+  latest_research: "research/2026-07-agent-capital-landscape.md"
+  latest_skill: "skills/evaluate-agent-capital/SKILL.md"
