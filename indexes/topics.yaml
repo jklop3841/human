@@ -1,5 +1,5 @@
 schema_version: "1.0"
-updated_at: "2026-07-23"
+updated_at: "2026-07-24"
 topics:
   meta:
     description: "Human 项目本身、认知保存、数字人格与 Agent 调用"
@@ -30,7 +30,7 @@ topics:
         skill: skills/analyze-dirty-reality/SKILL.md
         status: active
   reasoning:
-    description: "现实建模、结构反演、范畴迁移、证伪、验真与行动编译"
+    description: "现实建模、结构反演、范畴迁移、证伪、验真、协议与行动编译"
     entries:
       - id: HUMAN-METHOD-001
         title: "现实结构编译协议"
@@ -38,15 +38,34 @@ topics:
         related_viewpoint: worldview/reality/HUMAN-REALITY-001.md
         skill: skills/analyze-dirty-reality/SKILL.md
         status: active
+      - id: HUMAN-PROTOCOL-001
+        title: "PIRS 0.1：协议调用与信誉标准"
+        path: protocols/pirs/PIRS-0.1.md
+        related_viewpoint: worldview/economy/HUMAN-ECONOMY-001.md
+        skill: skills/evaluate-agent-capital/SKILL.md
+        status: experimental
   ai:
     description: "AI、人机关系、Agent、治理与文明转型"
-    entries: []
+    entries:
+      - id: HUMAN-ECONOMY-001
+        title: "Agent谱系资本：AI时代的财富标准假说"
+        path: worldview/economy/HUMAN-ECONOMY-001.md
+        protocol: protocols/pirs/PIRS-0.1.md
+        research: research/2026-07-agent-capital-landscape.md
+        status: active
   china:
     description: "中国社会、制度、文化、商业与现实生活"
     entries: []
   economy:
     description: "财富、劳动、市场、阶层与交易结构"
-    entries: []
+    entries:
+      - id: HUMAN-ECONOMY-001
+        title: "Agent谱系资本：AI时代的财富标准假说"
+        path: worldview/economy/HUMAN-ECONOMY-001.md
+        source_diary: museum/diary/2026/07/2026-07-24-03-agent-provenance-capital.md
+        protocol: protocols/pirs/PIRS-0.1.md
+        skill: skills/evaluate-agent-capital/SKILL.md
+        status: active
   state:
     description: "国家、权力、战争、秩序与治理"
     entries: []
@@ -65,4 +84,3 @@ topics:
   predictions:
     description: "带时间窗口和判定规则的未来判断"
     entries: []
-
