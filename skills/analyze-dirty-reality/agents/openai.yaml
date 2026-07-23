@@ -1,0 +1,4 @@
+interface:
+  display_name: "脏现实结构分析"
+  short_description: "识别现实关系结构、暗信息、干扰线、熵增风险并生成可验证行动方案"
+  default_prompt: "Use $analyze-dirty-reality to analyze this real-world situation as a falsifiable structural field and produce a bounded action plan."
