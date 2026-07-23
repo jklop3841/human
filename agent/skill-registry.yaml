@@ -1,5 +1,5 @@
 schema_version: "1.0"
-updated_at: "2026-07-23"
+updated_at: "2026-07-24"
 skills:
   - name: "write-persuasive-narratives"
     display_name: "人类说服性说理"
@@ -38,3 +38,23 @@ skills:
       - "用隐喻冒充科学定律，或在无证据时推断阴谋、意图和秘密关系"
       - "用事后干扰解释保护一个已经失败的判断"
 
+  - name: "evaluate-agent-capital"
+    display_name: "评估智能体资本"
+    version: "0.1.0"
+    status: experimental
+    entrypoint: "skills/evaluate-agent-capital/SKILL.md"
+    references:
+      standard: "skills/evaluate-agent-capital/references/standard.md"
+      rubric: "skills/evaluate-agent-capital/references/rubric.md"
+      evidence: "skills/evaluate-agent-capital/references/evidence.md"
+    source_diary: "museum/diary/2026/07/2026-07-24-03-agent-provenance-capital.md"
+    related_viewpoint: "worldview/economy/HUMAN-ECONOMY-001.md"
+    related_protocol: "protocols/pirs/PIRS-0.1.md"
+    use_when:
+      - "需要判断一个仓库、Skill、协议或Agent是否形成可验证的协议资产"
+      - "需要审查创造者关系、版本谱系、调用计量、效果信誉和收入捕获"
+      - "需要识别伪造调用量、自评冒充独立验证、离线漏计和分叉洗信誉"
+    do_not_use_for:
+      - "把哈希误当成作者权或法律所有权证明"
+      - "把调用量直接等同于效果、信誉或财富"
+      - "在缺少证据时给出投资估值、法律结论或APC高等级认证"
