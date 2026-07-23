@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.1.0",
+  "attestation_id": "eval_example_0001",
+  "agent": {
+    "agent_id": "pirs:github.com/jklop3841/human/dirty-reality-agent@1.0.0#sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "version": "1.0.0",
+    "artifact_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "suite": {
+    "suite_id": "pirs-example-suite",
+    "version": "0.1.0",
+    "task_class": "social-narrative-analysis",
+    "scoring_method": "blind rubric comparison"
+  },
+  "baseline": {
+    "id": "general-agent-without-protocol",
+    "score": 0.61
+  },
+  "result": {
+    "score": 0.76,
+    "verified_lift": 0.15,
+    "pass": true,
+    "confidence_interval_low": 0.7,
+    "confidence_interval_high": 0.82
+  },
+  "sample": {
+    "size": 100,
+    "started_at": "2026-07-01T00:00:00Z",
+    "ended_at": "2026-07-23T23:59:59Z",
+    "excluded": 2,
+    "exclusion_reason": "invalid fixtures"
+  },
+  "cost_latency": {
+    "average_cost": 0.04,
+    "currency": "USD",
+    "p95_latency_ms": 2600
+  },
+  "evaluator": {
+    "id": "evaluator:example-independent-lab",
+    "display_name": "Example Independent Lab"
+  },
+  "independence": "third-party",
+  "conflicts_of_interest": [],
+  "failures": [
+    "本文件仅演示数据结构，不代表真实评测。"
+  ],
+  "evidence": {
+    "method_uri": "https://github.com/jklop3841/human",
+    "evidence_uri": "https://github.com/jklop3841/human",
+    "evidence_digest": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+  },
+  "signature": {
+    "method": "illustrative-only",
+    "key_id": "example-evaluator-key-1",
+    "value": "not-a-real-signature"
+  }
+}
