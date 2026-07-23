@@ -19,6 +19,25 @@ topics:
         source_diary: museum/diary/2026/07/2026-07-23-01-human-persuasion.md
         skill: skills/write-persuasive-narratives/SKILL.md
         status: active
+  reality:
+    description: "关系、结构、场、路径、暗信息、现实摩擦与系统维护"
+    entries:
+      - id: HUMAN-REALITY-001
+        title: "脏现实结构场论"
+        path: worldview/reality/HUMAN-REALITY-001.md
+        source_diary: museum/diary/2026/07/2026-07-23-02-dirty-reality-structure.md
+        method: reasoning/HUMAN-METHOD-001.md
+        skill: skills/analyze-dirty-reality/SKILL.md
+        status: active
+  reasoning:
+    description: "现实建模、结构反演、范畴迁移、证伪、验真与行动编译"
+    entries:
+      - id: HUMAN-METHOD-001
+        title: "现实结构编译协议"
+        path: reasoning/HUMAN-METHOD-001.md
+        related_viewpoint: worldview/reality/HUMAN-REALITY-001.md
+        skill: skills/analyze-dirty-reality/SKILL.md
+        status: active
   ai:
     description: "AI、人机关系、Agent、治理与文明转型"
     entries: []
@@ -46,3 +65,4 @@ topics:
   predictions:
     description: "带时间窗口和判定规则的未来判断"
     entries: []
+
