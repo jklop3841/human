@@ -10,6 +10,15 @@ topics:
   human:
     description: "人性、欲望、希望、认知与个体命运"
     entries: []
+  influence:
+    description: "人类影响、说服、认知轨迹、行为生成与伦理边界"
+    entries:
+      - id: HUMAN-INFLUENCE-001
+        title: "人类影响的认知轨迹理论"
+        path: worldview/influence/HUMAN-INFLUENCE-001.md
+        source_diary: museum/diary/2026/07/2026-07-23-01-human-persuasion.md
+        skill: skills/write-persuasive-narratives/SKILL.md
+        status: active
   ai:
     description: "AI、人机关系、Agent、治理与文明转型"
     entries: []
@@ -27,7 +36,10 @@ topics:
     entries: []
   narrative:
     description: "叙事、身份、信任、影响力与意义生产"
-    entries: []
+    entries:
+      - id: HUMAN-INFLUENCE-001
+        path: worldview/influence/HUMAN-INFLUENCE-001.md
+        status: active
   ethics:
     description: "责任、伤害、公平、自由与边界"
     entries: []
