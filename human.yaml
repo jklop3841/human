@@ -1,0 +1,33 @@
+schema_version: "1.0"
+repository:
+  name: Human
+  canonical_url: "https://github.com/jklop3841/human"
+  version: "0.1.0-foundation"
+  created_at: "2026-07-23"
+  status: active
+  default_language: zh-CN
+author:
+  display_name: "卢成"
+purpose:
+  type: "personal-cognitive-museum"
+  summary: "保存一个具名人类在 AI 时代的观点、偏见、推理、矛盾、预测与修订，并为 Agent 提供有边界的读取接口。"
+epistemic_contract:
+  universal_truth: false
+  personal_perspective: true
+  allow_critique: true
+  preserve_history: true
+  require_attribution: true
+  agent_may_infer_unstated_beliefs: false
+content_states:
+  - raw
+  - draft
+  - active
+  - contested
+  - revised
+  - retired
+entrypoints:
+  constitution: "CONSTITUTION.md"
+  agent_rules: "AGENTS.md"
+  load_protocol: "agent/LOAD_PROTOCOL.md"
+  topic_index: "indexes/topics.yaml"
+  viewpoint_schema: "schemas/viewpoint.schema.json"
