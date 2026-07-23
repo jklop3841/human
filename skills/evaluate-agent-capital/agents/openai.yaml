@@ -1,0 +1,4 @@
+interface:
+  display_name: "评估智能体资本"
+  short_description: "评估Agent身份谱系、调用收据、效果信誉与经济捕获能力"
+  default_prompt: "Use $evaluate-agent-capital to assess whether this agent or protocol is a verifiable, meterable, and economically capturable asset."
