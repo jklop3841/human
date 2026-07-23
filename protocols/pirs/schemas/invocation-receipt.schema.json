@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jklop3841/human/protocols/pirs/schemas/invocation-receipt.schema.json",
+  "title": "PIRS Invocation Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "invocation_id", "idempotency_key", "agent", "runtime_instance_id", "grant_id", "task_class", "started_at", "ended_at", "status", "trace", "metrics", "trust_level", "runtime_signature"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "invocation_id": {"type": "string", "minLength": 8},
+    "idempotency_key": {"type": "string", "minLength": 8},
+    "agent": {
+      "type": "object",
+      "required": ["agent_id", "version", "artifact_digest"],
+      "properties": {
+        "agent_id": {"type": "string"},
+        "version": {"type": "string"},
+        "artifact_digest": {"type": "string"}
+      }
+    },
+    "runtime_instance_id": {"type": "string"},
+    "grant_id": {"type": "string"},
+    "tenant_hash": {"type": "string"},
+    "task_class": {"type": "string"},
+    "input_digest": {"type": "string"},
+    "output_digest": {"type": "string"},
+    "started_at": {"type": "string", "format": "date-time"},
+    "ended_at": {"type": "string", "format": "date-time"},
+    "status": {"enum": ["completed", "failed", "cancelled", "timed_out", "rejected"]},
+    "trace": {
+      "type": "object",
+      "required": ["trace_id", "telemetry_standard"],
+      "properties": {
+        "trace_id": {"type": "string"},
+        "telemetry_standard": {"type": "string"},
+        "evidence_uri": {"type": "string", "format": "uri"}
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "required": ["latency_ms", "runtime_cost"],
+      "properties": {
+        "latency_ms": {"type": "number", "minimum": 0},
+        "runtime_cost": {"type": "number", "minimum": 0},
+        "currency": {"type": "string"},
+        "input_tokens": {"type": "integer", "minimum": 0},
+        "output_tokens": {"type": "integer", "minimum": 0},
+        "tool_calls": {"type": "integer", "minimum": 0}
+      }
+    },
+    "evaluation_attestation_id": {"type": ["string", "null"]},
+    "settlement_receipt_id": {"type": ["string", "null"]},
+    "trust_level": {"enum": ["self-reported", "hosted-signed", "dual-signed", "settled-and-anchored"]},
+    "runtime_signature": {
+      "type": "object",
+      "required": ["method", "key_id", "value"],
+      "properties": {
+        "method": {"type": "string"},
+        "key_id": {"type": "string"},
+        "value": {"type": "string"}
+      }
+    }
+  }
+}
+
