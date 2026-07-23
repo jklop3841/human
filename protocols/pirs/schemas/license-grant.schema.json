@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jklop3841/human/protocols/pirs/schemas/license-grant.schema.json",
+  "title": "PIRS License Grant",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "grant_id", "issuer", "subject", "agent_id", "agent_version", "scopes", "issued_at", "expires_at", "execution_path", "pricing_plan", "revocation_uri", "signature"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "grant_id": {"type": "string", "minLength": 8},
+    "issuer": {"type": "string"},
+    "subject": {"type": "string"},
+    "agent_id": {"type": "string"},
+    "agent_version": {"type": "string"},
+    "protocol_ids": {"type": "array", "items": {"type": "string"}},
+    "scopes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["discover", "invoke", "evaluate", "fork", "certify", "admin"]}
+    },
+    "quota": {
+      "type": "object",
+      "properties": {
+        "verified_invocations": {"type": "integer", "minimum": 0},
+        "period": {"enum": ["total", "day", "month", "year"]}
+      }
+    },
+    "issued_at": {"type": "string", "format": "date-time"},
+    "expires_at": {"type": "string", "format": "date-time"},
+    "execution_path": {"enum": ["hosted", "certified-runtime", "enterprise-reconciled", "offline-self-reported"]},
+    "pricing_plan": {"type": "string"},
+    "constraints": {"type": "object"},
+    "revocation_uri": {"type": "string", "format": "uri"},
+    "signature": {
+      "type": "object",
+      "required": ["method", "value"],
+      "properties": {
+        "method": {"type": "string"},
+        "key_id": {"type": "string"},
+        "value": {"type": "string"}
+      }
+    }
+  }
+}
+
