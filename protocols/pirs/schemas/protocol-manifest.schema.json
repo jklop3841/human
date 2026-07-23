@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jklop3841/human/protocols/pirs/schemas/protocol-manifest.schema.json",
+  "title": "PIRS Protocol Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "protocol_id", "name", "version", "authority", "artifact_digest", "published_at", "status", "license", "interfaces", "verification"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "protocol_id": {"type": "string", "pattern": "^pirs:[^\\s]+$"},
+    "name": {"type": "string", "minLength": 1},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "authority": {"type": "string", "minLength": 1},
+    "artifact_digest": {"type": "string", "pattern": "^sha256:[a-fA-F0-9]{64}$"},
+    "published_at": {"type": "string", "format": "date-time"},
+    "status": {"enum": ["experimental", "active", "deprecated", "revoked", "retired"]},
+    "description": {"type": "string"},
+    "entrypoint": {"type": "string"},
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["specification", "runtime"],
+      "properties": {
+        "specification": {"type": "string"},
+        "runtime": {"type": "string"},
+        "attribution_required": {"type": "boolean"},
+        "terms_uri": {"type": "string", "format": "uri"}
+      }
+    },
+    "interfaces": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["skill", "mcp", "a2a", "http", "cli", "library", "other"]}
+    },
+    "compatibility": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["runtime", "status"],
+        "properties": {
+          "runtime": {"type": "string"},
+          "version": {"type": "string"},
+          "status": {"enum": ["self-declared", "tested", "certified", "unsupported"]},
+          "evidence_uri": {"type": "string", "format": "uri"}
+        }
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "properties": {
+        "suite_id": {"type": "string"},
+        "suite_version": {"type": "string"},
+        "baseline_required": {"type": "boolean"}
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["signature_method", "signature_uri", "revocation_uri"],
+      "properties": {
+        "signature_method": {"type": "string"},
+        "signature_uri": {"type": "string", "format": "uri"},
+        "provenance_uri": {"type": "string", "format": "uri"},
+        "revocation_uri": {"type": "string", "format": "uri"}
+      }
+    }
+  }
+}
+
