@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "settlement_id": "synthetic_failed_settlement",
+  "invocation_ids": ["synthetic_invocation_not_settled"],
+  "payment_rail": "other",
+  "gross_amount": 0,
+  "currency": "USD",
+  "status": "failed",
+  "settled_at": "2026-07-24T01:00:03Z",
+  "allocations": [
+    {
+      "beneficiary_id": "did:example:synthetic-beneficiary",
+      "role": "other",
+      "amount": 0
+    }
+  ],
+  "provider_reference": "no-payment-performed",
+  "contract_or_terms_uri": "https://example.invalid/no-contract",
+  "signature": {
+    "method": "illustrative-only",
+    "key_id": "example-settlement-key-1",
+    "value": "not-a-real-signature"
+  }
+}
