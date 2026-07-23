@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jklop3841/human/protocols/pirs/schemas/settlement-receipt.schema.json",
+  "title": "PIRS Settlement Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "settlement_id", "invocation_ids", "payment_rail", "gross_amount", "currency", "status", "settled_at", "allocations", "provider_reference", "signature"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "settlement_id": {"type": "string"},
+    "invocation_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "payment_rail": {"enum": ["invoice", "mpp", "x402", "ap2-compatible", "marketplace", "other"]},
+    "gross_amount": {"type": "number", "minimum": 0},
+    "currency": {"type": "string", "minLength": 3},
+    "status": {"enum": ["pending", "settled", "refunded", "disputed", "failed"]},
+    "settled_at": {"type": "string", "format": "date-time"},
+    "allocations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["beneficiary_id", "role", "amount"],
+        "properties": {
+          "beneficiary_id": {"type": "string"},
+          "role": {"enum": ["rights-holder", "protocol-author", "fork-creator", "domain-contributor", "runtime-operator", "evaluator", "registry-governance", "other"]},
+          "amount": {"type": "number", "minimum": 0}
+        }
+      }
+    },
+    "provider_reference": {"type": "string"},
+    "contract_or_terms_uri": {"type": "string", "format": "uri"},
+    "signature": {
+      "type": "object",
+      "required": ["method", "key_id", "value"],
+      "properties": {
+        "method": {"type": "string"},
+        "key_id": {"type": "string"},
+        "value": {"type": "string"}
+      }
+    }
+  }
+}
+
