@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jklop3841/human/protocols/pirs/schemas/evaluation-attestation.schema.json",
+  "title": "PIRS Evaluation Attestation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "attestation_id", "agent", "suite", "baseline", "result", "sample", "cost_latency", "evaluator", "independence", "evidence", "signature"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "attestation_id": {"type": "string"},
+    "agent": {
+      "type": "object",
+      "required": ["agent_id", "version", "artifact_digest"],
+      "properties": {
+        "agent_id": {"type": "string"},
+        "version": {"type": "string"},
+        "artifact_digest": {"type": "string"}
+      }
+    },
+    "suite": {
+      "type": "object",
+      "required": ["suite_id", "version", "task_class", "scoring_method"],
+      "properties": {
+        "suite_id": {"type": "string"},
+        "version": {"type": "string"},
+        "task_class": {"type": "string"},
+        "scoring_method": {"type": "string"}
+      }
+    },
+    "baseline": {
+      "type": "object",
+      "required": ["id", "score"],
+      "properties": {
+        "id": {"type": "string"},
+        "score": {"type": "number"}
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": ["score", "verified_lift", "pass"],
+      "properties": {
+        "score": {"type": "number"},
+        "verified_lift": {"type": "number"},
+        "pass": {"type": "boolean"},
+        "confidence_interval_low": {"type": "number"},
+        "confidence_interval_high": {"type": "number"}
+      }
+    },
+    "sample": {
+      "type": "object",
+      "required": ["size", "started_at", "ended_at", "excluded"],
+      "properties": {
+        "size": {"type": "integer", "minimum": 1},
+        "started_at": {"type": "string", "format": "date-time"},
+        "ended_at": {"type": "string", "format": "date-time"},
+        "excluded": {"type": "integer", "minimum": 0},
+        "exclusion_reason": {"type": "string"}
+      }
+    },
+    "cost_latency": {
+      "type": "object",
+      "required": ["average_cost", "p95_latency_ms"],
+      "properties": {
+        "average_cost": {"type": "number", "minimum": 0},
+        "currency": {"type": "string"},
+        "p95_latency_ms": {"type": "number", "minimum": 0}
+      }
+    },
+    "evaluator": {
+      "type": "object",
+      "required": ["id", "display_name"],
+      "properties": {
+        "id": {"type": "string"},
+        "display_name": {"type": "string"}
+      }
+    },
+    "independence": {"enum": ["first-party", "segregated-control", "third-party"]},
+    "conflicts_of_interest": {"type": "array", "items": {"type": "string"}},
+    "failures": {"type": "array", "items": {"type": "string"}},
+    "evidence": {
+      "type": "object",
+      "required": ["method_uri", "evidence_digest"],
+      "properties": {
+        "method_uri": {"type": "string", "format": "uri"},
+        "evidence_uri": {"type": "string", "format": "uri"},
+        "evidence_digest": {"type": "string"}
+      }
+    },
+    "signature": {
+      "type": "object",
+      "required": ["method", "key_id", "value"],
+      "properties": {
+        "method": {"type": "string"},
+        "key_id": {"type": "string"},
+        "value": {"type": "string"}
+      }
+    }
+  }
+}
+
