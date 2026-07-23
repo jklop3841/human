@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "grant_id": "grant_example_0001",
+  "issuer": "https://github.com/jklop3841",
+  "subject": "tenant:example-company",
+  "agent_id": "pirs:github.com/jklop3841/human/dirty-reality-agent@1.0.0#sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "agent_version": "1.0.0",
+  "protocol_ids": [
+    "pirs:github.com/jklop3841/human/dirty-reality@1.0.0#sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  ],
+  "scopes": ["discover", "invoke"],
+  "quota": {
+    "verified_invocations": 1000,
+    "period": "month"
+  },
+  "issued_at": "2026-07-24T00:00:00Z",
+  "expires_at": "2026-08-24T00:00:00Z",
+  "execution_path": "hosted",
+  "pricing_plan": "illustrative-metered-plan",
+  "constraints": {
+    "region": "example-only"
+  },
+  "revocation_uri": "https://github.com/jklop3841/human/security/advisories",
+  "signature": {
+    "method": "illustrative-only",
+    "key_id": "example-key-1",
+    "value": "not-a-real-signature"
+  }
+}
