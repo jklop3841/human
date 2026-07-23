@@ -17,3 +17,24 @@ skills:
       - "需要把观点变化继续连接到可信的最小行动"
     do_not_use_for:
       - "虚假共识、恐惧操控、羞辱攻击或隐蔽强迫"
+
+  - name: "analyze-dirty-reality"
+    display_name: "脏现实结构分析"
+    version: "0.1.0"
+    status: active
+    entrypoint: "skills/analyze-dirty-reality/SKILL.md"
+    references:
+      ontology: "skills/analyze-dirty-reality/references/ontology.md"
+      method: "skills/analyze-dirty-reality/references/method.md"
+      examples: "skills/analyze-dirty-reality/references/examples.md"
+    source_diary: "museum/diary/2026/07/2026-07-23-02-dirty-reality-structure.md"
+    related_viewpoint: "worldview/reality/HUMAN-REALITY-001.md"
+    related_method: "reasoning/HUMAN-METHOD-001.md"
+    use_when:
+      - "现实结果与干净模型发生偏差，需要分析主体、关系、权限、资源和反馈"
+      - "需要区分反例、干扰和未知，并提出可证伪的暗信息假设"
+      - "需要把复杂判断编译成小测试、行动、冗余、熔断和监控"
+    do_not_use_for:
+      - "用隐喻冒充科学定律，或在无证据时推断阴谋、意图和秘密关系"
+      - "用事后干扰解释保护一个已经失败的判断"
+
