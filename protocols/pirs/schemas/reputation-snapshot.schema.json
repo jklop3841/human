@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jklop3841/human/protocols/pirs/schemas/reputation-snapshot.schema.json",
+  "title": "PIRS Reputation Snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "snapshot_id", "agent", "window", "counters", "outcomes", "operations", "adoption", "governance", "methodology_uri", "source_digest", "generated_at", "signature"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "snapshot_id": {"type": "string"},
+    "agent": {
+      "type": "object",
+      "required": ["agent_id", "version", "artifact_digest"],
+      "properties": {
+        "agent_id": {"type": "string"},
+        "version": {"type": "string"},
+        "artifact_digest": {"type": "string"}
+      }
+    },
+    "window": {
+      "type": "object",
+      "required": ["start", "end"],
+      "properties": {
+        "start": {"type": "string", "format": "date-time"},
+        "end": {"type": "string", "format": "date-time"}
+      }
+    },
+    "counters": {
+      "type": "object",
+      "required": ["raw_invocations", "verified_invocations", "completed_invocations", "evaluated_invocations", "verified_successes", "paid_invocations", "unique_tenants", "independent_evaluators"],
+      "properties": {
+        "raw_invocations": {"type": "integer", "minimum": 0},
+        "verified_invocations": {"type": "integer", "minimum": 0},
+        "completed_invocations": {"type": "integer", "minimum": 0},
+        "evaluated_invocations": {"type": "integer", "minimum": 0},
+        "verified_successes": {"type": "integer", "minimum": 0},
+        "paid_invocations": {"type": "integer", "minimum": 0},
+        "unique_tenants": {"type": "integer", "minimum": 0},
+        "independent_evaluators": {"type": "integer", "minimum": 0}
+      }
+    },
+    "outcomes": {
+      "type": "object",
+      "required": ["task_coverage", "median_lift", "success_rate_low", "success_rate_high", "critical_failures"],
+      "properties": {
+        "task_coverage": {"type": "integer", "minimum": 0},
+        "median_lift": {"type": "number"},
+        "success_rate_low": {"type": "number", "minimum": 0, "maximum": 1},
+        "success_rate_high": {"type": "number", "minimum": 0, "maximum": 1},
+        "critical_failures": {"type": "integer", "minimum": 0}
+      }
+    },
+    "operations": {
+      "type": "object",
+      "required": ["average_runtime_cost", "p95_latency_ms", "compatible_runtimes"],
+      "properties": {
+        "average_runtime_cost": {"type": "number", "minimum": 0},
+        "currency": {"type": "string"},
+        "p95_latency_ms": {"type": "number", "minimum": 0},
+        "compatible_runtimes": {"type": "integer", "minimum": 0}
+      }
+    },
+    "adoption": {
+      "type": "object",
+      "required": ["paid_tenants", "enterprise_tenants"],
+      "properties": {
+        "paid_tenants": {"type": "integer", "minimum": 0},
+        "enterprise_tenants": {"type": "integer", "minimum": 0}
+      }
+    },
+    "governance": {
+      "type": "object",
+      "required": ["apc_level", "last_maintenance_at"],
+      "properties": {
+        "apc_level": {"enum": ["APC-0", "APC-1", "APC-2", "APC-3", "APC-4", "APC-5", "APC-6"]},
+        "last_maintenance_at": {"type": "string", "format": "date-time"},
+        "revoked_versions": {"type": "integer", "minimum": 0}
+      }
+    },
+    "methodology_uri": {"type": "string", "format": "uri"},
+    "source_digest": {"type": "string"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "signature": {
+      "type": "object",
+      "required": ["method", "key_id", "value"],
+      "properties": {
+        "method": {"type": "string"},
+        "key_id": {"type": "string"},
+        "value": {"type": "string"}
+      }
+    }
+  }
+}
+
