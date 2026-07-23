@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1.0",
+  "agent_id": "pirs:example.invalid/synthetic-agent@0.0.0#sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "name": "Synthetic PIRS Agent",
+  "version": "0.0.0",
+  "publisher": {
+    "id": "did:example:synthetic-publisher",
+    "display_name": "Synthetic Publisher"
+  },
+  "legal_principal": {
+    "type": "organization",
+    "id": "did:example:synthetic-principal",
+    "jurisdiction": "none-example"
+  },
+  "artifact_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "source_uri": "https://example.invalid/source",
+  "protocols": [
+    {
+      "protocol_id": "pirs:example.invalid/synthetic-protocol@0.0.0#sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "version": "0.0.0",
+      "artifact_digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "synthetic-capability",
+      "description": "仅用于展示PIRS Agent Manifest字段，不代表真实能力。",
+      "claim_status": "self-declared",
+      "evidence_uri": "https://example.invalid/no-evidence"
+    }
+  ],
+  "lineage": {
+    "is_fork": false,
+    "parent_agent_id": null,
+    "parent_version": null,
+    "parent_digest": null,
+    "patch_digest": null,
+    "contributors": [
+      {
+        "id": "did:example:synthetic-contributor",
+        "role": "example-only"
+      }
+    ]
+  },
+  "revenue_policy_uri": "https://example.invalid/no-revenue-policy",
+  "verification": {
+    "signature_method": "illustrative-only",
+    "signature_uri": "https://example.invalid/no-signature",
+    "build_attestation_uri": "https://example.invalid/no-attestation",
+    "revocation_uri": "https://example.invalid/no-revocation"
+  }
+}
