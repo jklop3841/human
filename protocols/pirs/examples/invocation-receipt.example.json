@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1.0",
+  "invocation_id": "invoke_example_0001",
+  "idempotency_key": "idem_example_0001",
+  "agent": {
+    "agent_id": "pirs:github.com/jklop3841/human/dirty-reality-agent@1.0.0#sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "version": "1.0.0",
+    "artifact_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "runtime_instance_id": "runtime:example-hosted-01",
+  "grant_id": "grant_example_0001",
+  "tenant_hash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "task_class": "social-narrative-analysis",
+  "input_digest": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "output_digest": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "started_at": "2026-07-24T01:00:00Z",
+  "ended_at": "2026-07-24T01:00:02Z",
+  "status": "completed",
+  "trace": {
+    "trace_id": "00112233445566778899aabbccddeeff",
+    "telemetry_standard": "OpenTelemetry",
+    "evidence_uri": "https://github.com/jklop3841/human"
+  },
+  "metrics": {
+    "latency_ms": 2000,
+    "runtime_cost": 0.04,
+    "currency": "USD",
+    "input_tokens": 700,
+    "output_tokens": 900,
+    "tool_calls": 1
+  },
+  "evaluation_attestation_id": "eval_example_0001",
+  "settlement_receipt_id": "settlement_example_0001",
+  "trust_level": "settled-and-anchored",
+  "runtime_signature": {
+    "method": "illustrative-only",
+    "key_id": "example-runtime-key-1",
+    "value": "not-a-real-signature"
+  }
+}
