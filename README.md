@@ -62,7 +62,7 @@ Human 不是标准答案库，也不是要求他人服从的教义。
 
 ## 当前版本
 
-`0.4.0-chapter-03`：提出“Agent 谱系资本（APC）”作为 AI 时代财富标准候选，并发布实验性 `PIRS 0.1` 协议、七类机器对象及 `evaluate-agent-capital` Skill。
+`0.5.0-chapter-04`：提出 LIAR 人类影响框架与七驱力指数，发布影响力审计协议、机器可读 Schema 及 `audit-deceptive-influence` Skill。
 
 ## 权利说明
 
