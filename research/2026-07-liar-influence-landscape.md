@@ -1,7 +1,7 @@
 ---
 id: HUMAN-RESEARCH-004
 title: "2025—2026谎言、说服、身份与仪式研究地图"
-author: Human
+author: "卢成"
 created_at: 2026-07-30
 version: 1.0.0
 status: active
