@@ -1,7 +1,7 @@
 ---
 id: HUMAN-METHOD-002
 title: "LIAR影响力审计与诚实说服协议"
-author: Human
+author: "卢成"
 created_at: 2026-07-30
 version: 1.0.0
 status: active
