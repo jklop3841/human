@@ -1,7 +1,7 @@
 ---
 id: HUMAN-INFLUENCE-002
 title: "LIAR人类影响框架：七驱力、谎言与仪式化行为"
-author: Human
+author: "卢成"
 created_at: 2026-07-30
 version: 1.0.0
 status: active
