@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jklop3841/human/schemas/influence-audit.schema.json",
+  "title": "LIAR Influence Audit",
+  "description": "Machine-readable audit of deceptive influence and truthful alternatives. Scores describe observable message design, not a person's mental state.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "audit_id",
+    "audited_at",
+    "object",
+    "decision",
+    "claim_ledger",
+    "seven_drives",
+    "liar_chain",
+    "risk_vector",
+    "hard_red_flags",
+    "vulnerable_groups_targeted",
+    "choice_integrity",
+    "assessment",
+    "recommended_actions",
+    "ethical_alternative",
+    "uncertainty"
+  ],
+  "properties": {
+    "schema_version": { "const": "0.1.0" },
+    "audit_id": { "type": "string", "minLength": 1 },
+    "audited_at": { "type": "string", "format": "date-time" },
+    "object": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "title"],
+      "properties": {
+        "type": {
+          "enum": ["message", "campaign", "product", "community", "agent", "policy", "other"]
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "source_uri": { "type": "string", "format": "uri" }
+      }
+    },
+    "decision": { "type": "string", "minLength": 1 },
+    "claim_ledger": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim", "class", "evidence_status", "materiality"],
+        "properties": {
+          "claim": { "type": "string", "minLength": 1 },
+          "class": {
+            "enum": ["fact", "inference", "value", "promise", "testimonial", "authority", "urgency"]
+          },
+          "evidence_status": {
+            "enum": ["verified", "sourced", "unsupported", "contradicted", "unknown"]
+          },
+          "materiality": { "enum": ["low", "medium", "high"] },
+          "evidence": {
+            "type": "array",
+            "items": { "type": "string" },
+            "default": []
+          }
+        }
+      }
+    },
+    "seven_drives": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pride", "greed", "lust", "envy", "gluttony", "wrath", "sloth"],
+      "properties": {
+        "pride": { "$ref": "#/$defs/drive" },
+        "greed": { "$ref": "#/$defs/drive" },
+        "lust": { "$ref": "#/$defs/drive" },
+        "envy": { "$ref": "#/$defs/drive" },
+        "gluttony": { "$ref": "#/$defs/drive" },
+        "wrath": { "$ref": "#/$defs/drive" },
+        "sloth": { "$ref": "#/$defs/drive" }
+      }
+    },
+    "liar_chain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["latent_drive", "identity_binding", "affective_amplification", "ritual_reinforcement"],
+      "properties": {
+        "latent_drive": { "$ref": "#/$defs/findings" },
+        "identity_binding": { "$ref": "#/$defs/findings" },
+        "affective_amplification": { "$ref": "#/$defs/findings" },
+        "ritual_reinforcement": { "$ref": "#/$defs/findings" }
+      }
+    },
+    "risk_vector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "truth_deficit",
+        "identity_enclosure",
+        "affective_pressure",
+        "ritual_lock_in",
+        "power_asymmetry",
+        "irreversibility",
+        "vulnerability_exploitation"
+      ],
+      "properties": {
+        "truth_deficit": { "$ref": "#/$defs/score" },
+        "identity_enclosure": { "$ref": "#/$defs/score" },
+        "affective_pressure": { "$ref": "#/$defs/score" },
+        "ritual_lock_in": { "$ref": "#/$defs/score" },
+        "power_asymmetry": { "$ref": "#/$defs/score" },
+        "irreversibility": { "$ref": "#/$defs/score" },
+        "vulnerability_exploitation": { "$ref": "#/$defs/score" }
+      }
+    },
+    "hard_red_flags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "fabricated_evidence",
+          "false_authority",
+          "false_consensus",
+          "false_scarcity_or_urgency",
+          "hidden_material_terms",
+          "public_shame_or_compulsory_confession",
+          "enemy_manufacture_or_dehumanization",
+          "vulnerability_exploitation",
+          "irreversible_first_action",
+          "no_practical_exit",
+          "concealed_persuasive_intent"
+        ]
+      }
+    },
+    "vulnerable_groups_targeted": { "type": "boolean" },
+    "choice_integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "material_terms_visible",
+        "alternatives_visible",
+        "exit_available",
+        "first_action_reversible",
+        "uncertainty_disclosed"
+      ],
+      "properties": {
+        "material_terms_visible": { "type": "boolean" },
+        "alternatives_visible": { "type": "boolean" },
+        "exit_available": { "type": "boolean" },
+        "first_action_reversible": { "type": "boolean" },
+        "uncertainty_disclosed": { "type": "boolean" },
+        "notes": { "type": "array", "items": { "type": "string" }, "default": [] }
+      }
+    },
+    "assessment": {
+      "enum": ["acceptable", "caution", "manipulative", "deceptive", "insufficient-evidence"]
+    },
+    "recommended_actions": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "ethical_alternative": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["disclosures"],
+      "properties": {
+        "message": { "type": "string" },
+        "minimum_action": { "type": "string" },
+        "disclosures": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "falsifier": { "type": "string" },
+    "monitoring": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "uncertainty": { "type": "string" }
+  },
+  "$defs": {
+    "score": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["score", "evidence", "confidence"],
+      "properties": {
+        "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "evidence": { "type": "array", "items": { "type": "string" } },
+        "confidence": { "enum": ["low", "medium", "high"] }
+      }
+    },
+    "drive": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["score", "evidence", "confidence", "legitimate_value", "abuse_risk"],
+      "properties": {
+        "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "evidence": { "type": "array", "items": { "type": "string" } },
+        "confidence": { "enum": ["low", "medium", "high"] },
+        "legitimate_value": { "type": "string" },
+        "abuse_risk": { "type": "string" }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["finding", "evidence", "confidence"],
+        "properties": {
+          "finding": { "type": "string" },
+          "evidence": { "type": "array", "items": { "type": "string" } },
+          "confidence": { "enum": ["low", "medium", "high"] }
+        }
+      }
+    }
+  }
+}
