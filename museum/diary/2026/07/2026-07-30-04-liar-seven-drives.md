@@ -1,7 +1,7 @@
 ---
 id: HUMAN-DIARY-004
 title: "第四章：谎言、七种驱力与人的行动"
-author: Human
+author: "卢成"
 created_at: 2026-07-30
 version: 1.0.0
 status: active
