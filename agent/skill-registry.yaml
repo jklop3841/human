@@ -1,5 +1,5 @@
 schema_version: "1.0"
-updated_at: "2026-07-24"
+updated_at: "2026-07-30"
 skills:
   - name: "write-persuasive-narratives"
     display_name: "人类说服性说理"
@@ -58,3 +58,25 @@ skills:
       - "把哈希误当成作者权或法律所有权证明"
       - "把调用量直接等同于效果、信誉或财富"
       - "在缺少证据时给出投资估值、法律结论或APC高等级认证"
+
+  - name: "audit-deceptive-influence"
+    display_name: "审计谎言与影响力"
+    version: "0.1.0"
+    status: active
+    entrypoint: "skills/audit-deceptive-influence/SKILL.md"
+    references:
+      liar_model: "skills/audit-deceptive-influence/references/liar-model.md"
+      seven_drives: "skills/audit-deceptive-influence/references/seven-drives.md"
+      audit_patterns: "skills/audit-deceptive-influence/references/audit-patterns.md"
+    source_diary: "museum/diary/2026/07/2026-07-30-04-liar-seven-drives.md"
+    related_viewpoint: "worldview/influence/HUMAN-INFLUENCE-002.md"
+    related_method: "reasoning/HUMAN-METHOD-002.md"
+    schema: "schemas/influence-audit.schema.json"
+    use_when:
+      - "需要审计消息、广告、社群、产品、政策或Agent中的谎言与操纵"
+      - "需要使用七驱力指数和LIAR链识别身份、情绪与仪式锁定"
+      - "需要把高风险影响材料转换为透明、可逆、可退出的替代方案"
+    do_not_use_for:
+      - "优化虚假证据、虚假权威、虚假共识、虚假紧迫或隐蔽操纵"
+      - "推断并利用特定个人的创伤、贫困、疾病、孤独或其他脆弱性"
+      - "以羞辱、敌人制造、退出惩罚或不可逆承诺促成行动"
