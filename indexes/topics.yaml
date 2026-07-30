@@ -1,5 +1,5 @@
 schema_version: "1.0"
-updated_at: "2026-07-24"
+updated_at: "2026-07-30"
 topics:
   meta:
     description: "Human 项目本身、认知保存、数字人格与 Agent 调用"
@@ -9,7 +9,11 @@ topics:
         status: active
   human:
     description: "人性、欲望、希望、认知与个体命运"
-    entries: []
+    entries:
+      - id: HUMAN-INFLUENCE-002
+        title: "LIAR人类影响框架：七驱力、谎言与仪式化行为"
+        path: worldview/influence/HUMAN-INFLUENCE-002.md
+        status: active
   influence:
     description: "人类影响、说服、认知轨迹、行为生成与伦理边界"
     entries:
@@ -18,6 +22,14 @@ topics:
         path: worldview/influence/HUMAN-INFLUENCE-001.md
         source_diary: museum/diary/2026/07/2026-07-23-01-human-persuasion.md
         skill: skills/write-persuasive-narratives/SKILL.md
+        status: active
+      - id: HUMAN-INFLUENCE-002
+        title: "LIAR人类影响框架：七驱力、谎言与仪式化行为"
+        path: worldview/influence/HUMAN-INFLUENCE-002.md
+        source_diary: museum/diary/2026/07/2026-07-30-04-liar-seven-drives.md
+        method: reasoning/HUMAN-METHOD-002.md
+        skill: skills/audit-deceptive-influence/SKILL.md
+        research: research/2026-07-liar-influence-landscape.md
         status: active
   reality:
     description: "关系、结构、场、路径、暗信息、现实摩擦与系统维护"
@@ -37,6 +49,13 @@ topics:
         path: reasoning/HUMAN-METHOD-001.md
         related_viewpoint: worldview/reality/HUMAN-REALITY-001.md
         skill: skills/analyze-dirty-reality/SKILL.md
+        status: active
+      - id: HUMAN-METHOD-002
+        title: "LIAR影响力审计与诚实说服协议"
+        path: reasoning/HUMAN-METHOD-002.md
+        related_viewpoint: worldview/influence/HUMAN-INFLUENCE-002.md
+        skill: skills/audit-deceptive-influence/SKILL.md
+        schema: schemas/influence-audit.schema.json
         status: active
       - id: HUMAN-PROTOCOL-001
         title: "PIRS 0.1：协议调用与信誉标准"
@@ -78,9 +97,16 @@ topics:
       - id: HUMAN-INFLUENCE-001
         path: worldview/influence/HUMAN-INFLUENCE-001.md
         status: active
+      - id: HUMAN-INFLUENCE-002
+        path: worldview/influence/HUMAN-INFLUENCE-002.md
+        status: active
   ethics:
     description: "责任、伤害、公平、自由与边界"
-    entries: []
+    entries:
+      - id: HUMAN-INFLUENCE-002
+        path: worldview/influence/HUMAN-INFLUENCE-002.md
+        method: reasoning/HUMAN-METHOD-002.md
+        status: active
   predictions:
     description: "带时间窗口和判定规则的未来判断"
     entries: []
