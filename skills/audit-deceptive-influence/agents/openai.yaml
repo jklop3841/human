@@ -1,0 +1,5 @@
+interface:
+  display_name: "审计谎言与影响力"
+  short_description: "识别七驱力、身份绑定、情绪放大、仪式锁定与欺骗风险"
+  default_prompt: "Use $audit-deceptive-influence to audit this message, campaign, product, community, or agent for deceptive influence and propose a truthful alternative."
+
