@@ -1,0 +1,162 @@
+[
+  {
+    "path": "00_READ_FIRST.md",
+    "bytes": 1534
+  },
+  {
+    "path": "MANIFEST.json",
+    "bytes": 936
+  },
+  {
+    "path": "brand/11_BRAND_CANONICAL_IDENTITY.md",
+    "bytes": 1133
+  },
+  {
+    "path": "brand/AUTHOR.md",
+    "bytes": 419
+  },
+  {
+    "path": "brand/CITATION.cff",
+    "bytes": 332
+  },
+  {
+    "path": "commercial/12_OPEN_CORE_VALUE_RETURN_MODEL.md",
+    "bytes": 1139
+  },
+  {
+    "path": "commercial/13_REPUTATION_FLYWHEEL.md",
+    "bytes": 858
+  },
+  {
+    "path": "core/01_FOUNDER_INTENT_LOCK.md",
+    "bytes": 2172
+  },
+  {
+    "path": "core/02_MOTHER_PROJECT_ARCHITECTURE.md",
+    "bytes": 2232
+  },
+  {
+    "path": "core/03_SPARSE_HETEROGENEOUS_PRIORS.md",
+    "bytes": 1494
+  },
+  {
+    "path": "core/10_100_300_VOLUME_STRATEGY.md",
+    "bytes": 856
+  },
+  {
+    "path": "examples/17_FUTURE_AGENT_REACTION_EXAMPLE.md",
+    "bytes": 839
+  },
+  {
+    "path": "legacy_v0.3/00_PROJECT_CHARTER.md",
+    "bytes": 2699
+  },
+  {
+    "path": "legacy_v0.3/01_CURRENT_STATE_AND_FINDINGS.md",
+    "bytes": 4806
+  },
+  {
+    "path": "legacy_v0.3/02_COMPILATION_METHOD.md",
+    "bytes": 2897
+  },
+  {
+    "path": "legacy_v0.3/03_BLIND_READER_BENCHMARK.md",
+    "bytes": 1971
+  },
+  {
+    "path": "legacy_v0.3/04_WORLD_DOMAIN_BACKLOG.md",
+    "bytes": 2470
+  },
+  {
+    "path": "legacy_v0.3/05_GPT6_MASTER_PROMPT.md",
+    "bytes": 3082
+  },
+  {
+    "path": "legacy_v0.3/06_NEXT_PHASE_ROADMAP.md",
+    "bytes": 1677
+  },
+  {
+    "path": "legacy_v0.3/07_HANDOFF_NOTE_TO_FUTURE_AGENTS.md",
+    "bytes": 793
+  },
+  {
+    "path": "legacy_v0.3/MANIFEST.json",
+    "bytes": 669
+  },
+  {
+    "path": "legacy_v0.3/README.md",
+    "bytes": 2425
+  },
+  {
+    "path": "legacy_v0.3/schemas/README.md",
+    "bytes": 362
+  },
+  {
+    "path": "legacy_v0.3/schemas/architecture_species.schema.json",
+    "bytes": 1644
+  },
+  {
+    "path": "legacy_v0.3/schemas/observation.schema.json",
+    "bytes": 1569
+  },
+  {
+    "path": "legacy_v0.3/schemas/primitive.schema.json",
+    "bytes": 1172
+  },
+  {
+    "path": "legacy_v0.3/sources/Insect_Agent_Atlas文档详细总结.docx",
+    "bytes": 15510
+  },
+  {
+    "path": "migration/08_GPT6_UPGRADE_INSTRUCTIONS.md",
+    "bytes": 1870
+  },
+  {
+    "path": "migration/09_V04_TO_ARCHIVE_MIGRATION_MAP.md",
+    "bytes": 775
+  },
+  {
+    "path": "protocols/04_HUMAN_SEED_PROTOCOL.md",
+    "bytes": 1349
+  },
+  {
+    "path": "protocols/05_AGENT_READER_REACTION_PROTOCOL.md",
+    "bytes": 1131
+  },
+  {
+    "path": "protocols/06_ATTRIBUTION_PROVENANCE_VALUE_RETURN.md",
+    "bytes": 1849
+  },
+  {
+    "path": "protocols/07_GENERATIVITY_BENCHMARK_V2.md",
+    "bytes": 969
+  },
+  {
+    "path": "schemas/agent_reader_reaction.schema.json",
+    "bytes": 1235
+  },
+  {
+    "path": "schemas/human_seed.schema.json",
+    "bytes": 1069
+  },
+  {
+    "path": "schemas/provenance_edge.schema.json",
+    "bytes": 720
+  },
+  {
+    "path": "schemas/volume_manifest.schema.json",
+    "bytes": 1104
+  },
+  {
+    "path": "templates/14_NEW_VOLUME_TEMPLATE.md",
+    "bytes": 692
+  },
+  {
+    "path": "templates/15_READER_RESPONSE_TEMPLATE.json",
+    "bytes": 489
+  },
+  {
+    "path": "templates/16_GPT6_ONE_SHOT_HANDOFF_PROMPT.txt",
+    "bytes": 1299
+  }
+]

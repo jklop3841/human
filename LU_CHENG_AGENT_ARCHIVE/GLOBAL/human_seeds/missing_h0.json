@@ -1,0 +1,20 @@
+{
+  "status": "MISSING_ORIGINAL_MATERIAL",
+  "raw_human_seed": null,
+  "affected_legacy_ids": [
+    "ANT-001",
+    "BEE-001",
+    "TERMITE-001",
+    "LOCUST-001",
+    "MAYFLY-001",
+    "DRAGONFLY-001",
+    "MANTIS-001",
+    "COCKROACH-001",
+    "BUTTERFLY-001",
+    "BEETLE-001",
+    "ANTLION-001",
+    "APHID-001"
+  ],
+  "required_to_resolve": "Original dated chat, field note or voice transcript with human confirmation of source.",
+  "excluded_example": "The mayfly sentence in input_patch_v1.0/protocols/04_HUMAN_SEED_PROTOCOL.md is explicitly an example."
+}

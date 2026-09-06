@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "frozen_files": 136,
+  "patch_files": 41,
+  "human_governance_seeds": 2,
+  "projected_records": 71,
+  "classified_claims": 62,
+  "id_aliases": 133,
+  "provenance_edges": 370,
+  "full_volume_gate": {
+    "average": null,
+    "full_volume_eligible": false,
+    "status": "UNMEASURED",
+    "missing_dimensions": [
+      "structural_distance",
+      "anti_default_power",
+      "abstraction_clarity",
+      "composability",
+      "generativity",
+      "evidence_quality"
+    ]
+  }
+}

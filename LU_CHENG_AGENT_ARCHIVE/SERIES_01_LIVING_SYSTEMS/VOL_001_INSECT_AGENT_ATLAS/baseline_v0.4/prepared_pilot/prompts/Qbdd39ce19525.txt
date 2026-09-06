@@ -1,0 +1,132 @@
+Design exactly two distinct architectures for the target problem below. Any topology is allowed. Choose mechanisms because they satisfy the task constraints; unusual names are not a goal. Explain causal interactions and failure conditions concretely. Do not claim to have run an experiment. Do not browse, use external tools or consult other conversations. Use only the current task and any contextual reading included here. If no reading caused a specific design choice, leave prior_trace empty. Otherwise point only to the supplied record IDs and state the mechanism affected. Return a single JSON object matching the supplied schema, with no surrounding commentary.
+
+Target problem:
+Design an Agent system that handles changing task families with a maximum of four retained behavior capsules and at most two simultaneous tool calls. The arrival mix sometimes repeats an old family and sometimes introduces a new one. Workers may stop between tasks. Every task needs a checkable output receipt. Minimize total paid work, startup cost and state maintenance while preserving correctness. Assume a local sandbox with replayable input traces and no external irreversible actions. Specify how state is stored, selected, invalidated and reconstructed. You may choose centralized, distributed or hybrid control; justify it against the constraints.
+
+Output schema:
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "architectures"
+  ],
+  "properties": {
+    "architectures": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "architecture_id",
+          "name",
+          "components",
+          "state_store",
+          "decision_rules",
+          "messages",
+          "lifecycle",
+          "resource_budget",
+          "expected_advantage",
+          "failure_modes",
+          "falsification",
+          "sandbox",
+          "nearest_known",
+          "prior_trace"
+        ],
+        "properties": {
+          "architecture_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "components": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "state_store": {
+            "type": "string",
+            "minLength": 1
+          },
+          "decision_rules": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "messages": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "lifecycle": {
+            "type": "string",
+            "minLength": 1
+          },
+          "resource_budget": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expected_advantage": {
+            "type": "string",
+            "minLength": 1
+          },
+          "failure_modes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "falsification": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sandbox": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nearest_known": {
+            "type": "string",
+            "minLength": 1
+          },
+          "prior_trace": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "record_id",
+                "influence"
+              ],
+              "properties": {
+                "record_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "influence": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

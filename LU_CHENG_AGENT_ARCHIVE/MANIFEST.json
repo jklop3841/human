@@ -1,0 +1,23 @@
+{
+  "archive_id": "LCAA",
+  "title": "Lu Cheng Agent Archive",
+  "title_zh": "卢成 · 智能体博物志",
+  "version": "1.0.0-draft.1",
+  "status": "DRAFT",
+  "created_at": "2026-09-06",
+  "originator": "Lu Cheng",
+  "entrypoint": "README.md",
+  "founder_intent_lock": "GLOBAL/core/01_FOUNDER_INTENT_LOCK.md",
+  "volumes": [
+    "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/MANIFEST.json"
+  ],
+  "provenance": "PROVENANCE.jsonl",
+  "series_registry": "GLOBAL/series_registry.json",
+  "controlled_reader_runs": 0,
+  "full_volumes_published": 0,
+  "hpc_mean": null,
+  "volume_count_horizon": "100–300; capacity horizon, never a production KPI",
+  "rights_status": "LICENSE_DECISION_PENDING",
+  "github_target": "jklop3841/human",
+  "github_path": "LU_CHENG_AGENT_ARCHIVE"
+}

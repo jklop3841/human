@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "archive_id": {
+      "const": "LCAA"
+    },
+    "series_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "volume_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonical_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "legacy_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorship_class": {
+      "enum": [
+        "HUMAN_SEED",
+        "HUMAN_CURATED",
+        "MODEL_FORMALIZED",
+        "MODEL_DERIVED",
+        "EXTERNAL_SOURCE"
+      ]
+    },
+    "layer": {
+      "enum": [
+        "H0",
+        "H1",
+        "A1",
+        "A2",
+        "E",
+        "R"
+      ]
+    },
+    "epistemic_status": {
+      "enum": [
+        "OBSERVED",
+        "ABSTRACTED",
+        "HYPOTHESIZED",
+        "COMPOSED",
+        "TESTED",
+        "REJECTED"
+      ]
+    },
+    "human_seed_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "human_seed_status": {
+      "enum": [
+        "AVAILABLE",
+        "MISSING_RAW",
+        "NOT_ASSERTED"
+      ]
+    },
+    "legacy_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "legacy_line": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "payload_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "attribution_scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "payload": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "archive_id",
+    "series_id",
+    "volume_id",
+    "canonical_id",
+    "legacy_id",
+    "record_type",
+    "authorship_class",
+    "layer",
+    "epistemic_status",
+    "human_seed_refs",
+    "human_seed_status",
+    "legacy_ref",
+    "legacy_line",
+    "payload_sha256",
+    "attribution_scope",
+    "payload"
+  ]
+}

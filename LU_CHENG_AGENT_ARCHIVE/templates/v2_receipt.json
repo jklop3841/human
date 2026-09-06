@@ -1,0 +1,23 @@
+{
+  "run_id": null,
+  "mode": "v2_controlled",
+  "provider": null,
+  "model": null,
+  "version": null,
+  "identity_evidence": null,
+  "session_id": null,
+  "fresh_context": null,
+  "memory_disabled": null,
+  "prior_conversation_exposure": null,
+  "generation_timestamp": null,
+  "timestamp_source": null,
+  "synthetic_fixture": false,
+  "settings_fingerprint": null,
+  "input_bundle_sha256": null,
+  "browsing_policy": "equal_budget_search",
+  "query_count": null,
+  "page_open_count": null,
+  "search_audit_complete": null,
+  "architecture_sealed_before_reflection": null,
+  "architecture_sha256_before_reflection": null
+}

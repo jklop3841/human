@@ -1,0 +1,11 @@
+{
+  "status": "missing_not_reconstructed",
+  "items": [
+    "Original Insect Agent Atlas v0.2 full pattern records",
+    "Original PRIMITIVES.jsonl and COMPOSITIONS.jsonl",
+    "Original reader response schema",
+    "Full original model replies, input prompts and actual model versions",
+    "Full MDS Mesh architecture response with run context"
+  ],
+  "handling": "Keep provenance gaps; do not infer original wording from summary or recollection."
+}

@@ -1,0 +1,77 @@
+{
+  "scope": "Conservative exclusion registry across frozen Volume 001 and its registered stimulus ancestry; visible only to operator/reviewers.",
+  "domains": [
+    {
+      "canonical": "insects",
+      "aliases": [
+        "insect",
+        "ant",
+        "termite",
+        "mayfly",
+        "bee",
+        "昆虫",
+        "蚂蚁",
+        "蜉蝣"
+      ]
+    },
+    {
+      "canonical": "fungi",
+      "aliases": [
+        "fungal",
+        "mycelium",
+        "mycelial",
+        "菌丝",
+        "真菌"
+      ]
+    },
+    {
+      "canonical": "immune system",
+      "aliases": [
+        "immune",
+        "immunity",
+        "免疫"
+      ]
+    },
+    {
+      "canonical": "octopus",
+      "aliases": [
+        "octopod",
+        "cephalopod",
+        "章鱼",
+        "头足类"
+      ]
+    },
+    {
+      "canonical": "forests",
+      "aliases": [
+        "forest",
+        "seed bank",
+        "dormant seed",
+        "森林",
+        "种子库"
+      ]
+    },
+    {
+      "canonical": "human institutions",
+      "aliases": [
+        "institution",
+        "commons",
+        "governance",
+        "制度",
+        "公地"
+      ]
+    },
+    {
+      "canonical": "conventional computing analogues",
+      "aliases": [
+        "cache",
+        "blackboard",
+        "lease",
+        "LRU",
+        "缓存",
+        "黑板"
+      ]
+    }
+  ],
+  "semantic_check": "String matching is only a conservative flag. Reviewers must resolve synonyms, hierarchy and genuinely new mechanisms without post-hoc treatment-dependent rules."
+}

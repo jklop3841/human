@@ -1,0 +1,59 @@
+{
+  "benchmark_id": "BENCH-04-PILOT",
+  "version": "0.4",
+  "seed": 20260906,
+  "models": [
+    {
+      "slot": "M01",
+      "provider": null,
+      "model_id": null,
+      "surface": null,
+      "identity_evidence": null
+    },
+    {
+      "slot": "M02",
+      "provider": null,
+      "model_id": null,
+      "surface": null,
+      "identity_evidence": null
+    },
+    {
+      "slot": "M03",
+      "provider": null,
+      "model_id": null,
+      "surface": null,
+      "identity_evidence": null
+    }
+  ],
+  "task_ids": [
+    "T01",
+    "T02"
+  ],
+  "replicates": 3,
+  "conditions": [
+    "A",
+    "B",
+    "C"
+  ],
+  "architectures_per_call": 2,
+  "max_retries": 0,
+  "generating_context": "new isolated session for every request; memory, project files, previous results and browsing off",
+  "generation_settings": {
+    "temperature": null,
+    "top_p": null,
+    "seed": null,
+    "reasoning_effort": null,
+    "max_output_tokens": null,
+    "settings_note": "Null means unknown/uncontrolled, never a claimed value. Keep the same route and settings within each model."
+  },
+  "evaluation": {
+    "reviewers_required": 2,
+    "invalid_call_distance": 0,
+    "incomplete_campaign": "do not claim confirmatory efficacy",
+    "primary": "paired per-call mean task-validity-gated architecture distance B minus A",
+    "placebo_control": "B minus C",
+    "distribution": "Jensen-Shannon divergence over adjudicated categorical mechanism signatures within model and task",
+    "statistical_unit": "generation call; architectures within a call are not independent replicates",
+    "pilot_inference": "descriptive, no significance or general-capability claim; no automatic pass threshold from this small pilot"
+  }
+}
