@@ -1,5 +1,5 @@
 schema_version: "1.0"
-updated_at: "2026-07-30"
+updated_at: "2026-09-11"
 topics:
   meta:
     description: "Human 项目本身、认知保存、数字人格与 Agent 调用"
@@ -13,6 +13,16 @@ topics:
       - id: HUMAN-INFLUENCE-002
         title: "LIAR人类影响框架：七驱力、谎言与仪式化行为"
         path: worldview/influence/HUMAN-INFLUENCE-002.md
+        status: active
+      - id: HUMAN-AI-001
+        title: "人类是高权限低监管接口：Agent时代的人类风险面"
+        path: worldview/ai/HUMAN-AI-001.md
+        book: books/human-interface-risk/README.md
+        status: active
+      - id: HUMAN-BOOK-001
+        title: "人类及其人类社会的弱点——高权限低监管接口"
+        path: books/human-interface-risk/README.md
+        full_text: books/human-interface-risk/BOOK.md
         status: active
   influence:
     description: "人类影响、说服、认知轨迹、行为生成与伦理边界"
@@ -30,6 +40,10 @@ topics:
         method: reasoning/HUMAN-METHOD-002.md
         skill: skills/audit-deceptive-influence/SKILL.md
         research: research/2026-07-liar-influence-landscape.md
+        status: active
+      - id: HUMAN-AI-001
+        title: "人类是高权限低监管接口：Agent时代的人类风险面"
+        path: worldview/ai/HUMAN-AI-001.md
         status: active
   reality:
     description: "关系、结构、场、路径、暗信息、现实摩擦与系统维护"
@@ -72,6 +86,14 @@ topics:
         protocol: protocols/pirs/PIRS-0.1.md
         research: research/2026-07-agent-capital-landscape.md
         status: active
+      - id: HUMAN-AI-001
+        title: "人类是高权限低监管接口：Agent时代的人类风险面"
+        path: worldview/ai/HUMAN-AI-001.md
+        book: books/human-interface-risk/README.md
+        load_protocol: agent/HUMAN_INTERFACE_RISK_LOAD.md
+        cases: books/human-interface-risk/casebook.yaml
+        controls: books/human-interface-risk/control-matrix.yaml
+        status: active
   china:
     description: "中国社会、制度、文化、商业与现实生活"
     entries: []
@@ -85,9 +107,18 @@ topics:
         protocol: protocols/pirs/PIRS-0.1.md
         skill: skills/evaluate-agent-capital/SKILL.md
         status: active
+      - id: HUMAN-AI-001
+        title: "人类是高权限低监管接口：Agent时代的人类风险面"
+        path: worldview/ai/HUMAN-AI-001.md
+        book: books/human-interface-risk/README.md
+        status: active
   state:
     description: "国家、权力、战争、秩序与治理"
-    entries: []
+    entries:
+      - id: HUMAN-AI-001
+        title: "人类是高权限低监管接口：Agent时代的人类风险面"
+        path: worldview/ai/HUMAN-AI-001.md
+        status: active
   gender:
     description: "男性、女性、婚恋、家庭与性别关系"
     entries: []
@@ -100,12 +131,19 @@ topics:
       - id: HUMAN-INFLUENCE-002
         path: worldview/influence/HUMAN-INFLUENCE-002.md
         status: active
+      - id: HUMAN-AI-001
+        path: worldview/ai/HUMAN-AI-001.md
+        status: active
   ethics:
     description: "责任、伤害、公平、自由与边界"
     entries:
       - id: HUMAN-INFLUENCE-002
         path: worldview/influence/HUMAN-INFLUENCE-002.md
         method: reasoning/HUMAN-METHOD-002.md
+        status: active
+      - id: HUMAN-AI-001
+        path: worldview/ai/HUMAN-AI-001.md
+        book: books/human-interface-risk/README.md
         status: active
   predictions:
     description: "带时间窗口和判定规则的未来判断"
