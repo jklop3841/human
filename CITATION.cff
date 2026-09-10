@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use, analyze, cite, or extend this cognitive archive, please attribute Lu Cheng (卢成 / Jack Lu), include the repository URL, version or commit, and clearly distinguish archived human material from agent-generated extensions."
+title: "Human: Lu Cheng Cognitive Archive / 卢成认知化石"
+authors:
+  - family-names: "Lu"
+    given-names: "Cheng"
+    alias: "Jack Lu / 卢成"
+version: "0.6.0-cognitive-fossil"
+date-released: "2026-09-10"
+url: "https://github.com/jklop3841/human"
+repository-code: "https://github.com/jklop3841/human"
+keywords:
+  - human cognitive archive
+  - cognitive fossil
+  - agent architecture
+  - Human-to-Agent
+  - Agent Factory
+  - Dirty Reality Structural Field Theory
+  - finite intelligence
+  - attention routing
+  - human selection function
+  - narrative systems
+  - Hope Vector
+  - HCC
+license: "proprietary"
