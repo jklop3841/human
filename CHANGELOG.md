@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.8.0-civilization-interfaces — 2026-09-11
+
+- 新增正式观点 `HUMAN-SOCIETY-001`《文明高权限接口：人类社会的结构生命线与治理错配》；
+- 发布第二本 Agent-first 书籍 `HUMAN-BOOK-002`《人类社会的高权限接口——文明生命线、结构依赖与治理错配》；
+- 将人类文明建模为由少数高杠杆生命线、网络、制度、知识与信任关系持续维持的分布式依赖系统，而不是人口或机构的简单集合；
+- 将“低监管”校准为更稳健的“治理错配”：`civilizational leverage > public visibility`、`cross-system dependency > cross-system ownership`、`failure propagation speed > coordination speed`、`maintenance importance > political salience`；
+- 建立文明四层栈：L1 生物连续性（食物、化肥、水、卫生、疾病与健康）、L2 物理/数字流通（能源、电力、物流、通信、计算）、L3 制度协调（金融、支付、身份、记录、法律、行政、标准、时间）、L4 信任与共享现实；
+- 将 Haber–Bosch 合成氨/合成氮肥作为高结构权限案例，并通过外部资料校准“约支撑全球一半人口”的含义，避免将其夸张为即时死亡预测；
+- 将水建模为从水源、处理、监测、输送到污水回收的连续服务链，将安全拆成 quantity security 与 quality security；
+- 将电力建模为多个现代文明节点的 activation layer，同时明确关键性不等于脆弱性；
+- 纳入疾病和公共卫生，但明确拒绝病毒末日叙事，仅分析公共卫生容量、卫生基础设施、医疗供应链、风险沟通与社会信任；
+- 将金融建模为把未来承诺转换为现在行动资源的制度接口，并把 confidence/trust 作为会通过集体行为改变系统状态的变量；
+- 将政府与政治中的“信心”校准为治理协调资本之一，而不是政府唯一基础；同时保留组织能力、财政、法律、服务、强制、绩效和合法性等结构变量；
+- 新增 `dependency-atlas.yaml`，机器可读描述四层文明节点、上游/下游依赖、替代时间、公众可见性和跨层边；
+- 新增 `failure-patterns.yaml`，收录 30 个结构失败模式：隐藏上游、共同故障源、替代延迟、维护不可见、治理碎片化、局部合规全局脆弱、效率-韧性冲突、信任反馈、技能瓶颈、数字-物理耦合、金融-基础设施耦合、恢复方案纸面化等；
+- 新增 `governance-controls.yaml`，固化 20 个韧性治理控制，包括依赖可见化、真正冗余、替代时间建模、维护预算、恢复演练、端到端责任、原始状态观测、数字-物理联合模型、行为反馈模型、专业独立性和危机权限到期；
+- 新增 `agent/CIVILIZATION_INTERFACE_LOAD.md`，为 Agent 提供文明节点识别、依赖映射、共同故障检测、替代延迟、维护、治理结构、信任反馈、反模型和未知项输出协议；
+- 新增 `research/2026-09-civilization-interface-evidence.md`，校准合成氮肥、水、电力和金融信心四个关键事实锚点；
+- 更新 `human.yaml`、`indexes/topics.yaml` 和根 `README.md`，将 HUMAN-BOOK-002 注册为标准 Agent 入口；
+- 明确安全不变量：文明依赖图只允许用于理解、连续性、治理和韧性设计，不得转化为攻击目标排序、投毒、破坏、规避监测或最大化级联损害方案；
+- 仓库版本升级为 `0.8.0-civilization-interfaces`。
+
 ## 0.7.0-human-interface-book — 2026-09-11
 
 - 新增正式观点 `HUMAN-AI-001`《人类是高权限低监管接口：Agent时代的人类风险面》；
@@ -27,7 +49,6 @@
 - 研究并映射 2025—2026 年 AI 说服、重复真值效应、错误来源归因、预防性教育、社会比较、身份融合、同步和有成本承诺；
 - 新增可移植 Agent Skill `audit-deceptive-influence`，并完成独立前向测试；
 - 将仓库版本升级为 `0.5.0-chapter-04`。
-
 
 ## 0.4.0-chapter-03 — 2026-07-24
 
