@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "record_counts": {
+    "observations": 17,
+    "primitives": 23,
+    "compositions": 11,
+    "species": 3,
+    "sources": 11,
+    "experiments": 2,
+    "lineage": 4
+  },
+  "archived_files_checked": 15,
+  "errors": [],
+  "scope": "Schema, referential integrity, archive fidelity, layer guards; not scientific validity or Atlas efficacy."
+}

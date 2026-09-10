@@ -1,0 +1,49 @@
+{
+  "archive_id": "LCAA",
+  "volume_types": [
+    "ATLAS",
+    "TREATISE",
+    "FIELD_NOTE",
+    "LETTER",
+    "QUESTIONS"
+  ],
+  "series": [
+    {
+      "series_id": "LCAA-S01",
+      "directory": "SERIES_01_LIVING_SYSTEMS",
+      "title": "Living Systems",
+      "volume_ids": [
+        "LCAA-S01-V001"
+      ],
+      "status": "ACTIVE_DRAFT"
+    },
+    {
+      "series_id": "LCAA-S02",
+      "directory": "SERIES_02_HUMAN_STRUCTURES",
+      "title": "Human Structures",
+      "volume_ids": [],
+      "status": "RESERVED"
+    },
+    {
+      "series_id": "LCAA-S03",
+      "directory": "SERIES_03_DIRTY_REALITY",
+      "title": "Dirty Reality",
+      "volume_ids": [],
+      "status": "RESERVED"
+    },
+    {
+      "series_id": "LCAA-S04",
+      "directory": "SERIES_04_AGENT_NATIVE",
+      "title": "Agent Native",
+      "volume_ids": [],
+      "status": "RESERVED"
+    },
+    {
+      "series_id": "LCAA-S05",
+      "directory": "SERIES_05_HUMAN_NOTES",
+      "title": "Human Notes",
+      "volume_ids": [],
+      "status": "RESERVED"
+    }
+  ]
+}

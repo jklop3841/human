@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "experiment_id": {
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "generativity",
+        "synthetic_cost_model",
+        "sandbox"
+      ]
+    },
+    "status": {
+      "enum": [
+        "PLANNED",
+        "PREPARED_NOT_RUN",
+        "RUNNING",
+        "COMPLETED",
+        "REJECTED"
+      ]
+    },
+    "epistemic_status": {
+      "enum": [
+        "OBSERVED",
+        "ABSTRACTED",
+        "HYPOTHESIZED",
+        "COMPOSED",
+        "TESTED",
+        "REJECTED"
+      ]
+    },
+    "hypothesis": {
+      "type": "string"
+    },
+    "protocol_ref": {
+      "type": "string"
+    },
+    "result_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "real_model_calls": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "experiment_id",
+    "kind",
+    "status",
+    "epistemic_status",
+    "hypothesis",
+    "protocol_ref",
+    "result_ref",
+    "real_model_calls"
+  ]
+}

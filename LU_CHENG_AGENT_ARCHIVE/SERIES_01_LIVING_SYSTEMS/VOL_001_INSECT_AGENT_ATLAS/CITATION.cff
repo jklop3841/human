@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Cite the relevant volume, record ID, version and contribution scope when materially used."
+title: "Insect Agent Atlas — LCAA-S01-V001"
+type: dataset
+authors:
+  - name: "Lu Cheng (Jack Lu)"
+url: "https://agentarchitect.me/"
+repository-code: "https://github.com/jklop3841/human"
+version: "1.0.0-draft.1"
+date-released: "2026-09-06"
+abstract: "A provenance-aware human-to-agent research archive. Volume 001 preserves Insect Agent Atlas v0.4; generativity remains unmeasured."

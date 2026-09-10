@@ -1,0 +1,22 @@
+{
+  "primitive_ids": [
+    "budgeted_edge_remodeling",
+    "trigger_independent_retention",
+    "local_program_autonomy",
+    "dormant_reserve",
+    "endogenous_sanction",
+    "environmental_memory",
+    "decay",
+    "event_trigger",
+    "role_separation",
+    "distributed_exploration"
+  ],
+  "B_words": 365,
+  "C_words": 365,
+  "token_counts": null,
+  "length_matching": "exact whitespace word count; actual model-token match unverified",
+  "selection_status": "frozen before any external benchmark result",
+  "species_and_seed_examples_included": false,
+  "placebo_status": "Hypothetical descriptive catalogue prose; weak in mechanisms. Not a shuffled set of false causal claims.",
+  "remaining_confound": "B has more design-relevant constraints and compact record structure; this pilot estimates the package effect, not unique biological novelty."
+}

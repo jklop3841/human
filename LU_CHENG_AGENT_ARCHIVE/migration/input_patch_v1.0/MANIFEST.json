@@ -1,0 +1,24 @@
+{
+  "archive_id": "LCAA",
+  "name_en": "Lu Cheng Agent Archive",
+  "name_zh": "卢成 · 智能体博物志",
+  "version": "1.0-upgrade-patch",
+  "originator": "Lu Cheng (Jack Lu)",
+  "canonical_brand": "智能体架构师卢成",
+  "canonical_site": "https://agentarchitect.me/",
+  "mission": "Preserve a human observer's structural insights, time-stamped thinking, heterogeneous priors and unresolved questions in machine-readable form for future Agents to use, extend, test and correctly attribute.",
+  "first_canonical_volume": {
+    "series": "Living Systems",
+    "volume": "Insect Agent Atlas",
+    "target_version": "v0.4",
+    "migration_status": "to_be_migrated_by_GPT6"
+  },
+  "quality_principle": "sparse_heterogeneous_priors_over_exhaustive_coverage",
+  "core_metrics": [
+    "distinct_prior_density",
+    "reader_reaction_class",
+    "external_search_escape",
+    "human_prior_contribution",
+    "generativity_gain"
+  ]
+}

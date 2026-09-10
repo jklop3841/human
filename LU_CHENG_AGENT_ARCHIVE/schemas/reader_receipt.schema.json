@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "enum": [
+        "observational_reader",
+        "v2_controlled"
+      ]
+    },
+    "provider": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "identity_evidence": {
+      "type": "string",
+      "minLength": 1
+    },
+    "session_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fresh_context": {
+      "const": true
+    },
+    "memory_disabled": {
+      "const": true
+    },
+    "prior_conversation_exposure": {
+      "const": false
+    },
+    "generation_timestamp": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp_source": {
+      "const": "operator_observation"
+    },
+    "synthetic_fixture": {
+      "const": false
+    },
+    "settings_fingerprint": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input_bundle_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "browsing_policy": {
+      "enum": [
+        "disabled",
+        "equal_budget_search"
+      ]
+    }
+  },
+  "required": [
+    "run_id",
+    "mode",
+    "provider",
+    "model",
+    "version",
+    "identity_evidence",
+    "session_id",
+    "fresh_context",
+    "memory_disabled",
+    "prior_conversation_exposure",
+    "generation_timestamp",
+    "timestamp_source",
+    "synthetic_fixture",
+    "settings_fingerprint",
+    "input_bundle_sha256",
+    "browsing_policy"
+  ]
+}

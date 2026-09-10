@@ -1,0 +1,1267 @@
+{
+  "archive_version": "1.0.0-draft.1",
+  "hosting_repository": "jklop3841/human",
+  "repository_files_preexisting_modified": [],
+  "baseline_original_files_modified": [],
+  "frozen_files_preserved": 136,
+  "upgrade_input_files_preserved": 41,
+  "file_count": 280,
+  "files": [
+    {
+      "path": ".gitignore",
+      "action": "ADDED"
+    },
+    {
+      "path": "AGENTS.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "ARTIFACT_SHA256.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "AUTHOR.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "CITATION.cff",
+      "action": "ADDED"
+    },
+    {
+      "path": "COMMERCIAL_LICENSE.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "CONTRIBUTORS.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/benchmark_results/summary.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/brand/11_BRAND_CANONICAL_IDENTITY.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/brand/AUTHOR.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/brand/CITATION.cff",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/brand/identity.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/citation_graph/derivative_works.jsonl",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/commercial/12_OPEN_CORE_VALUE_RETURN_MODEL.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/commercial/13_REPUTATION_FLYWHEEL.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/commercial_interfaces/publishing_layers.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/core/01_FOUNDER_INTENT_LOCK.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/core/02_MOTHER_PROJECT_ARCHITECTURE.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/core/03_SPARSE_HETEROGENEOUS_PRIORS.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/core/10_100_300_VOLUME_STRATEGY.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/human_seeds/H0_LOCK.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/human_seeds/README.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/human_seeds/missing_h0.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/human_seeds/raw/LC-SEED-2026-00001.txt",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/human_seeds/raw/LC-SEED-2026-00002.txt",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/human_seeds/records.jsonl",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/protocols/04_HUMAN_SEED_PROTOCOL.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/protocols/05_AGENT_READER_REACTION_PROTOCOL.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/protocols/06_ATTRIBUTION_PROVENANCE_VALUE_RETURN.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/protocols/07_GENERATIVITY_BENCHMARK_V2.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/provenance/nodes.jsonl",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/reader_reactions/accepted.jsonl",
+      "action": "ADDED"
+    },
+    {
+      "path": "GLOBAL/series_registry.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "LICENSE",
+      "action": "ADDED"
+    },
+    {
+      "path": "MANIFEST.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "NEXT_EXECUTOR.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "PROVENANCE.jsonl",
+      "action": "ADDED"
+    },
+    {
+      "path": "README.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/AUTHOR.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/CHANGELOG.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/CITATION.cff",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/COMMERCIAL_LICENSE.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/CONTRIBUTORS.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/LICENSE",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/MANIFEST.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/PROVENANCE.jsonl",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/README.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/.gitignore",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/.gitignore"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/05_GPT6_MASTER_PROMPT.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/05_GPT6_MASTER_PROMPT.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/AGENTS.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/AGENTS.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/ARTIFACT_SHA256.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/ARTIFACT_SHA256.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/MANIFEST.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/MANIFEST.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/README.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/README.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/intake_manifest.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/intake_manifest.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/missing_materials.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/missing_materials.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/v0.3/00_PROJECT_CHARTER.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/v0.3/00_PROJECT_CHARTER.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/v0.3/01_CURRENT_STATE_AND_FINDINGS.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/v0.3/01_CURRENT_STATE_AND_FINDINGS.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/v0.3/02_COMPILATION_METHOD.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/v0.3/02_COMPILATION_METHOD.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/v0.3/03_BLIND_READER_BENCHMARK.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/v0.3/03_BLIND_READER_BENCHMARK.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/v0.3/04_WORLD_DOMAIN_BACKLOG.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/v0.3/04_WORLD_DOMAIN_BACKLOG.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/v0.3/05_GPT6_MASTER_PROMPT.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/v0.3/05_GPT6_MASTER_PROMPT.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/v0.3/06_NEXT_PHASE_ROADMAP.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/v0.3/06_NEXT_PHASE_ROADMAP.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/v0.3/07_HANDOFF_NOTE_TO_FUTURE_AGENTS.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/v0.3/07_HANDOFF_NOTE_TO_FUTURE_AGENTS.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/v0.3/MANIFEST.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/v0.3/MANIFEST.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/v0.3/README.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/v0.3/README.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/v0.3/schemas/README.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/v0.3/schemas/README.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/v0.3/schemas/architecture_species.schema.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/v0.3/schemas/architecture_species.schema.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/v0.3/schemas/observation.schema.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/v0.3/schemas/observation.schema.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/v0.3/schemas/primitive.schema.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/v0.3/schemas/primitive.schema.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/archive/v0.3/sources/Insect_Agent_Atlas文档详细总结.docx",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/archive/v0.3/sources/Insect_Agent_Atlas文档详细总结.docx"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/benchmark/RUBRIC.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/benchmark/RUBRIC.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/benchmark/common_prompt.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/benchmark/common_prompt.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/benchmark/config.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/benchmark/config.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/benchmark/materials/A.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/benchmark/materials/A.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/benchmark/materials/B.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/benchmark/materials/B.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/benchmark/materials/C.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/benchmark/materials/C.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/benchmark/materials/selection.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/benchmark/materials/selection.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/benchmark/response.schema.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/benchmark/response.schema.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/benchmark/tasks.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/benchmark/tasks.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/corpus/compositions.jsonl",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/corpus/compositions.jsonl"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/corpus/domain_evidence_plan.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/corpus/domain_evidence_plan.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/corpus/experiments.jsonl",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/corpus/experiments.jsonl"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/corpus/lineage.jsonl",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/corpus/lineage.jsonl"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/corpus/observations.jsonl",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/corpus/observations.jsonl"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/corpus/primitives.jsonl",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/corpus/primitives.jsonl"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/corpus/sources.jsonl",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/corpus/sources.jsonl"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/corpus/species.jsonl",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/corpus/species.jsonl"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/dist/INDEX.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/dist/INDEX.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/dist/agent_priors.jsonl",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/dist/agent_priors.jsonl"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/docs/00_TAKEOVER_AUDIT.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/docs/00_TAKEOVER_AUDIT.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/docs/01_V04_PROTOCOL.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/docs/01_V04_PROTOCOL.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/docs/02_SCHEMA_COMPATIBILITY.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/docs/02_SCHEMA_COMPATIBILITY.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/docs/03_DOMAIN_EVIDENCE_PLAN.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/docs/03_DOMAIN_EVIDENCE_PLAN.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/docs/04_SPECIES_REVIEW.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/docs/04_SPECIES_REVIEW.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/docs/05_BENCHMARK_PROTOCOL.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/docs/05_BENCHMARK_PROTOCOL.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/docs/06_PATCH_PLAN.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/docs/06_PATCH_PLAN.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/docs/07_RUN_REPORT.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/docs/07_RUN_REPORT.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/experiments/cost_config.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/experiments/cost_config.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/FIRST_THREE_CALLS.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/FIRST_THREE_CALLS.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/analysis/paired_blocks.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/analysis/paired_blocks.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/analysis/summary.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/analysis/summary.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q0463a3b6cfc4.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q0463a3b6cfc4.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q04e54106e72d.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q04e54106e72d.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q054b5366da8f.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q054b5366da8f.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q0607d4842652.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q0607d4842652.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q0fead5022f7b.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q0fead5022f7b.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q102201216734.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q102201216734.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q11533723184f.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q11533723184f.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q232283ca909c.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q232283ca909c.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q31cfc26819a9.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q31cfc26819a9.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q3681f4169dc0.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q3681f4169dc0.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q3ad3e2cdf835.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q3ad3e2cdf835.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q508dd90676c7.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q508dd90676c7.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q50d351ec8471.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q50d351ec8471.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q535351818e81.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q535351818e81.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q5671ca847e82.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q5671ca847e82.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q677657ef23e2.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q677657ef23e2.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q690a083e1484.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q690a083e1484.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q7318a19e6ca5.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q7318a19e6ca5.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q73585b4c7247.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q73585b4c7247.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q73f86e9d7856.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q73f86e9d7856.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q74ddbcf71c38.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q74ddbcf71c38.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q784ae1b6dcb8.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q784ae1b6dcb8.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q7ac2074ed2ee.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q7ac2074ed2ee.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q7bdf0701275e.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q7bdf0701275e.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q7f4ef0e9944d.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q7f4ef0e9944d.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q8487c13494d5.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q8487c13494d5.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q869bb82c91e9.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q869bb82c91e9.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q8854ac7d14f3.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q8854ac7d14f3.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q89db07f390c8.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q89db07f390c8.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q8aa3e2eb7b15.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q8aa3e2eb7b15.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q939eff7d8bcc.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q939eff7d8bcc.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q971f656143a4.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q971f656143a4.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Q9dad99ac1d36.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Q9dad99ac1d36.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qa23430994804.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qa23430994804.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qa84d68b9b1de.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qa84d68b9b1de.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qb0bfb63bfc19.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qb0bfb63bfc19.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qb2e5c5053cff.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qb2e5c5053cff.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qb926fe7c53ab.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qb926fe7c53ab.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qb9ba5b0fdbce.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qb9ba5b0fdbce.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qbc0498e065b9.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qbc0498e065b9.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qbc46c862dd8c.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qbc46c862dd8c.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qbdd39ce19525.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qbdd39ce19525.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qbe85e9e58f6d.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qbe85e9e58f6d.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qc279b8bf09a1.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qc279b8bf09a1.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qd0e579ce2d93.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qd0e579ce2d93.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qd2043a85015d.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qd2043a85015d.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qd99d77901ae9.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qd99d77901ae9.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qe65b3bc47f90.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qe65b3bc47f90.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qf1e712a604b7.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qf1e712a604b7.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qf3429b7987b0.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qf3429b7987b0.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qf36acf7eb1d6.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qf36acf7eb1d6.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qf716c5f47197.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qf716c5f47197.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qf922dc4a1cdf.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qf922dc4a1cdf.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/prompts/Qfc199af8d52d.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/prompts/Qfc199af8d52d.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/runner_only/manifest.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/runner_only/manifest.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/runner_only/operator_schedule.csv",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/runner_only/operator_schedule.csv"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/runner_only/response.schema.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/runner_only/response.schema.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/prepared_pilot/runner_only/tasks.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/prepared_pilot/runner_only/tasks.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/reports/compression.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/reports/compression.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/reports/cost_sandbox_raw.jsonl",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/reports/cost_sandbox_raw.jsonl"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/reports/cost_sandbox_summary.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/reports/cost_sandbox_summary.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/reports/generativity_status.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/reports/generativity_status.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/reports/test_run.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/reports/test_run.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/reports/test_summary.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/reports/test_summary.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/reports/validation.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/reports/validation.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/requirements.txt",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/requirements.txt"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/schemas/architecture_species.schema.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/schemas/architecture_species.schema.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/schemas/composition.schema.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/schemas/composition.schema.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/schemas/experiment.schema.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/schemas/experiment.schema.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/schemas/lineage.schema.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/schemas/lineage.schema.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/schemas/observation.schema.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/schemas/observation.schema.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/schemas/primitive.schema.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/schemas/primitive.schema.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/schemas/source.schema.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/schemas/source.schema.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/schemas/v0.3/architecture_species.schema.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/schemas/v0.3/architecture_species.schema.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/schemas/v0.3/observation.schema.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/schemas/v0.3/observation.schema.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/schemas/v0.3/primitive.schema.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/schemas/v0.3/primitive.schema.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/templates/human_observation.md",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/templates/human_observation.md"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/templates/session_metadata.json",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/templates/session_metadata.json"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/tests/test_integrity.py",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/tests/test_integrity.py"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/tools/atlas.py",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/tools/atlas.py"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/tools/benchmark.py",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/tools/benchmark.py"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/baseline_v0.4/tools/cost_sandbox.py",
+      "action": "PRESERVED_REPARENTED",
+      "old_path": "Agent_Atlas_v0.4/tools/cost_sandbox.py"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/claims.jsonl",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/quality_gate.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS/records.jsonl",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_02_HUMAN_STRUCTURES/README.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_03_DIRTY_REALITY/README.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_04_AGENT_NATIVE/README.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "SERIES_05_HUMAN_NOTES/README.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "benchmark_v2/README.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "benchmark_v2/common_prompt.txt",
+      "action": "ADDED"
+    },
+    {
+      "path": "benchmark_v2/config.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "benchmark_v2/materials/A.txt",
+      "action": "ADDED"
+    },
+    {
+      "path": "benchmark_v2/materials/B.txt",
+      "action": "ADDED"
+    },
+    {
+      "path": "benchmark_v2/materials/C.txt",
+      "action": "ADDED"
+    },
+    {
+      "path": "benchmark_v2/reflection_prompt.txt",
+      "action": "ADDED"
+    },
+    {
+      "path": "benchmark_v2/response.schema.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "benchmark_v2/supplied_domains.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "benchmark_v2/tasks.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "migration/FILE_CHANGES.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "migration/FREEZE.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "migration/MIGRATION_MAP.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "migration/PATCH_INTAKE.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "migration/TARGET_TREE.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "migration/UNRESOLVED_DECISIONS.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "migration/id_aliases.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "migration/input_patch_v1.0/00_READ_FIRST.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/INVENTORY.json",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/MANIFEST.json",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/brand/11_BRAND_CANONICAL_IDENTITY.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/brand/AUTHOR.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/brand/CITATION.cff",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/commercial/12_OPEN_CORE_VALUE_RETURN_MODEL.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/commercial/13_REPUTATION_FLYWHEEL.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/core/01_FOUNDER_INTENT_LOCK.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/core/02_MOTHER_PROJECT_ARCHITECTURE.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/core/03_SPARSE_HETEROGENEOUS_PRIORS.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/core/10_100_300_VOLUME_STRATEGY.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/examples/17_FUTURE_AGENT_REACTION_EXAMPLE.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/legacy_v0.3/00_PROJECT_CHARTER.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/legacy_v0.3/01_CURRENT_STATE_AND_FINDINGS.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/legacy_v0.3/02_COMPILATION_METHOD.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/legacy_v0.3/03_BLIND_READER_BENCHMARK.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/legacy_v0.3/04_WORLD_DOMAIN_BACKLOG.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/legacy_v0.3/05_GPT6_MASTER_PROMPT.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/legacy_v0.3/06_NEXT_PHASE_ROADMAP.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/legacy_v0.3/07_HANDOFF_NOTE_TO_FUTURE_AGENTS.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/legacy_v0.3/MANIFEST.json",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/legacy_v0.3/README.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/legacy_v0.3/schemas/README.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/legacy_v0.3/schemas/architecture_species.schema.json",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/legacy_v0.3/schemas/observation.schema.json",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/legacy_v0.3/schemas/primitive.schema.json",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/legacy_v0.3/sources/Insect_Agent_Atlas文档详细总结.docx",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/migration/08_GPT6_UPGRADE_INSTRUCTIONS.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/migration/09_V04_TO_ARCHIVE_MIGRATION_MAP.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/protocols/04_HUMAN_SEED_PROTOCOL.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/protocols/05_AGENT_READER_REACTION_PROTOCOL.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/protocols/06_ATTRIBUTION_PROVENANCE_VALUE_RETURN.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/protocols/07_GENERATIVITY_BENCHMARK_V2.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/schemas/agent_reader_reaction.schema.json",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/schemas/human_seed.schema.json",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/schemas/provenance_edge.schema.json",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/schemas/volume_manifest.schema.json",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/templates/14_NEW_VOLUME_TEMPLATE.md",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/templates/15_READER_RESPONSE_TEMPLATE.json",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/input_patch_v1.0/templates/16_GPT6_ONE_SHOT_HANDOFF_PROMPT.txt",
+      "action": "PRESERVED_UPGRADE_INPUT"
+    },
+    {
+      "path": "migration/samples/insect_records.jsonl",
+      "action": "ADDED"
+    },
+    {
+      "path": "reports/VALIDATION_REPORT.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "reports/apply_upgrade.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "reports/legacy_tests.txt",
+      "action": "ADDED"
+    },
+    {
+      "path": "reports/migration_tests.txt",
+      "action": "ADDED"
+    },
+    {
+      "path": "reports/validation.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "requirements.txt",
+      "action": "ADDED"
+    },
+    {
+      "path": "schemas/agent_reader_reaction.schema.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "schemas/archive_record.schema.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "schemas/claim.schema.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "schemas/human_seed.schema.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "schemas/patch_v1.0/agent_reader_reaction.schema.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "schemas/patch_v1.0/human_seed.schema.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "schemas/patch_v1.0/provenance_edge.schema.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "schemas/patch_v1.0/volume_manifest.schema.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "schemas/provenance_edge.schema.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "schemas/quality_gate.schema.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "schemas/reader_receipt.schema.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "schemas/volume_manifest.schema.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "templates/14_NEW_VOLUME_TEMPLATE.md",
+      "action": "ADDED"
+    },
+    {
+      "path": "templates/16_GPT6_ONE_SHOT_HANDOFF_PROMPT.txt",
+      "action": "ADDED"
+    },
+    {
+      "path": "templates/reader_receipt.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "templates/reader_response.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "templates/v2_receipt.json",
+      "action": "ADDED"
+    },
+    {
+      "path": "tests/test_migration.py",
+      "action": "ADDED"
+    },
+    {
+      "path": "tools/apply_upgrade.py",
+      "action": "ADDED"
+    },
+    {
+      "path": "tools/archive.py",
+      "action": "ADDED"
+    },
+    {
+      "path": "tools/benchmark_v2.py",
+      "action": "ADDED"
+    },
+    {
+      "path": "tools/migrate.py",
+      "action": "ADDED"
+    },
+    {
+      "path": "tools/reader.py",
+      "action": "ADDED"
+    },
+    {
+      "path": "tools/release.py",
+      "action": "ADDED"
+    }
+  ]
+}

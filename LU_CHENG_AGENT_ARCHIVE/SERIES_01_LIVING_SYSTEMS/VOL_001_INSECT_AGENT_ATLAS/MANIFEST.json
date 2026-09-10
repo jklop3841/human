@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "archive_id": "LCAA",
+  "series_id": "LCAA-S01",
+  "volume_id": "LCAA-S01-V001",
+  "title": "Insect Agent Atlas",
+  "volume_type": "ATLAS",
+  "originator": "Lu Cheng",
+  "created_at": "2026-09-06",
+  "status": "DRAFT",
+  "version": "1.0.0-draft.1",
+  "content_version": "0.4.0",
+  "canonical_url": "https://agentarchitect.me/",
+  "canonical_url_scope": "Originator identity, not a verified volume landing page",
+  "role": "First demonstration candidate of heterogeneous-prior intervention",
+  "human_seed_refs": [
+    "LC-SEED-2026-00001",
+    "LC-SEED-2026-00002"
+  ],
+  "seed_scope": "governance only; biological H0 missing",
+  "baseline": "baseline_v0.4",
+  "record_overlay": "records.jsonl",
+  "quality_gate": "quality_gate.json",
+  "full_volume_published": false,
+  "external_reader_runs": 0,
+  "acceptance_status": "NOT_YET_MEASURED",
+  "scope_note": "The frozen v0.4 already includes five cross-domain reading notes. Preserve them; do not manufacture separate future volumes from these notes."
+}

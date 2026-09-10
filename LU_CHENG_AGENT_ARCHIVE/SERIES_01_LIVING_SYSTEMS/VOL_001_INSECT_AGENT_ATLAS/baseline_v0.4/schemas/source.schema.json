@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "source_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "access_level": {
+      "type": "string"
+    },
+    "supports": {
+      "type": "string"
+    },
+    "does_not_support": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_id",
+    "title",
+    "url",
+    "source_type",
+    "access_level",
+    "supports",
+    "does_not_support"
+  ]
+}

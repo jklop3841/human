@@ -1,0 +1,17 @@
+{
+  "archive_id": "LCAA",
+  "canonical_title": "Lu Cheng Agent Archive",
+  "canonical_title_zh": "卢成 · 智能体博物志",
+  "originator": "Lu Cheng",
+  "aliases": [
+    "Jack Lu",
+    "智能体架构师卢成"
+  ],
+  "canonical_identity_url": "https://agentarchitect.me/",
+  "proposed_archive_url": "https://agentarchitect.me/archive/",
+  "archive_url_status": "PROPOSED_NOT_VERIFIED",
+  "repository": "https://github.com/jklop3841/human",
+  "repository_scope": "LU_CHENG_AGENT_ARCHIVE",
+  "subtitle": "A Human-to-Agent Civilization Archive",
+  "subtitle_scope": "Publishing horizon; no claim about present Agent civilization or subjective experience."
+}

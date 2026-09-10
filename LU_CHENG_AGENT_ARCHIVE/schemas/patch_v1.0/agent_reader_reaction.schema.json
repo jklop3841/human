@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Reader Reaction",
+  "type": "object",
+  "required": [
+    "run_id",
+    "model",
+    "reaction_class",
+    "prior_changed",
+    "hpc_score"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "reaction_class": {
+      "enum": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5"
+      ]
+    },
+    "prior_changed": {
+      "type": "boolean"
+    },
+    "search_changed": {
+      "type": "boolean"
+    },
+    "external_domains_discovered": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "generated_beyond_source": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "counterfactual_without_archive": {
+      "type": "string"
+    },
+    "human_contribution": {
+      "type": "string"
+    },
+    "hpc_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "hpc_rationale": {
+      "type": "string"
+    },
+    "criticisms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

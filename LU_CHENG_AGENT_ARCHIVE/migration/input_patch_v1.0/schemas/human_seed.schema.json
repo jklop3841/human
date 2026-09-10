@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lu Cheng Agent Archive Human Seed",
+  "type": "object",
+  "required": [
+    "seed_id",
+    "originator",
+    "timestamp",
+    "raw_human_seed"
+  ],
+  "properties": {
+    "seed_id": {
+      "type": "string"
+    },
+    "originator": {
+      "const": "Lu Cheng"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "raw_human_seed": {
+      "type": "string"
+    },
+    "human_intended_meaning": {
+      "type": "string"
+    },
+    "source_type": {
+      "enum": [
+        "voice_transcript",
+        "chat",
+        "note",
+        "essay",
+        "field_observation",
+        "other"
+      ]
+    },
+    "agent_formalization": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "agent_expansion_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "enum": [
+        "RAW",
+        "ABSTRACTED",
+        "HYPOTHESIZED",
+        "TESTED",
+        "REJECTED",
+        "ARCHIVED"
+      ]
+    }
+  }
+}
