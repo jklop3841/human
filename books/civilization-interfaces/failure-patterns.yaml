@@ -1,0 +1,188 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-002
+updated_at: 2026-09-11
+purpose: defensive_failure_pattern_matching
+safety_rule: "Use patterns to detect and reduce systemic risk. Do not transform them into operational disruption guidance."
+
+patterns:
+  - id: CIV-FAIL-001
+    name: hidden_upstream_dependency
+    structure: "Visible service depends on low-visibility upstream input."
+    examples: [food_on_fertilizer, water_on_energy, cloud_on_electricity]
+    risk: "Public and policy attention may focus on output while ignoring enabling inputs."
+    controls: [G01, G02, G11]
+
+  - id: CIV-FAIL-002
+    name: common_mode_dependency
+    structure: "Apparently independent downstream systems share one upstream source."
+    risk: "Nominal redundancy overstates actual resilience."
+    controls: [G02, G03]
+
+  - id: CIV-FAIL-003
+    name: substitution_latency
+    structure: "Alternative exists in theory but cannot be activated fast enough."
+    risk: "Paper redundancy fails during real-time disruption."
+    controls: [G04, G06]
+
+  - id: CIV-FAIL-004
+    name: maintenance_invisibility
+    structure: "Successful maintenance produces no visible event."
+    risk: "Budgets and attention drift toward visible new projects."
+    controls: [G05, G06, G16]
+
+  - id: CIV-FAIL-005
+    name: governance_fragmentation
+    structure: "Dependency edges cross agencies, firms, regions, or nations, while responsibility remains siloed."
+    risk: "No actor owns end-to-end continuity."
+    controls: [G01, G07]
+
+  - id: CIV-FAIL-006
+    name: local_compliance_global_failure
+    structure: "Each subsystem satisfies its local rules while cross-system coupling remains unmanaged."
+    risk: "A system can be compliant yet brittle."
+    controls: [G01, G07, G08]
+
+  - id: CIV-FAIL-007
+    name: efficiency_resilience_tradeoff
+    structure: "Inventory, spare capacity, staffing, or alternative pathways are minimized for efficiency."
+    risk: "Small disturbances propagate without buffers."
+    controls: [G03, G04, G05]
+
+  - id: CIV-FAIL-008
+    name: information_latency
+    structure: "Physical state changes faster than monitoring, reporting, or institutional understanding."
+    risk: "Decision makers act on stale system models."
+    controls: [G08, G09]
+
+  - id: CIV-FAIL-009
+    name: behavioral_feedback
+    structure: "Beliefs cause coordinated behavior that changes the system state."
+    examples: [bank_run, panic_buying, withdrawal_from_institutions]
+    risk: "Expectation becomes a causal variable."
+    controls: [G10, G11, G17]
+
+  - id: CIV-FAIL-010
+    name: expertise_bottleneck
+    structure: "Critical capability depends on a small pool of experienced operators."
+    risk: "Documentation survives while operational capability decays."
+    controls: [G16, G05]
+
+  - id: CIV-FAIL-011
+    name: institutional_memory_loss
+    structure: "Rules remain but their original threat model is forgotten."
+    risk: "Controls become ritual or are removed without understanding consequences."
+    controls: [G14, G16]
+
+  - id: CIV-FAIL-012
+    name: emergency_power_persistence
+    structure: "Temporary crisis authority outlives the crisis."
+    risk: "Exceptional governance becomes normal without fresh justification."
+    controls: [G15]
+
+  - id: CIV-FAIL-013
+    name: trust_overhang
+    structure: "A system continues to operate because users expect continuity, but underlying performance is deteriorating."
+    risk: "Loss of confidence may arrive abruptly after delayed recognition."
+    controls: [G08, G10, G17]
+
+  - id: CIV-FAIL-014
+    name: trust_deficit
+    structure: "Even functional systems face high verification and compliance costs because participants expect failure or unfairness."
+    risk: "Coordination capacity falls without a physical infrastructure failure."
+    controls: [G11, G12, G17]
+
+  - id: CIV-FAIL-015
+    name: shared_reality_fragmentation
+    structure: "Actors no longer agree on basic event descriptions, measurements, or evidence sources."
+    risk: "Coordination stalls before policy disagreement is even reached."
+    controls: [G08, G11, G12]
+
+  - id: CIV-FAIL-016
+    name: just_in_time_buffer_loss
+    structure: "Inventory and time buffers are compressed across multiple stages."
+    risk: "Minor delays synchronize into larger shortages."
+    controls: [G03, G04]
+
+  - id: CIV-FAIL-017
+    name: geographic_concentration
+    structure: "Critical production, processing, or transit capability is concentrated in a small region."
+    risk: "Regional disruption creates broad downstream effects."
+    controls: [G02, G03, G04]
+
+  - id: CIV-FAIL-018
+    name: digital_physical_coupling
+    structure: "Physical service depends on digital control, identity, communications, or software."
+    risk: "Failure crosses domains that are governed separately."
+    controls: [G09, G01, G06]
+
+  - id: CIV-FAIL-019
+    name: infrastructure_finance_coupling
+    structure: "Physical continuity depends on credit, insurance, payment, procurement, or working capital."
+    risk: "Financial stress can reduce physical service capacity."
+    controls: [G01, G10]
+
+  - id: CIV-FAIL-020
+    name: public_salience_mismatch
+    structure: "Systemic importance is much higher than public awareness."
+    risk: "Political attention and resilience investment may not track criticality."
+    controls: [G11, G05]
+
+  - id: CIV-FAIL-021
+    name: prestige_criticality_mismatch
+    structure: "Low-status or low-visibility roles carry high operational criticality."
+    risk: "Recruitment, pay, succession, and retention may underweight continuity value."
+    controls: [G16]
+
+  - id: CIV-FAIL-022
+    name: metric_proxy_capture
+    structure: "Governance optimizes measurable proxies rather than continuity outcomes."
+    risk: "Reported performance improves while resilience degrades."
+    controls: [G08, G13]
+
+  - id: CIV-FAIL-023
+    name: cross_border_dependency_mismatch
+    structure: "Supply chains are transnational while emergency authority and political accountability remain national or local."
+    risk: "Coordination and incentives diverge during stress."
+    controls: [G01, G07]
+
+  - id: CIV-FAIL-024
+    name: path_dependence_lock_in
+    structure: "Historical standards, infrastructure, and capital investments make alternatives costly."
+    risk: "Known weaknesses persist because replacement itself is risky."
+    controls: [G14, G04]
+
+  - id: CIV-FAIL-025
+    name: cascading_service_failure
+    structure: "Failure in one layer propagates through physical, digital, institutional, and behavioral edges."
+    risk: "Impact exceeds the originating subsystem."
+    controls: [G01, G06, G09, G10]
+
+  - id: CIV-FAIL-026
+    name: recovery_fiction
+    structure: "Recovery plans exist on paper but have not been exercised under realistic constraints."
+    risk: "Nominal resilience is mistaken for demonstrated capability."
+    controls: [G06]
+
+  - id: CIV-FAIL-027
+    name: chronic_undermaintenance
+    structure: "Small deferred repairs accumulate faster than visible failures."
+    risk: "System enters a high-cost catch-up phase or sudden degradation."
+    controls: [G05, G08]
+
+  - id: CIV-FAIL-028
+    name: externality_export
+    structure: "Local performance is maintained by shifting environmental, health, financial, or social costs elsewhere."
+    risk: "Subsystem appears efficient while total system cost rises."
+    controls: [G13]
+
+  - id: CIV-FAIL-029
+    name: crisis_attention_cycle
+    structure: "Investment spikes after visible failures and decays during long stable periods."
+    risk: "Resilience policy becomes reactive rather than persistent."
+    controls: [G05, G06]
+
+  - id: CIV-FAIL-030
+    name: authority_without_shared_model
+    structure: "Decision makers have formal authority but lack a current end-to-end dependency model."
+    risk: "High power does not translate into high-quality intervention."
+    controls: [G01, G08, G12]
