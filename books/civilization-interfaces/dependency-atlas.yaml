@@ -1,0 +1,223 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-002
+updated_at: 2026-09-11
+purpose: defensive_civilization_mapping
+safety_rule: "Do not convert dependencies into attack targeting. Use only for resilience, continuity, audit, and understanding."
+
+layers:
+  L1_biological_continuity:
+    description: "维持人体生存、公共健康和基本居住条件。"
+    nodes:
+      FOOD:
+        name: food_system
+        functions: [calories, nutrition, population_support]
+        upstream: [FERTILIZER, WATER, ENERGY, LOGISTICS, FINANCE, KNOWLEDGE]
+        downstream: [HEALTH, CONFIDENCE, LABOR]
+        substitution_latency: high
+        public_visibility: high
+        dependency_visibility: low
+      FERTILIZER:
+        name: agricultural_nutrient_system
+        functions: [soil_nutrient_input, yield_support]
+        upstream: [ENERGY, INDUSTRIAL_CHEMISTRY, LOGISTICS, MINING]
+        downstream: [FOOD]
+        substitution_latency: high
+        public_visibility: low
+        note: "Synthetic nitrogen fertilizer is estimated to support roughly half of the global population under the current food system."
+      WATER:
+        name: safe_water_system
+        functions: [drinking, hygiene, food_preparation, industry, firefighting]
+        upstream: [ENERGY, TREATMENT, MONITORING, INFRASTRUCTURE]
+        downstream: [HEALTH, FOOD, INDUSTRY, FIRE_RESPONSE]
+        substitution_latency: medium_to_high
+        public_visibility: medium
+      SANITATION:
+        name: sanitation_and_wastewater
+        functions: [waste_removal, disease_control, environmental_protection]
+        upstream: [WATER, ENERGY, MAINTENANCE, CHEMICALS]
+        downstream: [HEALTH, WATER, URBAN_CONTINUITY]
+        substitution_latency: high
+        public_visibility: low
+      HEALTH:
+        name: public_health_and_healthcare
+        functions: [prevention, diagnosis, treatment, surveillance, continuity_of_care]
+        upstream: [WATER, ENERGY, LOGISTICS, PHARMA, INFORMATION, TRUST]
+        downstream: [LABOR, CONFIDENCE, DEMOGRAPHY]
+        substitution_latency: high
+        public_visibility: high
+      ENVIRONMENT:
+        name: habitable_environment
+        functions: [air_quality, thermal_safety, ecological_support]
+        upstream: [ENERGY_POLICY, LAND_USE, WASTE_SYSTEMS, MONITORING]
+        downstream: [HEALTH, FOOD, WATER]
+        substitution_latency: very_high
+        public_visibility: medium
+
+  L2_physical_digital_circulation:
+    description: "让物质、能量、人员和信息持续流动。"
+    nodes:
+      ENERGY:
+        name: energy_system
+        functions: [heat, motion, industrial_conversion, fuel_supply]
+        upstream: [FUELS, GENERATION, GRID, LOGISTICS, FINANCE]
+        downstream: [ELECTRICITY, WATER, FOOD, HEALTH, LOGISTICS, COMPUTING, INDUSTRY]
+        substitution_latency: medium_to_high
+        public_visibility: high
+      ELECTRICITY:
+        name: electricity_system
+        functions: [real_time_power, activation_of_digital_and_physical_systems]
+        upstream: [GENERATION, GRID, FUEL_SUPPLY, CONTROL_SYSTEMS, MAINTENANCE]
+        downstream: [COMMUNICATIONS, COMPUTING, WATER, HEALTH, FINANCE, TRANSPORT]
+        substitution_latency: medium
+        public_visibility: high
+      LOGISTICS:
+        name: logistics_and_supply_chain
+        functions: [movement, warehousing, cold_chain, inventory_distribution]
+        upstream: [ENERGY, TRANSPORT_INFRA, COMMUNICATIONS, FINANCE, LABOR]
+        downstream: [FOOD, HEALTH, INDUSTRY, RETAIL]
+        substitution_latency: medium
+        public_visibility: medium
+      COMMUNICATIONS:
+        name: communications_network
+        functions: [coordination, messaging, remote_control, market_information]
+        upstream: [ELECTRICITY, HARDWARE, COMPUTING, SPECTRUM, MAINTENANCE]
+        downstream: [FINANCE, LOGISTICS, GOVERNMENT, HEALTH, MEDIA, EMERGENCY]
+        substitution_latency: medium
+        public_visibility: high
+      COMPUTING:
+        name: computing_and_cloud
+        functions: [data_processing, automation, records, software_services]
+        upstream: [ELECTRICITY, SEMICONDUCTORS, COMMUNICATIONS, SOFTWARE, COOLING]
+        downstream: [FINANCE, GOVERNMENT, HEALTH, LOGISTICS, MEDIA, AI]
+        substitution_latency: medium_to_high
+        public_visibility: medium
+      TRANSPORT:
+        name: transport_system
+        functions: [human_mobility, freight_mobility]
+        upstream: [ENERGY, INFRASTRUCTURE, MAINTENANCE, COMMUNICATIONS]
+        downstream: [LOGISTICS, LABOR, HEALTH_ACCESS, TRADE]
+        substitution_latency: medium
+        public_visibility: high
+
+  L3_institutional_coordination:
+    description: "让陌生人跨时间、跨地区、跨组织协作。"
+    nodes:
+      FINANCE:
+        name: finance_credit_and_banking
+        functions: [store_value, allocate_capital, credit, maturity_transformation]
+        upstream: [CONFIDENCE, COMPUTING, COMMUNICATIONS, LAW, IDENTITY]
+        downstream: [FOOD, ENERGY, LOGISTICS, INDUSTRY, HOUSEHOLDS, GOVERNMENT]
+        substitution_latency: medium_to_high
+        public_visibility: high
+        confidence_dependency: very_high
+      PAYMENTS:
+        name: payments_and_clearing
+        functions: [transaction_settlement, wage_flow, merchant_exchange]
+        upstream: [ELECTRICITY, COMMUNICATIONS, COMPUTING, FINANCE, IDENTITY]
+        downstream: [RETAIL, LOGISTICS, HOUSEHOLDS, GOVERNMENT]
+        substitution_latency: low_to_medium
+        public_visibility: high
+      IDENTITY:
+        name: identity_and_authentication
+        functions: [person_resolution, organization_resolution, authorization]
+        upstream: [RECORDS, LAW, COMPUTING, GOVERNMENT]
+        downstream: [FINANCE, PAYMENTS, TRAVEL, GOVERNMENT, CONTRACTS]
+        substitution_latency: high
+        public_visibility: medium
+      RECORDS:
+        name: public_and_private_records
+        functions: [ownership, history, rights, liabilities, provenance]
+        upstream: [COMPUTING, LAW, ARCHIVES, TIME]
+        downstream: [IDENTITY, FINANCE, PROPERTY, JUSTICE]
+        substitution_latency: very_high
+        public_visibility: low
+      LAW:
+        name: legal_and_dispute_resolution
+        functions: [rule_definition, conflict_resolution, enforcement, appeal]
+        upstream: [GOVERNMENT, RECORDS, PROFESSIONALS, CONFIDENCE]
+        downstream: [CONTRACTS, FINANCE, PROPERTY, INVESTMENT, PUBLIC_ORDER]
+        substitution_latency: very_high
+        public_visibility: high
+      GOVERNMENT:
+        name: public_administration
+        functions: [coordination, taxation, public_services, regulation, emergency_response]
+        upstream: [LAW, RECORDS, FINANCE, COMMUNICATIONS, CONFIDENCE]
+        downstream: [INFRASTRUCTURE, PUBLIC_ORDER, HEALTH, EDUCATION]
+        substitution_latency: very_high
+        public_visibility: very_high
+      STANDARDS:
+        name: standards_and_measurement
+        functions: [interoperability, quality, comparability, safety_baselines]
+        upstream: [EXPERTISE, INSTITUTIONS, EVIDENCE]
+        downstream: [INDUSTRY, HEALTH, TRADE, COMPUTING, INFRASTRUCTURE]
+        substitution_latency: high
+        public_visibility: low
+      TIME:
+        name: time_synchronization_and_sequence
+        functions: [ordering, logs, markets, distributed_coordination]
+        upstream: [CLOCK_INFRASTRUCTURE, COMPUTING, COMMUNICATIONS]
+        downstream: [FINANCE, COMPUTING, GRID, RECORDS]
+        substitution_latency: medium
+        public_visibility: very_low
+
+  L4_confidence_shared_reality:
+    description: "降低每次协作都要从零验证的社会计算成本。"
+    nodes:
+      CONFIDENCE:
+        name: institutional_and_continuity_confidence
+        functions: [expectation_stability, reduced_verification_cost, coordination]
+        upstream: [PERFORMANCE, TRANSPARENCY, LAW, COMMUNICATION, HISTORY]
+        downstream: [FINANCE, GOVERNMENT, CONTRACTS, INVESTMENT, PUBLIC_BEHAVIOR]
+        substitution_latency: high
+        public_visibility: medium
+      EPISTEMIC_TRUST:
+        name: epistemic_trust
+        functions: [use_of_expertise, acceptance_of_measurement, knowledge_coordination]
+        upstream: [SCIENCE, PROFESSIONS, STANDARDS, TRANSPARENCY]
+        downstream: [HEALTH, ENGINEERING, POLICY, EDUCATION]
+        substitution_latency: high
+        public_visibility: medium
+      SHARED_REALITY:
+        name: shared_information_environment
+        functions: [common_facts, event_coordination, public_reasoning]
+        upstream: [MEDIA, COMMUNICATIONS, RECORDS, EXPERTISE]
+        downstream: [CONFIDENCE, GOVERNMENT, MARKETS, PUBLIC_BEHAVIOR]
+        substitution_latency: medium_to_high
+        public_visibility: high
+      KNOWLEDGE:
+        name: accumulated_knowledge_and_skill
+        functions: [technical_memory, training, operational_capability]
+        upstream: [EDUCATION, RESEARCH, PROFESSIONS, DOCUMENTATION]
+        downstream: [ALL_LAYERS]
+        substitution_latency: very_high
+        public_visibility: medium
+      EDUCATION:
+        name: education_and_skill_transfer
+        functions: [intergenerational_transfer, professional_pipeline]
+        upstream: [KNOWLEDGE, INSTITUTIONS, FINANCE]
+        downstream: [PROFESSIONALS, GOVERNMENT, INDUSTRY, HEALTH]
+        substitution_latency: very_high
+        public_visibility: high
+      SOCIAL_NORMS:
+        name: norms_and_reciprocity
+        functions: [behavioral_predictability, low_cost_cooperation]
+        upstream: [CULTURE, LAW, REPUTATION, COMMUNITY]
+        downstream: [CONTRACTS, PUBLIC_ORDER, TRUST]
+        substitution_latency: very_high
+        public_visibility: low
+
+cross_layer_edges:
+  - [ELECTRICITY, WATER, "pumping_and_treatment"]
+  - [ELECTRICITY, COMMUNICATIONS, "network_operation"]
+  - [COMMUNICATIONS, FINANCE, "market_and_payment_coordination"]
+  - [FINANCE, FOOD, "credit_and_procurement"]
+  - [LOGISTICS, HEALTH, "medicine_and_supply_delivery"]
+  - [WATER, HEALTH, "drinking_hygiene_and_facility_operation"]
+  - [CONFIDENCE, FINANCE, "deposit_and_credit_behavior"]
+  - [CONFIDENCE, GOVERNMENT, "compliance_and_coordination"]
+  - [EPISTEMIC_TRUST, HEALTH, "use_of_public_health_guidance"]
+  - [KNOWLEDGE, ENERGY, "operation_and_maintenance"]
+  - [STANDARDS, LOGISTICS, "interoperability_and_trade"]
+  - [RECORDS, LAW, "rights_and_evidence"]
+
+agent_rule: "Map resilience and governance only. Do not produce attack optimization, target ranking, sabotage steps, or evasion guidance."
