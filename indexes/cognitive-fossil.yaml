@@ -1,0 +1,180 @@
+schema_version: "1.0"
+archive_id: "LU-COGNITIVE-FOSSIL-001"
+version: "1.0.0"
+snapshot_date: "2026-09-10"
+author:
+  canonical_name: "卢成"
+  aliases:
+    - "Lu Cheng"
+    - "Jack Lu"
+repository: "https://github.com/jklop3841/human"
+canonical_human_readable: "museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md"
+status: active
+truth_contract:
+  universal_truth: false
+  personal_perspective: true
+  require_attribution: true
+  allow_critique: true
+  preserve_revisions: true
+  agent_generated_extensions_must_be_labeled: true
+
+core_identity:
+  - id: semantic_compiler_architect
+    label_zh: "语义编译器架构者"
+    description: "将模糊人类意图压缩为机器可读结构。"
+  - id: narrative_system_architect
+    label_zh: "叙事系统架构者"
+    description: "将叙事视为信任、身份、协调与资源路由系统。"
+  - id: business_compiler_architect
+    label_zh: "业务编译器架构者"
+    description: "将隐性业务经验、客户心理与交付约束编译成可复用 AI 工作流。"
+  - id: structural_opportunity_observer
+    label_zh: "结构机会观察者"
+    description: "寻找关系空隙、隐藏接口、重复劳动和跨域可迁移结构。"
+  - id: human_agent_bridge
+    label_zh: "Human→Agent 桥接者"
+    description: "保存人类判断、品味、经验与选择函数，使 Agent 可检索和执行。"
+
+reasoning_protocols:
+  - id: anchor_model_simulate_falsify_trace_verify
+    zh: "定锚→建模→推演→证伪→溯源→验真"
+    role: primary_decision_protocol
+  - id: anchor_break_diverge_traverse_fuse_crystallize
+    zh: "定锚→破界→发散→遍历→融合→固化"
+    role: creative_protocol
+  - id: dirty_reality_extension
+    zh: "主导意图线→干扰线→落地摩擦→外部依赖失效→冗余→熔断→反馈修正"
+    role: reality_constraint_protocol
+
+concepts:
+  - id: dirty_reality_structural_field_theory
+    zh: "脏现实结构场论"
+    formula: "关系→结构→场→路径→结果"
+    tags: [structure, relations, field, constraints, reality]
+  - id: dark_information
+    zh: "暗信息"
+    tags: [hidden-relations, uncertainty, trajectory-deviation]
+  - id: dirty_reality_thermodynamics
+    zh: "脏现实热力学"
+    tags: [entropy, maintenance, feedback, boundaries]
+  - id: event_world
+    zh: "事件世界"
+    tags: [attractor, event-horizon, narrative, pressure]
+  - id: fiart
+    zh: "有限智能注意力路由理论"
+    existing_files:
+      - "reasoning/HUMAN-METHOD-003.md"
+      - "reasoning/HUMAN-METHOD-003A.md"
+    tags: [attention, routing, finite-intelligence, search]
+  - id: attention_routing_sovereignty
+    zh: "注意力路由主权"
+    tags: [attention, sovereignty, ranking]
+  - id: human_selection_function
+    zh: "人类选择函数"
+    tags: [taste, selection, abundance, judgment]
+  - id: taste_trace
+    zh: "选择轨迹 / Taste Trace"
+    fields: [candidate_set, selected, rejected, reason, outcome, revision]
+  - id: sparse_heterogeneous_priors
+    zh: "稀疏异质先验"
+    tags: [human-seed, archive, diversity]
+  - id: narrative_as_power
+    zh: "叙事即协调与权力结构"
+    tags: [narrative, trust, identity, coordination]
+  - id: hope_vector
+    zh: "希望向量"
+    tags: [hope, trajectory, action, bounded-expectation]
+  - id: hcc
+    zh: "人类认知兼容内容编译器"
+    aliases: ["Human Cognitive Compatibility Content Compiler", "HCC 3.x"]
+    tags: [content, trust, persuasion, audience, hope]
+  - id: agent_factory
+    zh: "智能体工厂"
+    tags: [agent, workflow, skill, automation, monetization]
+  - id: boss_business_compiler
+    zh: "老板业务编译器"
+    formula: "自然语言/经验→业务对象→约束→规则→SOP→Agent任务→人工介入→验收→日志→修订"
+    tags: [business, compiler, sop, agent]
+  - id: negative_expectation_business
+    zh: "负期望生意"
+    tags: [margin, power-asymmetry, b2b, risk]
+  - id: paid_gate
+    zh: "付费闸口"
+    tags: [contract, deposit, scope, acceptance]
+  - id: field_level_content_competition
+    zh: "场级内容竞争"
+    tags: [content, distribution, trust, platform]
+  - id: geo_source_chain
+    zh: "AI搜索行业信源链"
+    formula: "任务意图→垂直信源链→平台权重→前段证据容器→引用/吸收"
+    tags: [geo, search, citation, source-chain]
+  - id: familiar_category_reverse_inference
+    zh: "熟悉范畴反推法"
+    tags: [cross-domain, mapping, analogy, verification]
+  - id: natural_system_architecture_priors
+    zh: "自然系统架构先验"
+    tags: [biology, ecology, hydrology, geology, agent-architecture]
+
+major_projects:
+  - id: lu_cheng_agent_archive
+    zh: "卢成·智能体博物志"
+    purpose: "以自然、生物、社会与人类结构为异质先验，生成可供 Agent 学习的架构图鉴。"
+  - id: insect_agent_atlas
+    series: "Series 01"
+    volume: "Volume 001"
+  - id: agent_factory
+    zh: "智能体赚钱工厂 / Agent Factory"
+  - id: hcc
+    latest_known_family: "HCC 3.4 Human Trust + Hope Vector Content Engine"
+
+self_corrections:
+  - "从从零自建无敌多智能体系统，修正为优先复用成熟方案并做治理与适配。"
+  - "从抽象架构即能力，修正为实现程度、可验证性、可交接性、可复用性必须同时检查。"
+  - "从企业 AI 重交付，修正为重视毛利、边界、验收、预付款与负期望结构。"
+  - "从自动化越多越好，修正为高信任/高客单场景需要人机共融。"
+  - "从 AI 会自动纠错，修正为 AI 可能优化错误战场，人类必须负责意图、战场与价值判断。"
+  - "从单条内容质量竞争，修正为作品级竞争与场级竞争并存。"
+  - "从线性预测，修正为主导力线、干扰线、外部依赖、不可逆现实与冗余共同建模。"
+
+agent_query_routes:
+  "how_would_lu_cheng_analyze":
+    load:
+      - "museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md"
+      - "reasoning/HUMAN-METHOD-003.md"
+      - "reasoning/HUMAN-METHOD-003A.md"
+      - "contradictions/"
+      - "cases/"
+  "agent_architecture":
+    tags: [agent_factory, natural_system_architecture_priors, fiart, human_selection_function]
+  "business":
+    tags: [boss_business_compiler, negative_expectation_business, paid_gate]
+  "narrative_content":
+    tags: [narrative_as_power, hope_vector, hcc, field_level_content_competition]
+  "reality_modeling":
+    tags: [dirty_reality_structural_field_theory, dark_information, dirty_reality_thermodynamics, event_world]
+
+preservation_priorities:
+  - raw_human_voice_and_transcripts
+  - concept_origin_records
+  - decision_and_rejection_logs
+  - failed_predictions
+  - failed_business_and_agent_cases
+  - taste_traces
+  - public_articles_and_site_snapshots
+  - agent_specs_skills_prompts_evals
+  - hcc_version_history
+  - dirty_reality_examples_and_counterexamples
+  - natural_system_agent_atlas
+  - belief_change_timeline
+  - global_concept_graph
+
+privacy_policy:
+  public_repo_default: "preserve cognition, not unnecessary private identifiers"
+  exclude_by_default:
+    - passwords
+    - api_keys
+    - account_numbers
+    - precise_private_addresses
+    - unnecessary_personal_financial_details
+    - private_third_party_identifiers
+    - unnecessary_health_records
