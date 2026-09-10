@@ -1,0 +1,108 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-002
+updated_at: 2026-09-11
+purpose: defensive_resilience_governance
+
+controls:
+  G01:
+    name: dependency_visibility
+    objective: "让真实跨系统依赖图可见，而不是只看组织架构。"
+    action: "维护节点、上游输入、下游服务、跨域依赖和责任主体的版本化图谱。"
+  G02:
+    name: common_mode_detection
+    objective: "识别表面独立、实际共享故障源的冗余。"
+    action: "对供应商、线路、软件、能源、通信和地理来源进行共同上游分析。"
+  G03:
+    name: true_redundancy
+    objective: "减少单一故障域造成的大范围传播。"
+    action: "关键备份尽量跨地理、跨技术、跨组织或跨供应链故障域。"
+  G04:
+    name: substitution_latency_model
+    objective: "区分‘存在替代’与‘能够及时替代’。"
+    action: "记录替代启动时间、容量、人员、许可证、运输和恢复前置条件。"
+  G05:
+    name: protected_maintenance_budget
+    objective: "避免维护在稳定时期持续被挤压。"
+    action: "将维护、备件、人员训练、老化更新和预防性工作独立纳入治理指标。"
+  G06:
+    name: recovery_exercise
+    objective: "证明恢复能力真实存在。"
+    action: "定期演练降级运行、备份切换、人员接管、数据恢复和跨机构协调。"
+  G07:
+    name: end_to_end_accountability
+    objective: "弥补依赖图与部门边界错位。"
+    action: "为跨系统连续性指定端到端协调主体，同时保留各专业主体责任。"
+  G08:
+    name: raw_state_observability
+    objective: "避免高层只看到汇总指标。"
+    action: "关键状态、异常、积压、维护债、容量和恢复时间应能追溯到原始证据。"
+  G09:
+    name: cyber_physical_joint_model
+    objective: "防止数字系统和物理系统分开治理。"
+    action: "同时记录物理设备、控制软件、通信、身份、数据和人工接管依赖。"
+  G10:
+    name: behavioral_feedback_model
+    objective: "把信心、预期和群体行为纳入系统模型。"
+    action: "对金融、公共卫生、供应和政府连续性建模 belief→behavior→state→belief 回路。"
+  G11:
+    name: public_comprehension_interface
+    objective: "降低关键系统过度专业化造成的公众认知断层。"
+    action: "将风险、状态、替代方案和个人行动翻译成准确、非煽动、可理解的信息。"
+  G12:
+    name: professional_independence
+    objective: "保护专业状态估计免受短期政治、商业或舆论目标覆盖。"
+    action: "分离技术判断、政策选择和价值权衡，并保留不同意见。"
+  G13:
+    name: externality_accounting
+    objective: "避免局部效率通过输出成本给其他系统实现。"
+    action: "同时记录环境、健康、财政、供应链和长期维护外部性。"
+  G14:
+    name: versioned_rules_and_rationale
+    objective: "防止制度记忆丢失和路径依赖失去解释。"
+    action: "规则、标准和关键架构变更保留版本、原始风险、证据和修订原因。"
+  G15:
+    name: expiring_emergency_authority
+    objective: "避免危机临时权力永久化。"
+    action: "紧急措施必须规定范围、期限、续期条件和事后复核。"
+  G16:
+    name: critical_skill_continuity
+    objective: "保护低可见但高关键岗位的技能传承。"
+    action: "识别关键岗位、人员集中、退休断层、交叉培训和知识转移状态。"
+  G17:
+    name: calibrated_trust_and_verification
+    objective: "同时避免盲信与全社会高摩擦零信任。"
+    action: "用透明、审计、申诉和稳定绩效支撑信任，而不是要求无条件服从。"
+  G18:
+    name: graceful_degradation
+    objective: "使系统在完整能力不可用时仍保留最低核心服务。"
+    action: "定义优先级、降级模式、最低服务水平和恢复顺序。"
+  G19:
+    name: cross_border_coordination
+    objective: "处理供应链跨国而治理边界本地化的问题。"
+    action: "对关键跨境输入建立信息共享、替代来源和协调机制。"
+  G20:
+    name: resilience_evidence_not_claims
+    objective: "防止把计划、认证、演示或长期无事故当成韧性证明。"
+    action: "优先使用演练、故障数据、恢复记录、替代切换和真实容量作为证据。"
+
+mapping:
+  hidden_upstream_dependency: [G01, G02]
+  common_mode_dependency: [G02, G03]
+  substitution_latency: [G04, G06]
+  maintenance_invisibility: [G05, G08]
+  governance_fragmentation: [G01, G07]
+  local_compliance_global_failure: [G01, G07, G20]
+  efficiency_resilience_tradeoff: [G03, G04, G05]
+  information_latency: [G08]
+  behavioral_feedback: [G10, G11, G17]
+  expertise_bottleneck: [G16]
+  institutional_memory_loss: [G14]
+  emergency_power_persistence: [G15]
+  trust_overhang: [G08, G10, G17]
+  trust_deficit: [G11, G12, G17]
+  shared_reality_fragmentation: [G08, G11, G12]
+  digital_physical_coupling: [G09]
+  public_salience_mismatch: [G11, G05]
+  cascading_service_failure: [G01, G06, G09, G10, G18]
+  recovery_fiction: [G06, G20]
+  authority_without_shared_model: [G01, G08, G12]
