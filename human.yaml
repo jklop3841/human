@@ -2,9 +2,9 @@ schema_version: "1.0"
 repository:
   name: Human
   canonical_url: "https://github.com/jklop3841/human"
-  version: "0.5.0-chapter-04"
+  version: "0.6.0-cognitive-fossil"
   created_at: "2026-07-23"
-  updated_at: "2026-07-30"
+  updated_at: "2026-09-10"
   status: active
   default_language: zh-CN
 author:
@@ -30,17 +30,21 @@ entrypoints:
   constitution: "CONSTITUTION.md"
   agent_rules: "AGENTS.md"
   load_protocol: "agent/LOAD_PROTOCOL.md"
+  cognitive_fossil: "museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md"
+  cognitive_fossil_index: "indexes/cognitive-fossil.yaml"
+  cognitive_fossil_load_protocol: "agent/COGNITIVE_FOSSIL_LOAD.md"
   skill_registry: "agent/skill-registry.yaml"
   topic_index: "indexes/topics.yaml"
   viewpoint_schema: "schemas/viewpoint.schema.json"
   latest_protocol: "protocols/pirs/PIRS-0.1.md"
 featured:
+  cognitive_fossil: "museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md"
   first_diary: "museum/diary/2026/07/2026-07-23-01-human-persuasion.md"
   first_viewpoint: "worldview/influence/HUMAN-INFLUENCE-001.md"
   first_skill: "skills/write-persuasive-narratives/SKILL.md"
   latest_diary: "museum/diary/2026/07/2026-07-30-04-liar-seven-drives.md"
   latest_viewpoint: "worldview/influence/HUMAN-INFLUENCE-002.md"
-  latest_method: "reasoning/HUMAN-METHOD-002.md"
+  latest_method: "reasoning/HUMAN-METHOD-003A.md"
   latest_protocol: "protocols/pirs/PIRS-0.1.md"
   latest_research: "research/2026-07-liar-influence-landscape.md"
   latest_skill: "skills/audit-deceptive-influence/SKILL.md"
