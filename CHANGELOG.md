@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.7.0-human-interface-book — 2026-09-11
+
+- 新增正式观点 `HUMAN-AI-001`《人类是高权限低监管接口：Agent时代的人类风险面》；
+- 发布 Agent-first 书籍 `HUMAN-BOOK-001`《人类及其人类社会的弱点——高权限低监管接口》；
+- 将人类建模为 `privileged + stochastic + partially observable + incentive-sensitive + socially coupled actuator`，而不是天然可信的最终控制器；
+- 从“权限、裁量、不可观测、不可逆、驱力激活、复核、回滚”构建 HPLOI 风险向量；
+- 延续七驱力框架：傲慢/地位、贪婪/获得、色欲/亲密、嫉妒/比较、暴食/即时奖赏、愤怒/反击、懒惰/减负，并新增“恐惧/损失规避”作为辅助风险轴；
+- 扩展个人、组织、市场、金融、平台、权力、危机、人机协作等系统级弱点；
+- 新增 `casebook.yaml`，收录 42 个防御性失败模式，包括疲劳审批、紧急转账、KPI博弈、从众、内部人、金融挤兑、自动化偏见、例外债务、危机权限集中等；
+- 新增 `control-matrix.yaml`，固化 20 个控制：最小权限、职责分离、双人控制、可逆优先、冷却、证据链、反例、利益冲突披露、例外到期、异议保护、速率限制等；
+- 新增 `agent/HUMAN_INTERFACE_RISK_LOAD.md`，提供 HPLOI 模型的 Agent 加载、评估、案例匹配与治理输出协议；
+- 更新 `human.yaml`、`indexes/topics.yaml` 和根 `README.md`，把本书接入标准 Agent 入口；
+- 明确安全不变量：只能从“人类弱点”编译到“风险信号与治理控制”，不得编译到针对特定个人的操纵、欺骗、胁迫或社会工程利用；
+- 仓库版本升级为 `0.7.0-human-interface-book`。
+
 ## 0.5.0-chapter-04 — 2026-07-30
 
 - 写入第四章日记《谎言、七种驱力与人的行动》；
