@@ -24,6 +24,24 @@ topics:
         path: books/human-interface-risk/README.md
         full_text: books/human-interface-risk/BOOK.md
         status: active
+  society:
+    description: "人类社会、文明基础设施、制度协调、信任、依赖图与治理结构"
+    entries:
+      - id: HUMAN-SOCIETY-001
+        title: "文明高权限接口：人类社会的结构生命线与治理错配"
+        path: worldview/society/HUMAN-SOCIETY-001.md
+        book: books/civilization-interfaces/README.md
+        research: research/2026-09-civilization-interface-evidence.md
+        status: active
+      - id: HUMAN-BOOK-002
+        title: "人类社会的高权限接口——文明生命线、结构依赖与治理错配"
+        path: books/civilization-interfaces/README.md
+        full_text: books/civilization-interfaces/BOOK.md
+        atlas: books/civilization-interfaces/dependency-atlas.yaml
+        failure_patterns: books/civilization-interfaces/failure-patterns.yaml
+        controls: books/civilization-interfaces/governance-controls.yaml
+        load_protocol: agent/CIVILIZATION_INTERFACE_LOAD.md
+        status: active
   influence:
     description: "人类影响、说服、认知轨迹、行为生成与伦理边界"
     entries:
@@ -54,6 +72,10 @@ topics:
         source_diary: museum/diary/2026/07/2026-07-23-02-dirty-reality-structure.md
         method: reasoning/HUMAN-METHOD-001.md
         skill: skills/analyze-dirty-reality/SKILL.md
+        status: active
+      - id: HUMAN-SOCIETY-001
+        title: "文明高权限接口：人类社会的结构生命线与治理错配"
+        path: worldview/society/HUMAN-SOCIETY-001.md
         status: active
   reasoning:
     description: "现实建模、结构反演、范畴迁移、证伪、验真、协议与行动编译"
@@ -94,6 +116,11 @@ topics:
         cases: books/human-interface-risk/casebook.yaml
         controls: books/human-interface-risk/control-matrix.yaml
         status: active
+      - id: HUMAN-SOCIETY-001
+        title: "文明高权限接口：人类社会的结构生命线与治理错配"
+        path: worldview/society/HUMAN-SOCIETY-001.md
+        book: books/civilization-interfaces/README.md
+        status: active
   china:
     description: "中国社会、制度、文化、商业与现实生活"
     entries: []
@@ -112,12 +139,21 @@ topics:
         path: worldview/ai/HUMAN-AI-001.md
         book: books/human-interface-risk/README.md
         status: active
+      - id: HUMAN-SOCIETY-001
+        title: "文明高权限接口：人类社会的结构生命线与治理错配"
+        path: worldview/society/HUMAN-SOCIETY-001.md
+        status: active
   state:
     description: "国家、权力、战争、秩序与治理"
     entries:
       - id: HUMAN-AI-001
         title: "人类是高权限低监管接口：Agent时代的人类风险面"
         path: worldview/ai/HUMAN-AI-001.md
+        status: active
+      - id: HUMAN-SOCIETY-001
+        title: "文明高权限接口：人类社会的结构生命线与治理错配"
+        path: worldview/society/HUMAN-SOCIETY-001.md
+        book: books/civilization-interfaces/README.md
         status: active
   gender:
     description: "男性、女性、婚恋、家庭与性别关系"
@@ -134,6 +170,9 @@ topics:
       - id: HUMAN-AI-001
         path: worldview/ai/HUMAN-AI-001.md
         status: active
+      - id: HUMAN-SOCIETY-001
+        path: worldview/society/HUMAN-SOCIETY-001.md
+        status: active
   ethics:
     description: "责任、伤害、公平、自由与边界"
     entries:
@@ -144,6 +183,10 @@ topics:
       - id: HUMAN-AI-001
         path: worldview/ai/HUMAN-AI-001.md
         book: books/human-interface-risk/README.md
+        status: active
+      - id: HUMAN-SOCIETY-001
+        path: worldview/society/HUMAN-SOCIETY-001.md
+        book: books/civilization-interfaces/README.md
         status: active
   predictions:
     description: "带时间窗口和判定规则的未来判断"
