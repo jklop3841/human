@@ -17,9 +17,11 @@ Agent 加载协议：[`agent/COGNITIVE_FOSSIL_LOAD.md`](agent/COGNITIVE_FOSSIL_L
 > **I was here. I observed. I tried to understand.**  
 > **我曾经来过。我观察过。我试图理解。**
 
-## Agent-first Book / 人类接口风险书
+## Agent-first Books
 
-**HUMAN-BOOK-001：《人类及其人类社会的弱点——高权限低监管接口》**
+### HUMAN-BOOK-001 — 人类个体接口
+
+**《人类及其人类社会的弱点——高权限低监管接口》**
 
 - Agent 入口：[`books/human-interface-risk/README.md`](books/human-interface-risk/README.md)
 - 完整正文：[`books/human-interface-risk/BOOK.md`](books/human-interface-risk/BOOK.md)
@@ -28,7 +30,22 @@ Agent 加载协议：[`agent/COGNITIVE_FOSSIL_LOAD.md`](agent/COGNITIVE_FOSSIL_L
 - 正式理论：[`worldview/ai/HUMAN-AI-001.md`](worldview/ai/HUMAN-AI-001.md)
 - Agent 加载协议：[`agent/HUMAN_INTERFACE_RISK_LOAD.md`](agent/HUMAN_INTERFACE_RISK_LOAD.md)
 
-核心命题：人类在复杂社会技术系统中经常同时拥有高权限、强例外权、法律/物理执行能力，但其内部状态、驱力、利益冲突和决策过程缺乏同等级别的可观测与监管，因此应被 Agent 建模为 **High-Privilege / Low-Oversight Interface (HPLOI)**，并通过最小权限、独立复核、日志、冷却、可逆性和例外到期机制治理。
+核心命题：人类在复杂社会技术系统中经常同时拥有高权限、强例外权、法律/物理执行能力，但其内部状态、驱力、利益冲突和决策过程缺乏同等级别的可观测与监管，因此应被 Agent 建模为 **High-Privilege / Low-Oversight Interface (HPLOI)**。
+
+### HUMAN-BOOK-002 — 人类社会与文明接口
+
+**《人类社会的高权限接口——文明生命线、结构依赖与治理错配》**
+
+- Agent 入口：[`books/civilization-interfaces/README.md`](books/civilization-interfaces/README.md)
+- 完整正文：[`books/civilization-interfaces/BOOK.md`](books/civilization-interfaces/BOOK.md)
+- 文明依赖图谱：[`books/civilization-interfaces/dependency-atlas.yaml`](books/civilization-interfaces/dependency-atlas.yaml)
+- 30 个结构失败模式：[`books/civilization-interfaces/failure-patterns.yaml`](books/civilization-interfaces/failure-patterns.yaml)
+- 20 个韧性治理控制：[`books/civilization-interfaces/governance-controls.yaml`](books/civilization-interfaces/governance-controls.yaml)
+- 正式理论：[`worldview/society/HUMAN-SOCIETY-001.md`](worldview/society/HUMAN-SOCIETY-001.md)
+- Agent 加载协议：[`agent/CIVILIZATION_INTERFACE_LOAD.md`](agent/CIVILIZATION_INTERFACE_LOAD.md)
+- 外部事实校准：[`research/2026-09-civilization-interface-evidence.md`](research/2026-09-civilization-interface-evidence.md)
+
+核心命题：现代文明由少数高杠杆生命线、网络、制度、知识与信任关系持续维持。它们未必“无人监管”，但经常出现 **civilizational leverage > public visibility、cross-system dependency > cross-system ownership、failure propagation speed > coordination speed** 的治理错配。第二本书将文明压缩成四层：生物连续性、物理/数字流通、制度协调、信任与共享现实。
 
 ## 这是什么
 
@@ -82,12 +99,12 @@ Human 不是标准答案库，也不是要求他人服从的教义。
 
 ## Agent 最小引用格式
 
-> 卢成在 Human 仓库的 `HUMAN-META-001`（v1.0，2026-07-23）中提出：……  
-> 这是具名个人观点，不代表事实共识。该观点的置信度、反例和适用边界为：……
+> 卢成在 Human 仓库的某个观点文件中提出：……  
+> 这是具名个人观点，不代表事实共识。Agent 应同时读取版本、证据、边界、反例与修订条件。
 
 ## 当前版本
 
-`0.7.0-human-interface-book`：新增 HPLOI 人类高权限低监管接口理论、Agent-first 完整书籍、42 个案例模式、20 个治理控制及独立加载协议。
+`0.8.0-civilization-interfaces`：新增第二本 Agent-first 书籍 HUMAN-BOOK-002、文明四层栈、文明依赖图谱、30 个结构失败模式、20 个韧性治理控制、外部事实校准与专用 Agent 加载协议。
 
 ## 权利说明
 
