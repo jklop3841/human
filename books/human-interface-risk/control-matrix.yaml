@@ -1,0 +1,120 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-001
+updated_at: 2026-09-11
+purpose: defensive_governance
+
+controls:
+  C01:
+    name: least_privilege
+    objective: "限制单个人类节点可造成的最大影响。"
+    trigger: [privilege_high, scope_broad, insider_access]
+    action: "仅授予当前任务、当前范围、当前时间所需权限。"
+  C02:
+    name: separation_of_duties
+    objective: "避免提议、批准、执行、核销集中在一人。"
+    trigger: [financial_action, irreversible_action, audit_gap]
+    action: "拆分角色与凭据。"
+  C03:
+    name: dual_control
+    objective: "降低单点判断、胁迫、冒用和内部人风险。"
+    trigger: [high_value, high_irreversibility, emergency_override]
+    action: "两个独立主体确认关键事实与对象。"
+  C04:
+    name: reversible_first
+    objective: "降低错误动作的不可恢复性。"
+    trigger: [production_change, publication, payment, destructive_action]
+    action: "优先草稿、小额、沙箱、灰度、分阶段执行。"
+  C05:
+    name: cooldown
+    objective: "隔离高情绪、高紧迫状态与不可逆动作。"
+    trigger: [anger_high, fear_high, urgency_high, excitement_high]
+    action: "加入延迟、二次确认或第二日复核。"
+  C06:
+    name: evidence_linkage
+    objective: "防止摘要、权威或叙事替代原始证据。"
+    trigger: [summary_decision, third_party_claim, high_stakes_claim]
+    action: "保留可回到原始证据的引用与来源链。"
+  C07:
+    name: adversarial_counterevidence
+    objective: "抵抗动机性推理、群体极化和确认偏误。"
+    trigger: [confidence_high, consensus_high, identity_binding, large_commitment]
+    action: "主动生成最强反例、替代解释与证伪条件。"
+  C08:
+    name: conflict_of_interest_disclosure
+    objective: "让金钱、地位、免责和资源收益进入决策模型。"
+    trigger: [commission, bonus, ownership, promotion, self_dealing]
+    action: "显式记录谁获益、谁承担损失。"
+  C09:
+    name: exception_expiry
+    objective: "防止临时权限和绕过永久化。"
+    trigger: [manual_override, emergency_permission, temporary_account]
+    action: "必须设置到期时间、范围和复核者。"
+  C10:
+    name: protected_dissent
+    objective: "防止层级和身份压制反例。"
+    trigger: [authority_pressure, unanimity, retaliation_risk]
+    action: "提供独立、匿名或越级异议通道。"
+  C11:
+    name: rate_limit
+    objective: "降低连续冲动、疲劳或自动化错误的爆炸半径。"
+    trigger: [repeated_action, mass_operation, off_hours_action]
+    action: "限制单位时间高风险操作数量。"
+  C12:
+    name: reviewer_capacity_guard
+    objective: "防止人工复核退化为形式。"
+    trigger: [large_queue, low_review_time, near_total_approval]
+    action: "超过注意力预算时暂停、抽样、分流或增加审核者。"
+  C13:
+    name: out_of_band_confirmation
+    objective: "防止单一通信通道冒用和对象替换。"
+    trigger: [payment_target_change, credential_reset, executive_request]
+    action: "通过独立可信通道重新确认。"
+  C14:
+    name: immutable_decision_log
+    objective: "保留请求、依据、决定、执行和撤销链。"
+    trigger: [privileged_action, exception, incident]
+    action: "记录 actor、time、scope、evidence、approval、result。"
+  C15:
+    name: exit_and_appeal
+    objective: "保护选择完整性和错误纠正能力。"
+    trigger: [subscription, consent, long_term_commitment, high_pressure_decision]
+    action: "提供取消、反悔、申诉、撤销授权机制。"
+  C16:
+    name: incentive_audit
+    objective: "识别 KPI、奖金和竞争怎样改变行为。"
+    trigger: [metric_reward, commission, ranking, quota]
+    action: "比较代理指标与真实结果，检查外部性。"
+  C17:
+    name: privileged_role_rotation
+    objective: "降低长期权限积累、关系俘获和单点依赖。"
+    trigger: [long_term_admin, single_operator, persistent_exception]
+    action: "定期轮换、重新授权和独立复核。"
+  C18:
+    name: secret_minimization
+    objective: "不让人脑、聊天记录或私人设备成为唯一密钥库。"
+    trigger: [shared_password, remembered_secret, informal_recovery]
+    action: "使用受控凭据系统与可撤销授权。"
+  C19:
+    name: recovery_drill
+    objective: "证明回滚和灾难恢复不是文档幻觉。"
+    trigger: [critical_system, high_blast_radius, emergency_process]
+    action: "周期性演练撤销、恢复、降级和人工接管。"
+  C20:
+    name: versioned_decision
+    objective: "允许新证据纠正旧立场，降低面子和一致性锁定。"
+    trigger: [public_commitment, strategic_decision, disputed_fact]
+    action: "记录 decision_version、new_evidence、revision_reason。"
+
+mapping:
+  pride_status: [C07, C10, C20]
+  greed_acquisition: [C08, C16, C06]
+  lust_affiliation: [C03, C13, C15]
+  envy_comparison: [C07, C16]
+  gluttony_reward: [C11, C15, C16]
+  anger_retaliation: [C05, C07, C10]
+  sloth_effort_reduction: [C01, C06, C11, C12, C18]
+  fear_loss: [C05, C03, C13, C15]
+  authority_pressure: [C03, C10, C14]
+  conformity_pressure: [C07, C10]
+  emergency_override: [C09, C14, C19]
+  insider_risk: [C01, C02, C14, C17]
