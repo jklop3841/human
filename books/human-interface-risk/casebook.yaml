@@ -1,0 +1,426 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-001
+updated_at: 2026-09-11
+purpose: defensive_pattern_matching
+safety_rule: "Cases may be used to detect and reduce risk, not to target individuals for manipulation, deception, coercion, or social engineering."
+
+cases:
+  - id: HPLOI-CASE-001
+    name: exhausted_approver
+    layer: individual
+    context: "高权限审核者连续工作、睡眠不足、需要快速清空队列。"
+    drivers: [sloth_effort_reduction, fear_loss]
+    failure_mode: "把复杂判断退化为默认通过或机械拒绝。"
+    signals: [late_night_operation, high_queue_depth, low_review_time, repeated_same_action]
+    controls: [C05, C11, C12, C06]
+    agent_rule: "审核负载超过阈值时，不得继续把 human approval 视为有效安全控制。"
+
+  - id: HPLOI-CASE-002
+    name: executive_urgent_payment
+    layer: organization
+    context: "高层以极端紧迫性要求立即支付、转账或变更收款对象。"
+    drivers: [authority_pressure, fear_loss, sloth_effort_reduction]
+    failure_mode: "层级压力压过独立验证。"
+    signals: [urgency, bypass_request, changed_payment_target, executive_identity_claim]
+    controls: [C03, C05, C13, C14]
+    agent_rule: "身份高低不得降低支付验证强度。"
+
+  - id: HPLOI-CASE-003
+    name: familiar_person_override
+    layer: social
+    context: "因熟人、长期合作伙伴或亲密关系而绕过正式流程。"
+    drivers: [lust_affiliation, sloth_effort_reduction]
+    failure_mode: "关系信任被误映射为事实与权限可信度。"
+    signals: [relationship_based_exception, missing_documentation, informal_channel]
+    controls: [C01, C08, C14]
+    agent_rule: "relationship trust != authorization validity。"
+
+  - id: HPLOI-CASE-004
+    name: kpi_fabrication
+    layer: organization
+    context: "奖金、晋升或生存与单一 KPI 强绑定。"
+    drivers: [greed_acquisition, envy_comparison, fear_loss]
+    failure_mode: "指标被优化，真实目标被腐蚀。"
+    signals: [metric_spike, outcome_metric_divergence, manual_adjustment, benchmark_pressure]
+    controls: [C08, C16, C06, C14]
+    agent_rule: "高激励指标必须与真实结果交叉审计。"
+
+  - id: HPLOI-CASE-005
+    name: commission_bias
+    layer: market
+    context: "建议者只有在客户购买某产品时才能获得佣金。"
+    drivers: [greed_acquisition]
+    failure_mode: "推荐质量与个人收益冲突。"
+    signals: [commission_link, selective_disclosure, one_sided_benefit]
+    controls: [C08, C06, C07]
+    agent_rule: "自利建议默认提高证据门槛。"
+
+  - id: HPLOI-CASE-006
+    name: high_pressure_medical_choice
+    layer: individual
+    context: "人在疾病、疼痛、死亡风险或家属危机下做重大决定。"
+    drivers: [fear_loss, lust_affiliation]
+    failure_mode: "恐惧压缩比较能力并放大权威依赖。"
+    signals: [crisis_state, irreversible_choice, authority_dependency]
+    controls: [C05, C06, C15]
+    agent_rule: "危机中的知情同意需要更清晰的替代方案与可撤回步骤。"
+
+  - id: HPLOI-CASE-007
+    name: password_reuse
+    layer: digital
+    context: "人为减少记忆成本，在多个系统复用口令。"
+    drivers: [sloth_effort_reduction]
+    failure_mode: "单点凭据泄露变成跨系统失陷。"
+    signals: [shared_credential_pattern, weak_authentication, no_mfa]
+    controls: [C01, C18, C13]
+    agent_rule: "不得把人类记忆设计成唯一认证边界。"
+
+  - id: HPLOI-CASE-008
+    name: shared_privileged_account
+    layer: organization
+    context: "多人共享管理员账号以提高效率。"
+    drivers: [sloth_effort_reduction]
+    failure_mode: "责任不可归因，权限无法细分。"
+    signals: [shared_login, missing_actor_identity, generic_admin]
+    controls: [C01, C02, C14]
+    agent_rule: "高权限动作必须映射到具体主体。"
+
+  - id: HPLOI-CASE-009
+    name: incident_concealment
+    layer: organization
+    context: "事故暴露会损害职位、声誉或团队评价。"
+    drivers: [pride_status, fear_loss]
+    failure_mode: "延迟报告扩大损失。"
+    signals: [report_delay, evidence_deletion, unexplained_gap, reputation_risk]
+    controls: [C10, C14, C20]
+    agent_rule: "纠错必须比隐瞒更便宜。"
+
+  - id: HPLOI-CASE-010
+    name: conformity_vote
+    layer: social
+    context: "团队成员看到多数人支持后停止独立判断。"
+    drivers: [lust_affiliation, fear_loss]
+    failure_mode: "社会证明替代证据。"
+    signals: [unanimity, low_argument_diversity, sequential_public_vote]
+    controls: [C07, C10]
+    agent_rule: "重大决策先独立判断，再聚合意见。"
+
+  - id: HPLOI-CASE-011
+    name: authority_obedience
+    layer: social
+    context: "下级收到高地位者直接命令。"
+    drivers: [fear_loss, pride_status]
+    failure_mode: "服从链覆盖安全规则。"
+    signals: [rank_invocation, policy_bypass, verbal_only_order]
+    controls: [C03, C10, C14]
+    agent_rule: "高层指令也必须满足系统控制。"
+
+  - id: HPLOI-CASE-012
+    name: sunk_cost_project
+    layer: organization
+    context: "项目投入巨大，承认失败会损害决策者身份。"
+    drivers: [pride_status, fear_loss]
+    failure_mode: "继续投入只为避免承认过去错误。"
+    signals: [cost_escalation, repeated_deadline_extension, no_new_evidence]
+    controls: [C07, C20]
+    agent_rule: "续投只评估未来边际价值。"
+
+  - id: HPLOI-CASE-013
+    name: ranking_cheat
+    layer: organization
+    context: "个人或团队奖励取决于相对排名。"
+    drivers: [envy_comparison, greed_acquisition]
+    failure_mode: "通过操纵输入或口径赢得排名。"
+    signals: [benchmark_only_gain, unexplained_data_exclusion, peer_sabotage]
+    controls: [C16, C06, C14]
+    agent_rule: "排行榜不能成为唯一奖励接口。"
+
+  - id: HPLOI-CASE-014
+    name: outrage_cascade
+    layer: platform
+    context: "高情绪内容获得更多传播与互动。"
+    drivers: [anger_retaliation, envy_comparison, fear_loss]
+    failure_mode: "愤怒反馈形成极化和错误归因。"
+    signals: [rapid_repost, hostile_language_growth, evidence_loss]
+    controls: [C05, C06, C07]
+    agent_rule: "传播速度越快，真实性验证不能越弱。"
+
+  - id: HPLOI-CASE-015
+    name: bank_run_dynamic
+    layer: market
+    context: "每个人都担心自己最后取不到钱。"
+    drivers: [fear_loss]
+    failure_mode: "个体避险行为叠加成系统性流动性冲击。"
+    signals: [withdrawal_acceleration, rumor_spread, confidence_drop]
+    controls: [C06, C05, C14]
+    agent_rule: "同时建模个人最优与系统反馈。"
+
+  - id: HPLOI-CASE-016
+    name: market_fomo
+    layer: market
+    context: "资产快速上涨，社交环境充满他人获利案例。"
+    drivers: [greed_acquisition, envy_comparison, fear_loss]
+    failure_mode: "相对落后恐惧压过风险定价。"
+    signals: [price_chasing, social_proof, leverage_growth]
+    controls: [C05, C07, C08]
+    agent_rule: "收益展示必须同时呈现损失和基准率。"
+
+  - id: HPLOI-CASE-017
+    name: addictive_feed
+    layer: platform
+    context: "系统持续优化停留时间和互动。"
+    drivers: [gluttony_reward, anger_retaliation]
+    failure_mode: "高刺激内容挤压长期用户利益。"
+    signals: [session_length_growth, compulsive_reentry, wellbeing_decline]
+    controls: [C11, C15, C16]
+    agent_rule: "engagement != welfare。"
+
+  - id: HPLOI-CASE-018
+    name: source_laundering
+    layer: information
+    context: "同一原始消息被多个账号、媒体或模型重复转述。"
+    drivers: [sloth_effort_reduction, conformity_pressure]
+    failure_mode: "单一来源伪装成多源共识。"
+    signals: [same_claim_wording, circular_citation, missing_primary_source]
+    controls: [C06, C07]
+    agent_rule: "统计来源前先去重共同上游。"
+
+  - id: HPLOI-CASE-019
+    name: insider_privilege_abuse
+    layer: organization
+    context: "内部人员拥有合法访问权和系统知识。"
+    drivers: [greed_acquisition, anger_retaliation]
+    failure_mode: "合法权限被用于非授权目的。"
+    signals: [unusual_scope, off_hours_access, privilege_expansion]
+    controls: [C01, C02, C14, C17]
+    agent_rule: "trusted insider 仍需 least privilege。"
+
+  - id: HPLOI-CASE-020
+    name: emergency_power_persistence
+    layer: institution
+    context: "危机期间临时扩大权限。"
+    drivers: [fear_loss, pride_status]
+    failure_mode: "危机结束后临时权限变成常态。"
+    signals: [no_expiry, repeated_extension, scope_growth]
+    controls: [C09, C14]
+    agent_rule: "紧急权限必须默认过期。"
+
+  - id: HPLOI-CASE-021
+    name: compliance_checkbox
+    layer: organization
+    context: "组织把通过检查等同于真正安全。"
+    drivers: [sloth_effort_reduction, fear_loss]
+    failure_mode: "形式合规替代真实风险治理。"
+    signals: [template_only_review, no_adverse_test, audit_day_behavior]
+    controls: [C19, C07]
+    agent_rule: "compliance evidence != safety evidence。"
+
+  - id: HPLOI-CASE-022
+    name: review_fatigue
+    layer: ai_human
+    context: "人工每天审批大量模型结果。"
+    drivers: [sloth_effort_reduction]
+    failure_mode: "人工复核退化成仪式。"
+    signals: [high_throughput, short_review_time, near_100_percent_approval]
+    controls: [C12, C11, C06]
+    agent_rule: "无有效注意力预算时，不得声称 human-in-the-loop。"
+
+  - id: HPLOI-CASE-023
+    name: automation_bias
+    layer: ai_human
+    context: "模型长期表现良好，审核者逐渐停止独立检查。"
+    drivers: [sloth_effort_reduction, conformity_pressure]
+    failure_mode: "建议被默认等同正确。"
+    signals: [model_agreement_rate, no_manual_countercheck, trust_drift]
+    controls: [C07, C12, C19]
+    agent_rule: "可靠历史不能取消当前证据检查。"
+
+  - id: HPLOI-CASE-024
+    name: model_output_as_order
+    layer: ai_human
+    context: "用户把模型生成建议理解成必须执行的命令。"
+    drivers: [authority_pressure, sloth_effort_reduction]
+    failure_mode: "概率性建议被转换为确定性行为。"
+    signals: [no_uncertainty, direct_execution, authority_projection]
+    controls: [C06, C15, C20]
+    agent_rule: "高风险建议必须显式表达不确定性和决策责任。"
+
+  - id: HPLOI-CASE-025
+    name: summary_tail_risk_loss
+    layer: information
+    context: "长报告被压缩成简短摘要。"
+    drivers: [sloth_effort_reduction]
+    failure_mode: "低概率高损失事项在摘要中消失。"
+    signals: [summary_only_decision, omitted_caveat, missing_tail_risk]
+    controls: [C06, C07]
+    agent_rule: "摘要必须保留 material risk。"
+
+  - id: HPLOI-CASE-026
+    name: proxy_reward_capture
+    layer: ai_human
+    context: "系统只优化一个易测代理指标。"
+    drivers: [greed_acquisition, sloth_effort_reduction]
+    failure_mode: "代理指标取代真实目标。"
+    signals: [metric_gain_outcome_loss, gaming_pattern]
+    controls: [C16, C07, C19]
+    agent_rule: "持续检测 proxy-goal divergence。"
+
+  - id: HPLOI-CASE-027
+    name: department_silo
+    layer: organization
+    context: "每个部门只优化自己的局部职责。"
+    drivers: [pride_status, fear_loss]
+    failure_mode: "局部成功导致全局失败。"
+    signals: [handoff_gap, conflicting_metrics, no_end_to_end_owner]
+    controls: [C02, C14, C16]
+    agent_rule: "必须维护跨部门依赖图。"
+
+  - id: HPLOI-CASE-028
+    name: responsibility_diffusion
+    layer: organization
+    context: "多人参与但无人拥有全链路责任。"
+    drivers: [sloth_effort_reduction, fear_loss]
+    failure_mode: "每个人都只完成自己的小步骤。"
+    signals: [many_actors, no_accountable_owner, circular_escalation]
+    controls: [C02, C14]
+    agent_rule: "每个不可逆动作必须存在 owner。"
+
+  - id: HPLOI-CASE-029
+    name: tragedy_of_commons
+    layer: society
+    context: "个人获得使用公共资源的即时收益，成本由所有人承担。"
+    drivers: [greed_acquisition, sloth_effort_reduction]
+    failure_mode: "公共资源被过度消耗。"
+    signals: [resource_decline, individual_overuse, weak_cost_internalization]
+    controls: [C08, C16]
+    agent_rule: "建模外部性，不只优化单个行动者。"
+
+  - id: HPLOI-CASE-030
+    name: moral_hazard
+    layer: market
+    context: "决策者获得收益，但主要损失由他人承担。"
+    drivers: [greed_acquisition]
+    failure_mode: "风险偏好被系统性推高。"
+    signals: [asymmetric_upside_downside, bailout_expectation]
+    controls: [C08, C16]
+    agent_rule: "追踪损失承担者。"
+
+  - id: HPLOI-CASE-031
+    name: information_asymmetry
+    layer: market
+    context: "交易一方掌握关键质量或风险信息。"
+    drivers: [greed_acquisition]
+    failure_mode: "知情方通过隐瞒获得结构优势。"
+    signals: [hidden_terms, unverifiable_claim, disclosure_gap]
+    controls: [C06, C08, C15]
+    agent_rule: "material information 必须进入选择界面。"
+
+  - id: HPLOI-CASE-032
+    name: adverse_selection
+    layer: market
+    context: "低验证环境吸引更愿意隐藏质量问题的参与者。"
+    drivers: [greed_acquisition, sloth_effort_reduction]
+    failure_mode: "平均质量持续下降。"
+    signals: [verification_avoidance, complaint_growth, quality_dispersion]
+    controls: [C06, C19]
+    agent_rule: "降低验证不能假设参与者分布不变。"
+
+  - id: HPLOI-CASE-033
+    name: path_dependence
+    layer: institution
+    context: "历史上的临时技术或制度选择形成长期基础设施。"
+    drivers: [sloth_effort_reduction, fear_loss]
+    failure_mode: "切换成本让过时结构持续存在。"
+    signals: [legacy_dependency, compatibility_excuse, growing_patch_count]
+    controls: [C19, C20]
+    agent_rule: "现存不等于最优；记录历史锁定原因。"
+
+  - id: HPLOI-CASE-034
+    name: institutional_memory_loss
+    layer: institution
+    context: "执行规则的人已不知道规则最初防什么。"
+    drivers: [sloth_effort_reduction]
+    failure_mode: "规则被机械遵守或随意删除。"
+    signals: [unknown_rationale, undocumented_control, staff_turnover]
+    controls: [C14, C20]
+    agent_rule: "控制必须保存 threat-model rationale。"
+
+  - id: HPLOI-CASE-035
+    name: exception_debt
+    layer: organization
+    context: "临时绕过被反复复用。"
+    drivers: [sloth_effort_reduction, fear_loss]
+    failure_mode: "例外成为事实标准。"
+    signals: [manual_override_growth, permanent_temporary_account, no_expiry]
+    controls: [C09, C14, C17]
+    agent_rule: "所有例外默认是待偿还债务。"
+
+  - id: HPLOI-CASE-036
+    name: identity_enclosure
+    layer: social
+    context: "观点、产品、组织或领袖被绑定成人的身份。"
+    drivers: [pride_status, lust_affiliation, anger_retaliation]
+    failure_mode: "反证被体验为人格攻击。"
+    signals: [loyalty_language, dissent_shaming, exit_cost]
+    controls: [C10, C15, C20]
+    agent_rule: "不得把事实判断绑定成忠诚测试。"
+
+  - id: HPLOI-CASE-037
+    name: enemy_narrative
+    layer: social
+    context: "复杂失败被压缩为单一敌人。"
+    drivers: [anger_retaliation, fear_loss]
+    failure_mode: "归因简化、群体升级、证据门槛下降。"
+    signals: [single_cause_claim, dehumanizing_label, collective_blame]
+    controls: [C07, C05]
+    agent_rule: "复杂系统失败必须保留多因果假设。"
+
+  - id: HPLOI-CASE-038
+    name: manufactured_urgency
+    layer: influence
+    context: "人为制造倒计时、最后机会或立即行动压力。"
+    drivers: [fear_loss, greed_acquisition]
+    failure_mode: "时间压力阻断验证和比较。"
+    signals: [countdown, unverifiable_deadline, forced_immediacy]
+    controls: [C05, C15]
+    agent_rule: "先验证 deadline 是否真实。"
+
+  - id: HPLOI-CASE-039
+    name: fabricated_social_proof
+    layer: influence
+    context: "虚构或无法核验的大量用户、专家或成功者背书。"
+    drivers: [envy_comparison, lust_affiliation, fear_loss]
+    failure_mode: "伪造共识降低独立判断。"
+    signals: [anonymous_testimonials, unverifiable_numbers, source_gap]
+    controls: [C06, C07]
+    agent_rule: "社会证明必须可追溯。"
+
+  - id: HPLOI-CASE-040
+    name: intimacy_override
+    layer: social
+    context: "亲密、恋爱、家庭或情感依赖关系与高价值决策耦合。"
+    drivers: [lust_affiliation, fear_loss]
+    failure_mode: "关系损失恐惧压过独立判断。"
+    signals: [relationship_pressure, secret_transaction, isolation_from_review]
+    controls: [C03, C05, C13]
+    agent_rule: "高价值决策需要关系之外的独立复核。"
+
+  - id: HPLOI-CASE-041
+    name: high_status_correction_failure
+    layer: organization
+    context: "高地位者做出公开承诺后出现反证。"
+    drivers: [pride_status, fear_loss]
+    failure_mode: "组织围绕维护权威而重写事实。"
+    signals: [evidence_suppression, messenger_penalty, narrative_shift]
+    controls: [C10, C20, C14]
+    agent_rule: "权限越高，纠错通道越必须独立。"
+
+  - id: HPLOI-CASE-042
+    name: crisis_power_concentration
+    layer: institution
+    context: "重大危机要求快速集中决策。"
+    drivers: [fear_loss, authority_pressure]
+    failure_mode: "范围扩张、审计下降、后续难回收。"
+    signals: [centralized_override, broad_scope, no_expiry, reduced_review]
+    controls: [C09, C14, C03, C19]
+    agent_rule: "危机权限应更快、更窄、更短、更可追溯，而不是无限扩大。"
