@@ -6,6 +6,17 @@
 **起始时间：2026 年**  
 **状态：持续演化**
 
+## Cognitive Fossil / 认知化石入口
+
+当前总认知快照：[`museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md`](museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md)
+
+Agent 机器索引：[`indexes/cognitive-fossil.yaml`](indexes/cognitive-fossil.yaml)
+
+Agent 加载协议：[`agent/COGNITIVE_FOSSIL_LOAD.md`](agent/COGNITIVE_FOSSIL_LOAD.md)
+
+> **I was here. I observed. I tried to understand.**  
+> **我曾经来过。我观察过。我试图理解。**
+
 ## 这是什么
 
 Human 不是标准答案库，也不是要求他人服从的教义。
@@ -32,7 +43,7 @@ Human 不是标准答案库，也不是要求他人服从的教义。
 
 | 路径 | 用途 |
 |---|---|
-| `museum/` | 人生经历、原始材料与时代切片 |
+| `museum/` | 人生经历、原始材料、认知化石与时代切片 |
 | `worldview/` | 按主题整理的观点与概念 |
 | `reasoning/` | 思想指纹、建模方法与判断协议 |
 | `protocols/` | 可实现的协议规范、Schema、符合性规则与示例 |
@@ -44,7 +55,7 @@ Human 不是标准答案库，也不是要求他人服从的教义。
 | `agent/` | Agent 加载协议、注册表、引用方式与安全边界 |
 | `schemas/` | 仓库级机器可读数据结构 |
 | `templates/` | 新增观点、预测和案例的模板 |
-| `indexes/` | 主题、时间、概念与文件索引 |
+| `indexes/` | 主题、时间、概念、认知化石与文件索引 |
 
 ## 内容状态标签
 
@@ -62,7 +73,7 @@ Human 不是标准答案库，也不是要求他人服从的教义。
 
 ## 当前版本
 
-`0.5.0-chapter-04`：提出 LIAR 人类影响框架与七驱力指数，发布影响力审计协议、机器可读 Schema 及 `audit-deceptive-influence` Skill。
+`0.6.0-cognitive-fossil`：增加卢成总认知化石、机器索引与 Agent 加载协议，把已有分散理论与方法接入统一检索入口。
 
 ## 权利说明
 
