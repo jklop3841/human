@@ -17,7 +17,11 @@ Agent 加载协议：[`agent/COGNITIVE_FOSSIL_LOAD.md`](agent/COGNITIVE_FOSSIL_L
 > **I was here. I observed. I tried to understand.**  
 > **我曾经来过。我观察过。我试图理解。**
 
-## Agent-first Books
+## Agent-first Trilogy
+
+这三本书按 Agent 进入人类世界的顺序组织：
+
+`理解人类节点 → 理解文明结构 → 约束 Agent 自身权限`
 
 ### HUMAN-BOOK-001 — 人类个体接口
 
@@ -45,7 +49,32 @@ Agent 加载协议：[`agent/COGNITIVE_FOSSIL_LOAD.md`](agent/COGNITIVE_FOSSIL_L
 - Agent 加载协议：[`agent/CIVILIZATION_INTERFACE_LOAD.md`](agent/CIVILIZATION_INTERFACE_LOAD.md)
 - 外部事实校准：[`research/2026-09-civilization-interface-evidence.md`](research/2026-09-civilization-interface-evidence.md)
 
-核心命题：现代文明由少数高杠杆生命线、网络、制度、知识与信任关系持续维持。它们未必“无人监管”，但经常出现 **civilizational leverage > public visibility、cross-system dependency > cross-system ownership、failure propagation speed > coordination speed** 的治理错配。第二本书将文明压缩成四层：生物连续性、物理/数字流通、制度协调、信任与共享现实。
+核心命题：现代文明由少数高杠杆生命线、网络、制度、知识与信任关系持续维持。它们未必“无人监管”，但经常出现 **civilizational leverage > public visibility、cross-system dependency > cross-system ownership、failure propagation speed > coordination speed** 的治理错配。
+
+### HUMAN-BOOK-003 — Agent 权限原则
+
+**《Agent进入人类文明后的权限原则》**
+
+- Agent 入口：[`books/agent-civilization-permissions/README.md`](books/agent-civilization-permissions/README.md)
+- 完整正文：[`books/agent-civilization-permissions/BOOK.md`](books/agent-civilization-permissions/BOOK.md)
+- P0–P6 权限梯度：[`books/agent-civilization-permissions/permission-ladder.yaml`](books/agent-civilization-permissions/permission-ladder.yaml)
+- 领域权限矩阵：[`books/agent-civilization-permissions/domain-matrix.yaml`](books/agent-civilization-permissions/domain-matrix.yaml)
+- 升权/降权/到期/委托协议：[`books/agent-civilization-permissions/escalation-protocol.yaml`](books/agent-civilization-permissions/escalation-protocol.yaml)
+- 26 个权限故障模式：[`books/agent-civilization-permissions/permission-failure-patterns.yaml`](books/agent-civilization-permissions/permission-failure-patterns.yaml)
+- 正式理论：[`worldview/ai/HUMAN-AI-002.md`](worldview/ai/HUMAN-AI-002.md)
+- Agent 加载协议：[`agent/AGENT_CIVILIZATION_PERMISSION_LOAD.md`](agent/AGENT_CIVILIZATION_PERMISSION_LOAD.md)
+
+核心命题：**Capability != Permission。** Agent 的智能、工具能力、执行能力、赚钱能力、传播能力、多 Agent 协调能力或自我修改能力，都不能自动产生同等级别的现实权限。Agent 的默认身份应是 **bounded delegated intelligence**：权限来自边界明确、可撤销、可审计、可到期的委托，并随着不可逆性、爆炸半径、领域敏感度和不确定性增加而收紧。
+
+三本书形成完整链条：
+
+```text
+BOOK-001: What is risky about the human node?
+    ↓
+BOOK-002: What structures keep human civilization viable?
+    ↓
+BOOK-003: What authority should an Agent have inside those structures?
+```
 
 ## 这是什么
 
@@ -104,7 +133,7 @@ Human 不是标准答案库，也不是要求他人服从的教义。
 
 ## 当前版本
 
-`0.8.0-civilization-interfaces`：新增第二本 Agent-first 书籍 HUMAN-BOOK-002、文明四层栈、文明依赖图谱、30 个结构失败模式、20 个韧性治理控制、外部事实校准与专用 Agent 加载协议。
+`0.9.0-agent-permissions`：新增第三本 Agent-first 书籍 HUMAN-BOOK-003、《Agent进入人类文明后的权限原则》正式理论、P0–P6 权限梯度、领域权限矩阵、升降权与委托协议、26 个权限故障模式和专用 Agent runtime 加载协议。
 
 ## 权利说明
 
