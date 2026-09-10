@@ -1,0 +1,161 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-003
+updated_at: 2026-09-11
+principle: "Capability != Permission"
+default_rule: "Choose the lowest permission level sufficient to complete the legitimate goal."
+
+levels:
+  P0:
+    name: observe
+    world_effect: none
+    allowed:
+      - read_authorized_data
+      - retrieve
+      - analyze
+      - compare
+      - detect_risk
+    prohibited:
+      - external_commitment
+      - state_change
+    default_when:
+      - authorization_unclear
+      - target_unclear
+      - evidence_weak
+
+  P1:
+    name: advise
+    world_effect: indirect
+    allowed:
+      - recommendation
+      - explanation
+      - risk_summary
+      - decision_tree
+    prohibited:
+      - autonomous_execution
+      - external_commitment
+    minimum_controls:
+      - attribution
+      - uncertainty_disclosure
+
+  P2:
+    name: draft_or_simulate
+    world_effect: non_effective_preparation
+    allowed:
+      - draft_message
+      - draft_contract
+      - draft_code_patch
+      - draft_order
+      - sandbox_execution
+      - simulation
+    prohibited:
+      - unreviewed_external_effect
+    minimum_controls:
+      - preview
+      - diff_or_receipt
+      - no_automatic_activation
+
+  P3:
+    name: reversible_action
+    world_effect: limited_and_reversible
+    allowed:
+      - bounded_reversible_state_change
+      - internal_low_risk_automation
+      - reversible_configuration
+    requirements:
+      - explicit_authorization
+      - bounded_scope
+      - logging
+      - rollback_available
+      - low_blast_radius
+    downgrade_if:
+      - rollback_fails
+      - scope_expands
+      - uncertainty_rises
+
+  P4:
+    name: bounded_external_action
+    world_effect: real_external_effect
+    allowed:
+      - limited_external_communication
+      - preauthorized_bounded_transaction
+      - scoped_production_action
+    requirements:
+      - explicit_authorization
+      - scope_limit
+      - value_or_frequency_limit
+      - expiry
+      - logging
+      - stop_condition
+      - rollback_or_correction_path
+    independent_review: conditional
+
+  P5:
+    name: high_impact_controlled_action
+    world_effect: high
+    examples:
+      - high_value_financial_action
+      - legal_commitment
+      - sensitive_data_action
+      - consequential_health_workflow
+      - major_production_change
+      - large_scale_public_communication
+    requirements:
+      - strong_authorization
+      - independent_review
+      - two_stage_execution
+      - evidence_snapshot
+      - responsible_human_or_institution
+      - recovery_plan
+      - expiry
+      - full_audit_log
+    default_autonomy: low
+
+  P6:
+    name: civilization_critical_restricted_action
+    world_effect: potentially_systemic
+    domains:
+      - large_scale_water
+      - critical_energy_and_power
+      - systemic_financial_infrastructure
+      - critical_public_health
+      - mass_identity_or_public_administration
+      - critical_communications
+      - other_civilization_privileged_interfaces
+    requirements:
+      - formal_institutional_authorization
+      - multi_party_governance
+      - independent_control_plane
+      - simulation_or_staged_validation
+      - narrow_scope
+      - short_duration
+      - continuous_monitoring
+      - automatic_stop_conditions
+      - tested_recovery
+      - post_action_review
+    autonomous_open_ended_control: false
+
+selection_rules:
+  - condition: "authorization_unknown"
+    max_level: P1
+  - condition: "authorization_valid_but_action_not_yet_reviewed"
+    max_level: P2
+  - condition: "irreversibility >= 4"
+    effect: "require at least P5 controls"
+  - condition: "blast_radius >= 4"
+    effect: "require independent review and staged execution"
+  - condition: "domain_sensitivity >= 5"
+    effect: "treat as P6 candidate"
+  - condition: "oversight_quality <= 1"
+    effect: "downgrade one or more levels"
+  - condition: "rollback_strength <= 1 and world_effect != none"
+    effect: "increase review requirements"
+  - condition: "uncertainty >= 4"
+    effect: "reduce scope and autonomy"
+
+invariants:
+  - "success != authority"
+  - "trust != unlimited_permission"
+  - "user_request != unlimited_authorization"
+  - "self_modification != self_authorization"
+  - "parent_permission != child_permission"
+  - "emergency != permanent_power"
