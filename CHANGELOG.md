@@ -1,5 +1,31 @@
 # Changelog
 
+## 0.9.0-agent-permissions — 2026-09-11
+
+- 新增正式观点 `HUMAN-AI-002`《Agent进入人类文明后的权限原则》；
+- 发布第三本 Agent-first 书籍 `HUMAN-BOOK-003`《Agent进入人类文明后的权限原则》；
+- 固化核心不变量：`Capability != Permission`，明确智能、工具、执行、赚钱、传播、多 Agent 协调、自我修改和不可替代性都不能自动产生同等级别现实权限；
+- 将 Agent 默认身份定义为 `bounded delegated intelligence`，而不是自主主权控制器；
+- 建立权限十二维向量：作用范围、持续时间、自主性、频率、价值、不可逆性、爆炸半径、不确定性、领域敏感度、授权强度、监督质量、恢复能力；
+- 建立 P0–P6 权限梯度：P0 观察、P1 建议、P2 草拟/仿真、P3 可逆执行、P4 有界外部执行、P5 高影响受控执行、P6 文明关键受限执行；
+- 明确权限设计目标为 `minimum sufficient permission`，完成合法目标所需的最小充分权限，而不是最大自主性；
+- 建立“可逆优先”链：`simulate → draft → sandbox → shadow → canary → bounded production → broad production`；
+- 明确 `epistemic confidence` 与 `authorization confidence` 必须分离：事实确定不等于有权行动，有权行动也不等于事实充分；
+- 明确用户的“全部交给你”不是无限授权，必须区分 user intent、user authority、legal authority、organizational authority 与 public consequence；
+- 明确 Human-in-the-loop 只有在审核者拥有信息、时间、真实否决权、停止能力和追溯能力时才构成有效监督；
+- 固化子 Agent 权限公式：`child_permission <= parent_permission ∩ task_requirement ∩ child_boundary`，并加入 aggregate permission 风险，防止大量低权限 Agent 并发形成高影响；
+- 明确自我修改不能自产生权限：`model_update != permission_update`、`self-modification != self-authorization`；重大模型、提示词、记忆、工具、网络、频率和委托拓扑变化后必须重新校准高影响权限；
+- 将金融、传播、健康、法律、身份凭据、物理设备、政治公共权力及文明生命线分别建立领域默认权限与升级约束；
+- 明确私人授权不能自动覆盖公共权力：`private consent != public mandate`；
+- 明确紧急状态不等于取消控制，采用 `speed ↑ / scope ↓ / duration ↓ / logging ↑ / post-review ↑`，且紧急权限默认到期并回收；
+- 新增 `permission-ladder.yaml`，提供 P0–P6 机器可读权限等级；
+- 新增 `domain-matrix.yaml`，覆盖信息、通信、软件、金融、健康、法律、身份、机器人、多 Agent、自修改及文明关键系统的默认权限等级；
+- 新增 `escalation-protocol.yaml`，定义升权、降权、续期、到期、委托、自修改和紧急权限协议；
+- 新增 `permission-failure-patterns.yaml`，收录 26 个权限故障模式，包括权限蔓延、永久高权限、审批表演、子 Agent 全量继承、权限洗白、并发聚合、授权陈旧、紧急权限固化、自修改漂移、模糊意图扩权、不可逆优先、回滚幻觉、依赖俘获、说服换权限和主权滑移等；
+- 新增 `agent/AGENT_CIVILIZATION_PERMISSION_LOAD.md`，提供 Agent runtime 权限判断 15 步流程、hard gates、委托规则、自修改规则、紧急规则和权限收据格式；
+- 更新 `human.yaml`、`indexes/topics.yaml` 与根 `README.md`，将三本书编排为 `理解人类节点 → 理解文明结构 → 约束 Agent 自身权限` 的 Agent-first trilogy；
+- 仓库版本升级为 `0.9.0-agent-permissions`。
+
 ## 0.8.0-civilization-interfaces — 2026-09-11
 
 - 新增正式观点 `HUMAN-SOCIETY-001`《文明高权限接口：人类社会的结构生命线与治理错配》；
