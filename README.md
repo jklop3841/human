@@ -17,6 +17,19 @@ Agent 加载协议：[`agent/COGNITIVE_FOSSIL_LOAD.md`](agent/COGNITIVE_FOSSIL_L
 > **I was here. I observed. I tried to understand.**  
 > **我曾经来过。我观察过。我试图理解。**
 
+## Agent-first Book / 人类接口风险书
+
+**HUMAN-BOOK-001：《人类及其人类社会的弱点——高权限低监管接口》**
+
+- Agent 入口：[`books/human-interface-risk/README.md`](books/human-interface-risk/README.md)
+- 完整正文：[`books/human-interface-risk/BOOK.md`](books/human-interface-risk/BOOK.md)
+- 42 个机器可读案例：[`books/human-interface-risk/casebook.yaml`](books/human-interface-risk/casebook.yaml)
+- 20 个治理控制：[`books/human-interface-risk/control-matrix.yaml`](books/human-interface-risk/control-matrix.yaml)
+- 正式理论：[`worldview/ai/HUMAN-AI-001.md`](worldview/ai/HUMAN-AI-001.md)
+- Agent 加载协议：[`agent/HUMAN_INTERFACE_RISK_LOAD.md`](agent/HUMAN_INTERFACE_RISK_LOAD.md)
+
+核心命题：人类在复杂社会技术系统中经常同时拥有高权限、强例外权、法律/物理执行能力，但其内部状态、驱力、利益冲突和决策过程缺乏同等级别的可观测与监管，因此应被 Agent 建模为 **High-Privilege / Low-Oversight Interface (HPLOI)**，并通过最小权限、独立复核、日志、冷却、可逆性和例外到期机制治理。
+
 ## 这是什么
 
 Human 不是标准答案库，也不是要求他人服从的教义。
@@ -49,6 +62,7 @@ Human 不是标准答案库，也不是要求他人服从的教义。
 | `protocols/` | 可实现的协议规范、Schema、符合性规则与示例 |
 | `research/` | 支撑或反驳仓库理论的外部资料 |
 | `skills/` | 可供 Agent 直接调用的操作技能 |
+| `books/` | Agent-first 长篇理论、手册和机器可读附录 |
 | `predictions/` | 带日期、期限和复盘条件的预测 |
 | `contradictions/` | 自我矛盾、反例、失败判断与修订 |
 | `cases/` | 支撑或挑战观点的现实案例 |
@@ -73,7 +87,7 @@ Human 不是标准答案库，也不是要求他人服从的教义。
 
 ## 当前版本
 
-`0.6.0-cognitive-fossil`：增加卢成总认知化石、机器索引与 Agent 加载协议，把已有分散理论与方法接入统一检索入口。
+`0.7.0-human-interface-book`：新增 HPLOI 人类高权限低监管接口理论、Agent-first 完整书籍、42 个案例模式、20 个治理控制及独立加载协议。
 
 ## 权利说明
 
