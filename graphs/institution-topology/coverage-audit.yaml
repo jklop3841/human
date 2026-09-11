@@ -1,0 +1,43 @@
+schema_version: "1.0"
+graph_id: HUMAN-INSTITUTION-TOPOLOGY-001
+audit_id: COVERAGE-AUDIT-001
+status: passed_structural_coverage
+created_at: "2026-09-11"
+
+scope:
+  canonical_nodes: 106
+  canonical_domains: 8
+  edge_files:
+    - "graphs/institution-topology/edges.yaml"
+    - "graphs/institution-topology/edges-coverage-002.yaml"
+  total_edges_declared: 106
+
+coverage_result:
+  state_governance: {nodes: 14, incident_nodes: 14, coverage_ratio: 1.0}
+  justice_security_emergency: {nodes: 13, incident_nodes: 13, coverage_ratio: 1.0}
+  health_care: {nodes: 14, incident_nodes: 14, coverage_ratio: 1.0}
+  education_science_knowledge: {nodes: 10, incident_nodes: 10, coverage_ratio: 1.0}
+  economy_finance_labor: {nodes: 14, incident_nodes: 14, coverage_ratio: 1.0}
+  information_platforms_culture: {nodes: 12, incident_nodes: 12, coverage_ratio: 1.0}
+  infrastructure_public_services: {nodes: 14, incident_nodes: 14, coverage_ratio: 1.0}
+  community_civil_transnational: {nodes: 15, incident_nodes: 15, coverage_ratio: 1.0}
+  total: {nodes: 106, incident_nodes: 106, coverage_ratio: 1.0}
+
+what_passed_means:
+  - "every canonical institution archetype appears in at least one incoming or outgoing typed relation"
+  - "all current edge endpoints are canonical institution archetypes"
+  - "no numeric causal weight or probability has been assigned"
+
+what_passed_does_not_mean:
+  - "the graph is complete"
+  - "all listed relations are equally important"
+  - "all listed relations exist in every jurisdiction"
+  - "edge direction proves causal direction"
+  - "degree or centrality measures institutional power or moral importance"
+  - "missing secondary relations are absent from reality"
+
+next_audits:
+  evidence_audit: "validate evidence_status distribution and source anchors"
+  reciprocity_audit: "identify relations that require bidirectional representation"
+  jurisdiction_audit: "build specific overlays rather than universalizing archetypes"
+  temporal_audit: "compare normal-state, crisis-state, reform-state and recovery-state topology"
