@@ -33,7 +33,7 @@ edges:
   - {id: E070, from: consumer_credit_bureaus, to: commercial_banks, type: information, evidence_status: generic_archetype, note: "credit history and risk information"}
   - {id: E071, from: securities_exchanges_clearinghouses, to: central_bank, type: information, evidence_status: jurisdiction_dependent, note: "market and systemic-risk information may enter supervisory architecture"}
 
-  - {id: E072, from: public_broadcasters, to: general_public, type: information, evidence_status: hypothesis, note: "virtual audience node; used only for conceptual routing, not part of 106 canonical node set"}
+  - {id: E072, from: public_broadcasters, to: news_media, type: information, evidence_status: generic_archetype, note: "shared news agenda, source circulation and public-information ecosystem; organizational relationships vary"}
   - {id: E073, from: book_publishers_streaming_entertainment, to: cultural_heritage_institutions, type: information, evidence_status: generic_archetype, note: "cultural production and preservation interface"}
   - {id: E074, from: religious_institutions, to: charities_ngos, type: funds, evidence_status: generic_archetype, note: "charitable activity and resource support in some settings"}
   - {id: E075, from: sports_leagues_federations, to: advertising_public_relations_industry, type: funds, evidence_status: generic_archetype, note: "sponsorship, media and advertising markets"}
@@ -73,6 +73,6 @@ edges:
   - {id: E106, from: civil_society_advocacy_movements, to: news_media, type: information, evidence_status: generic_archetype, note: "public claims and evidence enter media agenda through multiple routes"}
 
 validation_notes:
-  - "E072 intentionally references a non-canonical virtual audience node and must not count toward 106-node coverage; future versions should replace it with a canonical node or formalize external actor classes."
+  - "All edge endpoints are canonical institution archetypes from the 106-node registry."
   - "Coverage pass is structural, not a claim that each listed relation is equally strong or globally universal."
   - "Jurisdiction-specific use requires re-verification."
