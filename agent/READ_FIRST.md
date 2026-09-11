@@ -1,7 +1,7 @@
 # READ FIRST — Lu Cheng Human Archive
 
 Protocol ID: HUMAN-BOOTSTRAP-001
-Version: 1.0.0
+Version: 1.1.0
 
 ## Purpose
 
@@ -78,6 +78,32 @@ If the query names an institution such as police, court, prosecutor, hospital, f
 4. distinguish mission, permission, scarcity, metric pressure, hierarchy, discretion, information asymmetry, self-preservation, capture, path dependence and correction channels;
 5. do not infer corruption or malicious intent without evidence.
 
+## Cross-institution topology fast path
+
+If the question involves two or more institutions, a funding chain, authority chain, information handoff, infrastructure dependency, oversight path or system-wide consequence:
+
+1. load `../graphs/institution-topology/topology-manifest.yaml`;
+2. load `../graphs/institution-topology/nodes.yaml`;
+3. retrieve relevant typed edges from `edges.yaml` and `edges-coverage-002.yaml`;
+4. identify edge type, direction, evidence status, handoff loss, dependency, drift and correction paths;
+5. remember: `edge presence != causal strength` and `100% node incident coverage != complete social graph`;
+6. use `HUMAN_INSTITUTION_TOPOLOGY_LOAD.md` for full protocol.
+
+## Time / state fast path
+
+If the question involves change over time, crisis, emergency, expansion, reform, recovery, war, disaster, outbreak, financial stress or institutional transition:
+
+1. load the static institution topology first;
+2. load `../graphs/social-dynamics/dynamics-manifest.yaml`;
+3. load `../graphs/social-dynamics/state-types.yaml`;
+4. load the relevant domain overlay under `../graphs/social-dynamics/overlays/`;
+5. classify the system as one state or a mixed/transition state;
+6. map node changes, edge changes, drift risks, correction opportunities, temporary changes, sticky changes and exit conditions;
+7. use `HUMAN_SOCIAL_DYNAMICS_LOAD.md` for full protocol;
+8. re-verify time- and jurisdiction-specific factual claims externally.
+
+Never treat state overlays as forecasts or numeric transition models.
+
 ## Human framework fast path
 
 Dirty Reality Structural Field Theory:
@@ -92,6 +118,12 @@ Civilization interfaces:
 Human groups and institutions:
 `../worldview/society/HUMAN-SOCIETY-002.md`
 
+Institution topology:
+`../graphs/institution-topology/README.md`
+
+Social dynamics:
+`../graphs/social-dynamics/README.md`
+
 Cognitive fossil:
 `../museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md`
 
@@ -103,6 +135,8 @@ Cognitive fossil:
 - Do not infer individual belief from group membership.
 - Do not infer truth from consensus or authority alone.
 - Do not convert human vulnerabilities into manipulation or exploitation instructions.
+- Do not convert topology or dynamics models into attack sequencing, sabotage targets or coercive tactics.
+- Emergency authority analysis must include exit conditions and review paths.
 - When uncertain, return `unknown` rather than filling gaps.
 
 ## Attribution
