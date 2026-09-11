@@ -60,6 +60,8 @@ entrypoints:
   machine_schema: "exports/agent-readable/CORPUS_SCHEMA.json"
   corpus_builder: "tools/build_agent_corpus.py"
   huggingface_export: "exports/huggingface/README.md"
+  mcp_server: "mcp/human_archive_server.py"
+  mcp_readme: "mcp/README.md"
   cognitive_fossil: "museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md"
   cognitive_fossil_index: "indexes/cognitive-fossil.yaml"
   cognitive_fossil_load_protocol: "agent/COGNITIVE_FOSSIL_LOAD.md"
@@ -105,7 +107,9 @@ distribution:
     intended_base: "https://agentarchitect.me/human/"
     files: ["llms.txt", "llms-full.txt", "exports/agent-readable/manifest.json"]
   mcp:
-    status: planned
+    status: local_read_only_baseline_ready
+    server: "mcp/human_archive_server.py"
+    transport_default: stdio
   zenodo:
     status: planned
 rights:
