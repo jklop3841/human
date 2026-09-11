@@ -1,0 +1,103 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-003
+category: infrastructure_utilities_public_services
+framework: ../INSTITUTIONAL_DRIFT_FRAMEWORK.md
+
+institutions:
+  electric_utilities_grid_operators:
+    official_function: [generate_transmit_distribute_electricity, balance_grid, restore_service]
+    high_permissions: [dispatch, connection, outage_management, grid_investment]
+    dirty_reality_forces: [reliability_cost_tradeoff, aging_assets, regulatory_targets, peak_demand, weather]
+    common_deviations: [maintenance_deferral, reliability_metric_gaming, investment_bias_to_visible_projects, vendor_lockin]
+    stabilizers: [reliability_standards, independent_regulation, outage_reporting, reserve_requirements, maintenance_audit]
+
+  water_sewer_utilities:
+    official_function: [safe_water_supply, wastewater_collection_treatment, sanitation]
+    high_permissions: [water_quality_control, service_connection, rationing_in_emergency, infrastructure_investment]
+    dirty_reality_forces: [hidden_pipes, deferred_maintenance, tariff_politics, drought, treatment_cost]
+    common_deviations: [maintenance_invisibility, delayed_contamination_response, leakage_normalization, underpricing_then_underinvestment]
+    stabilizers: [water_quality_monitoring, public_reporting, asset_management, independent_regulation, redundancy]
+
+  gas_fuel_energy_suppliers:
+    official_function: [supply_fuel_and_heat, maintain_storage_and_distribution]
+    high_permissions: [distribution, pricing_within_rules, storage, emergency_allocation]
+    dirty_reality_forces: [commodity_cycles, geopolitical_dependency, safety, capital_intensity]
+    common_deviations: [underinvestment, price_pass_through_conflict, safety_maintenance_delay, concentration]
+    stabilizers: [reserves, safety_regulation, competition, diversification, inspection]
+
+  transportation_departments_roads:
+    official_function: [plan_build_maintain_roads_and_public_transport, manage_mobility]
+    high_permissions: [capital_allocation, route_design, traffic_rules, maintenance_priority]
+    dirty_reality_forces: [political_visibility, construction_budget, maintenance_backlog, ridership_metrics]
+    common_deviations: [new_build_over_maintenance, prestige_project_bias, underserved_area_neglect, induced_demand_blindness]
+    stabilizers: [asset_condition_metrics, cost_benefit_review, maintenance_ringfencing, public_consultation]
+
+  rail_transit_operators:
+    official_function: [move_people_or_freight_safely_and_reliably]
+    high_permissions: [scheduling, access, safety_operations, pricing_where_allowed]
+    dirty_reality_forces: [on_time_metrics, capacity, labor, aging_assets, fare_pressure]
+    common_deviations: [schedule_metric_gaming, deferred_maintenance, crowding_normalization, service_cuts_to_weak_constituencies]
+    stabilizers: [safety_regulator, incident_investigation, service_quality_metrics, maintenance_standards]
+
+  aviation_airports_air_traffic:
+    official_function: [safe_air_transport, navigation, airport_operations]
+    high_permissions: [flight_clearance, slot_allocation, security, airspace_management]
+    dirty_reality_forces: [schedule_pressure, weather, capacity, commercial_incentives, safety_complexity]
+    common_deviations: [on_time_pressure, normalization_of_deviation, hub_concentration, staffing_bottleneck]
+    stabilizers: [independent_accident_investigation, safety_management_systems, crew_duty_limits, redundancy]
+
+  ports_shipping_logistics_hubs:
+    official_function: [move_goods, customs_interface, coordinate supply_chains]
+    high_permissions: [berthing, cargo_priority, access, inspection_interface]
+    dirty_reality_forces: [throughput, congestion, labor, customs, global_trade_cycles]
+    common_deviations: [throughput_over_resilience, bottleneck_concentration, informal_priority, maintenance_deferral]
+    stabilizers: [capacity_planning, diversification, customs_transparency, safety_audits]
+
+  postal_courier_services:
+    official_function: [deliver_documents_goods_and_public_correspondence]
+    high_permissions: [address_network, last_mile_access, identity_delivery]
+    dirty_reality_forces: [volume, route_efficiency, labor_cost, e_commerce_pressure]
+    common_deviations: [speed_over_care, rural_service_decline, loss_claim_friction, contractor_quality_variance]
+    stabilizers: [service_standards, tracking, complaint_systems, universal_service_rules_where_applicable]
+
+  waste_management_sanitation:
+    official_function: [collect_process_dispose_or_recycle_waste, protect_public_health]
+    high_permissions: [collection_access, hazardous_waste_handling, siting]
+    dirty_reality_forces: [low_visibility, cost_pressure, environmental_externality, contractor_dependence]
+    common_deviations: [illegal_dumping, worker_safety_neglect, landfill_externality, recycling_metric_gaming]
+    stabilizers: [tracking, inspections, environmental_monitoring, worker_protection, public_contracting]
+
+  food_safety_inspection_agencies:
+    official_function: [inspect_food_chain, prevent_contamination, enforce_standards]
+    high_permissions: [inspection, recall, closure_where_lawful, certification]
+    dirty_reality_forces: [inspection_capacity, industry_pressure, fragmented_supply_chains, outbreak_uncertainty]
+    common_deviations: [checklist_inspection, easy_site_focus, regulatory_capture, delayed_recall]
+    stabilizers: [risk_based_inspection, lab_testing, traceability, public_recall_data, whistleblowing]
+
+  agriculture_extension_supply_institutions:
+    official_function: [support_farming, distribute_inputs_or_advice, stabilize_food_supply]
+    high_permissions: [subsidies, extension_advice, input_approval, procurement]
+    dirty_reality_forces: [weather, commodity_prices, political_constituencies, agribusiness_influence]
+    common_deviations: [subsidy_lockin, monoculture_bias, incumbent_input_capture, local_knowledge_loss]
+    stabilizers: [field_trials, farmer_feedback, diversified_extension, transparent_subsidies]
+
+  housing_authorities_social_housing:
+    official_function: [provide_or_regulate_housing_access, manage_public_housing]
+    high_permissions: [eligibility, allocation, rent_rules, property_management]
+    dirty_reality_forces: [scarcity, waitlists, maintenance_budget, local_politics]
+    common_deviations: [queue_gaming, paperwork_barriers, maintenance_backlog, spatial_concentration_of_disadvantage]
+    stabilizers: [appeal, transparent_waitlists, tenant_voice, maintenance_metrics]
+
+  building_code_fire_safety_inspection:
+    official_function: [ensure_structural_fire_and_occupancy_safety]
+    high_permissions: [permit, inspection, closure_or_correction_orders_where_lawful]
+    dirty_reality_forces: [inspection_load, developer_pressure, technical_complexity, legacy_buildings]
+    common_deviations: [checkbox_compliance, inconsistent_enforcement, corruption, outdated_code_lockin]
+    stabilizers: [random_audit, inspector_rotation, public_records, appeals, incident_feedback]
+
+  environmental_protection_agencies:
+    official_function: [monitor_pollution, protect_air_water_ecosystems, enforce_environmental_rules]
+    high_permissions: [permits, monitoring, fines, remediation_orders_where_lawful]
+    dirty_reality_forces: [industry_pressure, diffuse_harms, long_time_horizons, scientific_uncertainty, political_cycles]
+    common_deviations: [regulatory_capture, enforcement_gap, measurement_gaming, short_termism]
+    stabilizers: [independent_monitoring, public_data, citizen_suits_where_lawful, scientific_review, inspections]
