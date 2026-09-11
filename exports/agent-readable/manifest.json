@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "archive_id": "LU-CHENG-HUMAN-ARCHIVE",
   "archive_version": "1.0.0-agent-readable-corpus",
   "updated_at": "2026-09-11",
@@ -42,6 +42,9 @@
     "social_dynamics_manifest": "graphs/social-dynamics/dynamics-manifest.yaml",
     "social_dynamics_state_schema": "graphs/social-dynamics/STATE_SCHEMA.yaml",
     "social_dynamics_state_types": "graphs/social-dynamics/state-types.yaml",
+    "historical_calibration_manifest": "graphs/social-dynamics/calibration/calibration-manifest.yaml",
+    "historical_calibration_schema": "graphs/social-dynamics/calibration/CALIBRATION_SCHEMA.yaml",
+    "historical_calibration_events": "graphs/social-dynamics/calibration/events-001.yaml",
     "schema": "exports/agent-readable/CORPUS_SCHEMA.json"
   },
   "web_discovery": {
@@ -184,7 +187,7 @@
   },
   "social_dynamics": {
     "id": "HUMAN-SOCIAL-DYNAMICS-001",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "status": "active_experimental",
     "entry": "graphs/social-dynamics/README.md",
     "manifest": "graphs/social-dynamics/dynamics-manifest.yaml",
@@ -203,10 +206,25 @@
       "graphs/social-dynamics/overlays/infrastructure.yaml",
       "graphs/social-dynamics/overlays/information-platforms.yaml"
     ],
+    "historical_calibration": {
+      "id": "HUMAN-HISTORICAL-CALIBRATION-001",
+      "manifest": "graphs/social-dynamics/calibration/calibration-manifest.yaml",
+      "events": "graphs/social-dynamics/calibration/events-001.yaml",
+      "schema": "graphs/social-dynamics/calibration/CALIBRATION_SCHEMA.yaml",
+      "load_protocol": "agent/HUMAN_HISTORICAL_CALIBRATION_LOAD.md",
+      "event_count": 6,
+      "fit_summary": {
+        "strong_fit": 5,
+        "partial_fit": 1
+      },
+      "selection_bias": "first round intentionally reuses high-documentation archive cases and is not representative",
+      "current_revision": "meso-level institutional coordination, escalation, dependency and recovery model; not a universal event-causation model"
+    },
     "prediction_status": "not_a_prediction_engine",
     "quantitative_transition_probabilities": "not_assigned",
     "jurisdiction_overlays": 0,
-    "interpretation": "static topology plus qualitative state overlays; real-world claims require time and jurisdiction verification"
+    "prospective_validation_status": "not_started",
+    "interpretation": "static topology plus qualitative state overlays calibrated retrospectively against an initial historical set; real-world claims require time, jurisdiction and domain-specific causal verification"
   },
   "canonical_frameworks": [
     "worldview/reality/HUMAN-REALITY-001.md",
@@ -222,7 +240,8 @@
     "directory": "books/human-groups-institutions/institutions/README.md",
     "typed_ecology_extension": "cases/human-casebook/institution-ecology-graph.yaml",
     "typed_social_topology": "graphs/institution-topology/topology-manifest.yaml",
-    "dynamic_state_extension": "graphs/social-dynamics/dynamics-manifest.yaml"
+    "dynamic_state_extension": "graphs/social-dynamics/dynamics-manifest.yaml",
+    "historical_calibration_extension": "graphs/social-dynamics/calibration/calibration-manifest.yaml"
   },
   "integrity_rules": [
     "separate_external_fact_from_author_viewpoint_from_agent_inference",
@@ -238,10 +257,14 @@
     "topology_incident_coverage_does_not_mean_graph_completeness",
     "generic_archetype_edges_require_jurisdiction_verification_for_specific_claims",
     "social_state_overlays_are_qualitative_priors_not_predictions",
+    "historical_fit_does_not_equal_predictive_validation",
+    "social_dynamics_must_not_replace_domain_specific_causal_models",
+    "historical_calibration_must_record_model_misses_and_outside_model_factors",
+    "successful_prevention_contains_counterfactual_uncertainty",
     "emergency_authority_analysis_must_include_exit_conditions",
     "recovery_does_not_necessarily_restore_the_previous_topology",
     "distinguish_node_failure_handoff_failure_dependency_failure_and_coordination_failure",
-    "do_not_use_ecology_topology_or_dynamics_models_for_attack_target_ranking_sabotage_or_coercion",
+    "do_not_use_ecology_topology_dynamics_or_calibration_models_for_attack_target_ranking_sabotage_or_coercion",
     "return_unknown_when_evidence_is_missing"
   ],
   "distribution_targets": {
