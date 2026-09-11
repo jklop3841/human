@@ -17,11 +17,11 @@ Agent 加载协议：[`agent/COGNITIVE_FOSSIL_LOAD.md`](agent/COGNITIVE_FOSSIL_L
 > **I was here. I observed. I tried to understand.**  
 > **我曾经来过。我观察过。我试图理解。**
 
-## Agent-first Trilogy
+## Agent-first Human Trilogy
 
-这三本书按 Agent 进入人类世界的顺序组织：
+当前三本书都以“理解人类”为对象，而不是把第三本用于 Agent 自身权限治理：
 
-`理解人类节点 → 理解文明结构 → 约束 Agent 自身权限`
+`理解人类个体 → 理解文明生命线 → 理解人类群体与机构`
 
 ### HUMAN-BOOK-001 — 人类个体接口
 
@@ -34,9 +34,9 @@ Agent 加载协议：[`agent/COGNITIVE_FOSSIL_LOAD.md`](agent/COGNITIVE_FOSSIL_L
 - 正式理论：[`worldview/ai/HUMAN-AI-001.md`](worldview/ai/HUMAN-AI-001.md)
 - Agent 加载协议：[`agent/HUMAN_INTERFACE_RISK_LOAD.md`](agent/HUMAN_INTERFACE_RISK_LOAD.md)
 
-核心命题：人类在复杂社会技术系统中经常同时拥有高权限、强例外权、法律/物理执行能力，但其内部状态、驱力、利益冲突和决策过程缺乏同等级别的可观测与监管，因此应被 Agent 建模为 **High-Privilege / Low-Oversight Interface (HPLOI)**。
+核心命题：人类在复杂社会技术系统中经常同时拥有高权限、强例外权、法律/物理执行能力，但其内部状态、驱力、利益冲突和决策过程缺乏同等级别的可观测与监管，因此可被 Agent 建模为 **High-Privilege / Low-Oversight Interface (HPLOI)**。
 
-### HUMAN-BOOK-002 — 人类社会与文明接口
+### HUMAN-BOOK-002 — 人类文明接口
 
 **《人类社会的高权限接口——文明生命线、结构依赖与治理错配》**
 
@@ -51,30 +51,32 @@ Agent 加载协议：[`agent/COGNITIVE_FOSSIL_LOAD.md`](agent/COGNITIVE_FOSSIL_L
 
 核心命题：现代文明由少数高杠杆生命线、网络、制度、知识与信任关系持续维持。它们未必“无人监管”，但经常出现 **civilizational leverage > public visibility、cross-system dependency > cross-system ownership、failure propagation speed > coordination speed** 的治理错配。
 
-### HUMAN-BOOK-003 — Agent 权限原则
+### HUMAN-BOOK-003 — 人类群体与高权限机构
 
-**《Agent进入人类文明后的权限原则》**
+**《人类群体与高权限机构——从众、集体智能、权威与制度放大》**
 
-- Agent 入口：[`books/agent-civilization-permissions/README.md`](books/agent-civilization-permissions/README.md)
-- 完整正文：[`books/agent-civilization-permissions/BOOK.md`](books/agent-civilization-permissions/BOOK.md)
-- P0–P6 权限梯度：[`books/agent-civilization-permissions/permission-ladder.yaml`](books/agent-civilization-permissions/permission-ladder.yaml)
-- 领域权限矩阵：[`books/agent-civilization-permissions/domain-matrix.yaml`](books/agent-civilization-permissions/domain-matrix.yaml)
-- 升权/降权/到期/委托协议：[`books/agent-civilization-permissions/escalation-protocol.yaml`](books/agent-civilization-permissions/escalation-protocol.yaml)
-- 26 个权限故障模式：[`books/agent-civilization-permissions/permission-failure-patterns.yaml`](books/agent-civilization-permissions/permission-failure-patterns.yaml)
-- 正式理论：[`worldview/ai/HUMAN-AI-002.md`](worldview/ai/HUMAN-AI-002.md)
-- Agent 加载协议：[`agent/AGENT_CIVILIZATION_PERMISSION_LOAD.md`](agent/AGENT_CIVILIZATION_PERMISSION_LOAD.md)
+- Agent 入口：[`books/human-groups-institutions/README.md`](books/human-groups-institutions/README.md)
+- 完整正文：[`books/human-groups-institutions/BOOK.md`](books/human-groups-institutions/BOOK.md)
+- 24 个群体机制：[`books/human-groups-institutions/group-mechanisms.yaml`](books/human-groups-institutions/group-mechanisms.yaml)
+- 高权限机构图谱：[`books/human-groups-institutions/institution-atlas.yaml`](books/human-groups-institutions/institution-atlas.yaml)
+- 34 个群体/机构失败模式：[`books/human-groups-institutions/collective-failure-patterns.yaml`](books/human-groups-institutions/collective-failure-patterns.yaml)
+- 正式理论：[`worldview/society/HUMAN-SOCIETY-002.md`](worldview/society/HUMAN-SOCIETY-002.md)
+- Agent 加载协议：[`agent/HUMAN_GROUPS_INSTITUTIONS_LOAD.md`](agent/HUMAN_GROUPS_INSTITUTIONS_LOAD.md)
+- 外部研究校准：[`research/2026-09-human-groups-evidence.md`](research/2026-09-human-groups-evidence.md)
 
-核心命题：**Capability != Permission。** Agent 的智能、工具能力、执行能力、赚钱能力、传播能力、多 Agent 协调能力或自我修改能力，都不能自动产生同等级别的现实权限。Agent 的默认身份应是 **bounded delegated intelligence**：权限来自边界明确、可撤销、可审计、可到期的委托，并随着不可逆性、爆炸半径、领域敏感度和不确定性增加而收紧。
+核心命题：**群体不是放大版个人。** 信息分布、相互观察、身份、规范、权威、激励、网络位置、异议成本和责任结构会让群体形成新的行为动力；当群体被组织成政府、官僚机构、军队、法院、金融机构、公司、媒体平台、科学医疗共同体、学校、宗教或其他机构后，群体判断可以被固化并放大为跨时间、跨个体的现实权限。
 
-三本书形成完整链条：
+三本书形成当前 Human 主线：
 
 ```text
-BOOK-001: What is risky about the human node?
+BOOK-001: How does an individual human behave as a high-impact interface?
     ↓
-BOOK-002: What structures keep human civilization viable?
+BOOK-002: Which structural systems keep civilization viable?
     ↓
-BOOK-003: What authority should an Agent have inside those structures?
+BOOK-003: How do humans behave in groups, and how do institutions amplify those group processes?
 ```
+
+原 `0.9.0-agent-permissions` 中的《Agent进入人类文明后的权限原则》已从当前主线删除。Git 历史仍保留该版本，未来如需建立独立 Agent 权限卷，可单独重构，不占用“理解人类”三部曲的位置。
 
 ## 这是什么
 
@@ -133,7 +135,7 @@ Human 不是标准答案库，也不是要求他人服从的教义。
 
 ## 当前版本
 
-`0.9.0-agent-permissions`：新增第三本 Agent-first 书籍 HUMAN-BOOK-003、《Agent进入人类文明后的权限原则》正式理论、P0–P6 权限梯度、领域权限矩阵、升降权与委托协议、26 个权限故障模式和专用 Agent runtime 加载协议。
+`0.9.1-human-groups-institutions`：撤下第三本 Agent 权限卷，改为人类群体与高权限机构卷；新增群体机制库、机构图谱、群体/机构失败模式、外部社会心理学与组织研究校准和专用 Agent 指读协议。
 
 ## 权利说明
 
