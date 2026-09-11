@@ -35,6 +35,7 @@
     "server": "mcp/human_archive_server.py",
     "readme": "mcp/README.md",
     "default_transport": "stdio",
+    "smoke_test_status": "committed_not_executed_in_repo_checkout",
     "tools": [
       "archive_status",
       "search_human_archive",
@@ -108,9 +109,31 @@
     "return_unknown_when_evidence_is_missing"
   ],
   "distribution_targets": {
-    "github": "canonical",
-    "huggingface": "staging_ready_remote_write_permission_missing",
-    "agentarchitect_me": "discovery_files_ready_site_deployment_not_performed",
+    "github": {
+      "status": "canonical",
+      "url": "https://github.com/jklop3841/human"
+    },
+    "huggingface": {
+      "status": "staging_ready_remote_write_permission_missing",
+      "connected_account_observed": "sandworm047",
+      "local_export": "exports/huggingface/"
+    },
+    "agentarchitect_me": {
+      "status": "site_code_committed_deployment_unverified",
+      "repository": "jklop3841/agentarchitect-site",
+      "canonical_host": "https://www.agentarchitect.me",
+      "routes": [
+        "/human",
+        "/human/manifest.json",
+        "/human/corpus.jsonl",
+        "/human/claims.jsonl",
+        "/human/relations.jsonl",
+        "/human/institution-index.jsonl",
+        "/llms.txt",
+        "/llms-full.txt"
+      ],
+      "verification_gap": "Connected Vercel context exposed no teams/projects, so production deployment was not verified."
+    },
     "mcp": "local_read_only_baseline_ready",
     "zenodo": "future_immutable_release_snapshot"
   }
