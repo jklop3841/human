@@ -1,8 +1,9 @@
-schema_version: "1.0"
+schema_version: "1.1"
 system_id: HUMAN-SOCIAL-DYNAMICS-001
-version: "0.1.0"
+version: "0.2.0"
 status: active_experimental
 created_at: "2026-09-11"
+updated_at: "2026-09-11"
 author: "Lu Cheng / 卢成 / Jack Lu"
 
 base_topology:
@@ -35,22 +36,36 @@ overlays:
   - {id: SD-INFRA-001, domain: infrastructure, path: "graphs/social-dynamics/overlays/infrastructure.yaml"}
   - {id: SD-INFO-001, domain: information_platforms, path: "graphs/social-dynamics/overlays/information-platforms.yaml"}
 
+historical_calibration:
+  id: HUMAN-HISTORICAL-CALIBRATION-001
+  status: active_experimental
+  manifest: "graphs/social-dynamics/calibration/calibration-manifest.yaml"
+  events: "graphs/social-dynamics/calibration/events-001.yaml"
+  schema: "graphs/social-dynamics/calibration/CALIBRATION_SCHEMA.yaml"
+  load_protocol: "agent/HUMAN_HISTORICAL_CALIBRATION_LOAD.md"
+  event_count: 6
+  current_revision: "Social Dynamics is a meso-level institutional coordination, escalation, dependency and recovery model; it does not replace domain-specific event causation models."
+
 coverage:
   overlay_count: 6
   base_state_count: 6
+  calibrated_event_count: 6
   domain_coverage: "initial_priority_domains_only"
-  temporal_history_dataset: false
+  historical_calibration_status: "first_round_complete_selection_biased"
   jurisdiction_overlays: 0
   quantitative_transition_probabilities: 0
 
 interpretation_rules:
   - "overlay != prediction"
-  - "state_label != natural_kind"
+  - "historical_fit != predictive_validation"
+  - "state_label != natural_kind_or_cause"
   - "state_profiles_are_qualitative_priors_unless_evidence_backed"
   - "state_transitions_may_overlap_or_reverse"
   - "temporary_authority_requires_exit_conditions"
   - "emergency_effectiveness_does_not_imply_permanent_legitimacy"
   - "crisis_must_map_both_drift_and_correction_vectors"
+  - "social_dynamics_must_not_replace_physical_technical_biological_financial_or_legal_causal_models"
+  - "successful_prevention_contains_counterfactual_uncertainty"
   - "specific_jurisdiction_claims_require_reverification"
   - "do_not_fabricate_transition_probabilities_or_edge_weights"
   - "do_not_use_for_attack_sequencing_sabotage_or_coercion"
@@ -64,13 +79,17 @@ build_state:
   science_overlay: complete
   infrastructure_overlay: complete
   information_platform_overlay: complete
+  historical_event_calibration_round_1: complete
+  historical_event_calibration_event_count: 6
   agent_load_protocol: "agent/HUMAN_SOCIAL_DYNAMICS_LOAD.md"
+  calibration_load_protocol: "agent/HUMAN_HISTORICAL_CALIBRATION_LOAD.md"
   jurisdiction_overlays: pending
-  historical_event_calibration: pending
+  prospective_or_pseudo_prospective_validation: pending
   quantitative_models: out_of_scope_until_evidence_exists
 
 next_build:
-  - "calibrate overlays against historical cases already stored in Human Casebook"
+  - "add at least six mixed, weak-fit or disconfirming historical events"
+  - "perform prospective or pseudo-prospective tests using only information available before outcomes"
   - "add mixed-state and transition-conflict examples"
   - "build jurisdiction overlays only after generic-state model stabilizes"
-  - "add reform and recovery case pairs, not only crisis narratives"
+  - "add reform and recovery cases not anchored only in catastrophe"
