@@ -1,0 +1,314 @@
+schema_version: "1.0"
+calibration_id: HUMAN-HISTORICAL-CALIBRATION-001
+created_at: "2026-09-11"
+event_count: 6
+
+records:
+  - id: HC-001
+    title: "Space Shuttle Challenger — decision failure around a technical defect"
+    event_period: "1985-1986"
+    domains: [science_engineering, aerospace, bureaucracy]
+    source_anchors:
+      - label: "Rogers Commission Chapter V"
+        url: "https://www.nasa.gov/history/rogersrep/v1ch5.htm"
+      - label: "Rogers Commission Chapter VI"
+        url: "https://www.nasa.gov/history/rogersrep/v1ch6.htm"
+      - label: "Rogers Commission Chapter VII"
+        url: "https://www.nasa.gov/history/rogersrep/v1ch7.htm"
+    pre_event_state:
+      state: NORMAL
+      qualifier: "normal operations with accumulated safety drift and unresolved O-ring concerns"
+    trigger: "approval and launch of mission 51-L under conditions in which key decisionmakers lacked complete risk information"
+    state_sequence: [NORMAL, EMERGENCY, REFORM]
+    observed_variable_shifts:
+      information_velocity: "critical concern existed but did not reliably reach key decisionmakers before launch"
+      verification_depth: "insufficient challenge and incomplete integration of engineering evidence into the final launch decision"
+      coordination_density: "formal review structure existed, but safety-relevant communication failed across levels"
+      feedback_latency: "repeated O-ring anomalies did not produce timely corrective redesign before the accident"
+      public_trust: "accident converted an internal safety problem into a public legitimacy and safety crisis"
+    relation_changes:
+      - "engineer/contractor risk information -> management decision: attenuated before launch"
+      - "safety program -> launch decision: formal channel existed but failed to surface crucial constraints"
+      - "post-accident independent commission -> NASA: oversight and corrective pressure sharply increased"
+    correction_recovery:
+      - "independent accident investigation"
+      - "safety and decision-process reforms"
+      - "technical redesign of the solid rocket motor joint/seal system"
+    sticky_legacy:
+      - "stronger institutional memory around communication failure and normalization of deviance"
+      - "safety governance lessons carried into later high-risk engineering practice"
+    model_hits:
+      - information_reachability
+      - bad_news_safety
+      - verification_depth
+      - memory_retention
+      - correction_latency
+    model_misses:
+      - "the current social model does not explain the material failure mechanism of the O-ring joint"
+      - "it does not independently establish how much schedule pressure versus technical uncertainty contributed"
+    outside_model_factors:
+      - "faulty joint design"
+      - "temperature sensitivity"
+      - "material and dynamic loading effects"
+    fit_classification: strong_fit
+    confidence: high
+    falsification_conditions:
+      - "evidence that key engineering concerns were fully conveyed and understood by final decisionmakers before launch would weaken the information-reachability interpretation"
+
+  - id: HC-002
+    title: "Apollo 13 — crisis-driven distributed expert coordination"
+    event_period: "1970-04-11 to 1970-04-17"
+    domains: [science_engineering, aerospace, emergency_response]
+    source_anchors:
+      - label: "NASA Apollo 13 Mission Details"
+        url: "https://www.nasa.gov/missions/apollo/apollo-13-mission-details/"
+    pre_event_state:
+      state: NORMAL
+      qualifier: "planned lunar mission with established mission-control hierarchy, procedures and simulation capability"
+    trigger: "service module oxygen tank explosion and loss of normal spacecraft capabilities"
+    state_sequence: [NORMAL, EMERGENCY, RECOVERY]
+    observed_variable_shifts:
+      authority_shift: "mission objective rapidly shifted from lunar landing to crew survival and safe return"
+      resource_pressure: "oxygen, power, water, thermal control and carbon-dioxide management became acute constraints"
+      information_velocity: "continuous high-rate exchange between crew, mission control and engineering teams"
+      verification_depth: "remained unusually strong because ground teams could test and simulate procedures before transmitting them"
+      coordination_density: "increased sharply across specialized control and engineering teams"
+      feedback_latency: "compressed from normal development cycles to hours/days"
+      rule_flexibility: "procedures and mission plans were rewritten under emergency constraints"
+    relation_changes:
+      - "specialized engineering teams -> flight director/mission control: increased information flow"
+      - "ground simulation -> crew procedure: became a critical verification bridge"
+      - "mission hierarchy -> distributed expertise: integration increased rather than suppressing specialist input"
+    correction_recovery:
+      - "new procedures developed and validated under compressed time"
+      - "command module power-up procedure created in roughly three days rather than the usual months"
+      - "crew returned safely"
+    sticky_legacy:
+      - "reinforced value of simulation, redundancy, modular expertise and accident memory"
+    model_hits:
+      - shared_objective_clarity
+      - simulation_testability
+      - coordination_density
+      - information_velocity
+      - correction_latency
+    model_misses:
+      - "success depended on spacecraft survivability, hardware redundancy and engineering margins not captured by social variables"
+      - "the model cannot separate institutional competence from favorable physical contingencies"
+    outside_model_factors:
+      - "remaining spacecraft hardware capability"
+      - "orbital mechanics"
+      - "design safeguards carried over from earlier Apollo safety changes"
+    fit_classification: strong_fit
+    confidence: high
+    falsification_conditions:
+      - "evidence that simulation and distributed specialist work were marginal rather than central to recovery would weaken this calibration"
+
+  - id: HC-003
+    title: "Silicon Valley Bank — slow supervisory feedback meets fast networked bank run"
+    event_period: "2019-2023"
+    domains: [finance, banking, regulation]
+    source_anchors:
+      - label: "Federal Reserve SVB Review"
+        url: "https://www.federalreserve.gov/publications/2023-April-SVB-Key-Takeaways.htm"
+      - label: "Federal Reserve Joint Statement, 2023-03-12"
+        url: "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230312b.htm"
+      - label: "Federal Reserve BTFP announcement"
+        url: "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230312a.htm"
+    pre_event_state:
+      state: EXPANSION
+      qualifier: "rapid asset and deposit growth with risk-management and supervisory adaptation lagging growth"
+    trigger: "balance-sheet restructuring/capital-raising announcement amid heightened uncertainty, followed by extremely rapid depositor withdrawals"
+    state_sequence: [EXPANSION, CRISIS, EMERGENCY, RECOVERY, REFORM]
+    observed_variable_shifts:
+      resource_pressure: "liquidity pressure moved from manageable vulnerability to acute constraint"
+      information_velocity: "risk narratives and depositor coordination accelerated dramatically during the run"
+      feedback_latency: "supervisory correction had been slow before failure; depositor feedback became nearly immediate"
+      public_trust: "confidence deteriorated rapidly at SVB and spilled into broader banking stress"
+      dependency_exposure: "concentrated uninsured deposits and technology-sector exposure became systemically salient"
+      authority_shift: "after closure, resolution and emergency liquidity actions moved to regulators and public authorities"
+    relation_changes:
+      - "supervisor -> bank correction: too slow relative to growth and emerging risk"
+      - "depositor network -> bank liquidity: became a high-speed destabilizing feedback loop"
+      - "Treasury/Fed/FDIC -> banking system: emergency confidence and liquidity support intensified"
+    correction_recovery:
+      - "SVB closure and resolution"
+      - "systemic-risk exception protecting depositors"
+      - "Bank Term Funding Program and broader liquidity support"
+      - "post-failure supervisory self-review and policy reconsideration"
+    sticky_legacy:
+      - "greater attention to speed of digital/networked runs"
+      - "greater scrutiny of supervision of fast-growing institutions and uninsured deposit concentration"
+    model_hits:
+      - feedback_latency
+      - public_trust
+      - information_velocity
+      - dependency_exposure
+      - correction_latency
+    model_misses:
+      - "the model does not itself quantify duration risk, asset-liability mismatch or interest-rate sensitivity"
+      - "it cannot assign causal shares among management, regulation, macroeconomic rates and depositor behavior"
+    outside_model_factors:
+      - "interest-rate changes"
+      - "asset-liability structure"
+      - "securities valuation and liquidity mechanics"
+    fit_classification: strong_fit
+    confidence: high
+    falsification_conditions:
+      - "evidence that supervisory delays or uninsured-deposit concentration were immaterial would materially weaken this calibration"
+
+  - id: HC-004
+    title: "Hurricane Katrina — emergency state without sufficient coordination coherence"
+    event_period: "2005"
+    domains: [disaster_response, government, infrastructure]
+    source_anchors:
+      - label: "U.S. House Select Committee — A Failure of Initiative"
+        url: "https://www.govinfo.gov/app/details/CRPT-109hrpt377"
+    pre_event_state:
+      state: NORMAL
+      qualifier: "formal preparedness architecture existed, including plans and exercises, but capability and learning gaps remained"
+    trigger: "Hurricane Katrina, levee failures and large-scale urban flooding"
+    state_sequence: [NORMAL, EMERGENCY, RECOVERY, REFORM]
+    observed_variable_shifts:
+      resource_pressure: "extreme surge in shelter, rescue, logistics, medical and public-safety demand"
+      information_velocity: "communications breakdown reduced usable situational awareness despite urgent information demand"
+      coordination_density: "many organizations were active, but cross-level coordination was fragmented and delayed"
+      authority_shift: "emergency authorities expanded in salience but command clarity remained problematic"
+      feedback_latency: "earlier exercises and known preparedness concerns were not translated into sufficient pre-event capability"
+      dependency_exposure: "levees, communications, logistics, transport and shelter systems became visibly interdependent"
+      public_trust: "government response failures became a major legitimacy issue"
+    relation_changes:
+      - "local/state/federal emergency actors: coordination burden rose faster than integration capacity"
+      - "communications infrastructure -> command/control: degraded, obscuring situational awareness"
+      - "FEMA logistics -> field needs: capacity mismatch became critical"
+    correction_recovery:
+      - "congressional investigations and after-action learning"
+      - "subsequent emergency-management reforms and preparedness changes"
+    sticky_legacy:
+      - "Katrina became a canonical case for coordination, communications and preparedness failure"
+    model_hits:
+      - dependency_exposure
+      - boundary_blindness
+      - coordination_density
+      - information_velocity
+      - memory_retention
+    model_misses:
+      - "the model does not explain storm intensity, hydrology or levee engineering failure"
+      - "a high count of active organizations is not equivalent to effective coordination"
+    outside_model_factors:
+      - "hurricane intensity"
+      - "levee and flood-protection engineering"
+      - "geography and evacuation constraints"
+    fit_classification: strong_fit
+    confidence: high
+    falsification_conditions:
+      - "evidence of intact communications and effective cross-level command during the acute response would weaken the coordination-failure interpretation"
+
+  - id: HC-005
+    title: "Winter Storm Uri — gas-electric interdependency becomes a cascading emergency"
+    event_period: "2021-02"
+    domains: [infrastructure, electricity, natural_gas, emergency_management]
+    source_anchors:
+      - label: "FERC/NERC Final Report summary"
+        url: "https://www.ferc.gov/news-events/news/final-report-february-2021-freeze-underscores-winterization-recommendations"
+      - label: "FERC/NERC full cold-weather report"
+        url: "https://www.ferc.gov/sites/default/files/2021-12/Cold%20Weather%20Report_%202021_120821.pdf"
+    pre_event_state:
+      state: NORMAL
+      qualifier: "electric and natural-gas systems operated with latent cold-weather and cross-system vulnerabilities"
+    trigger: "severe, prolonged cold causing generation outages, fuel-supply failures and escalating grid stress"
+    state_sequence: [NORMAL, CRISIS, EMERGENCY, RECOVERY, REFORM]
+    observed_variable_shifts:
+      resource_pressure: "electricity and fuel scarcity became acute"
+      dependency_exposure: "gas-electric interdependency became visible as gas supply and power loss reinforced one another"
+      coordination_density: "need for coordination between gas and electric systems increased sharply"
+      rule_flexibility: "grid operators used emergency load shedding to prevent broader collapse"
+      information_velocity: "weather, generator availability, fuel and load conditions became high-frequency operational inputs"
+      feedback_latency: "pre-existing cold-weather lessons had not produced sufficient preventive hardening before 2021"
+    relation_changes:
+      - "natural gas production/processing -> gas generation: supply failures propagated into electric generation"
+      - "electric grid -> gas infrastructure: power losses impaired gas production/processing, creating feedback"
+      - "grid operator -> consumers/critical loads: emergency load shedding became a central control edge"
+    correction_recovery:
+      - "28 formal recommendations in the joint report"
+      - "winterization and cold-weather reliability standards work"
+      - "greater emphasis on gas-electric coordination and protection of critical gas infrastructure from load shedding"
+    sticky_legacy:
+      - "cross-infrastructure dependency became a first-class reliability concern"
+    model_hits:
+      - dependency_exposure
+      - cross_system_dependency
+      - feedback_latency
+      - correction_latency
+      - emergency_state_edge_reweighting
+    model_misses:
+      - "the model does not calculate generator thermodynamics, weather severity, fuel-flow constraints or grid stability margins"
+    outside_model_factors:
+      - "extreme cold"
+      - "equipment freeze susceptibility"
+      - "physical gas-production and power-system constraints"
+    fit_classification: strong_fit
+    confidence: high
+    falsification_conditions:
+      - "evidence that gas-electric feedback was minor rather than material would weaken the cross-system interpretation"
+
+  - id: HC-006
+    title: "Y2K — deadline-driven preventive coordination"
+    event_period: "1998-2000"
+    domains: [government, information_technology, infrastructure, prevention]
+    source_anchors:
+      - label: "GAO Year 2000 Computing Challenge, April 1999"
+        url: "https://www.gao.gov/products/t-aimd-99-144"
+    pre_event_state:
+      state: NORMAL
+      qualifier: "widely recognized date-related software risk with a fixed future deadline"
+    trigger: "approaching January 1, 2000 deadline and recognition that mission-critical systems required remediation, testing and contingency planning"
+    state_sequence: [NORMAL, REFORM, RECOVERY]
+    observed_variable_shifts:
+      shared_objective_clarity: "the fixed deadline made the coordination target unusually concrete"
+      coordination_density: "increased across agencies, state-administered programs, vendors and infrastructure operators"
+      verification_depth: "end-to-end testing and compliance verification became central"
+      feedback_latency: "remediation programs shortened the loop between discovered defect and corrective action"
+      resource_pressure: "large temporary remediation effort was mobilized before failure occurred"
+      rule_flexibility: "organizations reprioritized maintenance and testing around a shared deadline"
+    relation_changes:
+      - "oversight/audit -> mission-critical IT owners: monitoring and deadline pressure increased"
+      - "agency -> vendor/partner systems: end-to-end dependency testing gained importance"
+      - "continuity planning -> operational units: contingency links were strengthened before the date rollover"
+    correction_recovery:
+      - "system remediation"
+      - "end-to-end testing"
+      - "business-continuity and contingency planning"
+    sticky_legacy:
+      - "Y2K remains an example of visible prevention producing an apparently uneventful outcome"
+    model_hits:
+      - shared_objective_clarity
+      - verification_depth
+      - coordination_density
+      - correction_latency
+      - proactive_dependency_mapping
+    model_misses:
+      - "the absence of catastrophic disruption cannot be cleanly attributed to remediation alone"
+      - "counterfactual severity without intervention is fundamentally uncertain"
+    outside_model_factors:
+      - "actual prevalence and technical severity of date-related defects varied across systems"
+      - "software architecture and embedded-system heterogeneity"
+    fit_classification: partial_fit
+    confidence: medium_high
+    falsification_conditions:
+      - "evidence that major remediation and testing efforts were unrelated to avoided disruptions would weaken the prevention interpretation"
+
+cross_event_findings:
+  repeated_hits:
+    information_reachability: [HC-001, HC-002, HC-004]
+    verification_depth: [HC-001, HC-002, HC-006]
+    feedback_latency: [HC-001, HC-003, HC-004, HC-005, HC-006]
+    dependency_exposure: [HC-003, HC-004, HC-005]
+    coordination_density: [HC-002, HC-004, HC-005, HC-006]
+    shared_objective_clarity: [HC-002, HC-006]
+  repeated_misses:
+    - "physical and technical causation cannot be reduced to institutional state variables"
+    - "historical narratives rarely identify isolated causal effect sizes for social-dynamics variables"
+    - "successful prevention creates counterfactual uncertainty"
+  current_revision:
+    - "Social Dynamics is best treated as a meso-level coordination/response model, not a universal event-causation model"
+    - "state variables should describe institutional transformation around events, not replace domain-specific causal models"
