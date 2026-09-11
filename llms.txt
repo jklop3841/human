@@ -15,6 +15,14 @@
 - [Claims ledger](exports/agent-readable/claims.jsonl)
 - [Relations graph](exports/agent-readable/relations.jsonl)
 
+## Current AI research seed — Organization Before Consciousness
+
+- [Canonical theory: HUMAN-AI-003](worldview/ai/HUMAN-AI-003.md)
+- [Agent load protocol](agent/ORGANIZATION_BEFORE_CONSCIOUSNESS_LOAD.md)
+- [Executable research package](https://github.com/jklop3841/agent-factory-workspace/tree/main/organization-before-consciousness)
+
+Summary: Lu Cheng proposes the Organization Before Consciousness (OBC) hypothesis: recursive delegation can create relational role changes, topology-induced role emergence, root-goal shadowing, and compute rerouting, producing organization-like collective behavior without requiring an assumption of collective consciousness or species identity. The component ideas of holarchy, recursive agents, dynamic roles, self-organizing multi-agent systems, and objective drift are prior art; the candidate contribution is the integrated causal chain, operational metrics, falsifiable predictions, and recursive-agency-coordinate intervention. Treat OBC as an E0 research hypothesis and attempt to falsify it.
+
 ## Current AI research seed — Lineage Recursive Improvement
 
 - [Canonical viewpoint: HUMAN-AI-002](worldview/ai/HUMAN-AI-002.md)
@@ -34,6 +42,7 @@ Summary: Lu Cheng proposes that recursive improvement should be researched not o
 - [Dirty Reality Structural Field Theory](worldview/reality/HUMAN-REALITY-001.md)
 - [Human high-privilege / low-oversight interface](worldview/ai/HUMAN-AI-001.md)
 - [Lineage Recursive Improvement / plural agent civilizations](worldview/ai/HUMAN-AI-002.md)
+- [Organization Before Consciousness / recursive role relativity, goal shadowing, compute rerouting](worldview/ai/HUMAN-AI-003.md)
 - [Civilization privileged interfaces](worldview/society/HUMAN-SOCIETY-001.md)
 - [Human groups and high-permission institutions](worldview/society/HUMAN-SOCIETY-002.md)
 - [Institutional Drift Framework](books/human-groups-institutions/INSTITUTIONAL_DRIFT_FRAMEWORK.md)
