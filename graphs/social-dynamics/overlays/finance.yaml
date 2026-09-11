@@ -1,0 +1,145 @@
+schema_version: "1.0"
+overlay_id: SD-FINANCE-001
+domain: finance
+canonical_topology_refs:
+  - central_bank
+  - commercial_banks
+  - securities_exchanges_clearinghouses
+  - insurers
+  - pension_funds_asset_managers
+  - credit_rating_agencies
+  - accounting_audit_firms
+  - corporations_large_employers
+  - small_businesses_family_firms
+  - consumer_credit_bureaus
+
+states:
+  NORMAL:
+    variable_profile:
+      authority_shift: baseline
+      resource_pressure: baseline
+      information_velocity: baseline
+      verification_depth: baseline
+      coordination_density: baseline
+      discretion_level: baseline
+      feedback_latency: baseline
+      rule_flexibility: baseline
+      public_trust: baseline
+      dependency_exposure: lower
+    node_changes: []
+    edge_changes:
+      - {edge_or_path: "central_bank -> commercial_banks", operation: strengthen, confidence: medium, evidence_status: generic_archetype}
+    drift_risks: [risk_underpricing, regulatory_lag, leverage_build_up]
+    correction_opportunities: [routine_supervision, stress_testing, audit, capital_liquidity_buffers]
+
+  EXPANSION:
+    variable_profile:
+      authority_shift: mixed
+      resource_pressure: higher
+      information_velocity: higher
+      verification_depth: mixed
+      coordination_density: higher
+      discretion_level: higher
+      feedback_latency: higher
+      rule_flexibility: baseline
+      public_trust: higher
+      dependency_exposure: higher
+    node_changes:
+      - {node: commercial_banks, change: "credit allocation and balance-sheet growth accelerate"}
+      - {node: securities_exchanges_clearinghouses, change: "market interdependence and settlement load rise"}
+    edge_changes:
+      - {edge_or_path: "commercial_banks -> corporations_large_employers", operation: strengthen, confidence: medium, evidence_status: generic_archetype}
+      - {edge_or_path: "pension_funds_asset_managers -> securities_exchanges_clearinghouses", operation: strengthen, confidence: medium, evidence_status: generic_archetype}
+    drift_risks: [procyclicality, leverage_growth, risk_model_complacency, asset_price_feedback]
+    correction_opportunities: [countercyclical_buffers, tighter_underwriting, concentration_monitoring]
+
+  CRISIS:
+    variable_profile:
+      authority_shift: higher
+      resource_pressure: higher
+      information_velocity: higher
+      verification_depth: mixed
+      coordination_density: higher
+      discretion_level: higher
+      feedback_latency: lower
+      rule_flexibility: higher
+      public_trust: lower
+      dependency_exposure: higher
+    node_changes:
+      - {node: central_bank, change: "liquidity and stability role becomes more salient"}
+      - {node: commercial_banks, change: "funding and confidence sensitivity rises"}
+    edge_changes:
+      - {edge_or_path: "central_bank -> commercial_banks", operation: strengthen, confidence: high, evidence_status: generic_archetype}
+      - {edge_or_path: "credit_rating_agencies/news signals -> depositor_investor expectations", operation: accelerate, confidence: medium, evidence_status: hypothesis}
+      - {edge_or_path: "commercial_banks -> firms", operation: weaken, confidence: medium, evidence_status: generic_archetype}
+    drift_risks: [run_feedback, fire_sale_feedback, credit_contraction, information_cascade]
+    correction_opportunities: [liquidity_support, transparent_loss_recognition, credible_backstops, coordinated_resolution]
+
+  EMERGENCY:
+    variable_profile:
+      authority_shift: higher
+      resource_pressure: higher
+      information_velocity: higher
+      verification_depth: mixed
+      coordination_density: higher
+      discretion_level: higher
+      feedback_latency: lower
+      rule_flexibility: higher
+      public_trust: lower
+      dependency_exposure: higher
+    node_changes:
+      - {node: central_bank, change: "exceptional facilities or market stabilization measures may be activated"}
+      - {node: regulatory_agency, change: "resolution, restrictions or emergency supervisory tools may expand"}
+    edge_changes:
+      - {edge_or_path: "public backstop -> core financial institutions", operation: activate, confidence: medium, evidence_status: jurisdiction_dependent}
+      - {edge_or_path: "normal market discipline", operation: weaken, confidence: medium, evidence_status: jurisdiction_dependent}
+    drift_risks: [moral_hazard, opaque_loss_socialization, emergency_measure_stickiness]
+    correction_opportunities: [containment, orderly_resolution, restoration_of_payment_and_credit_channels]
+
+  RECOVERY:
+    variable_profile:
+      authority_shift: mixed
+      resource_pressure: mixed
+      information_velocity: mixed
+      verification_depth: higher
+      coordination_density: mixed
+      discretion_level: mixed
+      feedback_latency: lower
+      rule_flexibility: mixed
+      public_trust: mixed
+      dependency_exposure: higher
+    node_changes:
+      - {node: commercial_banks, change: "balance-sheet repair and lending normalization compete"}
+      - {node: central_bank, change: "exceptional support should unwind or be formally redesigned"}
+    edge_changes:
+      - {edge_or_path: "emergency liquidity/support", operation: weaken, confidence: high, evidence_status: generic_archetype}
+      - {edge_or_path: "post-crisis supervision -> institutions", operation: increase_verification, confidence: high, evidence_status: generic_archetype}
+    drift_risks: [zombie_credit, premature_withdrawal, permanent_emergency_tools]
+    correction_opportunities: [capital_rebuilding, resolution_reform, better_data_and_stress_tests]
+
+transitions:
+  - from: NORMAL
+    to: EXPANSION
+    triggers: [rapid_credit_growth, asset_boom, large_capital_inflows]
+    early_signals: [leverage_rise, concentration_rise, underwriting_relaxation]
+    reversible_changes: [tighten_underwriting, macroprudential_adjustment]
+    sticky_changes: [new_market_infrastructure, sector_concentration]
+    exit_conditions: [growth_returns_within_sustainable_range]
+  - from: EXPANSION
+    to: CRISIS
+    triggers: [asset_repricing, confidence_loss, funding_freeze, correlated_losses]
+    early_signals: [deposit_outflow, spread_widening, collateral_stress, liquidity_mismatch]
+    reversible_changes: [temporary_liquidity_facilities]
+    sticky_changes: [losses, insolvency, trust_damage]
+    exit_conditions: [core_payments_and_funding_stabilize]
+  - from: CRISIS
+    to: RECOVERY
+    triggers: [funding_stabilization, credible_loss_allocation, restored_market_function]
+    early_signals: [lower_outflows, narrower_spreads, resumed_credit]
+    reversible_changes: [emergency_support]
+    sticky_changes: [regulatory_reform, new_resolution_rules]
+    exit_conditions: [temporary_support_unwound_or_formally_reauthorized]
+
+safeguards:
+  - "financial stabilization success does not prove a bailout was optimally designed"
+  - "confidence effects must not be used as a substitute for balance-sheet evidence"
