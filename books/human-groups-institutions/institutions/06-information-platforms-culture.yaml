@@ -1,0 +1,89 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-003
+category: information_platforms_culture
+framework: ../INSTITUTIONAL_DRIFT_FRAMEWORK.md
+
+institutions:
+  news_media:
+    official_function: [gather_verify_and_publish_information, public_watchdog, agenda_visibility]
+    high_permissions: [attention_selection, framing, investigation, repetition, correction]
+    dirty_reality_forces: [attention_economy, speed, competition, source_dependence, ownership, audience_identity]
+    common_deviations: [sensationalism, herd_reporting, source_circularity, conflict_amplification, correction_asymmetry, elite_source_bias]
+    stabilizers: [editorial_standards, corrections, source_diversity, ombudsman, competition, transparency]
+
+  public_broadcasters:
+    official_function: [public_information, education, cultural_programming, emergency_communication]
+    high_permissions: [mass_distribution, agenda_selection, public_funding_use]
+    dirty_reality_forces: [political_appointment, public_mandate_ambiguity, audience_pressure, budget_dependence]
+    common_deviations: [government_proximity, cautious_consensus, bureaucratic_programming, elite_capture]
+    stabilizers: [charter_independence, plural_board, transparent_funding, editorial_firewalls]
+
+  social_media_platforms:
+    official_function: [connect_users, host_content, enable_discovery_and_communication]
+    high_permissions: [ranking, recommendation, moderation, account_access, virality_control]
+    dirty_reality_forces: [engagement, growth, ad_revenue, network_effects, moderation_scale, political_pressure]
+    common_deviations: [engagement_over_truth, popularity_feedback, perceived_majority_distortion, outrage_amplification, moderation_inconsistency, creator_dependency]
+    stabilizers: [user_controls, transparency, independent_research_access, appeals, rate_limits, ranking_diversity]
+
+  search_engines_information_gateways:
+    official_function: [index_information, retrieve_ranked_results]
+    high_permissions: [visibility, ranking, discovery, deindexing]
+    dirty_reality_forces: [relevance_metrics, advertising, spam_pressure, personalization, ecosystem_self_preference]
+    common_deviations: [ranking_feedback_loops, incumbent_visibility, SEO_gaming, commercial_bias, answer_overconfidence]
+    stabilizers: [source_diversity, ranking_quality_evaluation, disclosure, competition, user_choice]
+
+  telecom_carriers_isps:
+    official_function: [provide_connectivity, route_voice_and_data]
+    high_permissions: [network_access, traffic_management, subscriber_identity, emergency_support]
+    dirty_reality_forces: [capital_intensity, congestion, regulation, market_concentration, security_duties]
+    common_deviations: [underinvestment, discriminatory_access, lockin, opaque_throttling, privacy_overcollection]
+    stabilizers: [network_regulation, competition, service_levels, privacy_rules, outage_reporting]
+
+  advertising_public_relations_industry:
+    official_function: [communicate_products_organizations_ideas, shape_public_attention]
+    high_permissions: [targeting, message_design, media_buying, reputation_management]
+    dirty_reality_forces: [client_interest, conversion_metrics, data_targeting, persuasion_incentives]
+    common_deviations: [truth_boundary_stretching, astroturfing, selective_disclosure, identity_exploitation, attention_pollution]
+    stabilizers: [ad_disclosure, consumer_law, platform_rules, professional_ethics, provenance]
+
+  book_publishers_streaming_entertainment:
+    official_function: [select_finance_distribute_cultural_works]
+    high_permissions: [catalog_selection, promotion, distribution, rights_control]
+    dirty_reality_forces: [sales, trend_chasing, franchise_economics, recommendation_metrics]
+    common_deviations: [safe_sequel_bias, popularity_lockin, cultural_homogenization, niche_exclusion]
+    stabilizers: [independent_publishers, long_tail_distribution, public_funding, diverse_editors]
+
+  religious_institutions:
+    official_function: [ritual, meaning, moral_formation, community_support, spiritual_authority]
+    high_permissions: [norm_definition, identity, social_sanction, charitable_distribution]
+    dirty_reality_forces: [leader_charisma, doctrinal_authority, donation, community_boundary, tradition]
+    common_deviations: [authority_concentration, dissent_cost, abuse_coverup, outgroup_hardening, resource_self_preservation]
+    stabilizers: [plural_leadership, external_law, safeguarding, financial_transparency, denominational_review]
+
+  sports_leagues_federations:
+    official_function: [organize_competition, rules, athlete_development, entertainment]
+    high_permissions: [eligibility, sanctions, scheduling, media_rights, rule_setting]
+    dirty_reality_forces: [revenue, nationalism, star_power, sponsor_pressure, performance]
+    common_deviations: [athlete_welfare_subordination, corruption, doping_coverup, favorable_officiating_pressure, calendar_overload]
+    stabilizers: [independent_integrity_units, athlete_voice, transparent_rules, testing, arbitration]
+
+  cultural_heritage_institutions:
+    official_function: [preserve_interpret_and_present_cultural_memory]
+    high_permissions: [canon_selection, exhibition, classification, funding]
+    dirty_reality_forces: [state_narrative, donor_interest, identity_conflict, collection_history]
+    common_deviations: [selective_memory, prestige_bias, contested_history_suppression, provenance_blindness]
+    stabilizers: [multi_voice_curation, provenance_research, public_access, scholarly_review]
+
+  political_parties:
+    official_function: [aggregate_interests, recruit_candidates, organize_elections, formulate_policy]
+    high_permissions: [candidate_selection, agenda_setting, party_discipline, campaign_resource_allocation]
+    dirty_reality_forces: [electoral_survival, donor_influence, activist_base, media_attention, internal_factions]
+    common_deviations: [purity_spirals, patronage, short_termism, messaging_over_governance, leader_capture]
+    stabilizers: [internal_elections, disclosure, competitive_elections, term_limits_where_applicable, plural_media]
+
+  polling_rating_reputation_institutions:
+    official_function: [measure_opinion_or_quality, compress_complex_reputation_into_scores]
+    high_permissions: [ranking, signaling, agenda_attention]
+    dirty_reality_forces: [method_choice, client_demand, media_simplification, score_visibility]
+    common_deviations: [score_reification, sampling_bias, gaming, feedback_loops, false_precision]
+    stabilizers: [method_disclosure, confidence_intervals, multiple_measures, independent_replication]
