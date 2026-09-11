@@ -1,0 +1,132 @@
+schema_version: "1.0"
+casebook_id: HUMAN-CASEBOOK-001
+volume: 1
+case_count: 12
+updated_at: "2026-09-11"
+
+cases:
+  - id: CASE-001
+    title: "Brandon Mayfield 指纹误认"
+    domains: [justice, law_enforcement, forensics]
+    institutions: [FBI, FBI_Laboratory, Spanish_National_Police, courts]
+    mechanisms: [confirmation_bias, authority_overconfidence, non_independent_verification, dissent_underweighting]
+    theory_result: partially_supports
+    evidence_level: E4
+    source_anchor: "DOJ OIG 2006/2011"
+
+  - id: CASE-002
+    title: "Challenger：工程异议如何被组织过滤"
+    domains: [aerospace, engineering, bureaucracy]
+    institutions: [NASA, Marshall_Space_Flight_Center, Morton_Thiokol]
+    mechanisms: [hierarchy_filtering, normalization_of_deviance, schedule_pressure, information_compression]
+    theory_result: supports
+    evidence_level: E4
+    source_anchor: "Rogers Commission"
+
+  - id: CASE-003
+    title: "Mid Staffordshire：医疗使命如何被目标系统拉偏"
+    domains: [healthcare, hospital, regulation]
+    institutions: [Mid_Staffordshire_NHS_Trust, NHS_regulators, Department_of_Health]
+    mechanisms: [metric_substitution, organizational_silence, responsibility_diffusion, positive_information_bias]
+    theory_result: supports
+    evidence_level: E4
+    source_anchor: "Francis Inquiry"
+
+  - id: CASE-004
+    title: "Silicon Valley Bank：银行、监管与信心反馈"
+    domains: [banking, finance, regulation]
+    institutions: [Silicon_Valley_Bank, Federal_Reserve, California_DFPI]
+    mechanisms: [risk_governance_failure, regulatory_lag, confidence_feedback, networked_run]
+    theory_result: supports
+    evidence_level: E4
+    source_anchor: "Federal Reserve 2023 Review"
+
+  - id: CASE-005
+    title: "Wells Fargo：销售指标替代客户服务使命"
+    domains: [banking, corporation, sales]
+    institutions: [Wells_Fargo, CFPB, OCC]
+    mechanisms: [metric_substitution, incentive_distortion, local_optimization, delayed_externality]
+    theory_result: supports
+    evidence_level: E4
+    source_anchor: "CFPB 2016 enforcement"
+
+  - id: CASE-006
+    title: "Atlanta Public Schools：考试指标如何反向塑造教育行为"
+    domains: [education, testing, public_management]
+    institutions: [Atlanta_Public_Schools, Georgia_education_oversight]
+    mechanisms: [metric_substitution, target_pressure, warning_suppression, data_manipulation]
+    theory_result: supports
+    evidence_level: E4
+    source_anchor: "Georgia APS Investigation"
+
+  - id: CASE-007
+    title: "9/11 前情报共享失灵：拥有信息不等于拥有认知"
+    domains: [intelligence, government, law_enforcement]
+    institutions: [CIA, FBI, NSA, federal_agencies]
+    mechanisms: [information_silos, need_to_know, mission_fragmentation, local_rationality_global_failure]
+    theory_result: supports
+    evidence_level: E4
+    source_anchor: "9/11 Commission / Senate Joint Inquiry"
+
+  - id: CASE-008
+    title: "Hurricane Katrina：灾害把隐藏依赖一次性显影"
+    domains: [disaster_governance, emergency_management, government]
+    institutions: [FEMA, DHS, federal_government, state_government, local_government]
+    mechanisms: [coordination_failure, communications_collapse, authority_overlap, crisis_state_transition]
+    theory_result: supports
+    evidence_level: E4
+    source_anchor: "Congressional Katrina investigations"
+
+  - id: CASE-009
+    title: "Texas 2021 冬季风暴：电力—天然气耦合级联"
+    domains: [electricity, natural_gas, critical_infrastructure]
+    institutions: [ERCOT, generators, gas_system, FERC, NERC]
+    mechanisms: [cross_system_dependency, cascading_failure, resilience_underinvestment, coordination_gap]
+    theory_result: supports
+    evidence_level: E4
+    source_anchor: "FERC/NERC 2021 Final Report"
+
+  - id: CASE-010
+    title: "Publish or Perish：科学被自己的奖励函数塑形"
+    domains: [science, universities, journals, funding]
+    institutions: [universities, research_institutes, journals, funders]
+    mechanisms: [publication_incentive, selection_bias, proxy_optimization, reproducibility_pressure]
+    theory_result: partially_supports
+    evidence_level: E3
+    source_anchor: "Grimes et al. 2018 and metascience literature"
+
+  - id: CASE-011
+    title: "Engagement Ranking：目标函数塑造信息生态"
+    domains: [social_media, algorithms, information]
+    institutions: [social_media_platforms, recommender_systems, advertising_market]
+    mechanisms: [feedback_loop, engagement_optimization, externality, visibility_amplification]
+    theory_result: partially_supports
+    evidence_level: E3
+    source_anchor: "Germano, Gómez & Sobbrio 2026"
+
+  - id: CASE-012
+    title: "Flint Water Crisis：多层监管链中的延迟与责任断裂"
+    domains: [water, public_health, environmental_regulation]
+    institutions: [City_of_Flint, Michigan_state_agencies, EPA, public_health_agencies]
+    mechanisms: [multi_level_oversight_gap, responsibility_diffusion, technical_information_fragmentation, delayed_response]
+    theory_result: supports
+    evidence_level: E4
+    source_anchor: "EPA OIG / CDC"
+
+cross_case_patterns:
+  proxy_power:
+    cases: [CASE-003, CASE-005, CASE-006, CASE-010, CASE-011]
+  information_topology:
+    cases: [CASE-001, CASE-002, CASE-003, CASE-007, CASE-008, CASE-012]
+  local_rationality_global_failure:
+    cases: [CASE-007, CASE-008, CASE-009, CASE-012]
+  trust_expectation_feedback:
+    cases: [CASE-004, CASE-011]
+  independent_correction:
+    cases: [CASE-001, CASE-002, CASE-003, CASE-004, CASE-005, CASE-006, CASE-007, CASE-008, CASE-009, CASE-012]
+
+next_volume_constraints:
+  minimum_success_cases: 6
+  minimum_counterexamples: 3
+  failure_to_success_target_ratio: "<=1:1"
+  purpose: "prevent pessimism and confirmation-selection bias"
