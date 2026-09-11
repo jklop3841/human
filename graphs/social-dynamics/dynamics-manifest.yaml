@@ -1,6 +1,6 @@
-schema_version: "1.1"
+schema_version: "1.2"
 system_id: HUMAN-SOCIAL-DYNAMICS-001
-version: "0.2.0"
+version: "0.3.0"
 status: active_experimental
 created_at: "2026-09-11"
 updated_at: "2026-09-11"
@@ -41,23 +41,28 @@ historical_calibration:
   status: active_experimental
   manifest: "graphs/social-dynamics/calibration/calibration-manifest.yaml"
   events: "graphs/social-dynamics/calibration/events-001.yaml"
+  prospective_signals: "graphs/social-dynamics/calibration/prospective-signals-001.yaml"
   schema: "graphs/social-dynamics/calibration/CALIBRATION_SCHEMA.yaml"
   load_protocol: "agent/HUMAN_HISTORICAL_CALIBRATION_LOAD.md"
-  event_count: 6
-  current_revision: "Social Dynamics is a meso-level institutional coordination, escalation, dependency and recovery model; it does not replace domain-specific event causation models."
+  retrospective_event_count: 6
+  pseudo_prospective_event_count: 6
+  current_revision: "Social Dynamics is a meso-level institutional coordination, escalation, dependency, preparedness and recovery model. Its strongest prospective use is structural warning and audit, not event-timing prediction."
 
 coverage:
   overlay_count: 6
   base_state_count: 6
   calibrated_event_count: 6
+  pseudo_prospective_event_count: 6
   domain_coverage: "initial_priority_domains_only"
   historical_calibration_status: "first_round_complete_selection_biased"
+  prospective_calibration_status: "first_pseudo_prospective_round_complete_no_timing_prediction"
   jurisdiction_overlays: 0
   quantitative_transition_probabilities: 0
 
 interpretation_rules:
   - "overlay != prediction"
   - "historical_fit != predictive_validation"
+  - "pre_event_structural_flag != event_timing_prediction"
   - "state_label != natural_kind_or_cause"
   - "state_profiles_are_qualitative_priors_unless_evidence_backed"
   - "state_transitions_may_overlap_or_reverse"
@@ -81,15 +86,20 @@ build_state:
   information_platform_overlay: complete
   historical_event_calibration_round_1: complete
   historical_event_calibration_event_count: 6
+  pseudo_prospective_round_1: complete
+  pseudo_prospective_event_count: 6
+  specific_trigger_or_timing_prediction_successes: 0
   agent_load_protocol: "agent/HUMAN_SOCIAL_DYNAMICS_LOAD.md"
   calibration_load_protocol: "agent/HUMAN_HISTORICAL_CALIBRATION_LOAD.md"
   jurisdiction_overlays: pending
-  prospective_or_pseudo_prospective_validation: pending
+  false_positive_benchmark: pending
+  disconfirming_case_round: pending
   quantitative_models: out_of_scope_until_evidence_exists
 
 next_build:
   - "add at least six mixed, weak-fit or disconfirming historical events"
-  - "perform prospective or pseudo-prospective tests using only information available before outcomes"
+  - "build false-positive controls: cases with similar warning patterns but no catastrophe"
+  - "score audit-question discriminating value instead of narrative fit"
   - "add mixed-state and transition-conflict examples"
   - "build jurisdiction overlays only after generic-state model stabilizes"
   - "add reform and recovery cases not anchored only in catastrophe"
