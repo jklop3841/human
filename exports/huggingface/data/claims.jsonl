@@ -1,0 +1,5 @@
+{"id":"CLAIM-001","claim":"关系形成结构，结构生成场，场约束路径，路径产生结果。","epistemic_type":"viewpoint","evidence_level":"E0","provenance_class":"P2","source_path":"worldview/reality/HUMAN-REALITY-001.md"}
+{"id":"CLAIM-002","claim":"群体不是放大版个人；信息分布、身份、权威、规范、激励、异议与责任结构会改变群体行为。","epistemic_type":"mixed","evidence_level":"E3","provenance_class":"P2","source_path":"worldview/society/HUMAN-SOCIETY-002.md"}
+{"id":"CLAIM-003","claim":"机构纸面使命不能直接推出机构实际行为。","epistemic_type":"viewpoint","evidence_level":"E0","provenance_class":"P2","source_path":"books/human-groups-institutions/INSTITUTIONAL_DRIFT_FRAMEWORK.md"}
+{"id":"CLAIM-004","claim":"糟糕结果本身不能证明腐败；资源不足、指标扭曲、信息失败、正常裁量、俘获与违法腐败应分开诊断。","epistemic_type":"method","evidence_level":"E2","provenance_class":"P2","source_path":"books/human-groups-institutions/INSTITUTIONAL_DRIFT_FRAMEWORK.md"}
+{"id":"CLAIM-005","claim":"当前 Human 机构图谱包含 8 大域、106 个机构原型。","epistemic_type":"fact","evidence_level":"NA","provenance_class":"P2","source_path":"books/human-groups-institutions/institution-atlas.yaml"}
