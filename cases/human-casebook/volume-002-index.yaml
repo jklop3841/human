@@ -1,0 +1,146 @@
+schema_version: "1.0"
+casebook_id: HUMAN-CASEBOOK-001
+volume: 2
+case_range: "CASE-013..CASE-024"
+case_count: 12
+updated_at: "2026-09-11"
+purpose: "successful_correction_collective_intelligence_and_counterexamples"
+selection_bias: "success-heavy by design; read together with volume 1"
+
+cases:
+  - id: CASE-013
+    title: "Apollo 13：高压危机中的分布式专家协作"
+    domains: [aerospace, crisis_management, engineering]
+    institutions: [NASA, mission_control, contractors]
+    mechanisms: [distributed_expertise, role_clarity, rapid_feedback, simulation, institutional_memory]
+    theory_result: counterexample_to_simple_hierarchy_pessimism
+    evidence_level: E4
+    source_anchor: "NASA Apollo 13 official history"
+
+  - id: CASE-014
+    title: "NASA ASRS：让人愿意报告错误"
+    domains: [aviation, safety, reporting]
+    institutions: [NASA, FAA, aviation_industry]
+    mechanisms: [confidential_reporting, non_punitive_feedback, neutral_intermediary, near_miss_learning]
+    theory_result: counterexample_to_fixed_organizational_silence
+    evidence_level: E4
+    source_anchor: "NASA ASRS official materials"
+
+  - id: CASE-015
+    title: "Crew Resource Management：制度化约束专业权威"
+    domains: [aviation, training, organizational_behavior]
+    institutions: [airlines, FAA, NASA]
+    mechanisms: [safe_dissent, standardized_communication, error_management, authority_gradient_control]
+    theory_result: partially_counterexample
+    evidence_level: E3
+    source_anchor: "FAA CRM history"
+
+  - id: CASE-016
+    title: "Michigan Keystone ICU：标准化也可以保护人"
+    domains: [healthcare, patient_safety, quality_improvement]
+    institutions: [AHRQ, Michigan_hospitals, Johns_Hopkins]
+    mechanisms: [evidence_based_standardization, checklist, safety_culture, feedback]
+    theory_result: counterexample_to_standardization_pessimism
+    evidence_level: E4
+    source_anchor: "AHRQ Keystone ICU"
+
+  - id: CASE-017
+    title: "Smallpox Eradication：冷战中的全球公共卫生协作"
+    domains: [public_health, international_coordination]
+    institutions: [WHO, national_health_systems]
+    mechanisms: [shared_goal, surveillance, adaptive_strategy, verification, resource_sharing]
+    theory_result: counterexample_to_global_coordination_fatalism
+    evidence_level: E4
+    source_anchor: "WHO smallpox eradication history"
+
+  - id: CASE-018
+    title: "Montreal Protocol：国际制度改变物理世界"
+    domains: [environment, international_governance, regulation]
+    institutions: [UNEP, states, industry]
+    mechanisms: [measurement_linked_governance, periodic_review, rule_update, technology_substitution]
+    theory_result: counterexample_to_institutional_symbolism_prior
+    evidence_level: E4
+    source_anchor: "UNEP Ozone Secretariat"
+
+  - id: CASE-019
+    title: "Singapore Water：长期基础设施规划"
+    domains: [water, infrastructure, public_governance]
+    institutions: [PUB_Singapore, government]
+    mechanisms: [source_diversification, long_term_planning, integrated_management, technology_revisit]
+    theory_result: counterexample_to_path_dependence_as_decay_only
+    evidence_level: E4
+    source_anchor: "PUB Singapore Water Story"
+
+  - id: CASE-020
+    title: "Toyota Jidoka / Andon：把异议变成基础设施"
+    domains: [manufacturing, quality, frontline_governance]
+    institutions: [Toyota]
+    mechanisms: [frontline_stop_authority, visible_exception, local_detection, quality_over_short_term_throughput]
+    theory_result: counterexample_to_frontline_powerlessness_prior
+    evidence_level: E3
+    source_anchor: "Toyota Production System official materials"
+
+  - id: CASE-021
+    title: "Y2K remediation：预防成功与不可见结果"
+    domains: [government, information_technology, risk_management]
+    institutions: [US_federal_agencies, GAO, SSA]
+    mechanisms: [early_warning, inventory, independent_validation, contingency_planning, public_progress_review]
+    theory_result: counterexample_to_visibility_bias
+    evidence_level: E4
+    source_anchor: "US GAO Y2K reports"
+
+  - id: CASE-022
+    title: "Human Genome Project：竞争与开放共享并存"
+    domains: [science, genomics, international_collaboration]
+    institutions: [NIH, DOE, Wellcome_Trust, international_consortium]
+    mechanisms: [open_data, public_goods, distributed_research, periodic_goal_revision]
+    theory_result: counterexample_to_scientific_incentive_fatalism
+    evidence_level: E4
+    source_anchor: "NHGRI HGP timeline and fact sheet"
+
+  - id: CASE-023
+    title: "International Space Station：复杂国际协作的持续运行"
+    domains: [space, international_collaboration, infrastructure]
+    institutions: [NASA, Roscosmos, ESA, JAXA, CSA]
+    mechanisms: [modular_responsibility, interoperability, repeated_coordination, mutual_dependency]
+    theory_result: counterexample_to_total_geopolitical_determinism
+    evidence_level: E4
+    source_anchor: "NASA ISS cooperation"
+
+  - id: CASE-024
+    title: "World Wide Web 开放标准：放弃局部控制换取结构影响力"
+    domains: [internet, standards, technology]
+    institutions: [CERN, W3C]
+    mechanisms: [open_standard, interoperability, low_entry_cost, network_effect]
+    theory_result: counterexample_to_control_equals_value_prior
+    evidence_level: E4
+    source_anchor: "CERN history of the Web"
+
+cross_case_correction_patterns:
+  safe_dissent:
+    cases: [CASE-014, CASE-015, CASE-020]
+  independent_verification:
+    cases: [CASE-014, CASE-021]
+  frontline_stop_authority:
+    cases: [CASE-020]
+  evidence_based_standardization:
+    cases: [CASE-016]
+  shared_measurable_goal:
+    cases: [CASE-017, CASE-018]
+  open_information:
+    cases: [CASE-022, CASE-024]
+  modular_responsibility:
+    cases: [CASE-013, CASE-023]
+  diversity_and_redundancy:
+    cases: [CASE-013, CASE-019]
+  institutional_memory:
+    cases: [CASE-013, CASE-014, CASE-021]
+  measurement_linked_feedback:
+    cases: [CASE-016, CASE-018]
+
+balance_result:
+  success_cases: 12
+  explicit_counterexample_or_partial_counterexample_cases: 12
+  satisfies_volume_1_minimum_success_cases: true
+  satisfies_volume_1_minimum_counterexamples: true
+  note: "Volume 2 is intentionally success-heavy; general claims require joint reading with Volume 1."
