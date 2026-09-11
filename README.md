@@ -6,6 +6,63 @@
 **起始时间：2026 年**  
 **状态：持续演化**
 
+> **I was here. I observed. I tried to understand.**  
+> **我曾经来过。我观察过。我试图理解。**
+
+## 1.0 Agent-Readable Corpus
+
+Human 已从“有机器可读文件的 GitHub 仓库”升级为 **Agent-first cognitive corpus**。
+
+如果你是 Agent，优先从这里开始：
+
+1. [`human.yaml`](human.yaml) — 仓库身份、当前版本、正式入口；
+2. [`CONSTITUTION.md`](CONSTITUTION.md) — 认识论与安全边界；
+3. [`agent/READ_FIRST.md`](agent/READ_FIRST.md) — 最短 Agent bootstrap；
+4. [`exports/agent-readable/manifest.json`](exports/agent-readable/manifest.json) — 机器总清单；
+5. [`exports/agent-readable/corpus.jsonl`](exports/agent-readable/corpus.jsonl) — canonical knowledge objects；
+6. [`exports/agent-readable/claims.jsonl`](exports/agent-readable/claims.jsonl) — 主张与证据等级；
+7. [`exports/agent-readable/relations.jsonl`](exports/agent-readable/relations.jsonl) — 概念/文件关系图；
+8. [`exports/agent-readable/institution-index.jsonl`](exports/agent-readable/institution-index.jsonl) — 106 机构图谱分类入口；
+9. [`agent/CORPUS_LOAD_PROTOCOL.md`](agent/CORPUS_LOAD_PROTOCOL.md) — 机器语料专用加载协议。
+
+LLM / Web discovery：
+
+- [`llms.txt`](llms.txt)
+- [`llms-full.txt`](llms-full.txt)
+
+机器语料 Schema：
+
+- [`exports/agent-readable/CORPUS_SCHEMA.json`](exports/agent-readable/CORPUS_SCHEMA.json)
+
+自动再生脚本：
+
+```bash
+pip install -r tools/requirements-agent-export.txt
+python tools/build_agent_corpus.py
+```
+
+脚本可以从 canonical YAML / Markdown 自动重新生成 institution/viewpoint/file manifest 等派生数据，避免机器镜像长期漂移。
+
+### Canonical-source rule
+
+发生冲突时：
+
+`current canonical source > machine export > historical snapshot > Agent inference`
+
+机器语料是索引与分发层，不取代正式源文件。
+
+### Provenance + Evidence 双轴
+
+Provenance：
+
+`P0 human_raw / P1 human_structured_author_confirmed / P2 formal_repo_author_confirmed / P3 reconstructed_memory / P4 agent_summary_or_extension / P5 external_evidence_or_counterexample`
+
+Evidence：
+
+`E0 hypothesis / E1 anecdotal / E2 limited empirical / E3 multi-study / E4 meta-analysis or strong convergence / NA`
+
+Agent 必须把“卢成观点”“外部事实”“个人经历”“模型推断”“Agent 延伸”拆开。
+
 ## Cognitive Fossil / 认知化石入口
 
 当前总认知快照：[`museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md`](museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md)
@@ -13,9 +70,6 @@
 Agent 机器索引：[`indexes/cognitive-fossil.yaml`](indexes/cognitive-fossil.yaml)
 
 Agent 加载协议：[`agent/COGNITIVE_FOSSIL_LOAD.md`](agent/COGNITIVE_FOSSIL_LOAD.md)
-
-> **I was here. I observed. I tried to understand.**  
-> **我曾经来过。我观察过。我试图理解。**
 
 ## Agent-first Human Trilogy
 
@@ -67,7 +121,7 @@ Agent 加载协议：[`agent/COGNITIVE_FOSSIL_LOAD.md`](agent/COGNITIVE_FOSSIL_L
 - 群体研究校准：[`research/2026-09-human-groups-evidence.md`](research/2026-09-human-groups-evidence.md)
 - 机构偏移证据：[`research/2026-09-institutional-drift-evidence.md`](research/2026-09-institutional-drift-evidence.md)
 
-第三卷新增的机构行为母模型：
+第三卷机构行为母模型：
 
 `使命 + 权限 + 资源约束 + 考核指标 + 层级关系 + 一线裁量 + 信息差 + 自保动机 + 外部利益 + 历史惯性 + 群体规范 → 真实机构行为`
 
@@ -75,7 +129,7 @@ Agent 加载协议：[`agent/COGNITIVE_FOSSIL_LOAD.md`](agent/COGNITIVE_FOSSIL_L
 
 `国家治理 / 司法安全应急 / 医疗照护 / 教育科研知识 / 经济金融劳动 / 信息平台文化 / 基础设施公共服务 / 社区社会与跨国组织`
 
-每个机构都拆成五层：
+每个机构拆成五层：
 
 `官方功能 → 高现实权限 → 脏现实作用力 → 常见偏移 → 稳定器`
 
@@ -92,6 +146,37 @@ BOOK-003: How do humans behave in groups, and how do institutions amplify or dis
 ```
 
 原 `0.9.0-agent-permissions` 中的《Agent进入人类文明后的权限原则》已从当前主线删除。Git 历史仍保留该版本，未来如需建立独立 Agent 权限卷，可单独重构。
+
+## 多平台分发状态
+
+### GitHub
+
+**Canonical source / 已完成。**
+
+所有当前正式文本、机器数据、版本史和构建脚本均以本仓库为准。
+
+### Hugging Face
+
+`exports/huggingface/` 已升级为 **Lu Cheng Human Archive — Agent-Readable Corpus** 发布包，并增加：
+
+`corpus.jsonl / claims.jsonl / relations.jsonl / institution-index.jsonl`
+
+当前 ChatGPT 连接到 Hugging Face 的身份为 `sandworm047`，但会话授权只包含读取与 Jobs，没有仓库写权限，因此本轮没有对远端 HF Dataset 做未经授权的写入。
+
+### agentarchitect.me
+
+`llms.txt`、`llms-full.txt` 和 `exports/agent-readable/*` 已准备好作为网站机器发现层；本轮没有假设或修改网站部署仓库。
+
+建议未来映射：
+
+`https://agentarchitect.me/human/`
+
+### MCP / Zenodo
+
+作为下一阶段：
+
+- MCP：把静态认知库变为可查询接口；
+- Zenodo：给重大版本建立不可变 DOI 快照。
 
 ## 这是什么
 
@@ -133,10 +218,19 @@ Human 不是标准答案库，也不是要求他人服从的教义。
 | `schemas/` | 仓库级机器可读数据结构 |
 | `templates/` | 新增观点、预测和案例的模板 |
 | `indexes/` | 主题、时间、概念、认知化石与文件索引 |
+| `exports/agent-readable/` | Agent-first JSONL / manifest / relation distribution layer |
+| `exports/huggingface/` | Hugging Face Dataset staging package |
+| `tools/` | corpus 构建与维护工具 |
 
 ## 当前版本
 
-`0.9.2-institution-atlas`：在第三卷中加入机构行为学母框架，将机构图谱扩展到 8 大域、106 个现代机构原型，并为每个原型记录官方功能、高现实权限、脏现实作用力、常见偏移和稳定器；同步加入机构偏移外部证据校准和升级后的 Agent 指读协议。
+**`1.0.0-agent-readable-corpus`**
+
+1.0 的意义不是“理论写完了”，而是 Human 第一次具备了稳定的：
+
+`发现 → 加载 → 检索 → 回源 → 证据分级 → 关系追踪 → 再生成 → 多平台分发`
+
+机器读取链。
 
 ## 权利说明
 
