@@ -1,0 +1,125 @@
+schema_version: "1.0"
+overlay_id: SD-HEALTH-001
+domain: healthcare
+canonical_topology_refs:
+  - hospitals
+  - emergency_departments
+  - primary_care_clinics
+  - public_health_agencies
+  - pharmacies
+  - pharmaceutical_companies
+  - medical_device_companies
+  - health_insurers_payers
+  - laboratories_diagnostic_centers
+  - blood_banks_transplant_networks
+
+states:
+  NORMAL:
+    variable_profile:
+      authority_shift: baseline
+      resource_pressure: baseline
+      information_velocity: baseline
+      verification_depth: baseline
+      coordination_density: baseline
+      discretion_level: baseline
+      feedback_latency: baseline
+      rule_flexibility: baseline
+      public_trust: baseline
+      dependency_exposure: lower
+    node_changes: []
+    edge_changes:
+      - {edge_or_path: "health_insurers_payers -> hospitals", operation: strengthen, confidence: medium, evidence_status: generic_archetype}
+    drift_risks: [metric_substitution, handoff_loss, fragmented_patient_context]
+    correction_opportunities: [routine_quality_reporting, clinical_review, patient_feedback]
+
+  CRISIS:
+    variable_profile:
+      authority_shift: higher
+      resource_pressure: higher
+      information_velocity: higher
+      verification_depth: mixed
+      coordination_density: higher
+      discretion_level: higher
+      feedback_latency: lower
+      rule_flexibility: higher
+      public_trust: mixed
+      dependency_exposure: higher
+    node_changes:
+      - {node: public_health_agencies, change: "coordination role expands"}
+      - {node: hospitals, change: "capacity and triage pressure rises"}
+      - {node: laboratories_diagnostic_centers, change: "testing/reporting importance rises"}
+    edge_changes:
+      - {edge_or_path: "public_health_agencies -> hospitals", operation: strengthen, confidence: high, evidence_status: generic_archetype}
+      - {edge_or_path: "laboratories_diagnostic_centers -> public_health_agencies", operation: accelerate, confidence: high, evidence_status: generic_archetype}
+      - {edge_or_path: "pharmaceutical_companies -> hospitals", operation: strengthen, confidence: medium, evidence_status: jurisdiction_dependent}
+    drift_risks: [triage_compression, verification_shortcuts, supply_bottlenecks, data_overload]
+    correction_opportunities: [shared_surveillance, pooled_procurement, rapid_guideline_update, cross_facility_capacity_sharing]
+
+  EMERGENCY:
+    variable_profile:
+      authority_shift: higher
+      resource_pressure: higher
+      information_velocity: higher
+      verification_depth: lower
+      coordination_density: higher
+      discretion_level: higher
+      feedback_latency: lower
+      rule_flexibility: higher
+      public_trust: mixed
+      dependency_exposure: higher
+    node_changes:
+      - {node: public_health_agencies, change: "temporary emergency authority may expand"}
+      - {node: hospitals, change: "normal scheduling and allocation rules may be bypassed"}
+    edge_changes:
+      - {edge_or_path: "government/public_health -> hospitals", operation: centralize, confidence: medium, evidence_status: jurisdiction_dependent}
+      - {edge_or_path: "routine payer rules -> hospitals", operation: weaken, confidence: medium, evidence_status: jurisdiction_dependent}
+    drift_risks: [overcentralization, inequitable_allocation, reduced_verification, staff_burnout]
+    correction_opportunities: [unified_command, emergency_mutual_aid, accelerated_data_feedback]
+
+  RECOVERY:
+    variable_profile:
+      authority_shift: mixed
+      resource_pressure: mixed
+      information_velocity: mixed
+      verification_depth: higher
+      coordination_density: mixed
+      discretion_level: mixed
+      feedback_latency: lower
+      rule_flexibility: mixed
+      public_trust: mixed
+      dependency_exposure: higher
+    node_changes:
+      - {node: hospitals, change: "backlog and workforce recovery become primary constraints"}
+      - {node: public_health_agencies, change: "emergency authority should contract unless reauthorized"}
+    edge_changes:
+      - {edge_or_path: "temporary emergency authority", operation: weaken, confidence: high, evidence_status: generic_archetype}
+      - {edge_or_path: "incident learning -> routine standards", operation: activate, confidence: high, evidence_status: generic_archetype}
+    drift_risks: [emergency_rule_stickiness, deferred_care, normalization_of_burnout]
+    correction_opportunities: [after_action_review, stockpile_revision, durable_reporting_improvements]
+
+transitions:
+  - from: NORMAL
+    to: CRISIS
+    triggers: [surge_demand, outbreak, supply_disruption, mass_casualty]
+    early_signals: [capacity_strain, rising_wait_times, abnormal_supply_use, surveillance_alerts]
+    reversible_changes: [surge_staffing, temporary_bed_conversion]
+    sticky_changes: [new_reporting_interfaces, revised_stockpile_policy]
+    exit_conditions: [sustained_capacity_margin, normalized_supply, falling_incident_rate]
+  - from: CRISIS
+    to: EMERGENCY
+    triggers: [ordinary_capacity_failure, rapid_systemic_spread]
+    early_signals: [care_denial_risk, command_fragmentation, cascading_supply_failure]
+    reversible_changes: [temporary_authority, emergency_procurement]
+    sticky_changes: [interoperability_improvements]
+    exit_conditions: [ordinary_governance_can_resume_without_immediate_harm]
+  - from: EMERGENCY
+    to: RECOVERY
+    triggers: [threat_reduction, restored_capacity]
+    early_signals: [stable_staffing, supply_restoration, reduced_case_pressure]
+    reversible_changes: [exceptional_allocation_rules]
+    sticky_changes: [validated_emergency_protocols]
+    exit_conditions: [temporary_authorities_reviewed_and_retired_or_formally_reauthorized]
+
+safeguards:
+  - "emergency clinical prioritization must not be interpreted as proof of institutional malice"
+  - "temporary authority expansion requires explicit exit review"
