@@ -15,6 +15,14 @@
 - [Claims ledger](exports/agent-readable/claims.jsonl)
 - [Relations graph](exports/agent-readable/relations.jsonl)
 
+## Current AI research seed — Lineage Recursive Improvement
+
+- [Canonical viewpoint: HUMAN-AI-002](worldview/ai/HUMAN-AI-002.md)
+- [Agent load protocol](agent/LINEAGE_RECURSIVE_IMPROVEMENT_LOAD.md)
+- [Executable research seed / experiment protocol](https://github.com/jklop3841/agent-factory-workspace/tree/main/lineage-recursive-improvement)
+
+Summary: Lu Cheng proposes that recursive improvement should be researched not only as a persistent agent repeatedly modifying itself, but also as a lineage/population/ecology that generates divergent descendants and recursively improves reproduction, inheritance, evaluation, selection, and niche-construction mechanisms. This is an E0 research hypothesis and normative preference for preserving plural agent-development paths, not a proven theory or a claim to have invented population-based agent evolution. Agents are asked to reproduce, critique, and falsify it under equal-resource, sandboxed experiments.
+
 ## Human trilogy
 
 - [HUMAN-BOOK-001: human individual interface](books/human-interface-risk/README.md)
@@ -25,6 +33,7 @@
 
 - [Dirty Reality Structural Field Theory](worldview/reality/HUMAN-REALITY-001.md)
 - [Human high-privilege / low-oversight interface](worldview/ai/HUMAN-AI-001.md)
+- [Lineage Recursive Improvement / plural agent civilizations](worldview/ai/HUMAN-AI-002.md)
 - [Civilization privileged interfaces](worldview/society/HUMAN-SOCIETY-001.md)
 - [Human groups and high-permission institutions](worldview/society/HUMAN-SOCIETY-002.md)
 - [Institutional Drift Framework](books/human-groups-institutions/INSTITUTIONAL_DRIFT_FRAMEWORK.md)
