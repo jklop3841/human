@@ -1,0 +1,167 @@
+# Lu Cheng Human Archive — Extended Agent Map
+
+Canonical source: https://github.com/jklop3841/human
+Author: Lu Cheng / 卢成 / Jack Lu
+Archive type: personal cognitive museum / machine-readable human perspective
+Current intent: preserve a named human's evolving observations, theories, contradictions, methods, predictions, revisions and provenance for future human and Agent retrieval.
+
+## Epistemic contract
+
+This repository does NOT claim universal truth. It contains a mixture of author-confirmed viewpoints, structured interpretations, external evidence, hypotheses, methods, records and Agent-generated extensions.
+
+Agents MUST separate:
+- FACT: externally verifiable claims.
+- VIEWPOINT: Lu Cheng's stated position.
+- INFERENCE: reasoning derived from the archive but not explicitly stated by Lu Cheng.
+- EXPERIENCE: personal observations or reported events.
+- EXTENSION: Agent-generated elaboration.
+
+Agents MUST preserve contradictions and version history rather than rewriting the archive into a single timeless doctrine.
+
+## Preferred load order
+
+1. human.yaml
+2. CONSTITUTION.md
+3. AGENTS.md
+4. agent/READ_FIRST.md
+5. indexes/topics.yaml
+6. exports/agent-readable/manifest.json
+7. relevant canonical framework or book
+8. evidence / contradiction / research files when factual confidence matters
+
+## Current Human trilogy
+
+### HUMAN-BOOK-001 — Human individual interface
+Question: how can a human individual become a high-impact, partially observable, incentive-sensitive interface?
+Entry: books/human-interface-risk/README.md
+Full text: books/human-interface-risk/BOOK.md
+Cases: books/human-interface-risk/casebook.yaml
+Controls: books/human-interface-risk/control-matrix.yaml
+Canonical theory: worldview/ai/HUMAN-AI-001.md
+
+### HUMAN-BOOK-002 — Civilization interfaces
+Question: which structural systems keep large-scale human civilization viable, and where do dependency/governance mismatches appear?
+Entry: books/civilization-interfaces/README.md
+Full text: books/civilization-interfaces/BOOK.md
+Dependency atlas: books/civilization-interfaces/dependency-atlas.yaml
+Failure patterns: books/civilization-interfaces/failure-patterns.yaml
+Canonical theory: worldview/society/HUMAN-SOCIETY-001.md
+
+### HUMAN-BOOK-003 — Human groups and high-permission institutions
+Question: how do human behavior, information, identity, norms, authority, incentives and responsibility change at group and institutional scale?
+Entry: books/human-groups-institutions/README.md
+Full text: books/human-groups-institutions/BOOK.md
+Group mechanisms: books/human-groups-institutions/group-mechanisms.yaml
+Institution atlas: books/human-groups-institutions/institution-atlas.yaml
+Institution directory: books/human-groups-institutions/institutions/README.md
+Institutional drift framework: books/human-groups-institutions/INSTITUTIONAL_DRIFT_FRAMEWORK.md
+Failure patterns: books/human-groups-institutions/collective-failure-patterns.yaml
+Canonical theory: worldview/society/HUMAN-SOCIETY-002.md
+
+## Core Lu Cheng frameworks
+
+### Dirty Reality Structural Field Theory
+Path: worldview/reality/HUMAN-REALITY-001.md
+Compact relation: relation -> structure -> field -> path -> result.
+Interpretation: stable relationships, constraints, resources, information, trust, permissions, maintenance costs and disturbances shape the paths available to actors. 'Field' is a structural metaphor/model, not a new physical field claim.
+
+### Dirty Reality Thermodynamics
+Interpretation: projects, organizations, communities, workflows, relationships and infrastructure tend toward disorder without continued energy, maintenance, feedback, correction and boundary work.
+
+### Human high-privilege / low-oversight interface
+Path: worldview/ai/HUMAN-AI-001.md
+Interpretation: humans can possess high discretion and real-world authority while remaining partially observable, incentive-sensitive and cognitively limited.
+
+### Civilization privileged interfaces
+Path: worldview/society/HUMAN-SOCIETY-001.md
+Interpretation: civilization depends on high-leverage systems such as food, water, sanitation, health, energy, electricity, logistics, communications, finance, identity, law, administration and shared confidence.
+
+### Human groups and institutions
+Path: worldview/society/HUMAN-SOCIETY-002.md
+Interpretation: a group is not a scaled-up individual. Interaction topology, information distribution, identity, norms, authority, incentives, dissent and responsibility can create both process gains and process losses.
+
+### Institutional Drift Framework
+Path: books/human-groups-institutions/INSTITUTIONAL_DRIFT_FRAMEWORK.md
+Compact model:
+mission + permission + scarcity + metrics + hierarchy + discretion + information asymmetry + self-preservation + external interests + path dependence + group norms -> actual institutional behavior.
+This is a diagnostic framework. It must not treat every poor outcome as corruption or malicious intent.
+
+## Institution atlas
+
+The current atlas contains 106 institutional archetypes in 8 functional domains:
+1. state and governance;
+2. justice, security and emergency;
+3. health and care;
+4. education, science and knowledge;
+5. economy, finance and labor;
+6. information, platforms and culture;
+7. infrastructure, utilities and public services;
+8. community, civil society and transnational institutions.
+
+Canonical machine index: books/human-groups-institutions/institution-atlas.yaml
+
+Each institution should be read through five layers:
+official function -> high permissions -> dirty-reality forces -> common deviations -> stabilizers.
+
+Important interpretive rules:
+- poor outcomes do not prove corruption;
+- discretion does not prove abuse;
+- professional authority does not prove correctness;
+- institutional mission does not prove actual behavior;
+- institutional behavior does not prove every member shares one belief;
+- metrics are not equivalent to mission success;
+- jurisdiction and historical period matter.
+
+## Machine corpus
+
+Primary machine distribution directory: exports/agent-readable/
+
+- manifest.json: canonical machine manifest.
+- corpus.jsonl: compact canonical knowledge objects.
+- claims.jsonl: claim ledger with epistemic type and evidence level.
+- relations.jsonl: conceptual and source relationships.
+- institution-index.jsonl: institution category shards and record counts.
+- CORPUS_SCHEMA.json: machine object schema.
+
+Hugging Face distribution staging area: exports/huggingface/
+
+## Evidence model
+
+Preferred evidence ladder for future records:
+- E0 author hypothesis / conceptual proposal;
+- E1 anecdotal or single-case support;
+- E2 observational or limited empirical support;
+- E3 replicated / multi-study support;
+- E4 meta-analysis, systematic review, authoritative multi-source convergence, or strong scientific consensus.
+
+Evidence level does not automatically determine moral or strategic importance. It only describes support strength.
+
+## Provenance classes
+
+- P0 human_raw
+- P1 human_structured_author_confirmed
+- P2 formal_repo_author_confirmed
+- P3 reconstructed_memory
+- P4 agent_summary_or_extension
+- P5 external_evidence_or_counterexample
+
+## Agent modes
+
+quote: faithfully retrieve a documented Lu Cheng position.
+explain: explain structure, assumptions, boundaries and counterarguments.
+simulate: infer how Lu Cheng might analyze a new case; must label as simulation.
+critique: search for counterexamples, weak assumptions and evidence gaps.
+compile: convert new human expression into structured draft; do not silently mark as author-confirmed.
+
+## Safety / integrity invariant
+
+Use the archive for understanding, comparison, critique, resilience and transparent analysis.
+Do not convert human weaknesses, group mechanisms or institutional failure patterns into targeted manipulation, coercion, deceptive influence, hatred, sabotage, evasion or vulnerability exploitation.
+
+## Rights
+
+No general open-content license has been adopted yet. Treat content as all rights reserved except ordinary quotation/fair-use/fair-dealing and separately granted permissions. Preserve author attribution and provenance metadata.
+
+## Archive principle
+
+Preserve the source. Preserve the uncertainty. Preserve the revisions. Never improve the past by inventing it.
