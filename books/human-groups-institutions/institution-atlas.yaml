@@ -1,98 +1,104 @@
-schema_version: "1.0"
+schema_version: "2.0"
 book_id: HUMAN-BOOK-003
 updated_at: 2026-09-11
-purpose: understand_institutional_amplification
-note: "High-permission is an analytic label for real-world leverage, not a claim of illegitimacy."
+purpose: comprehensive_human_institution_taxonomy_and_drift_index
+framework: INSTITUTIONAL_DRIFT_FRAMEWORK.md
+note: "This atlas is a comprehensive first-pass taxonomy of major modern human institutions, not a claim that every jurisdiction uses the same institutional forms. High-permission is an analytic label for real-world leverage, not a claim of illegitimacy."
 
-institutions:
-  government_public_administration:
-    core_permissions: [rule_making, taxation, budgeting, licensing, public_service, enforcement, records]
-    amplification_channels: [law, bureaucracy, budget, administrative_procedure]
-    group_risks: [hierarchy_filtering, departmental_silos, organizational_silence, responsibility_fragmentation, inertia]
-    stabilizing_functions: [coordination, continuity, public_goods, dispute_processing]
+core_model: "mission + permission + scarcity + metrics + hierarchy + discretion + information_asymmetry + self_preservation + external_interests + path_dependence + group_norms -> actual_institutional_behavior"
 
-  military_police_emergency:
-    core_permissions: [command, coercive_force_in_lawful_scope, emergency_response, rapid_resource_mobilization]
-    amplification_channels: [chain_of_command, training, doctrine, logistics]
-    group_risks: [authority_pressure, information_filtering, role_conformity, emergency_persistence]
-    stabilizing_functions: [rapid_coordination, public_safety, crisis_response]
+institution_count: 105
+category_count: 8
 
-  courts_legal_institutions:
-    core_permissions: [fact_finding, rule_interpretation, binding_judgment, rights_and_obligations]
-    amplification_channels: [procedure, precedent, enforcement, legal_records]
-    group_risks: [status_bias, institutional_path_dependence, information_asymmetry]
-    stabilizing_functions: [due_process, predictable_dispute_resolution, rights_protection]
+categories:
+  state_governance:
+    path: institutions/01-state-governance.yaml
+    count: 14
+    examples: [legislature_parliament, executive_leadership_cabinet, ministries_departments_civil_service, local_government_municipality, tax_revenue_authority, regulatory_agency]
 
-  central_banks_banks_financial_institutions:
-    core_permissions: [credit, liquidity, payment, settlement, risk_pricing, capital_allocation]
-    amplification_channels: [balance_sheets, payment_networks, market_expectations, regulation]
-    group_risks: [herding, informational_cascade, model_convergence, confidence_feedback]
-    stabilizing_functions: [intertemporal_coordination, savings, investment, payments]
+  justice_security_emergency:
+    path: institutions/02-justice-security.yaml
+    count: 13
+    examples: [police_law_enforcement, prosecutors_public_prosecution, courts_judiciary, corrections_prisons_detention, military, fire_department, emergency_medical_services_ambulance]
 
-  corporations_large_employers:
-    core_permissions: [employment, investment, production, pricing, technology_deployment, supply_chain]
-    amplification_channels: [management, capital, contracts, software, scale]
-    group_risks: [kpi_distortion, hierarchy_filtering, local_knowledge_loss, group_conformity, sunk_cost]
-    stabilizing_functions: [production, specialization, innovation, coordination]
+  health_and_care:
+    path: institutions/03-health-care.yaml
+    count: 14
+    examples: [hospitals, emergency_departments, primary_care_clinics, public_health_agencies, pharmacies, pharmaceutical_companies, health_insurers_payers]
 
-  news_media:
-    core_permissions: [attention_selection, framing, verification, agenda_setting]
-    amplification_channels: [publication, repetition, editorial_selection, reputation]
-    group_risks: [herding, agenda_narrowing, sensational_selection, source_circularity]
-    stabilizing_functions: [public_information, accountability, common_reference]
+  education_science_knowledge:
+    path: institutions/04-education-science.yaml
+    count: 10
+    examples: [primary_secondary_schools, universities, research_institutes_laboratories, academic_journals_publishers, think_tanks_policy_research_centers]
 
-  digital_platforms:
-    core_permissions: [ranking, recommendation, moderation, account_access, distribution]
-    amplification_channels: [algorithms, network_effects, interface_defaults, scale]
-    group_risks: [social_proof_amplification, outrage_cascade, norm_feedback, perceived_majority_distortion]
-    stabilizing_functions: [coordination, discovery, communication, market_access]
+  economy_finance_labor:
+    path: institutions/05-economy-finance-labor.yaml
+    count: 14
+    examples: [central_bank, commercial_banks, insurers, accounting_audit_firms, corporations_large_employers, labor_unions, antitrust_competition_authority]
 
-  science_engineering_professional_communities:
-    core_permissions: [knowledge_validation, measurement_standards, expert_advice, technical_norms]
-    amplification_channels: [peer_review, credentials, journals, standards, professional_reputation]
-    group_risks: [prestige_bias, disciplinary_lockin, publication_incentives, consensus_overreading]
-    stabilizing_functions: [error_correction, expertise, cumulative_knowledge, standards]
+  information_platforms_culture:
+    path: institutions/06-information-platforms-culture.yaml
+    count: 11
+    examples: [news_media, social_media_platforms, search_engines_information_gateways, telecom_carriers_isps, advertising_public_relations_industry, political_parties]
 
-  medical_health_institutions:
-    core_permissions: [diagnosis_frameworks, treatment_standards, professional_licensing, public_health_guidance]
-    amplification_channels: [clinical_guidelines, hospitals, professional_bodies, insurance_and_payment]
-    group_risks: [authority_overreach, hierarchy_silence, evidence_lag, institutional_inertia]
-    stabilizing_functions: [care_coordination, quality_control, expertise]
+  infrastructure_utilities_public_services:
+    path: institutions/07-infrastructure-public-services.yaml
+    count: 14
+    examples: [electric_utilities_grid_operators, water_sewer_utilities, transportation_departments_roads, aviation_airports_air_traffic, ports_shipping_logistics_hubs, environmental_protection_agencies]
 
-  schools_universities:
-    core_permissions: [curriculum, credentialing, selection, knowledge_transmission]
-    amplification_channels: [teaching, exams, degrees, research, alumni_networks]
-    group_risks: [status_hierarchy, disciplinary_path_dependence, conformity, gatekeeping]
-    stabilizing_functions: [skill_transfer, cultural_memory, professional_formation]
-
-  religious_value_communities:
-    core_permissions: [norm_definition, meaning, identity, ritual, community_support]
-    amplification_channels: [shared_narrative, ritual, moral_authority, social_network]
-    group_risks: [identity_enclosure, authority_concentration, dissent_cost, outgroup_boundary]
-    stabilizing_functions: [mutual_aid, moral_coordination, belonging, meaning]
-
-  unions_industry_associations_professional_associations:
-    core_permissions: [representation, bargaining, standards, membership_rules, coordination]
-    amplification_channels: [collective_voice, certification, negotiation, industry_norms]
-    group_risks: [insider_outsider_bias, agenda_capture, incumbent_protection]
-    stabilizing_functions: [collective_bargaining, quality_standards, coordination]
-
-  standards_measurement_bodies:
-    core_permissions: [technical_definition, interoperability_rules, measurement_conventions]
-    amplification_channels: [protocols, certification, procurement, compliance]
-    group_risks: [path_dependence, expert_insularity, slow_revision]
-    stabilizing_functions: [interoperability, comparability, reliability]
+  community_social_civil_transnational:
+    path: institutions/08-community-transnational.yaml
+    count: 15
+    examples: [family_kinship, charities_ngos, social_welfare_agencies, child_protection_services, professional_associations, international_organizations, humanitarian_relief_organizations]
 
 common_dimensions:
-  - legal_authority
-  - coercive_capacity
-  - capital_control
-  - information_control
-  - certification_power
-  - agenda_power
-  - rule_interpretation
-  - temporal_persistence
-  - scale
-  - exit_cost
-  - dissent_cost
-  - correction_capacity
+  authority:
+    - legal_authority
+    - coercive_capacity
+    - resource_allocation
+    - capital_control
+    - information_control
+    - certification_power
+    - agenda_power
+    - rule_interpretation
+  structure:
+    - hierarchy_depth
+    - frontline_discretion
+    - professional_specialization
+    - information_asymmetry
+    - temporal_persistence
+    - scale
+    - subject_exit_cost
+  dirty_reality:
+    - scarcity
+    - proxy_metrics
+    - hierarchy_filtering
+    - organizational_silence
+    - principal_agent_drift
+    - institutional_self_preservation
+    - external_capture
+    - professional_insularity
+    - path_dependence
+    - local_rationality_global_failure
+    - emergency_persistence
+    - corruption_where_evidence_supports_it
+  correction:
+    - transparency
+    - independent_review
+    - appeals
+    - competition
+    - audits
+    - rotation
+    - dissent_channels
+    - external_oversight
+    - data_revision
+    - sunset_and_expiry
+
+analysis_rules:
+  - "Do not infer corruption from poor outcomes alone."
+  - "Separate resource scarcity, metric distortion, information failure, legitimate discretion, capture, and criminal corruption."
+  - "Do not infer the belief of every employee from the behavior of the institution."
+  - "Do not infer the institution's actual behavior from its mission statement alone."
+  - "Do not treat performance metrics as equivalent to mission success."
+  - "Always identify who experiences the institution as a client, subject, member, employee, regulator, or outsider."
+  - "For high-permission institutions, map appeal, exit, dissent, audit, and correction channels."
