@@ -30,6 +30,24 @@
     "compact": "llms.txt",
     "extended": "llms-full.txt"
   },
+  "mcp": {
+    "status": "local_read_only_baseline_ready",
+    "server": "mcp/human_archive_server.py",
+    "readme": "mcp/README.md",
+    "default_transport": "stdio",
+    "tools": [
+      "archive_status",
+      "search_human_archive",
+      "get_canonical_object",
+      "get_claim",
+      "search_claims",
+      "get_relation_neighbors",
+      "search_institutions",
+      "get_institution",
+      "read_source"
+    ],
+    "resources": ["human://manifest", "human://llms"]
+  },
   "provenance_classes": {
     "P0": "human_raw",
     "P1": "human_structured_author_confirmed",
@@ -91,9 +109,9 @@
   ],
   "distribution_targets": {
     "github": "canonical",
-    "huggingface": "prepared_export_requires_write_authorization",
-    "agentarchitect_me": "prepared_files_require_site_deployment",
-    "mcp": "future_runtime_interface",
+    "huggingface": "staging_ready_remote_write_permission_missing",
+    "agentarchitect_me": "discovery_files_ready_site_deployment_not_performed",
+    "mcp": "local_read_only_baseline_ready",
     "zenodo": "future_immutable_release_snapshot"
   }
 }
