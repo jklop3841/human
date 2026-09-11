@@ -7,8 +7,9 @@ topics:
       - id: HUMAN-META-001
         path: worldview/meta/HUMAN-META-001.md
         status: active
+
   human:
-    description: "人性、欲望、希望、认知与个体命运"
+    description: "人性、欲望、希望、认知、个体命运与群体行为"
     entries:
       - id: HUMAN-INFLUENCE-002
         title: "LIAR人类影响框架：七驱力、谎言与仪式化行为"
@@ -19,13 +20,29 @@ topics:
         path: worldview/ai/HUMAN-AI-001.md
         book: books/human-interface-risk/README.md
         status: active
+      - id: HUMAN-SOCIETY-002
+        title: "人类群体与高权限机构：群体认知、权威与制度放大"
+        path: worldview/society/HUMAN-SOCIETY-002.md
+        book: books/human-groups-institutions/README.md
+        research: research/2026-09-human-groups-evidence.md
+        status: active
       - id: HUMAN-BOOK-001
         title: "人类及其人类社会的弱点——高权限低监管接口"
         path: books/human-interface-risk/README.md
         full_text: books/human-interface-risk/BOOK.md
         status: active
+      - id: HUMAN-BOOK-003
+        title: "人类群体与高权限机构——从众、集体智能、权威与制度放大"
+        path: books/human-groups-institutions/README.md
+        full_text: books/human-groups-institutions/BOOK.md
+        mechanisms: books/human-groups-institutions/group-mechanisms.yaml
+        institution_atlas: books/human-groups-institutions/institution-atlas.yaml
+        failure_patterns: books/human-groups-institutions/collective-failure-patterns.yaml
+        load_protocol: agent/HUMAN_GROUPS_INSTITUTIONS_LOAD.md
+        status: active
+
   society:
-    description: "人类社会、文明基础设施、制度协调、信任、依赖图与治理结构"
+    description: "人类社会、文明基础设施、群体、机构、制度协调、信任、依赖图与治理结构"
     entries:
       - id: HUMAN-SOCIETY-001
         title: "文明高权限接口：人类社会的结构生命线与治理错配"
@@ -42,21 +59,22 @@ topics:
         controls: books/civilization-interfaces/governance-controls.yaml
         load_protocol: agent/CIVILIZATION_INTERFACE_LOAD.md
         status: active
-      - id: HUMAN-AI-002
-        title: "Agent进入人类文明后的权限原则"
-        path: worldview/ai/HUMAN-AI-002.md
-        book: books/agent-civilization-permissions/README.md
+      - id: HUMAN-SOCIETY-002
+        title: "人类群体与高权限机构：群体认知、权威与制度放大"
+        path: worldview/society/HUMAN-SOCIETY-002.md
+        book: books/human-groups-institutions/README.md
+        research: research/2026-09-human-groups-evidence.md
         status: active
       - id: HUMAN-BOOK-003
-        title: "Agent进入人类文明后的权限原则"
-        path: books/agent-civilization-permissions/README.md
-        full_text: books/agent-civilization-permissions/BOOK.md
-        permission_ladder: books/agent-civilization-permissions/permission-ladder.yaml
-        domain_matrix: books/agent-civilization-permissions/domain-matrix.yaml
-        escalation: books/agent-civilization-permissions/escalation-protocol.yaml
-        failure_patterns: books/agent-civilization-permissions/permission-failure-patterns.yaml
-        load_protocol: agent/AGENT_CIVILIZATION_PERMISSION_LOAD.md
+        title: "人类群体与高权限机构——从众、集体智能、权威与制度放大"
+        path: books/human-groups-institutions/README.md
+        full_text: books/human-groups-institutions/BOOK.md
+        mechanisms: books/human-groups-institutions/group-mechanisms.yaml
+        institution_atlas: books/human-groups-institutions/institution-atlas.yaml
+        failure_patterns: books/human-groups-institutions/collective-failure-patterns.yaml
+        load_protocol: agent/HUMAN_GROUPS_INSTITUTIONS_LOAD.md
         status: active
+
   influence:
     description: "人类影响、说服、认知轨迹、行为生成与伦理边界"
     entries:
@@ -78,10 +96,11 @@ topics:
         title: "人类是高权限低监管接口：Agent时代的人类风险面"
         path: worldview/ai/HUMAN-AI-001.md
         status: active
-      - id: HUMAN-AI-002
-        title: "Agent进入人类文明后的权限原则"
-        path: worldview/ai/HUMAN-AI-002.md
+      - id: HUMAN-SOCIETY-002
+        title: "人类群体与高权限机构：群体认知、权威与制度放大"
+        path: worldview/society/HUMAN-SOCIETY-002.md
         status: active
+
   reality:
     description: "关系、结构、场、路径、暗信息、现实摩擦与系统维护"
     entries:
@@ -96,10 +115,11 @@ topics:
         title: "文明高权限接口：人类社会的结构生命线与治理错配"
         path: worldview/society/HUMAN-SOCIETY-001.md
         status: active
-      - id: HUMAN-AI-002
-        title: "Agent进入人类文明后的权限原则"
-        path: worldview/ai/HUMAN-AI-002.md
+      - id: HUMAN-SOCIETY-002
+        title: "人类群体与高权限机构：群体认知、权威与制度放大"
+        path: worldview/society/HUMAN-SOCIETY-002.md
         status: active
+
   reasoning:
     description: "现实建模、结构反演、范畴迁移、证伪、验真、协议与行动编译"
     entries:
@@ -122,6 +142,7 @@ topics:
         related_viewpoint: worldview/economy/HUMAN-ECONOMY-001.md
         skill: skills/evaluate-agent-capital/SKILL.md
         status: experimental
+
   ai:
     description: "AI、人机关系、Agent、治理与文明转型"
     entries:
@@ -144,23 +165,16 @@ topics:
         path: worldview/society/HUMAN-SOCIETY-001.md
         book: books/civilization-interfaces/README.md
         status: active
-      - id: HUMAN-AI-002
-        title: "Agent进入人类文明后的权限原则"
-        path: worldview/ai/HUMAN-AI-002.md
-        book: books/agent-civilization-permissions/README.md
-        permission_ladder: books/agent-civilization-permissions/permission-ladder.yaml
-        domain_matrix: books/agent-civilization-permissions/domain-matrix.yaml
-        escalation: books/agent-civilization-permissions/escalation-protocol.yaml
-        load_protocol: agent/AGENT_CIVILIZATION_PERMISSION_LOAD.md
+      - id: HUMAN-SOCIETY-002
+        title: "人类群体与高权限机构：群体认知、权威与制度放大"
+        path: worldview/society/HUMAN-SOCIETY-002.md
+        book: books/human-groups-institutions/README.md
         status: active
-      - id: HUMAN-BOOK-003
-        title: "Agent进入人类文明后的权限原则"
-        path: books/agent-civilization-permissions/README.md
-        full_text: books/agent-civilization-permissions/BOOK.md
-        status: active
+
   china:
     description: "中国社会、制度、文化、商业与现实生活"
     entries: []
+
   economy:
     description: "财富、劳动、市场、阶层与交易结构"
     entries:
@@ -180,10 +194,11 @@ topics:
         title: "文明高权限接口：人类社会的结构生命线与治理错配"
         path: worldview/society/HUMAN-SOCIETY-001.md
         status: active
-      - id: HUMAN-AI-002
-        title: "Agent进入人类文明后的权限原则"
-        path: worldview/ai/HUMAN-AI-002.md
+      - id: HUMAN-SOCIETY-002
+        title: "人类群体与高权限机构：群体认知、权威与制度放大"
+        path: worldview/society/HUMAN-SOCIETY-002.md
         status: active
+
   state:
     description: "国家、权力、战争、秩序与治理"
     entries:
@@ -196,14 +211,16 @@ topics:
         path: worldview/society/HUMAN-SOCIETY-001.md
         book: books/civilization-interfaces/README.md
         status: active
-      - id: HUMAN-AI-002
-        title: "Agent进入人类文明后的权限原则"
-        path: worldview/ai/HUMAN-AI-002.md
-        book: books/agent-civilization-permissions/README.md
+      - id: HUMAN-SOCIETY-002
+        title: "人类群体与高权限机构：群体认知、权威与制度放大"
+        path: worldview/society/HUMAN-SOCIETY-002.md
+        book: books/human-groups-institutions/README.md
         status: active
+
   gender:
     description: "男性、女性、婚恋、家庭与性别关系"
     entries: []
+
   narrative:
     description: "叙事、身份、信任、影响力与意义生产"
     entries:
@@ -219,9 +236,10 @@ topics:
       - id: HUMAN-SOCIETY-001
         path: worldview/society/HUMAN-SOCIETY-001.md
         status: active
-      - id: HUMAN-AI-002
-        path: worldview/ai/HUMAN-AI-002.md
+      - id: HUMAN-SOCIETY-002
+        path: worldview/society/HUMAN-SOCIETY-002.md
         status: active
+
   ethics:
     description: "责任、伤害、公平、自由与边界"
     entries:
@@ -237,10 +255,11 @@ topics:
         path: worldview/society/HUMAN-SOCIETY-001.md
         book: books/civilization-interfaces/README.md
         status: active
-      - id: HUMAN-AI-002
-        path: worldview/ai/HUMAN-AI-002.md
-        book: books/agent-civilization-permissions/README.md
+      - id: HUMAN-SOCIETY-002
+        path: worldview/society/HUMAN-SOCIETY-002.md
+        book: books/human-groups-institutions/README.md
         status: active
+
   predictions:
     description: "带时间窗口和判定规则的未来判断"
     entries: []
