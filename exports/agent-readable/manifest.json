@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.3",
+  "schema_version": "1.4",
   "archive_id": "LU-CHENG-HUMAN-ARCHIVE",
   "archive_version": "1.0.0-agent-readable-corpus",
   "updated_at": "2026-09-11",
@@ -34,6 +34,11 @@
     "casebook_volume_004": "cases/human-casebook/VOLUME-004.md",
     "casebook_volume_004_index": "cases/human-casebook/institution-ecology-index.yaml",
     "institution_ecology_graph": "cases/human-casebook/institution-ecology-graph.yaml",
+    "institution_topology_manifest": "graphs/institution-topology/topology-manifest.yaml",
+    "institution_topology_nodes": "graphs/institution-topology/nodes.yaml",
+    "institution_topology_edges_backbone": "graphs/institution-topology/edges.yaml",
+    "institution_topology_edges_coverage": "graphs/institution-topology/edges-coverage-002.yaml",
+    "institution_topology_coverage_audit": "graphs/institution-topology/coverage-audit.yaml",
     "schema": "exports/agent-readable/CORPUS_SCHEMA.json"
   },
   "web_discovery": {
@@ -141,6 +146,39 @@
     "paired_contrast_rule": "For why-A-failed-while-B-succeeded questions, retrieve a paired contrast, state shared conditions, candidate difference variables, competing explanations and falsification conditions.",
     "institution_ecology_rule": "For questions involving two or more institutions, represent nodes, typed edges, direction, delays, drift propagation and correction propagation before making a system-level claim."
   },
+  "institution_topology": {
+    "id": "HUMAN-INSTITUTION-TOPOLOGY-001",
+    "version": "0.2.0",
+    "status": "active_experimental",
+    "entry": "graphs/institution-topology/README.md",
+    "manifest": "graphs/institution-topology/topology-manifest.yaml",
+    "load_protocol": "agent/HUMAN_INSTITUTION_TOPOLOGY_LOAD.md",
+    "canonical_node_count": 106,
+    "typed_edge_count": 106,
+    "incident_node_count": 106,
+    "incident_coverage_ratio": 1.0,
+    "coverage_interpretation": "all nodes appear in at least one relation; graph remains sparse and incomplete",
+    "edge_files": [
+      "graphs/institution-topology/edges.yaml",
+      "graphs/institution-topology/edges-coverage-002.yaml"
+    ],
+    "edge_types": [
+      "funds",
+      "authority",
+      "information",
+      "certification",
+      "enforcement",
+      "dependency",
+      "oversight",
+      "appeal",
+      "reputation",
+      "feedback",
+      "representation",
+      "standard_setting"
+    ],
+    "specific_claim_rule": "re-verify jurisdiction and current institutional implementation before applying archetype edges to real institutions",
+    "causal_weight_status": "not_assigned"
+  },
   "canonical_frameworks": [
     "worldview/reality/HUMAN-REALITY-001.md",
     "worldview/ai/HUMAN-AI-001.md",
@@ -153,7 +191,8 @@
     "category_count": 8,
     "index": "books/human-groups-institutions/institution-atlas.yaml",
     "directory": "books/human-groups-institutions/institutions/README.md",
-    "typed_ecology_extension": "cases/human-casebook/institution-ecology-graph.yaml"
+    "typed_ecology_extension": "cases/human-casebook/institution-ecology-graph.yaml",
+    "typed_social_topology": "graphs/institution-topology/topology-manifest.yaml"
   },
   "integrity_rules": [
     "separate_external_fact_from_author_viewpoint_from_agent_inference",
@@ -166,8 +205,10 @@
     "pair_drift_cases_with_correction_or_counterexample_cases_for_broad_claims",
     "paired_contrasts_generate_candidate_variables_not_proven_causal_laws",
     "ecology_edges_do_not_by_themselves_establish_causal_strength_intent_or_corruption",
+    "topology_incident_coverage_does_not_mean_graph_completeness",
+    "generic_archetype_edges_require_jurisdiction_verification_for_specific_claims",
     "distinguish_node_failure_handoff_failure_dependency_failure_and_coordination_failure",
-    "do_not_use_ecology_graph_for_attack_target_ranking_or_sabotage",
+    "do_not_use_ecology_or_topology_graphs_for_attack_target_ranking_or_sabotage",
     "return_unknown_when_evidence_is_missing"
   ],
   "distribution_targets": {
