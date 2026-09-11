@@ -112,13 +112,13 @@ Agent 必须区分：**外部事实 / 卢成观点 / 个人经历 / 模型推断
 
 核心警告：**效率差不等于腐败，裁量不等于违规，专业权威不等于真理，使命宣言不等于实际行为。**
 
-## Human Casebook — 现实碰撞与证伪层
+## Human Casebook — 现实碰撞、证伪与比较层
 
 入口：[`cases/human-casebook/README.md`](cases/human-casebook/README.md)
 
 Casebook 不负责证明 Human 永远正确，而负责让理论持续撞现实。
 
-当前共有 **24 个结构案例 / 2 卷**：
+当前共有 **24 个结构案例 + 6 组成对对照 / 3 卷**：
 
 ### Volume 001 — failure / drift
 
@@ -132,15 +132,42 @@ Casebook 不负责证明 Human 永远正确，而负责让理论持续撞现实�
 
 12 个成功纠错与反悲观样本，包括 Apollo 13、NASA ASRS、Crew Resource Management、Michigan Keystone ICU、Smallpox Eradication、Montreal Protocol、Singapore Water、Toyota Jidoka/Andon、Y2K remediation、Human Genome Project、ISS 与 World Wide Web 开放标准。
 
+### Volume 003 — Same Mechanism, Opposite Outcomes
+
+[`cases/human-casebook/VOLUME-003.md`](cases/human-casebook/VOLUME-003.md)
+
+6 组结构差分：
+
+- Challenger vs Apollo 13；
+- Mid Staffordshire vs Michigan Keystone ICU；
+- 9/11 information silos vs NASA ASRS；
+- Punitive metrics vs Toyota Andon/Jidoka；
+- Publish or Perish vs Human Genome Project；
+- Texas/Katrina vs Y2K remediation。
+
+第三卷的目标不是继续统计“失败”和“成功”，而是：
+
+`相同结构条件 - 相反结果 → 候选差异变量`
+
+当前提取出的候选变量包括：
+
+`bad_news_safety / information_reachability / proxy_distance / frontline_correction_authority / independent_verification / simulation_testability / shared_objective_clarity / responsibility_concentration / memory_retention / correction_latency`
+
+这些变量当前仍是 **exploratory hypotheses**，不是已经建立的因果定律。
+
 Casebook 现在强制同时观察：
 
 `drift_vector` — 什么把系统拉偏；
 
-`correction_vector` — 什么把系统拉回来。
+`correction_vector` — 什么把系统拉回来；
+
+`paired_contrast` — 为什么相似系统产生相反结果。
 
 Agent 对“人类机构一般如何”这类广义问题，至少必须联合读取：
 
 `1 drift case + 1 correction/counterexample case`
+
+对“为什么 A 失败而 B 成功”这类问题，则必须增加 paired contrast、竞争解释和可证伪条件。
 
 加载协议：[`agent/HUMAN_CASEBOOK_LOAD.md`](agent/HUMAN_CASEBOOK_LOAD.md)
 
@@ -150,6 +177,9 @@ Agent 对“人类机构一般如何”这类广义问题，至少必须联合�
 - [`cases/human-casebook/cases.jsonl`](cases/human-casebook/cases.jsonl)
 - [`cases/human-casebook/volume-002-index.yaml`](cases/human-casebook/volume-002-index.yaml)
 - [`cases/human-casebook/volume-002-cases.jsonl`](cases/human-casebook/volume-002-cases.jsonl)
+- [`cases/human-casebook/paired-contrast-index.yaml`](cases/human-casebook/paired-contrast-index.yaml)
+- [`cases/human-casebook/paired-contrasts.jsonl`](cases/human-casebook/paired-contrasts.jsonl)
+- [`cases/human-casebook/candidate-difference-variables.yaml`](cases/human-casebook/candidate-difference-variables.yaml)
 
 ## 脏现实结构场论
 
@@ -159,7 +189,11 @@ Agent 对“人类机构一般如何”这类广义问题，至少必须联合�
 
 `关系 → 结构 → 场 → 路径 → 结果`
 
-这里的“场”是结构建模语言，不是新的物理场主张。
+Casebook Volume 003 对它做了一个重要校准：
+
+`关系 → 结构 → 场 → 可行路径集合 → 选择/反馈 → 结果`
+
+这里的“场”是结构建模语言，不是新的物理场主张；它既可能把系统拉偏，也可能通过制度设计制造更好的低阻力路径。
 
 ## Cognitive Fossil / 认知化石
 
