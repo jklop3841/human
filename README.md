@@ -112,6 +112,45 @@ Agent 必须区分：**外部事实 / 卢成观点 / 个人经历 / 模型推断
 
 核心警告：**效率差不等于腐败，裁量不等于违规，专业权威不等于真理，使命宣言不等于实际行为。**
 
+## Human Casebook — 现实碰撞与证伪层
+
+入口：[`cases/human-casebook/README.md`](cases/human-casebook/README.md)
+
+Casebook 不负责证明 Human 永远正确，而负责让理论持续撞现实。
+
+当前共有 **24 个结构案例 / 2 卷**：
+
+### Volume 001 — failure / drift
+
+[`cases/human-casebook/VOLUME-001.md`](cases/human-casebook/VOLUME-001.md)
+
+12 个失败与偏移案例，包括司法误认、Challenger、医院目标偏移、银行挤兑、销售 KPI、考试指标、情报孤岛、灾害协同、电力—天然气级联、科研激励、平台参与度与 Flint 水危机。
+
+### Volume 002 — correction / collective intelligence / counterexample
+
+[`cases/human-casebook/VOLUME-002.md`](cases/human-casebook/VOLUME-002.md)
+
+12 个成功纠错与反悲观样本，包括 Apollo 13、NASA ASRS、Crew Resource Management、Michigan Keystone ICU、Smallpox Eradication、Montreal Protocol、Singapore Water、Toyota Jidoka/Andon、Y2K remediation、Human Genome Project、ISS 与 World Wide Web 开放标准。
+
+Casebook 现在强制同时观察：
+
+`drift_vector` — 什么把系统拉偏；
+
+`correction_vector` — 什么把系统拉回来。
+
+Agent 对“人类机构一般如何”这类广义问题，至少必须联合读取：
+
+`1 drift case + 1 correction/counterexample case`
+
+加载协议：[`agent/HUMAN_CASEBOOK_LOAD.md`](agent/HUMAN_CASEBOOK_LOAD.md)
+
+机器入口：
+
+- [`cases/human-casebook/case-index.yaml`](cases/human-casebook/case-index.yaml)
+- [`cases/human-casebook/cases.jsonl`](cases/human-casebook/cases.jsonl)
+- [`cases/human-casebook/volume-002-index.yaml`](cases/human-casebook/volume-002-index.yaml)
+- [`cases/human-casebook/volume-002-cases.jsonl`](cases/human-casebook/volume-002-cases.jsonl)
+
 ## 脏现实结构场论
 
 正式入口：[`worldview/reality/HUMAN-REALITY-001.md`](worldview/reality/HUMAN-REALITY-001.md)
@@ -186,7 +225,7 @@ MCP 不提供仓库写入、Shell、网络执行或权限提升能力。
 
 `corpus.jsonl / claims.jsonl / relations.jsonl / institution-index.jsonl / viewpoints.jsonl / timeline.jsonl`
 
-当前连接账号观测为 `sandworm047`，但 OAuth 没有仓库写权限，所以本轮没有远程发布。
+远程 Hugging Face 发布本轮不作为 Human 主线工作前提；GitHub 继续作为 canonical source。
 
 ### Zenodo
 
