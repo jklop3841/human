@@ -1,0 +1,98 @@
+schema_version: "1.0"
+state_set_id: HUMAN-SOCIAL-STATESET-001
+
+states:
+  - id: NORMAL
+    title_zh: 正常态
+    definition: "existing rules, budgets, permissions and feedback loops operate within expected range"
+    default_profile:
+      authority_shift: baseline
+      resource_pressure: baseline
+      information_velocity: baseline
+      verification_depth: baseline
+      coordination_density: baseline
+      discretion_level: baseline
+      feedback_latency: baseline
+      rule_flexibility: baseline
+      public_trust: baseline
+      dependency_exposure: lower
+
+  - id: EXPANSION
+    title_zh: 扩张态
+    definition: "demand, investment, organizational scale or mission scope grows faster than routines mature"
+    default_profile:
+      authority_shift: mixed
+      resource_pressure: higher
+      information_velocity: higher
+      verification_depth: mixed
+      coordination_density: higher
+      discretion_level: higher
+      feedback_latency: higher
+      rule_flexibility: higher
+      public_trust: mixed
+      dependency_exposure: higher
+
+  - id: CRISIS
+    title_zh: 危机态
+    definition: "existing structure remains active but time, resources, trust or dependencies are under abnormal stress"
+    default_profile:
+      authority_shift: higher
+      resource_pressure: higher
+      information_velocity: higher
+      verification_depth: mixed
+      coordination_density: higher
+      discretion_level: higher
+      feedback_latency: mixed
+      rule_flexibility: higher
+      public_trust: mixed
+      dependency_exposure: higher
+
+  - id: EMERGENCY
+    title_zh: 紧急态
+    definition: "ordinary mechanisms are insufficient and temporary authority, rerouting or exceptional coordination is activated"
+    default_profile:
+      authority_shift: higher
+      resource_pressure: higher
+      information_velocity: higher
+      verification_depth: lower
+      coordination_density: higher
+      discretion_level: higher
+      feedback_latency: lower
+      rule_flexibility: higher
+      public_trust: mixed
+      dependency_exposure: higher
+
+  - id: REFORM
+    title_zh: 改革态
+    definition: "system intentionally rewrites rules, incentives, permissions, interfaces or oversight"
+    default_profile:
+      authority_shift: mixed
+      resource_pressure: higher
+      information_velocity: higher
+      verification_depth: higher
+      coordination_density: higher
+      discretion_level: mixed
+      feedback_latency: lower
+      rule_flexibility: higher
+      public_trust: mixed
+      dependency_exposure: higher
+
+  - id: RECOVERY
+    title_zh: 恢复态
+    definition: "system moves out of stress while deciding which temporary mechanisms to retire and which improvements to retain"
+    default_profile:
+      authority_shift: mixed
+      resource_pressure: mixed
+      information_velocity: mixed
+      verification_depth: higher
+      coordination_density: mixed
+      discretion_level: mixed
+      feedback_latency: lower
+      rule_flexibility: mixed
+      public_trust: mixed
+      dependency_exposure: higher
+
+notes:
+  - "profiles are qualitative priors, not empirical measurements"
+  - "domain overlays may override any default value"
+  - "state classification may be mixed or uncertain"
