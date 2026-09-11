@@ -1,0 +1,110 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-003
+category: community_social_civil_transnational
+framework: ../INSTITUTIONAL_DRIFT_FRAMEWORK.md
+
+institutions:
+  family_kinship:
+    official_function: [care, reproduction, socialization, resource_sharing, emotional_support]
+    high_permissions: [child_rearing, inheritance_informal_rules, caregiving, identity_formation]
+    dirty_reality_forces: [dependency, tradition, gender_roles, money, emotional_bonds, secrecy]
+    common_deviations: [favoritism, coercive_control, intergenerational_pattern_lockin, hidden_abuse, duty_over_individual_need]
+    stabilizers: [law, education, outside_support, child_protection, social_norm_change]
+
+  neighborhood_community_organizations:
+    official_function: [local_coordination, mutual_aid, dispute_mediation, shared_resources]
+    high_permissions: [informal_norms, reputation, access_to_local_networks]
+    dirty_reality_forces: [small_networks, gossip, status, long_memory, local_factions]
+    common_deviations: [clique_capture, exclusion, rumor_cascade, informal_punishment]
+    stabilizers: [open_membership, rotating_leadership, transparent_rules, external_mediation]
+
+  charities_ngos:
+    official_function: [public_benefit, aid, advocacy, service_delivery]
+    high_permissions: [donation_allocation, beneficiary_selection, agenda_setting, moral_authority]
+    dirty_reality_forces: [donor_preferences, grant_metrics, fundraising_storytelling, staff_survival, mission_brand]
+    common_deviations: [mission_drift, donor_capture, beneficiary_voice_loss, impact_metric_gaming, savior_narrative]
+    stabilizers: [beneficiary_governance, financial_audit, outcome_review, funding_diversity, transparency]
+
+  social_welfare_agencies:
+    official_function: [income_support, disability_support, unemployment_support, child_and_family_services]
+    high_permissions: [eligibility, benefit_amount, sanctions, case_management]
+    dirty_reality_forces: [caseload, fraud_prevention, budget, documentation, political_stigma]
+    common_deviations: [false_rejection, compliance_burden, claimant_dehumanization, easy_case_processing, sanction_over_support]
+    stabilizers: [appeals, legal_aid, ombudsman, simplified_forms, caseworker_support]
+
+  child_protection_services:
+    official_function: [protect_children_from_abuse_neglect, support_families]
+    high_permissions: [investigation, family_intervention, court_referral, placement_recommendation]
+    dirty_reality_forces: [high_stakes_uncertainty, caseload, public_scandal_risk, limited_placement_capacity]
+    common_deviations: [overremoval, underintervention, defensive_casework, paperwork_over_relationship, risk_score_overreliance]
+    stabilizers: [judicial_review, multidisciplinary_team, family_services, case_audit, child_advocacy]
+
+  elder_disability_support_institutions:
+    official_function: [care_support_accessibility_protection]
+    high_permissions: [service_eligibility, guardianship_interfaces, care_plan, resource_allocation]
+    dirty_reality_forces: [dependency, caregiver_shortage, budget, low_visibility]
+    common_deviations: [paternalism, neglect, service_rationing, autonomy_loss]
+    stabilizers: [supported_decision_making, ombudsman, family_and_user_voice, inspection]
+
+  professional_associations:
+    official_function: [professional_standards, training, representation, ethics]
+    high_permissions: [membership, credential_signals, discipline, standard_setting]
+    dirty_reality_forces: [member_interest, prestige, market_entry, peer_loyalty]
+    common_deviations: [guild_behavior, entry_barriers, misconduct_protection, consensus_lockin]
+    stabilizers: [public_members, external_review, transparency, competing_associations]
+
+  cooperatives_mutuals:
+    official_function: [member_owned_service_or_production, shared_economic_benefit]
+    high_permissions: [member_rules, resource_allocation, collective_purchasing_or_production]
+    dirty_reality_forces: [participation_fatigue, insider_control, capital_constraints, free_riding]
+    common_deviations: [manager_capture, low_participation_oligarchy, member_short_termism]
+    stabilizers: [one_member_one_vote_where_applicable, audit, education, term_rotation]
+
+  international_organizations:
+    official_function: [coordinate_states, set_norms, manage_cross_border_problems, provide_assistance]
+    high_permissions: [standards, funding, monitoring, convening, technical_advice]
+    dirty_reality_forces: [member_state_power, donor_dependence, diplomatic_consensus, bureaucracy, distance_from_local_reality]
+    common_deviations: [lowest_common_denominator, donor_capture, mission_sprawl, local_context_loss, symbolic_resolution]
+    stabilizers: [multi_state_governance, independent_evaluation, local_participation, transparent_budget, periodic_mandate_review]
+
+  humanitarian_relief_organizations:
+    official_function: [emergency_aid, shelter, food, medical_support, protection]
+    high_permissions: [aid_allocation, beneficiary_registration, logistics, crisis_information]
+    dirty_reality_forces: [urgency, donor_visibility, security, access_negotiation, scarcity]
+    common_deviations: [visible_crisis_bias, aid_dependency, local_market_distortion, beneficiary_data_risk, donor_priority_over_need]
+    stabilizers: [needs_assessment, local_partner_governance, cash_where_appropriate, accountability_to_affected_people, independent_evaluation]
+
+  development_banks_aid_agencies:
+    official_function: [finance_development, infrastructure, poverty_reduction, institutional_capacity]
+    high_permissions: [large_scale_finance, policy_conditions, project_selection, technical_standards]
+    dirty_reality_forces: [disbursement_targets, geopolitical_interest, consultant_ecosystems, measurable_outputs, borrower_politics]
+    common_deviations: [loan_push, infrastructure_bias, consultant_capture, local_ownership_gap, debt_externality]
+    stabilizers: [safeguards, independent_evaluation, local_consultation, debt_analysis, procurement_rules]
+
+  treaty_standard_setting_international_bodies:
+    official_function: [coordinate_cross_border_rules, interoperability, safety_or_trade_standards]
+    high_permissions: [norm_creation, certification_reference, trade_access_effects]
+    dirty_reality_forces: [state_power_asymmetry, corporate_expertise, consensus_requirement, technical_complexity]
+    common_deviations: [rich_member_bias, incumbent_technology_lockin, slow_revision, opaque_negotiation]
+    stabilizers: [public_consultation, balanced_representation, versioning, scientific_review]
+
+  civil_society_advocacy_movements:
+    official_function: [represent_causes, mobilize_voice, monitor_power, change_norms_or_policy]
+    high_permissions: [agenda_setting, reputational_pressure, mobilization, donor_allocation]
+    dirty_reality_forces: [identity, outrage, donor_interest, media_visibility, activist_status]
+    common_deviations: [purity_spiral, mission_capture, symbolic_action_over_outcome, internal_silence, adversary_dehumanization]
+    stabilizers: [internal_democracy, outcome_review, viewpoint_diversity, funding_disclosure, nonviolence_rules]
+
+  arbitration_mediation_institutions:
+    official_function: [resolve_disputes_outside_or_alongside_courts]
+    high_permissions: [settlement_facilitation, binding_awards_where_agreed_or_lawful]
+    dirty_reality_forces: [repeat_player_effect, speed, confidentiality, fee_structure]
+    common_deviations: [repeat_client_bias, pressure_to_settle, opacity, unequal_bargaining_power]
+    stabilizers: [conflict_disclosure, appeal_or_review_where_available, arbitrator_rotation, published_rules]
+
+  private_security_firms:
+    official_function: [protect_people_property_events_facilities]
+    high_permissions: [access_control, surveillance, physical_intervention_within_law]
+    dirty_reality_forces: [client_priority, low_training, cost_pressure, accountability_gap]
+    common_deviations: [excess_force, rights_blindness, undertraining, client_interest_over_public_interest]
+    stabilizers: [licensing, training, insurance, police_and_court_oversight, complaint_channels]
