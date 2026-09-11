@@ -1,0 +1,103 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-003
+category: economy_finance_labor
+framework: ../INSTITUTIONAL_DRIFT_FRAMEWORK.md
+
+institutions:
+  central_bank:
+    official_function: [monetary_stability, financial_stability, payment_system_support, lender_of_last_resort_where_mandated]
+    high_permissions: [interest_rate_policy, liquidity, balance_sheet_operations, bank_supervision_where_mandated]
+    dirty_reality_forces: [inflation_unemployment_tradeoffs, model_uncertainty, political_pressure, market_expectations, crisis_speed]
+    common_deviations: [model_lockin, communication_overprecision, delayed_recognition, market_dependency, mission_expansion]
+    stabilizers: [independence, transparency, minutes, multiple_models, legislative_mandate, ex_post_review]
+
+  commercial_banks:
+    official_function: [payments, deposits, credit, financial_intermediation]
+    high_permissions: [credit_allocation, account_access, transaction_screening, leverage]
+    dirty_reality_forces: [profit_targets, risk_models, capital_requirements, competition, depositor_confidence]
+    common_deviations: [credit_cycle_herding, sales_misconduct, model_bias, fee_extraction, de_risking_exclusion, short_termism]
+    stabilizers: [capital_rules, deposit_insurance, supervision, audits, consumer_protection, stress_tests]
+
+  securities_exchanges_clearinghouses:
+    official_function: [market_access, price_discovery, trade_matching, settlement, risk_management]
+    high_permissions: [listing, trading_rules, margin, clearing, market_halts]
+    dirty_reality_forces: [volume_incentive, speed, systemic_risk, member_pressure, technological_complexity]
+    common_deviations: [volume_over_quality, procyclical_margin, incumbent_advantage, opacity, operational_concentration]
+    stabilizers: [market_surveillance, circuit_breakers, capital_requirements, disclosure, independent_governance]
+
+  insurers:
+    official_function: [pool_risk, compensate_losses, price_uncertainty]
+    high_permissions: [coverage, pricing, claim_approval, exclusions]
+    dirty_reality_forces: [loss_ratio, fraud, adverse_selection, reserve_pressure, catastrophe_modeling]
+    common_deviations: [claim_friction, exclusion_complexity, model_discrimination, underpricing_then_withdrawal]
+    stabilizers: [regulation, appeals, solvency_rules, plain_language, actuarial_review]
+
+  pension_funds_asset_managers:
+    official_function: [manage_long_term_savings, invest_capital]
+    high_permissions: [asset_allocation, voting_rights, manager_selection]
+    dirty_reality_forces: [benchmarking, quarterly_performance, fee_incentives, career_risk, herd_behavior]
+    common_deviations: [benchmark_herding, short_termism, fee_drag, fashionable_asset_cascade]
+    stabilizers: [fiduciary_duty, long_horizon_benchmark, governance, fee_disclosure, diversification]
+
+  credit_rating_agencies:
+    official_function: [assess_creditworthiness, standardize_risk_signals]
+    high_permissions: [ratings_that_affect_capital_cost_and_rules]
+    dirty_reality_forces: [issuer_pays_model, model_similarity, reputation, regulatory_embedding]
+    common_deviations: [rating_inertia, conflict_of_interest, procyclicality, false_precision]
+    stabilizers: [method_disclosure, regulatory_oversight, competing_ratings, performance_tracking]
+
+  accounting_audit_firms:
+    official_function: [verify_financial_reporting, provide_assurance]
+    high_permissions: [audit_opinion, valuation_judgment, compliance_assurance]
+    dirty_reality_forces: [client_payment, consulting_cross_sell, deadline, partner_economics]
+    common_deviations: [client_capture, checklist_audit, materiality_blind_spot, boilerplate_assurance]
+    stabilizers: [independence_rules, audit_committee, regulator_inspection, partner_rotation, liability]
+
+  corporations_large_employers:
+    official_function: [produce_goods_services, employ_people, allocate_capital, innovate]
+    high_permissions: [employment, investment, pricing, technology_deployment, supply_chain_control]
+    dirty_reality_forces: [profit, growth, quarterly_reporting, executive_incentives, competition, internal_politics]
+    common_deviations: [KPI_substitution, externality_export, hierarchy_filtering, mission_drift, customer_lockin, short_term_cost_cutting]
+    stabilizers: [boards, competition, labor_law, consumer_protection, audit, whistleblowing, long_term_ownership]
+
+  small_businesses_family_firms:
+    official_function: [local_production_services_employment]
+    high_permissions: [employment, pricing, local_relationships, customer_selection]
+    dirty_reality_forces: [cashflow, owner_identity, informal_governance, relationship_networks]
+    common_deviations: [nepotism, informal_rules, underinvestment_in_controls, owner_mood_as_policy]
+    stabilizers: [contracts, bookkeeping, professionalization, customer_reputation, law]
+
+  labor_unions:
+    official_function: [collective_bargaining, worker_representation, workplace_protection]
+    high_permissions: [collective_voice, strike_coordination_where_lawful, bargaining, membership_rules]
+    dirty_reality_forces: [leadership_survival, incumbent_member_interest, political_alignment, employer_conflict]
+    common_deviations: [insider_outsider_bias, leadership_entrenchment, rigidity, political_mission_drift]
+    stabilizers: [member_elections, financial_disclosure, internal_democracy, legal_rules]
+
+  employer_industry_associations_chambers:
+    official_function: [coordinate_business_interests, standards, representation]
+    high_permissions: [lobbying, industry_norms, certification, information_pooling]
+    dirty_reality_forces: [incumbent_interest, market_entry_threat, lobbying_access]
+    common_deviations: [cartel_like_coordination_risk, incumbent_protection, regulatory_capture, exclusion]
+    stabilizers: [antitrust, lobbying_transparency, plural_membership, public_consultation]
+
+  employment_agencies_platform_labor_markets:
+    official_function: [match_workers_and_jobs, verify_qualifications, handle_payments_or_scheduling]
+    high_permissions: [ranking, access_to_work, rating, deactivation]
+    dirty_reality_forces: [fill_rate, platform_growth, employer_demand, automation, fraud_control]
+    common_deviations: [opaque_ranking, race_to_bottom, rating_bias, deactivation_without_due_process]
+    stabilizers: [appeal, transparency, labor_protection, audit, portability_of_reputation]
+
+  consumer_credit_bureaus:
+    official_function: [aggregate_credit_history, support_lending_decisions]
+    high_permissions: [credit_score_information, identity_matching]
+    dirty_reality_forces: [data_scale, automation, lender_dependence, correction_cost]
+    common_deviations: [error_persistence, identity_mismatch, opaque_score_effect, exclusion]
+    stabilizers: [correction_rights, disclosure, data_quality_rules, regulator_oversight]
+
+  antitrust_competition_authority:
+    official_function: [protect_market_competition, review_mergers, prevent_abuse]
+    high_permissions: [investigation, merger_conditions_or_blocks_where_lawful, fines]
+    dirty_reality_forces: [complex_economics, lobbying, legal_delay, revolving_doors, political_pressure]
+    common_deviations: [under_enforcement, over_enforcement, static_market_models, litigation_aversion]
+    stabilizers: [judicial_review, economic_transparency, independence, ex_post_merger_review]
