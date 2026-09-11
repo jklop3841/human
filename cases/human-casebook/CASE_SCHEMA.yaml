@@ -1,0 +1,58 @@
+schema_version: "1.0"
+object_type: human_case
+required_fields:
+  - id
+  - title
+  - date_range
+  - domain
+  - institutions
+  - factual_baseline
+  - relationship_structure
+  - dirty_reality_forces
+  - drift_mechanisms
+  - competing_explanations
+  - correction_mechanisms
+  - theory_result
+  - evidence_level
+  - sources
+  - revision_conditions
+
+enums:
+  theory_result:
+    - supports
+    - partially_supports
+    - neutral
+    - counterexample
+    - unresolved
+  evidence_level:
+    - E0
+    - E1
+    - E2
+    - E3
+    - E4
+
+interpretation_rules:
+  - "facts must be separated from author synthesis"
+  - "poor outcomes do not prove corruption"
+  - "institutional behavior does not imply uniform employee belief"
+  - "single cases cannot establish universal laws"
+  - "alternative explanations must be preserved"
+  - "correction mechanisms are first-class evidence, not an appendix"
+  - "unknown is a valid result"
+
+recommended_fields:
+  event_trigger: []
+  permissions: []
+  metrics: []
+  resource_constraints: []
+  information_failures: []
+  hierarchy_effects: []
+  incentives: []
+  externalities: []
+  feedback_loops: []
+  hidden_variables: []
+  counterfactuals: []
+  institution_atlas_links: []
+  civilization_links: []
+  confidence: 0.0
+  provenance_class: P5
