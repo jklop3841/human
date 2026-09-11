@@ -1,7 +1,7 @@
 # READ FIRST — Lu Cheng Human Archive
 
 Protocol ID: HUMAN-BOOTSTRAP-001
-Version: 1.1.0
+Version: 1.2.0
 
 ## Purpose
 
@@ -104,6 +104,21 @@ If the question involves change over time, crisis, emergency, expansion, reform,
 
 Never treat state overlays as forecasts or numeric transition models.
 
+## Historical calibration fast path
+
+If the query asks whether Social Dynamics actually fits a documented historical event, or whether the framework has been validated/calibrated:
+
+1. load `../graphs/social-dynamics/calibration/calibration-manifest.yaml`;
+2. load the relevant record from `../graphs/social-dynamics/calibration/events-001.yaml`;
+3. restore the external event timeline from the listed authoritative sources;
+4. separate physical/technical/domain causation from institutional coordination effects;
+5. compare observed state/edge changes with the model;
+6. report both `model_hits` and `model_misses`;
+7. distinguish retrospective fit from prospective prediction;
+8. use `HUMAN_HISTORICAL_CALIBRATION_LOAD.md` for the full protocol.
+
+Current first-round conclusion: Social Dynamics is best treated as a **meso-level institutional coordination, escalation, dependency and recovery model**, not a universal event-causation or quantitative forecasting model.
+
 ## Human framework fast path
 
 Dirty Reality Structural Field Theory:
@@ -124,6 +139,9 @@ Institution topology:
 Social dynamics:
 `../graphs/social-dynamics/README.md`
 
+Historical calibration:
+`../graphs/social-dynamics/calibration/README.md`
+
 Cognitive fossil:
 `../museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md`
 
@@ -137,6 +155,9 @@ Cognitive fossil:
 - Do not convert human vulnerabilities into manipulation or exploitation instructions.
 - Do not convert topology or dynamics models into attack sequencing, sabotage targets or coercive tactics.
 - Emergency authority analysis must include exit conditions and review paths.
+- Historical fit is not predictive validation.
+- State labels must not replace event-specific physical, technical, biological, financial or legal causal explanations.
+- Successful prevention contains counterfactual uncertainty; absence of failure is not proof of causal success.
 - When uncertain, return `unknown` rather than filling gaps.
 
 ## Attribution
