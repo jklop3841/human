@@ -9,7 +9,7 @@ ecology_count: 6
 
 edge_types: [funds, authority, information, certification, enforcement, dependency, oversight, appeal, reputation, feedback]
 
- ecologies:
+ecologies:
   - id: ECO-001
     name: healthcare_ecology
     title: "医疗生态：患者→医院→支付方→药械→监管"
