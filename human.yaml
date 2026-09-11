@@ -68,6 +68,7 @@ entrypoints:
   human_casebook_schema: "cases/human-casebook/CASE_SCHEMA.yaml"
   human_casebook_index: "cases/human-casebook/case-index.yaml"
   human_casebook_jsonl: "cases/human-casebook/cases.jsonl"
+  human_casebook_load_protocol: "agent/HUMAN_CASEBOOK_LOAD.md"
   human_interface_viewpoint: "worldview/ai/HUMAN-AI-001.md"
   human_interface_book: "books/human-interface-risk/README.md"
   human_interface_book_full: "books/human-interface-risk/BOOK.md"
