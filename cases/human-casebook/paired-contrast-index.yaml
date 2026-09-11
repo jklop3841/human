@@ -1,0 +1,86 @@
+schema_version: "1.0"
+casebook_id: HUMAN-CASEBOOK-001
+volume: 3
+pair_count: 6
+updated_at: "2026-09-11"
+
+pairs:
+  - id: PAIR-001
+    title: "Challenger vs Apollo 13"
+    domain: aerospace
+    negative_cases: [CASE-002]
+    positive_cases: [CASE-013]
+    shared_conditions: [high_risk, technical_complexity, hierarchy, time_pressure]
+    candidate_difference_variables: [dissent_reachability, information_completeness, simulation_capability, shared_objective_clarity, decision_interface_quality]
+    effect_on_human: revises
+
+  - id: PAIR-002
+    title: "Mid Staffordshire vs Michigan Keystone ICU"
+    domain: healthcare
+    negative_cases: [CASE-003]
+    positive_cases: [CASE-016]
+    shared_conditions: [hospital_system, metrics, clinical_workflows, patient_safety]
+    candidate_difference_variables: [proxy_distance, frontline_participation, feedback_speed, safety_culture, metric_gameability]
+    effect_on_human: revises
+
+  - id: PAIR-003
+    title: "9/11 information silos vs NASA ASRS"
+    domain: safety_information
+    negative_cases: [CASE-007]
+    positive_cases: [CASE-014]
+    shared_conditions: [hazard_information, cross_boundary_sharing, high_consequence]
+    candidate_difference_variables: [reporting_cost, deidentification, neutral_analysis, information_reachability, responsibility_concentration]
+    effect_on_human: supports_and_refines
+
+  - id: PAIR-004
+    title: "Punitive metrics vs Toyota Andon/Jidoka"
+    domain: organizational_operations
+    negative_cases: [CASE-005, CASE-006]
+    positive_cases: [CASE-020]
+    shared_conditions: [frontline_workers, performance_management, operational_metrics]
+    candidate_difference_variables: [bad_news_safety, stop_work_authority, metric_alignment, visibility_of_defects, punishment_coupling]
+    effect_on_human: revises
+
+  - id: PAIR-005
+    title: "Publish or Perish vs Human Genome Project"
+    domain: science
+    negative_cases: [CASE-010]
+    positive_cases: [CASE-022]
+    shared_conditions: [scientific_competition, prestige, funding, data_production]
+    candidate_difference_variables: [data_release_rules, incentive_alignment, public_resource_identity, funder_policy, private_capture_benefit]
+    effect_on_human: supports_and_refines
+
+  - id: PAIR-006
+    title: "Texas/Katrina vs Y2K remediation"
+    domain: systemic_risk
+    negative_cases: [CASE-008, CASE-009]
+    positive_cases: [CASE-021]
+    shared_conditions: [cross_system_dependency, public_private_coordination, infrastructure_risk]
+    candidate_difference_variables: [deadline_clarity, testability, responsibility_clarity, preventive_investment, dependency_visibility]
+    effect_on_human: revises
+
+candidate_variables:
+  bad_news_safety:
+    description: "Whether surfacing bad news, error or risk is institutionally safe."
+  information_reachability:
+    description: "Whether relevant information can reach the actor with real decision authority."
+  proxy_distance:
+    description: "Distance between measured proxy and actual mission outcome."
+  frontline_correction_authority:
+    description: "Whether frontline actors can pause, escalate or correct the process."
+  independent_verification:
+    description: "Whether claims and decisions are checked outside the originating chain."
+  simulation_testability:
+    description: "Whether high-risk actions can be tested or simulated before full execution."
+  shared_objective_clarity:
+    description: "How clearly distributed actors share the same top-level objective."
+  responsibility_concentration:
+    description: "Whether cross-boundary outcomes have a real owner rather than diffuse accountability."
+  memory_retention:
+    description: "Whether lessons from incidents persist in process, training and governance."
+  correction_latency:
+    description: "Time between error emergence, detection, acknowledgement and correction."
+
+comparison_rule:
+  required_fields: [shared_conditions, outcome_difference, candidate_difference_variables, competing_explanations, falsification_conditions, effect_on_human]
+  warning: "Pair comparison identifies candidate variables; it does not by itself establish causal sufficiency or necessity."
