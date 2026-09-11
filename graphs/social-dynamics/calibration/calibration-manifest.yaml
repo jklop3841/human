@@ -1,11 +1,14 @@
-schema_version: "1.0"
+schema_version: "1.1"
 calibration_id: HUMAN-HISTORICAL-CALIBRATION-001
 status: active_experimental
 created_at: "2026-09-11"
+updated_at: "2026-09-11"
 base_system: HUMAN-SOCIAL-DYNAMICS-001
 schema: "graphs/social-dynamics/calibration/CALIBRATION_SCHEMA.yaml"
 events: "graphs/social-dynamics/calibration/events-001.yaml"
+prospective_signals: "graphs/social-dynamics/calibration/prospective-signals-001.yaml"
 event_count: 6
+pseudo_prospective_event_count: 6
 
 coverage:
   failure_event: [HC-001, HC-004, HC-005]
@@ -19,7 +22,7 @@ coverage:
     - infrastructure
     - government_it
 
-fit_summary:
+retrospective_fit_summary:
   strong_fit: 5
   partial_fit: 1
   mixed_fit: 0
@@ -27,8 +30,14 @@ fit_summary:
   contradicts_model: 0
   insufficient_evidence: 0
 
+pseudo_prospective_summary:
+  events_with_useful_pre_event_structural_flags: 6
+  events_with_specific_trigger_or_timing_prediction: 0
+  strongest_use: "structural warning, preparedness audit, recurrence-risk audit and coordination review"
+  weakest_use: "event timing, physical trigger prediction, quantitative probability and physical severity estimation without domain models"
+
 current_model_revision:
-  statement: "Human Social Dynamics should be treated as a meso-level institutional coordination, escalation and recovery model. It does not replace domain-specific physical, technical, biological, financial or legal causal models."
+  statement: "Human Social Dynamics should be treated as a meso-level institutional coordination, escalation, dependency, preparedness and recovery model. Its strongest prospective use is structural warning and audit, not event-timing prediction. It does not replace domain-specific physical, technical, biological, financial or legal causal models."
   status: active_calibration_revision
 
 repeated_supported_variables:
@@ -46,17 +55,21 @@ known_blind_spots:
   - causal_weight_assignment
   - prevention_counterfactuals
   - jurisdiction_specific_authority
+  - event_trigger_timing
 
 interpretation_rules:
   - "historical_fit != predictive_validation"
+  - "pre_event_structural_flag != event_timing_prediction"
   - "six_events_are_not_representative_of_all_institutions_or_crises"
   - "event_selection_contains_archive_selection_bias"
   - "strong_fit_means_structural_descriptive_fit_not_statistical_accuracy"
   - "every_calibration_must_preserve_model_misses_and_outside_model_factors"
+  - "prospective_tests_must_use_only_information_documented_as_available_before_outcome"
   - "future_calibration_should_prioritize_disconfirming_and_mixed_cases"
 
 next_build:
   - "add at least six weak-fit, mixed-fit or counterexample events"
   - "add reform and recovery cases that did not follow major catastrophe"
-  - "compare pre-event warnings with what the model could have known prospectively"
-  - "separate retrospective explanation from prospective detection"
+  - "build an audit-question benchmark and score whether pre-event signals are discriminating rather than generic"
+  - "test false-positive risk: cases where similar warning patterns did not lead to catastrophe"
+  - "separate preparedness auditing from trigger forecasting as distinct capabilities"
