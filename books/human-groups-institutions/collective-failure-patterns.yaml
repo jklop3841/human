@@ -1,0 +1,209 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-003
+updated_at: 2026-09-11
+purpose: collective_failure_pattern_matching
+
+patterns:
+  - id: HGI-FAIL-001
+    name: copied_majority
+    mechanism: conformity
+    structure: "多数看似很大，但大量成员只是复制前面人的选择。"
+    signals: [low_independence, sequential_visibility, repeated_same_source]
+
+  - id: HGI-FAIL-002
+    name: information_cascade_lockin
+    mechanism: informational_cascade
+    structure: "早期行动成为后续人的主要信息来源，私人信息被压制。"
+    signals: [early_movers_dominate, private_signal_ignored, fragile_reversal]
+
+  - id: HGI-FAIL-003
+    name: false_majority
+    mechanism: pluralistic_ignorance
+    structure: "大量成员私下不赞成，但误以为多数赞成。"
+    signals: [private_public_gap, fear_of_deviation, weak_private_support]
+
+  - id: HGI-FAIL-004
+    name: common_information_loop
+    mechanism: shared_information_bias
+    structure: "讨论不断重复共同已知内容，独特信息进不了中心。"
+    signals: [repetition, low_unique_information, early_consensus]
+
+  - id: HGI-FAIL-005
+    name: hidden_profile_miss
+    mechanism: hidden_profile_failure
+    structure: "完整答案分散在成员手里，但群体没有完成整合。"
+    signals: [distributed_expertise, wrong_group_choice, unshared_information]
+
+  - id: HGI-FAIL-006
+    name: dissent_suppression
+    mechanism: dissent_effect
+    structure: "异议被当成不忠诚、拖延或制造麻烦。"
+    signals: [punished_dissent, unanimous_meetings, private_disagreement]
+
+  - id: HGI-FAIL-007
+    name: leader_first_anchor
+    mechanism: authority_obedience
+    structure: "高地位者先表态，其他成员围绕其答案组织讨论。"
+    signals: [leader_opinion_first, low_counterargument, preference_alignment]
+
+  - id: HGI-FAIL-008
+    name: polarization_spiral
+    mechanism: group_polarization
+    structure: "同质讨论不断强化原有倾向。"
+    signals: [ideological_homogeneity, one_sided_arguments, stronger_post_discussion_position]
+
+  - id: HGI-FAIL-009
+    name: identity_over_evidence
+    mechanism: identity_protection
+    structure: "观点与身份绑定后，反证被体验为群体攻击。"
+    signals: [loyalty_tests, source_judged_by_group, defensive_rejection]
+
+  - id: HGI-FAIL-010
+    name: outgroup_threat_amplification
+    mechanism: intergroup_threat
+    structure: "群体把现实或象征威胁集中投射到外群体。"
+    signals: [collective_blame, threat_language, stereotype_growth]
+
+  - id: HGI-FAIL-011
+    name: responsibility_diffusion
+    mechanism: diffusion_of_responsibility
+    structure: "参与者增多后，没有人认为自己必须行动。"
+    signals: [many_observers, no_owner, delayed_intervention]
+
+  - id: HGI-FAIL-012
+    name: role_morality_substitution
+    mechanism: authority_obedience
+    structure: "成员用‘这是我的角色/职责’替代对整体结果的判断。"
+    signals: [just_following_process, narrow_role_claim, consequence_distance]
+
+  - id: HGI-FAIL-013
+    name: organizational_silence
+    mechanism: organizational_silence
+    structure: "问题在基层可见，但向上汇报成本太高。"
+    signals: [bad_news_gap, retaliation_fear, leaders_surprised_by_known_issue]
+
+  - id: HGI-FAIL-014
+    name: filtered_upward_reality
+    mechanism: status_hierarchy
+    structure: "信息每经过一层层级就变得更符合上级预期。"
+    signals: [summary_softening, disappearing_uncertainty, positive_bias_upward]
+
+  - id: HGI-FAIL-015
+    name: approval_by_repetition
+    mechanism: social_proof
+    structure: "重复出现被误认为独立来源增加。"
+    signals: [circular_citation, same_origin_many_channels, source_count_inflation]
+
+  - id: HGI-FAIL-016
+    name: prestige_capture
+    mechanism: status_hierarchy
+    structure: "高声望成员的判断获得超出证据本身的权重。"
+    signals: [status_substitutes_evidence, low_challenge, citation_by_name]
+
+  - id: HGI-FAIL-017
+    name: expertise_gate_failure
+    mechanism: collective_intelligence
+    structure: "群体无法识别谁真正拥有相关专业信息。"
+    signals: [confidence_over_expertise, wrong_expert_selected, status_based_weighting]
+
+  - id: HGI-FAIL-018
+    name: premature_consensus
+    mechanism: groupthink
+    structure: "共识形成速度快于证据搜索和替代方案比较。"
+    signals: [few_alternatives, short_deliberation, no_falsifier]
+
+  - id: HGI-FAIL-019
+    name: consensus_as_truth
+    mechanism: social_proof
+    structure: "一致意见被直接当成真实性证明。"
+    signals: [no_source_check, unanimity_claim, dissent_discredited_by_count]
+
+  - id: HGI-FAIL-020
+    name: minority_as_falsehood
+    mechanism: conformity
+    structure: "少数意见仅因人数少被判为错误。"
+    signals: [vote_count_substitutes_evidence, minority_exclusion]
+
+  - id: HGI-FAIL-021
+    name: institutionalized_error
+    mechanism: institutional_memory
+    structure: "错误判断写入规则、预算、软件或培训后跨成员持续。"
+    signals: [legacy_rule, no_known_rationale, persistent_wrong_output]
+
+  - id: HGI-FAIL-022
+    name: procedural_moral_offload
+    mechanism: responsibility_fragmentation
+    structure: "每个人只对自己的步骤负责，没人拥有整体后果。"
+    signals: [many_handoffs, no_end_owner, process_compliance_defense]
+
+  - id: HGI-FAIL-023
+    name: institutional_inertia
+    mechanism: institutional_memory
+    structure: "旧选择因沉没成本、技能和依赖关系获得自我保护。"
+    signals: [high_switching_cost, legacy_dependents, repeated_patch]
+
+  - id: HGI-FAIL-024
+    name: metric_replaces_mission
+    mechanism: organizational_incentive
+    structure: "可测指标逐渐替代机构原始目的。"
+    signals: [metric_gain_outcome_loss, gaming, mission_language_without_outcome]
+
+  - id: HGI-FAIL-025
+    name: local_rational_global_failure
+    mechanism: institutional_fragmentation
+    structure: "每个部门局部合理，组合后整体失败。"
+    signals: [conflicting_local_metrics, cross_unit_externality, no_system_owner]
+
+  - id: HGI-FAIL-026
+    name: platform_majority_distortion
+    mechanism: social_proof
+    structure: "排序和推荐使少量高可见内容看起来像社会多数。"
+    signals: [visibility_concentration, recommendation_feedback, perceived_consensus_gap]
+
+  - id: HGI-FAIL-027
+    name: contagion_confound
+    mechanism: social_contagion
+    structure: "把相似行为全部解释为传播，忽略同质选择或共同环境。"
+    signals: [correlation_only, network_homophily, shared_exposure]
+
+  - id: HGI-FAIL-028
+    name: authority_legitimacy_collapse
+    mechanism: legitimacy_compliance
+    structure: "把拥有权力、拥有合法性、拥有专业能力混为一谈。"
+    signals: [power_as_truth, title_as_expertise, no_mandate_check]
+
+  - id: HGI-FAIL-029
+    name: agenda_exclusion
+    mechanism: agenda_control
+    structure: "某些选项在决策前就被排除，因此最终选择看似自由但搜索空间被预设。"
+    signals: [missing_alternatives, fixed_question_frame, gatekeeper_control]
+
+  - id: HGI-FAIL-030
+    name: group_label_overgeneralization
+    mechanism: categorization
+    structure: "把群体平均特征错误应用到每一个成员。"
+    signals: [membership_used_as_individual_prediction, ignored_within_group_variance]
+
+  - id: HGI-FAIL-031
+    name: institution_personification
+    mechanism: attribution
+    structure: "把大型机构当成单一意志主体，忽略内部多方目标和冲突。"
+    signals: [the_institution_wants, no_internal_actor_map, hidden_principal_agent_conflict]
+
+  - id: HGI-FAIL-032
+    name: crowd_mindlessness_myth
+    mechanism: outdated_crowd_model
+    structure: "把任何群体异常行为归结为人群失去理性，忽略身份与规范。"
+    signals: [mindless_crowd_label, no_norm_analysis, no_identity_analysis]
+
+  - id: HGI-FAIL-033
+    name: false_collective_wisdom
+    mechanism: collective_intelligence
+    structure: "将高度相关、同源、相互观察的判断当作独立群众智慧。"
+    signals: [same_source, visible_prior_votes, correlated_errors]
+
+  - id: HGI-FAIL-034
+    name: institutional_confidence_feedback
+    mechanism: legitimacy_compliance
+    structure: "对机构失去信心改变成员行为，成员行为进一步削弱机构表现。"
+    signals: [withdrawal, noncompliance, defensive_behavior, performance_decline]
