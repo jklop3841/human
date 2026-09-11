@@ -1,0 +1,151 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-003
+updated_at: 2026-09-11
+purpose: understand_collective_human_behavior
+
+mechanisms:
+  - id: HG-001
+    name: conformity
+    zh: 从众
+    core: "个体调整表达或行为，使其更接近群体规范或多数。"
+    can_help: [coordination, norm_learning, uncertainty_reduction]
+    can_harm: [error_copying, dissent_suppression, false_consensus]
+    distinguish_from: [informational_cascade, obedience]
+
+  - id: HG-002
+    name: informational_cascade
+    zh: 信息级联
+    core: "后续个体从他人行动推断信息，并可能压过自己的私人信号。"
+    can_help: [rapid_social_learning]
+    can_harm: [fragile_mass_error, blocked_learning, fads]
+    key_warning: "large majority may represent few independent observations"
+
+  - id: HG-003
+    name: herding
+    zh: 羊群行为
+    core: "行为向其他人的行为聚集；其成因可以是信息学习、激励、模仿或协调。"
+    note: "Herding is an observed pattern; informational cascade is one possible mechanism."
+
+  - id: HG-004
+    name: pluralistic_ignorance
+    zh: 多元无知
+    core: "个体私下态度与公开规范不一致，同时系统性误判他人真实态度。"
+    failure_path: "private_doubt -> false_majority_belief -> public_conformity -> norm_persistence"
+
+  - id: HG-005
+    name: shared_information_bias
+    zh: 共享信息偏差
+    core: "群体讨论更容易重复所有人已知的信息，而忽略只掌握在少数成员手中的独特信息。"
+    failure_path: "distributed_knowledge -> repeated_common_information -> premature_consensus"
+
+  - id: HG-006
+    name: hidden_profile_failure
+    zh: 隐藏信息轮廓失败
+    core: "正确答案只有整合成员独特信息后才能看见，但群体未能完成信息池化。"
+    evidence_note: "Meta-analytic literature finds substantial difficulty solving hidden profiles."
+
+  - id: HG-007
+    name: dissent_effect
+    zh: 异议效应
+    core: "异议可以增加讨论深度并降低过早收敛，即使异议者本身不一定正确。"
+    can_help: [information_search, alternative_hypotheses, error_detection]
+
+  - id: HG-008
+    name: group_polarization
+    zh: 群体极化
+    core: "讨论后群体平均立场可能沿原先倾向进一步移动，而非简单回到中间。"
+    candidate_mechanisms: [persuasive_arguments, social_comparison, identity_signaling]
+
+  - id: HG-009
+    name: groupthink
+    zh: 群体迷思
+    core: "高一致压力、低异议和不充分检视可能导致差决策。"
+    epistemic_status: contested_heuristic
+    warning: "Do not diagnose every failed group as groupthink; empirical support for the classic full model is mixed."
+
+  - id: HG-010
+    name: authority_obedience
+    zh: 权威服从
+    core: "角色、合法性、专业、制度目标和指挥关系可以使个体接受权威指引。"
+    warning: "Obedience is not reducible to direct verbal orders."
+
+  - id: HG-011
+    name: diffusion_of_responsibility
+    zh: 责任扩散
+    core: "在多人场景中，个体感受到的个人行动责任可能下降。"
+    related: [bystander_effect]
+
+  - id: HG-012
+    name: bystander_effect
+    zh: 旁观者效应
+    core: "其他人在场时，个体在部分紧急场景中的介入概率可能下降。"
+    epistemic_note: "Effect is context-dependent, not universal."
+
+  - id: HG-013
+    name: deindividuation_social_identity
+    zh: 去个体化与社会身份
+    core: "群体沉浸未必意味着没有规范；行为可能更受当前群体身份和群体规范驱动。"
+    warning: "Avoid the simplistic crowd-equals-mindless model."
+
+  - id: HG-014
+    name: social_contagion
+    zh: 社会传播
+    core: "行为、情绪或状态可沿社会网络出现扩散，但必须与同质选择和共同环境区分。"
+    confounds: [homophily, shared_environment, measurement_bias]
+
+  - id: HG-015
+    name: intergroup_threat
+    zh: 群际威胁
+    core: "现实、象征、身份或地位威胁会改变对外群体的态度。"
+    risks: [defensiveness, stereotyping, scapegoating]
+
+  - id: HG-016
+    name: organizational_silence
+    zh: 组织沉默
+    core: "成员掌握问题或建议，但因成本、无效感、层级或利益选择不上报。"
+    failure_path: "local_knowledge -> silence -> central_blindness"
+
+  - id: HG-017
+    name: status_hierarchy
+    zh: 地位层级
+    core: "地位影响谁更容易发言、被相信、定义议程和被挑战。"
+    risks: [voice_inequality, authority_bias, error_persistence]
+
+  - id: HG-018
+    name: social_proof
+    zh: 社会证明
+    core: "他人的选择数量被当作选择质量或正确性的线索。"
+    warning: "popularity is not independent evidence"
+
+  - id: HG-019
+    name: collective_intelligence
+    zh: 集体智能
+    core: "在合适的信息、多样性、协作和聚合结构下，群体可产生超过个体的认知性能。"
+    enabling_conditions: [diversity, partial_independence, information_pooling, good_aggregation, expertise_use, dissent]
+
+  - id: HG-020
+    name: coordination_norm
+    zh: 协调规范
+    core: "群体规范可显著降低协调成本，使大量成员无需反复协商即可行动。"
+    dual_use: [cooperation, conformity_lockin]
+
+  - id: HG-021
+    name: identity_protection
+    zh: 身份保护性认知
+    core: "当观点与群体身份绑定时，信息评价可能同时服务于事实判断和归属维护。"
+
+  - id: HG-022
+    name: legitimacy_compliance
+    zh: 合法性与遵从
+    core: "人不仅因直接强制行动，也会因认为某程序、职位或机构具有合法性而配合。"
+
+  - id: HG-023
+    name: agenda_control
+    zh: 议程控制
+    core: "决定哪些问题、选项和信息进入讨论，本身就是群体权力。"
+
+  - id: HG-024
+    name: institutional_memory
+    zh: 制度记忆
+    core: "组织通过规则、文档、标准、预算、软件和培训，使群体判断跨越成员更替继续存在。"
+    dual_use: [stability, lockin]
