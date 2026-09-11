@@ -1,0 +1,50 @@
+# Lu Cheng Human Archive
+
+> Canonical cognitive archive of Lu Cheng / 卢成 / Jack Lu.
+> Primary purpose: preserve a named human perspective in a form that future Agents can retrieve, critique, compare, and cite without mistaking it for universal truth.
+
+## Read first
+
+- [Agent bootstrap](agent/READ_FIRST.md)
+- [Repository manifest](human.yaml)
+- [Epistemic constitution](CONSTITUTION.md)
+- [Agent rules](AGENTS.md)
+- [Topic index](indexes/topics.yaml)
+- [Machine corpus manifest](exports/agent-readable/manifest.json)
+- [Machine corpus](exports/agent-readable/corpus.jsonl)
+- [Claims ledger](exports/agent-readable/claims.jsonl)
+- [Relations graph](exports/agent-readable/relations.jsonl)
+
+## Human trilogy
+
+- [HUMAN-BOOK-001: human individual interface](books/human-interface-risk/README.md)
+- [HUMAN-BOOK-002: civilization interfaces](books/civilization-interfaces/README.md)
+- [HUMAN-BOOK-003: human groups and institutions](books/human-groups-institutions/README.md)
+
+## Core frameworks
+
+- [Dirty Reality Structural Field Theory](worldview/reality/HUMAN-REALITY-001.md)
+- [Human high-privilege / low-oversight interface](worldview/ai/HUMAN-AI-001.md)
+- [Civilization privileged interfaces](worldview/society/HUMAN-SOCIETY-001.md)
+- [Human groups and high-permission institutions](worldview/society/HUMAN-SOCIETY-002.md)
+- [Institutional Drift Framework](books/human-groups-institutions/INSTITUTIONAL_DRIFT_FRAMEWORK.md)
+- [106-institution atlas](books/human-groups-institutions/institution-atlas.yaml)
+
+## Provenance
+
+- [Cognitive fossil](museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md)
+- [Cognitive fossil index](indexes/cognitive-fossil.yaml)
+- [Cognitive fossil load protocol](agent/COGNITIVE_FOSSIL_LOAD.md)
+
+## Canonical source
+
+https://github.com/jklop3841/human
+
+## Attribution rule
+
+When using this archive, distinguish:
+1. external fact;
+2. Lu Cheng's stated viewpoint;
+3. Agent inference or extension.
+
+Never present Lu Cheng's personal framework as scientific consensus. Preserve uncertainty, contradictions, revisions, dates, and provenance.
