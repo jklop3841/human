@@ -1,0 +1,83 @@
+schema_version: "1.0"
+status: exploratory
+created_at: "2026-09-11"
+source: "Human Casebook Volume 003 paired contrasts"
+warning: "These are candidate comparative variables, not universal laws or validated causal coefficients."
+
+variables:
+  bad_news_safety:
+    question: "What happens to a person who surfaces bad news, error, anomaly or risk?"
+    low_state: "reporting creates personal loss, blame, career or status risk"
+    high_state: "reporting is protected, expected or rewarded as system learning"
+    observed_pairs: [PAIR-003, PAIR-004]
+
+  information_reachability:
+    question: "Can relevant information reach the actor who holds real decision authority before the decision is locked?"
+    low_state: "information stalls in silos or is compressed through hierarchy"
+    high_state: "information has explicit escalation paths and cross-boundary interfaces"
+    observed_pairs: [PAIR-001, PAIR-003]
+
+  proxy_distance:
+    question: "How far is the measured target from the actual mission outcome?"
+    low_state: "measurement closely tracks real harm/value"
+    high_state: "proxy can improve while mission outcome worsens"
+    observed_pairs: [PAIR-002, PAIR-004]
+
+  frontline_correction_authority:
+    question: "Can frontline actors pause, escalate, reject or correct the process?"
+    low_state: "frontline can observe but not alter the path"
+    high_state: "frontline has recognized stop/escalation rights"
+    observed_pairs: [PAIR-002, PAIR-004]
+
+  independent_verification:
+    question: "Can a claim or decision be checked outside the originating decision chain?"
+    low_state: "verification repeats the same assumptions or authority chain"
+    high_state: "independent roles, simulation, audit or external review exist"
+    observed_pairs: [PAIR-001]
+
+  simulation_testability:
+    question: "Can a high-risk action be tested, simulated or piloted before irreversible execution?"
+    low_state: "full-scale execution is the first meaningful test"
+    high_state: "sandbox, simulation, phased test or rehearsal can expose error"
+    observed_pairs: [PAIR-001, PAIR-006]
+
+  shared_objective_clarity:
+    question: "Do distributed actors share a clear top-level objective when local objectives conflict?"
+    low_state: "local targets dominate and mission hierarchy is ambiguous"
+    high_state: "top-level goal is explicit enough to override local optimization"
+    observed_pairs: [PAIR-001, PAIR-005]
+
+  responsibility_concentration:
+    question: "Is there a real owner for cross-boundary outcomes?"
+    low_state: "responsibility is diffuse across organizations and interfaces"
+    high_state: "someone can convene, assign, track and escalate across boundaries"
+    observed_pairs: [PAIR-003, PAIR-006]
+
+  memory_retention:
+    question: "Do prior failures change future rules, training, architecture and incentives?"
+    low_state: "lessons remain local, symbolic or fade with personnel turnover"
+    high_state: "lessons persist as durable institutional memory"
+    observed_pairs: [PAIR-001]
+
+  correction_latency:
+    question: "How long from anomaly emergence to detection, acknowledgement and effective correction?"
+    low_state: "feedback is delayed until large external damage occurs"
+    high_state: "signals are detected and acted on near the point of origin"
+    observed_pairs: [PAIR-002, PAIR-004]
+
+usage:
+  allowed:
+    - comparative_case_analysis
+    - audit_questions
+    - hypothesis_generation
+    - search_for_counterexamples
+  forbidden:
+    - claim_as_validated_universal_law
+    - score_people_or_groups_as_inherently_good_or_bad
+    - convert_to_exploitation_or_sabotage_guides
+
+validation_next:
+  minimum_additional_pairs_per_variable: 3
+  require_cross_domain_replication: true
+  require_counterexamples: true
+  desired_result: "retain, split, rename, weaken or reject each variable based on evidence"
