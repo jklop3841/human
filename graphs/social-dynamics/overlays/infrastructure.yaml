@@ -1,0 +1,84 @@
+schema_version: "1.0"
+overlay_id: SD-INFRA-001
+domain: infrastructure
+canonical_topology_refs:
+  - electric_utilities_grid_operators
+  - water_sewer_utilities
+  - gas_fuel_energy_suppliers
+  - transportation_departments_roads
+  - rail_transit_operators
+  - aviation_airports_air_traffic
+  - ports_shipping_logistics_hubs
+  - postal_courier_services
+  - waste_management_sanitation
+  - building_code_fire_safety_inspection
+  - disaster_management_civil_defense
+
+states:
+  NORMAL:
+    variable_profile: {authority_shift: baseline, resource_pressure: baseline, information_velocity: baseline, verification_depth: baseline, coordination_density: baseline, discretion_level: baseline, feedback_latency: baseline, rule_flexibility: baseline, public_trust: baseline, dependency_exposure: lower}
+    node_changes: []
+    edge_changes:
+      - {edge_or_path: "gas_fuel_energy_suppliers -> electric_utilities_grid_operators", operation: strengthen, confidence: medium, evidence_status: generic_archetype}
+    drift_risks: [maintenance_deferral, hidden_dependency, local_optimization]
+    correction_opportunities: [routine_testing, reserve_margin, preventive_maintenance, mutual_aid]
+
+  CRISIS:
+    variable_profile: {authority_shift: higher, resource_pressure: higher, information_velocity: higher, verification_depth: mixed, coordination_density: higher, discretion_level: higher, feedback_latency: lower, rule_flexibility: higher, public_trust: mixed, dependency_exposure: higher}
+    node_changes:
+      - {node: disaster_management_civil_defense, change: "cross-sector coordination role expands"}
+      - {node: electric_utilities_grid_operators, change: "load balancing and restoration priority become dominant"}
+    edge_changes:
+      - {edge_or_path: "gas_fuel_energy_suppliers -> electric_utilities_grid_operators", operation: strengthen, confidence: high, evidence_status: generic_archetype}
+      - {edge_or_path: "electric_utilities_grid_operators -> water_sewer_utilities/telecom/public_services", operation: strengthen, confidence: high, evidence_status: generic_archetype}
+      - {edge_or_path: "disaster_management_civil_defense -> infrastructure_operators", operation: centralize, confidence: medium, evidence_status: jurisdiction_dependent}
+    drift_risks: [cascading_failure, restoration_conflict, incomplete_dependency_map]
+    correction_opportunities: [joint_command, dependency_mapping, load_prioritization, mutual_aid]
+
+  EMERGENCY:
+    variable_profile: {authority_shift: higher, resource_pressure: higher, information_velocity: higher, verification_depth: lower, coordination_density: higher, discretion_level: higher, feedback_latency: lower, rule_flexibility: higher, public_trust: mixed, dependency_exposure: higher}
+    node_changes:
+      - {node: transportation_departments_roads, change: "access and evacuation priority may override routine traffic goals"}
+      - {node: water_sewer_utilities, change: "minimum continuity becomes more important than normal service quality"}
+    edge_changes:
+      - {edge_or_path: "routine_service_priority", operation: reroute, confidence: high, evidence_status: generic_archetype}
+      - {edge_or_path: "emergency_mutual_aid", operation: activate, confidence: high, evidence_status: generic_archetype}
+    drift_risks: [single_point_overload, opaque_priority_setting, worker_fatigue]
+    correction_opportunities: [cross_sector_restoration_plan, mobile_backup, emergency_procurement]
+
+  RECOVERY:
+    variable_profile: {authority_shift: mixed, resource_pressure: mixed, information_velocity: mixed, verification_depth: higher, coordination_density: mixed, discretion_level: mixed, feedback_latency: lower, rule_flexibility: mixed, public_trust: mixed, dependency_exposure: higher}
+    node_changes:
+      - {node: infrastructure_operators, change: "repair shifts toward resilience retrofit and backlog reduction"}
+    edge_changes:
+      - {edge_or_path: "emergency priority routing", operation: weaken, confidence: high, evidence_status: generic_archetype}
+      - {edge_or_path: "incident learning -> design/maintenance standards", operation: strengthen, confidence: high, evidence_status: generic_archetype}
+    drift_risks: [rebuild_old_fragility, temporary_workaround_permanence]
+    correction_opportunities: [hardening, redundancy, revised_interdependency_maps]
+
+transitions:
+  - from: NORMAL
+    to: CRISIS
+    triggers: [extreme_weather, fuel_shortage, cyber_or_physical_disruption, major_equipment_failure]
+    early_signals: [reserve_margin_drop, abnormal_outage_rate, supply_delay, correlated_failures]
+    reversible_changes: [load_shedding, emergency_routing]
+    sticky_changes: [damaged_assets, changed_demand_patterns]
+    exit_conditions: [core_services_stable_and_cascades_contained]
+  - from: CRISIS
+    to: EMERGENCY
+    triggers: [multi_sector_failure, life_safety_threat]
+    early_signals: [water_power_telecom_interaction, access_failure, restoration_queue_conflict]
+    reversible_changes: [emergency_command, temporary_prioritization]
+    sticky_changes: [new_backup_interfaces]
+    exit_conditions: [ordinary_operator_control_can_resume]
+  - from: EMERGENCY
+    to: RECOVERY
+    triggers: [core_service_restoration, threat_reduction]
+    early_signals: [stable_grid, restored_water, accessible_transport]
+    reversible_changes: [exceptional_priority_rules]
+    sticky_changes: [validated_redundancy, revised_standards]
+    exit_conditions: [temporary_measures_reviewed_and_recovery_plan_formalized]
+
+safeguards:
+  - "dependency criticality must not be turned into attack-target ranking"
+  - "redundancy is not automatically inefficiency"
