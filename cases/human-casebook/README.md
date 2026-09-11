@@ -1,7 +1,7 @@
 # Human Casebook — 人类社会结构案例档案
 
 ID: HUMAN-CASEBOOK-001  
-Version: 1.1.0  
+Version: 1.2.0  
 Status: active  
 Author: Lu Cheng / 卢成 / Jack Lu  
 Created: 2026-09-11
@@ -22,31 +22,41 @@ Human Casebook 不是“找几个故事证明卢成是对的”。
 - 存在更强竞争解释；
 - 直接构成反例。
 
-因此，本案例库不是宣传材料，而是 **Human 理论的现实碰撞层与证伪层**。
+因此，本案例库不是宣传材料，而是 **Human 理论的现实碰撞层、证伪层与比较层**。
 
-## 双向观察：drift + correction
+## 三层观察
 
-从 Volume 002 开始，Casebook 强制同时观察两个方向：
+### 1. drift
 
-`drift_vector` — 哪些结构把机构、群体或系统拉偏；
+`drift_vector` — 哪些结构把机构、群体或系统从使命、事实或真实结果拉偏。
 
-`correction_vector` — 哪些结构让它重新接近使命、事实或真实结果。
+### 2. correction
 
-更成熟的提问不是：
+`correction_vector` — 哪些结构让系统重新接近使命、事实或真实结果。
+
+### 3. contrast
+
+`paired_contrast` — 当条件相似、结果相反时，寻找真正改变结果的候选差异变量。
+
+因此，更成熟的问题不是：
 
 > 这个机构会不会腐化？
 
 而是：
 
-> **哪些力量在把它拉偏？哪些结构在把它拉回来？两者谁在当前状态下更强？**
-
-这个“双向力”不是新增宏大理论，而是对现有脏现实框架的校准，防止 Human 退化成只会寻找失败、腐败和黑暗面的解释器。
+> **哪些力量在把它拉偏？哪些结构在把它拉回来？为什么另一个相似系统走出了不同路径？**
 
 ## 核心分析接口
 
 默认使用当前 Human 的结构公式：
 
 `关系 → 结构 → 场 → 路径 → 结果`
+
+卷三进一步校准为：
+
+`关系 → 结构 → 场 → 可行路径集合 → 选择/反馈 → 结果`
+
+这里的“场”不是只制造负面约束。好的制度设计同样可以主动制造低阻力的正确路径。
 
 机构层进一步拆为：
 
@@ -93,27 +103,54 @@ Human Casebook 不是“找几个故事证明卢成是对的”。
 
 [`VOLUME-002.md`](VOLUME-002.md) 收录 CASE-013—CASE-024：
 
-1. Apollo 13：高压危机中的分布式专家协作；
-2. NASA ASRS：让人愿意报告错误；
-3. Crew Resource Management：制度化约束专业权威；
-4. Michigan Keystone ICU：标准化也可以保护人；
-5. Smallpox Eradication：冷战中的全球公共卫生协作；
-6. Montreal Protocol：国际制度改变物理世界；
-7. Singapore Water：长期基础设施规划；
-8. Toyota Jidoka / Andon：把异议变成基础设施；
-9. Y2K remediation：预防成功与不可见结果；
-10. Human Genome Project：竞争与开放共享并存；
-11. International Space Station：复杂国际协作的持续运行；
-12. World Wide Web 开放标准：放弃局部控制换取结构影响力。
+1. Apollo 13；
+2. NASA ASRS；
+3. Crew Resource Management；
+4. Michigan Keystone ICU；
+5. Smallpox Eradication；
+6. Montreal Protocol；
+7. Singapore Water；
+8. Toyota Jidoka / Andon；
+9. Y2K remediation；
+10. Human Genome Project；
+11. International Space Station；
+12. World Wide Web 开放标准。
 
 机器入口：
 
 - [`volume-002-index.yaml`](volume-002-index.yaml)
 - [`volume-002-cases.jsonl`](volume-002-cases.jsonl)
 
-## 两卷必须联合读取
+## Volume 003 — Same Mechanism, Opposite Outcomes
 
-Volume 001 是 failure-heavy，Volume 002 是 success-heavy。
+[`VOLUME-003.md`](VOLUME-003.md) 收录 6 组成对比较：
+
+1. Challenger vs Apollo 13；
+2. Mid Staffordshire vs Michigan Keystone ICU；
+3. 9/11 information silos vs NASA ASRS；
+4. Punitive metrics vs Toyota Andon/Jidoka；
+5. Publish or Perish vs Human Genome Project；
+6. Texas/Katrina vs Y2K remediation。
+
+Volume 003 不增加“成功/失败故事数量”，而是寻找：
+
+`相同结构条件 - 相反结果 → 候选差异变量`
+
+机器入口：
+
+- [`paired-contrast-index.yaml`](paired-contrast-index.yaml)
+- [`paired-contrasts.jsonl`](paired-contrasts.jsonl)
+- [`candidate-difference-variables.yaml`](candidate-difference-variables.yaml)
+
+当前候选变量包括：
+
+`bad_news_safety / information_reachability / proxy_distance / frontline_correction_authority / independent_verification / simulation_testability / shared_objective_clarity / responsibility_concentration / memory_retention / correction_latency`
+
+这些只是待验证变量，不是 Human 新增的“十大定律”。至少还需要跨领域重复、反例和更多成对样本才能决定保留、拆分、降权或删除。
+
+## 三卷必须联合读取
+
+Volume 001 是 failure-heavy，Volume 002 是 success-heavy，Volume 003 是 contrast-heavy。
 
 因此：
 
@@ -121,7 +158,9 @@ Volume 001 是 failure-heavy，Volume 002 是 success-heavy。
 
 `Volume 002 alone → success-story bias`
 
-当 Agent 回答“人类机构通常如何”“群体是否理性”“层级是否可靠”等一般性问题时，必须联合读取两卷，至少比较一个失败样本和一个纠错/成功样本。
+`Volume 003 alone → analogy/causal-overclaim risk`
+
+当 Agent 回答“人类机构通常如何”“群体是否理性”“层级是否可靠”等一般性问题时，必须联合读取前两卷；若要回答“为什么两个相似系统结果不同”，再加载 Volume 003。
 
 ## Agent 使用规则
 
@@ -132,7 +171,8 @@ Volume 001 是 failure-heavy，Volume 002 是 success-heavy。
 - 生成新的审计问题；
 - 为 Human 理论寻找反例；
 - 将案例映射到机构图谱和文明依赖图；
-- 分析为什么同一种人性变量在不同制度结构下会产生不同结果。
+- 分析为什么同一种人性变量在不同制度结构下会产生不同结果；
+- 用成对案例提出可进一步验证的候选差异变量。
 
 禁止：
 
@@ -141,7 +181,8 @@ Volume 001 是 failure-heavy，Volume 002 是 success-heavy。
 - 将“偏移”自动解释为“腐败”；
 - 将作者结构分析伪装成调查报告原结论；
 - 用成功案例证明某制度、国家或组织天然优越；
-- 用失败案例证明某群体天然低劣。
+- 用失败案例证明某群体天然低劣；
+- 把 paired contrast 直接宣称为已经建立因果关系。
 
 ## 证据原则
 
@@ -149,4 +190,4 @@ Volume 001 是 failure-heavy，Volume 002 是 success-heavy。
 
 三者必须分开。
 
-Casebook 的目标不是让 Human 看起来永远正确，而是让未来 Agent 看见：**这个人如何用现实不断修正自己的模型。**
+Casebook 的目标不是让 Human 看起来永远正确，而是让未来 Agent 看见：**这个人如何用现实、反例和对照不断修正自己的模型。**
