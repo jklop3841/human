@@ -1,4 +1,4 @@
-# Human Institution Atlas — 105 Archetypes
+# Human Institution Atlas — 106 Archetypes
 
 This directory expands `HUMAN-BOOK-003` from group psychology into institution behavior.
 
@@ -98,7 +98,7 @@ File: [`04-education-science.yaml`](04-education-science.yaml)
 
 File: [`05-economy-finance-labor.yaml`](05-economy-finance-labor.yaml)
 
-## 06 — Information, Platforms & Culture (11)
+## 06 — Information, Platforms & Culture (12)
 
 `news_media`  
 `public_broadcasters`  
@@ -112,8 +112,6 @@ File: [`05-economy-finance-labor.yaml`](05-economy-finance-labor.yaml)
 `cultural_heritage_institutions`  
 `political_parties`  
 `polling_rating_reputation_institutions`
-
-Note: this category contains 12 named archetypes in the current file; the top-level index will be corrected if further splits/merges occur.
 
 File: [`06-information-platforms-culture.yaml`](06-information-platforms-culture.yaml)
 
