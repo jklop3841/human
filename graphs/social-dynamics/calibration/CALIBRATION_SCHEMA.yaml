@@ -1,0 +1,66 @@
+schema_version: "1.0"
+record_type: historical_social_dynamics_calibration
+required_fields:
+  - id
+  - title
+  - event_period
+  - domains
+  - source_anchors
+  - pre_event_state
+  - trigger
+  - state_sequence
+  - observed_variable_shifts
+  - relation_changes
+  - correction_recovery
+  - sticky_legacy
+  - model_hits
+  - model_misses
+  - outside_model_factors
+  - fit_classification
+  - confidence
+  - falsification_conditions
+
+allowed_states: [NORMAL, EXPANSION, CRISIS, EMERGENCY, REFORM, RECOVERY]
+allowed_variables:
+  - authority_shift
+  - resource_pressure
+  - information_velocity
+  - verification_depth
+  - coordination_density
+  - discretion_level
+  - feedback_latency
+  - rule_flexibility
+  - public_trust
+  - dependency_exposure
+
+fit_classification:
+  - strong_fit
+  - partial_fit
+  - mixed_fit
+  - weak_fit
+  - contradicts_model
+  - insufficient_evidence
+
+confidence: [low, medium, medium_high, high]
+
+field_semantics:
+  pre_event_state: "best-supported institutional condition before the decisive trigger; may include latent drift without creating a new state type"
+  trigger: "event or decision that materially changed the system trajectory"
+  state_sequence: "ordered qualitative state labels; not a Markov model"
+  observed_variable_shifts: "only shifts supported or reasonably inferred from evidence; no fabricated numeric magnitudes"
+  relation_changes: "changes in typed institutional relations, visibility, direction, speed, or practical salience"
+  correction_recovery: "response mechanisms and post-event correction"
+  sticky_legacy: "changes retained after acute stress; distinguish from temporary emergency measures"
+  model_hits: "parts of Human Social Dynamics that the event supports"
+  model_misses: "important observations the current model under-describes or cannot explain"
+  outside_model_factors: "physical, technical, biological, legal, geographic, contingent or other causes not reducible to institutional dynamics"
+  falsification_conditions: "new evidence that would weaken or reverse the archive judgment"
+
+hard_rules:
+  - "hindsight_is_not_prediction"
+  - "state_label_is_not_cause"
+  - "social_dynamics_must_not_replace_physical_or_technical_causation"
+  - "absence_of_disaster_does_not_prove_prevention_caused_success"
+  - "emergency_response_success_does_not_justify_permanent_emergency_authority"
+  - "do_not_infer_intent_corruption_or_malice_from_system_outcome"
+  - "specific_claims_must_be_traceable_to_source_anchors"
