@@ -1,0 +1,103 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-003
+category: health_and_care
+framework: ../INSTITUTIONAL_DRIFT_FRAMEWORK.md
+
+institutions:
+  hospitals:
+    official_function: [diagnose, treat, monitor, perform_procedures, coordinate_complex_care]
+    high_permissions: [clinical_decisions, admission_discharge, surgery, medication, access_to_sensitive_health_data]
+    dirty_reality_forces: [bed_capacity, staffing, burnout, reimbursement, throughput, hierarchy, litigation_risk, supply_constraints]
+    common_deviations: [throughput_over_attention, defensive_medicine, handoff_loss, hierarchy_silence, protocol_overfit, patient_as_case_number, revenue_mix_distortion]
+    stabilizers: [clinical_governance, incident_reporting, morbidity_mortality_review, accreditation, informed_consent, staffing_standards, second_opinion]
+
+  emergency_departments:
+    official_function: [rapid_triage, stabilize_acute_illness_or_injury, route_patients]
+    high_permissions: [triage_priority, emergency_intervention, admission_referral]
+    dirty_reality_forces: [crowding, time_pressure, uncertainty, boarding, violence_risk, shift_fatigue]
+    common_deviations: [premature_closure, low_acuity_deprioritization, hallway_care, repeat_patient_stigma, diagnostic_shortcuts]
+    stabilizers: [triage_protocols, senior_review, observation, escalation_rules, staffing, safety_checklists]
+
+  primary_care_clinics:
+    official_function: [prevention, first_contact_diagnosis, chronic_disease_management, referral]
+    high_permissions: [diagnostic_gatekeeping, prescribing, referral, longitudinal_record]
+    dirty_reality_forces: [short_visit_time, large_panel, documentation_burden, payment_model, specialist_access]
+    common_deviations: [template_visit, symptom_suppression_over_root_cause, delayed_referral, overreferral, checklist_care]
+    stabilizers: [continuity, follow_up, shared_decision_making, audit, team_based_care]
+
+  public_health_agencies:
+    official_function: [population_surveillance, prevention, outbreak_response, health_guidance]
+    high_permissions: [surveillance_under_law, public_guidance, emergency_measures_where_lawful, resource_prioritization]
+    dirty_reality_forces: [uncertain_evidence, political_pressure, public_trust, crisis_speed, incomplete_data]
+    common_deviations: [overconfidence, delayed_update, communication_failure, politicization, one_size_fits_all_policy]
+    stabilizers: [transparent_evidence, revision, independent_advice, public_reporting, proportionality_review]
+
+  pharmacies:
+    official_function: [dispense_medicines, check_interactions, counsel_patients]
+    high_permissions: [medication_access, dispensing_control, substitution_where_allowed]
+    dirty_reality_forces: [volume, staffing, commercial_targets, stock_shortages, insurer_rules]
+    common_deviations: [speed_over_counseling, dispensing_error, upselling, formulary_bias, underreporting_near_misses]
+    stabilizers: [double_checks, pharmacist_independence, e_prescribing, interaction_alerts, incident_reporting]
+
+  pharmaceutical_companies:
+    official_function: [discover_develop_manufacture_market_medicines]
+    high_permissions: [trial_sponsorship, evidence_generation, pricing, supply, marketing]
+    dirty_reality_forces: [patent_clock, investor_pressure, regulatory_strategy, commercial_incentives, publication_control]
+    common_deviations: [positive_result_selection, indication_expansion, marketing_overreach, price_optimization_over_access, pipeline_bias]
+    stabilizers: [regulators, trial_registration, adverse_event_reporting, independent_replication, disclosure, competition]
+
+  medical_device_companies:
+    official_function: [develop_manufacture_support_medical_devices]
+    high_permissions: [technical_design, software_updates, maintenance, clinical_integration]
+    dirty_reality_forces: [time_to_market, proprietary_lockin, hospital_procurement, postmarket_visibility]
+    common_deviations: [feature_over_safety, underreported_failure, vendor_lockin, patch_delay]
+    stabilizers: [regulatory_review, postmarket_surveillance, recall_systems, interoperability_standards]
+
+  health_insurers_payers:
+    official_function: [pool_risk, pay_for_care, manage_benefits]
+    high_permissions: [coverage_decisions, reimbursement, prior_authorization, provider_networks]
+    dirty_reality_forces: [cost_control, adverse_selection, fraud_control, actuarial_models, shareholder_or_budget_pressure]
+    common_deviations: [denial_friction, narrow_networks, administrative_burden, code_gaming, cost_shift_to_patient_or_provider]
+    stabilizers: [appeals, external_review, transparency, regulation, medical_necessity_standards]
+
+  medical_licensing_professional_boards:
+    official_function: [credential_professionals, set_standards, discipline_misconduct]
+    high_permissions: [license_grant_or_revoke, professional_rules, sanctions]
+    dirty_reality_forces: [peer_loyalty, professional_self_protection, complaint_volume, political_pressure]
+    common_deviations: [underdiscipline, overdiscipline, gatekeeping, slow_response, insider_bias]
+    stabilizers: [public_members, published_decisions, appeal, conflict_rules, data_reporting]
+
+  nursing_homes_long_term_care:
+    official_function: [daily_living_support, nursing_care, rehabilitation, end_of_life_support]
+    high_permissions: [daily_care_control, medication_administration, movement_and_routine, guardianship_interfaces]
+    dirty_reality_forces: [staffing_ratio, low_margin, resident_dependency, low_visibility, turnover]
+    common_deviations: [task_completion_over_personhood, neglect, overmedication, understaffing_normalization, family_information_gap]
+    stabilizers: [staffing_standards, inspections, family_access, ombudsman, incident_reporting]
+
+  laboratories_diagnostic_centers:
+    official_function: [measure_biomarkers, imaging, pathology, diagnostic_support]
+    high_permissions: [test_result_generation, technical_interpretation, data_storage]
+    dirty_reality_forces: [volume, automation, equipment_calibration, reimbursement, turnaround_targets]
+    common_deviations: [false_precision, quality_control_shortcuts, incidental_finding_loss, copy_forward_error]
+    stabilizers: [proficiency_testing, accreditation, calibration, repeat_testing, audit_trails]
+
+  blood_banks_transplant_networks:
+    official_function: [collect_allocate_blood_or_organs, match_recipients, maintain_safety]
+    high_permissions: [scarce_life_critical_resource_allocation, eligibility, matching]
+    dirty_reality_forces: [extreme_scarcity, urgency, compatibility_constraints, geography, equity]
+    common_deviations: [allocation_bias, gaming_priority_scores, access_inequality, data_delay]
+    stabilizers: [transparent_rules, audit, waitlist_review, independent ethics, allocation_algorithms_with_review]
+
+  mental_health_institutions:
+    official_function: [diagnosis, therapy, crisis_care, rehabilitation]
+    high_permissions: [diagnosis_labels, medication, involuntary_care_where_lawful]
+    dirty_reality_forces: [subjective_assessment, bed_shortage, stigma, crisis_pressure, legal_risk]
+    common_deviations: [overmedicalization, undercare, coercion_over_therapy, label_persistence, risk_aversion]
+    stabilizers: [patient_rights, review, multidisciplinary_care, least_restrictive_principle, second_opinion]
+
+  medical_research_ethics_institutional_review:
+    official_function: [protect_research_participants, review_study_ethics, oversee_consent]
+    high_permissions: [approve_reject_modify_research, set_ethics_conditions]
+    dirty_reality_forces: [risk_aversion, administrative_load, institutional_liability, novelty_uncertainty]
+    common_deviations: [paperwork_over_ethics, inconsistent_review, excessive_delay, checkbox_consent]
+    stabilizers: [independent_members, proportional_review, appeal, transparent_guidance, postapproval_monitoring]
