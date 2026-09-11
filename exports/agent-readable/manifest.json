@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.4",
+  "schema_version": "1.5",
   "archive_id": "LU-CHENG-HUMAN-ARCHIVE",
   "archive_version": "1.0.0-agent-readable-corpus",
   "updated_at": "2026-09-11",
@@ -39,6 +39,9 @@
     "institution_topology_edges_backbone": "graphs/institution-topology/edges.yaml",
     "institution_topology_edges_coverage": "graphs/institution-topology/edges-coverage-002.yaml",
     "institution_topology_coverage_audit": "graphs/institution-topology/coverage-audit.yaml",
+    "social_dynamics_manifest": "graphs/social-dynamics/dynamics-manifest.yaml",
+    "social_dynamics_state_schema": "graphs/social-dynamics/STATE_SCHEMA.yaml",
+    "social_dynamics_state_types": "graphs/social-dynamics/state-types.yaml",
     "schema": "exports/agent-readable/CORPUS_SCHEMA.json"
   },
   "web_discovery": {
@@ -179,6 +182,32 @@
     "specific_claim_rule": "re-verify jurisdiction and current institutional implementation before applying archetype edges to real institutions",
     "causal_weight_status": "not_assigned"
   },
+  "social_dynamics": {
+    "id": "HUMAN-SOCIAL-DYNAMICS-001",
+    "version": "0.1.0",
+    "status": "active_experimental",
+    "entry": "graphs/social-dynamics/README.md",
+    "manifest": "graphs/social-dynamics/dynamics-manifest.yaml",
+    "state_schema": "graphs/social-dynamics/STATE_SCHEMA.yaml",
+    "state_types": "graphs/social-dynamics/state-types.yaml",
+    "load_protocol": "agent/HUMAN_SOCIAL_DYNAMICS_LOAD.md",
+    "base_states": ["NORMAL", "EXPANSION", "CRISIS", "EMERGENCY", "REFORM", "RECOVERY"],
+    "state_variable_count": 10,
+    "overlay_count": 6,
+    "overlay_domains": ["healthcare", "justice", "finance", "science", "infrastructure", "information_platforms"],
+    "overlay_paths": [
+      "graphs/social-dynamics/overlays/healthcare.yaml",
+      "graphs/social-dynamics/overlays/justice.yaml",
+      "graphs/social-dynamics/overlays/finance.yaml",
+      "graphs/social-dynamics/overlays/science.yaml",
+      "graphs/social-dynamics/overlays/infrastructure.yaml",
+      "graphs/social-dynamics/overlays/information-platforms.yaml"
+    ],
+    "prediction_status": "not_a_prediction_engine",
+    "quantitative_transition_probabilities": "not_assigned",
+    "jurisdiction_overlays": 0,
+    "interpretation": "static topology plus qualitative state overlays; real-world claims require time and jurisdiction verification"
+  },
   "canonical_frameworks": [
     "worldview/reality/HUMAN-REALITY-001.md",
     "worldview/ai/HUMAN-AI-001.md",
@@ -192,7 +221,8 @@
     "index": "books/human-groups-institutions/institution-atlas.yaml",
     "directory": "books/human-groups-institutions/institutions/README.md",
     "typed_ecology_extension": "cases/human-casebook/institution-ecology-graph.yaml",
-    "typed_social_topology": "graphs/institution-topology/topology-manifest.yaml"
+    "typed_social_topology": "graphs/institution-topology/topology-manifest.yaml",
+    "dynamic_state_extension": "graphs/social-dynamics/dynamics-manifest.yaml"
   },
   "integrity_rules": [
     "separate_external_fact_from_author_viewpoint_from_agent_inference",
@@ -207,8 +237,11 @@
     "ecology_edges_do_not_by_themselves_establish_causal_strength_intent_or_corruption",
     "topology_incident_coverage_does_not_mean_graph_completeness",
     "generic_archetype_edges_require_jurisdiction_verification_for_specific_claims",
+    "social_state_overlays_are_qualitative_priors_not_predictions",
+    "emergency_authority_analysis_must_include_exit_conditions",
+    "recovery_does_not_necessarily_restore_the_previous_topology",
     "distinguish_node_failure_handoff_failure_dependency_failure_and_coordination_failure",
-    "do_not_use_ecology_or_topology_graphs_for_attack_target_ranking_or_sabotage",
+    "do_not_use_ecology_topology_or_dynamics_models_for_attack_target_ranking_sabotage_or_coercion",
     "return_unknown_when_evidence_is_missing"
   ],
   "distribution_targets": {
