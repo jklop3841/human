@@ -1,0 +1,154 @@
+schema_version: "1.0"
+calibration_id: HUMAN-PSEUDO-PROSPECTIVE-001
+status: active_experimental
+created_at: "2026-09-11"
+purpose: "test what Human Social Dynamics could have flagged using only information documented as available before outcomes"
+
+rules:
+  - "do_not_use_post_event_findings_as_pre_event_signal"
+  - "warning_existence != warning_reachability"
+  - "structural_risk_flag != event_timing_prediction"
+  - "generic_risk_statement != discriminating_warning"
+  - "event_trigger_prediction_and_response_quality_prediction_are_separate_tasks"
+
+records:
+  - id: PP-001
+    event: HC-001
+    title: "Challenger"
+    pre_event_evidence:
+      - "prior O-ring erosion and blow-by had been observed"
+      - "launch constraints and engineering concern existed"
+      - "Thiokol engineers opposed launch under the low-temperature condition before management reversed the recommendation"
+    model_available_signals:
+      - information_reachability_risk
+      - bad_news_safety_risk
+      - memory_retention_failure
+      - verification_depth_risk
+    discriminating_value: medium_high
+    could_flag_before_outcome: true
+    could_predict_specific_failure_time: false
+    key_limit: "the model could flag a dangerous decision structure, but not calculate the O-ring failure probability or exact accident timing"
+    source_anchors:
+      - "https://www.nasa.gov/history/rogersrep/v1ch5.htm"
+      - "https://www.nasa.gov/history/rogersrep/v1ch6.htm"
+
+  - id: PP-002
+    event: HC-002
+    title: "Apollo 13"
+    pre_event_evidence:
+      - "oxygen tank 2 had abnormal detanking behavior before launch"
+      - "an interim discrepancy record existed"
+      - "the tank was subjected to an extended heater procedure using ground-support power"
+      - "the actual thermostat/wiring damage mechanism was not understood before flight"
+    model_available_signals:
+      - anomaly_history_should_be_preserved
+      - verification_depth_risk
+      - handoff_between_testing_and_flight_readiness
+    discriminating_value: medium
+    could_flag_before_outcome: true
+    could_predict_specific_failure_time: false
+    response_prediction_value: high
+    key_limit: "the social model can flag unresolved anomaly handling, but the decisive electrical/thermal failure mechanism required domain engineering knowledge unavailable to the generic model"
+    source_anchors:
+      - "https://www.nasa.gov/history/50-years-ago-apollo-13-review-board-report/"
+      - "https://www.nasa.gov/missions/apollo/apollo-13-mission-details/"
+
+  - id: PP-003
+    event: HC-003
+    title: "Silicon Valley Bank"
+    pre_event_evidence:
+      - "rapid growth in assets and deposits"
+      - "governance, liquidity and interest-rate-risk weaknesses were documented by supervisors"
+      - "the bank had a large concentration of uninsured deposits"
+      - "supervisory findings accumulated while corrective action remained slow"
+    model_available_signals:
+      - EXPANSION_state_risk
+      - feedback_latency_risk
+      - dependency_concentration_risk
+      - public_trust_sensitivity
+      - correction_latency_risk
+    discriminating_value: high
+    could_flag_before_outcome: true
+    could_predict_specific_run_trigger_or_timing: false
+    key_limit: "the model could flag fragility and supervisory lag, not the exact market-rate path or timing of depositor coordination"
+    source_anchors:
+      - "https://www.federalreserve.gov/publications/2023-April-SVB-Key-Takeaways.htm"
+      - "https://www.federalreserve.gov/publications/2023-April-SVB-Executive-Summary.htm"
+
+  - id: PP-004
+    event: HC-004
+    title: "Hurricane Katrina"
+    pre_event_evidence:
+      - "the 2004 Hurricane Pam exercise anticipated widespread flooding, mass evacuation and sheltering stress"
+      - "the exercise exposed lessons that were not fully implemented"
+      - "some special-needs and post-landfall evacuation planning remained incomplete"
+    model_available_signals:
+      - dependency_exposure_risk
+      - preparedness_memory_gap
+      - coordination_capacity_risk
+      - boundary_blindness_risk
+    discriminating_value: high
+    could_flag_before_outcome: true
+    could_predict_hurricane_landfall_or_levee_failure: false
+    key_limit: "the model could identify preparedness/coordination vulnerability but not storm trajectory, surge or engineering failure"
+    source_anchors:
+      - "https://www.govinfo.gov/content/pkg/CRPT-109hrpt377/pdf/CRPT-109hrpt377.pdf"
+      - "https://www.govinfo.gov/content/pkg/GAOREPORTS-GAO-06-442T/pdf/GAOREPORTS-GAO-06-442T.pdf"
+
+  - id: PP-005
+    event: HC-005
+    title: "Winter Storm Uri"
+    pre_event_evidence:
+      - "the 2011 Southwest cold-weather event had already shown generator and natural-gas winterization weaknesses"
+      - "2011 investigators recommended stronger winterization planning and standards"
+      - "later cold-weather reports echoed similar preparedness concerns before 2021"
+    model_available_signals:
+      - institutional_memory_failure
+      - dependency_exposure_risk
+      - correction_latency_risk
+      - repeated_warning_without_hardening
+    discriminating_value: high
+    could_flag_before_outcome: true
+    could_predict_specific_weather_severity_or_blackout_scale: false
+    key_limit: "the model could flag recurrence vulnerability, but not meteorological severity, physical outage magnitude or exact load-shed requirement"
+    source_anchors:
+      - "https://www.ferc.gov/sites/default/files/2020-05/ReportontheSouthwestColdWeatherEventfromFebruary2011Report.pdf"
+      - "https://www.ferc.gov/news-events/news/ferc-and-nerc-release-report-january-2018-extreme-cold-weather-event-0"
+
+  - id: PP-006
+    event: HC-006
+    title: "Y2K"
+    pre_event_evidence:
+      - "the date rollover was known years in advance"
+      - "mission-critical systems were tracked for compliance"
+      - "GAO continued to identify gaps in end-to-end testing and contingency planning before 2000"
+    model_available_signals:
+      - shared_objective_clarity
+      - fixed_deadline_coordination
+      - verification_depth_need
+      - proactive_dependency_mapping
+    discriminating_value: high_for_coordination_need_low_for_counterfactual_severity
+    could_flag_before_outcome: true
+    could_predict_counterfactual_without_remediation: false
+    key_limit: "Y2K strongly validates the usefulness of prospective coordination signals but cannot establish how severe the unrealized counterfactual would have been"
+    source_anchors:
+      - "https://www.gao.gov/products/t-aimd-99-144"
+
+summary:
+  events_with_useful_pre_event_structural_flags: 6
+  events_with_specific_trigger_or_timing_prediction: 0
+  strongest_prospective_use_cases:
+    - recurring_warning_not_converted_into_correction
+    - rapid_growth_outpacing_control
+    - known_dependency_without_resilience_hardening
+    - unresolved_anomaly_crossing_handoff_boundaries
+    - fixed_deadline_coordination_problem
+  weakest_capability:
+    - predicting exact physical trigger
+    - predicting event timing
+    - assigning quantitative probability
+    - estimating physical severity without domain models
+
+revision:
+  statement: "The strongest prospective use of Human Social Dynamics is structural warning and preparedness auditing, not event-timing prediction."
+  implication: "future evaluation should measure whether the model produces discriminating, actionable audit questions before outcomes, rather than whether it narrates events well after outcomes."
