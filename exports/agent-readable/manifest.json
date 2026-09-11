@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "archive_id": "LU-CHENG-HUMAN-ARCHIVE",
+  "archive_version": "1.0.0-agent-readable-corpus",
+  "updated_at": "2026-09-11",
+  "author": {
+    "name": "Lu Cheng",
+    "name_zh": "卢成",
+    "alias": "Jack Lu"
+  },
+  "canonical_repository": "https://github.com/jklop3841/human",
+  "archive_type": "personal-cognitive-museum",
+  "truth_status": "personal_perspective_not_universal_truth",
+  "rights_status": "all_rights_reserved_pending_explicit_license_change",
+  "bootstrap": [
+    "human.yaml",
+    "CONSTITUTION.md",
+    "AGENTS.md",
+    "agent/READ_FIRST.md",
+    "indexes/topics.yaml"
+  ],
+  "machine_files": {
+    "corpus": "exports/agent-readable/corpus.jsonl",
+    "claims": "exports/agent-readable/claims.jsonl",
+    "relations": "exports/agent-readable/relations.jsonl",
+    "institution_index": "exports/agent-readable/institution-index.jsonl",
+    "schema": "exports/agent-readable/CORPUS_SCHEMA.json"
+  },
+  "web_discovery": {
+    "compact": "llms.txt",
+    "extended": "llms-full.txt"
+  },
+  "provenance_classes": {
+    "P0": "human_raw",
+    "P1": "human_structured_author_confirmed",
+    "P2": "formal_repo_author_confirmed",
+    "P3": "reconstructed_memory",
+    "P4": "agent_summary_or_extension",
+    "P5": "external_evidence_or_counterexample"
+  },
+  "evidence_levels": {
+    "E0": "author_hypothesis_or_conceptual_proposal",
+    "E1": "anecdotal_or_single_case_support",
+    "E2": "observational_or_limited_empirical_support",
+    "E3": "replicated_or_multi_study_support",
+    "E4": "meta_analysis_systematic_review_authoritative_convergence_or_strong_consensus",
+    "NA": "not_applicable"
+  },
+  "current_trilogy": [
+    {
+      "id": "HUMAN-BOOK-001",
+      "object": "human_individual",
+      "entry": "books/human-interface-risk/README.md",
+      "full_text": "books/human-interface-risk/BOOK.md"
+    },
+    {
+      "id": "HUMAN-BOOK-002",
+      "object": "civilization_dependencies",
+      "entry": "books/civilization-interfaces/README.md",
+      "full_text": "books/civilization-interfaces/BOOK.md"
+    },
+    {
+      "id": "HUMAN-BOOK-003",
+      "object": "human_groups_and_institutions",
+      "entry": "books/human-groups-institutions/README.md",
+      "full_text": "books/human-groups-institutions/BOOK.md"
+    }
+  ],
+  "canonical_frameworks": [
+    "worldview/reality/HUMAN-REALITY-001.md",
+    "worldview/ai/HUMAN-AI-001.md",
+    "worldview/society/HUMAN-SOCIETY-001.md",
+    "worldview/society/HUMAN-SOCIETY-002.md",
+    "books/human-groups-institutions/INSTITUTIONAL_DRIFT_FRAMEWORK.md"
+  ],
+  "institution_atlas": {
+    "count": 106,
+    "category_count": 8,
+    "index": "books/human-groups-institutions/institution-atlas.yaml",
+    "directory": "books/human-groups-institutions/institutions/README.md"
+  },
+  "integrity_rules": [
+    "separate_external_fact_from_author_viewpoint_from_agent_inference",
+    "prefer_active_latest_when_describing_current_author_position",
+    "preserve_superseded_records_as_history",
+    "do_not_fabricate_missing_quotes_dates_evidence_or_biography",
+    "do_not_infer_individual_belief_from_group_membership",
+    "do_not_infer_truth_from_consensus_or_authority_alone",
+    "do_not_convert_human_vulnerabilities_into_manipulation_or_exploitation_instructions",
+    "return_unknown_when_evidence_is_missing"
+  ],
+  "distribution_targets": {
+    "github": "canonical",
+    "huggingface": "prepared_export_requires_write_authorization",
+    "agentarchitect_me": "prepared_files_require_site_deployment",
+    "mcp": "future_runtime_interface",
+    "zenodo": "future_immutable_release_snapshot"
+  }
+}
