@@ -1,0 +1,194 @@
+schema_version: "1.0"
+graph_id: HUMAN-INSTITUTION-ECOLOGY-001
+status: active
+created_at: "2026-09-11"
+author: "Lu Cheng / 卢成 / Jack Lu"
+purpose: "typed graph for cross-institutional flows, dependencies, drift propagation, and correction propagation"
+
+edge_types:
+  funds: "money, reimbursement, subsidy, lending, financing"
+  authority: "legal, administrative, organizational decision authority"
+  information: "reports, evidence, data, risk signals"
+  certification: "license, qualification, rating, peer review"
+  enforcement: "sanction, detention, penalty, compulsory action"
+  dependency: "technical, energy, supply, infrastructure dependency"
+  oversight: "audit, regulation, inspection, independent review"
+  appeal: "appeal, reconsideration, retrial, correction path"
+  reputation: "ranking, legitimacy, public expectation, professional status"
+  feedback: "outcome return, complaints, quality data, accident learning"
+
+analysis_invariants:
+  - "edge_exists_does_not_prove_causal_strength"
+  - "poor_outcome_does_not_prove_corruption"
+  - "fragmentation_does_not_automatically_mean_waste"
+  - "redundancy_can_be_a_resilience_feature"
+  - "node_intent_must_not_be_inferred_from_network_outcome"
+  - "map_correction_edges_as_well_as_drift_edges"
+  - "do_not_use_graph_for_attack_target_ranking_or_sabotage"
+
+common_failure_patterns:
+  handoff_loss: "critical information degrades or disappears between nodes"
+  responsibility_gap: "no node owns the full consequence"
+  incentive_misalignment: "one node's local optimum exports cost to another"
+  feedback_delay: "outcomes return too slowly to correct behavior"
+  boundary_blindness: "nodes understand themselves but not cross-node dependencies"
+  correction_blocking: "a node sees the problem but lacks interface, authority, or incentive to change the path"
+  correction_amplification: "audit, standards, payment, precedent, or open data propagate correction across nodes"
+
+chains:
+  - id: ECO-001
+    name: healthcare_ecology
+    title_zh: "医疗生态"
+    nodes:
+      - patient
+      - hospital_clinician
+      - payer_insurer
+      - pharmaceutical_device_supplier
+      - regulator
+      - professional_guideline_body
+    edges:
+      - {from: patient, to: hospital_clinician, type: information, direction: bidirectional, note: "symptoms, consent, complaints, clinical explanation"}
+      - {from: patient, to: hospital_clinician, type: funds, direction: forward, note: "direct or indirect payment"}
+      - {from: payer_insurer, to: hospital_clinician, type: funds, direction: forward, note: "reimbursement and incentive design"}
+      - {from: payer_insurer, to: hospital_clinician, type: oversight, direction: forward, note: "claims review and quality-linked payment"}
+      - {from: hospital_clinician, to: payer_insurer, type: information, direction: forward, note: "coding, claims, quality data"}
+      - {from: pharmaceutical_device_supplier, to: hospital_clinician, type: dependency, direction: forward, note: "medicines, devices, supply"}
+      - {from: regulator, to: hospital_clinician, type: oversight, direction: forward, note: "licensing, inspection, compliance"}
+      - {from: regulator, to: pharmaceutical_device_supplier, type: oversight, direction: forward, note: "approval and post-market oversight"}
+      - {from: professional_guideline_body, to: hospital_clinician, type: certification, direction: forward, note: "standards, guidelines, professional legitimacy"}
+    drift_paths:
+      - "payment_rule -> hospital_metric -> department_target -> clinician_time_allocation -> patient_path"
+    correction_paths:
+      - "safety_event -> reporting -> quality_improvement -> payer_or_regulator_feedback -> standard_change -> frontline_process"
+
+  - id: ECO-002
+    name: justice_ecology
+    title_zh: "司法生态"
+    nodes:
+      - law_enforcement
+      - prosecution
+      - defense
+      - court
+      - corrections
+      - appellate_review
+      - forensic_expert
+    edges:
+      - {from: law_enforcement, to: prosecution, type: information, direction: forward, note: "evidence, suspect, investigative narrative"}
+      - {from: prosecution, to: court, type: authority, direction: forward, note: "charging and case presentation"}
+      - {from: defense, to: court, type: information, direction: forward, note: "counterevidence and procedural challenge"}
+      - {from: forensic_expert, to: law_enforcement, type: information, direction: forward, note: "technical evidence and uncertainty"}
+      - {from: forensic_expert, to: court, type: information, direction: forward, note: "expert evidence"}
+      - {from: court, to: corrections, type: authority, direction: forward, note: "sentence and supervision conditions"}
+      - {from: appellate_review, to: court, type: appeal, direction: reverse, note: "reversal, remand, precedent, correction"}
+    drift_paths:
+      - "initial_suspicion -> investigative_selection -> evidence_set -> charging_narrative -> visible_trial_record -> judgment"
+    correction_paths:
+      - "independent_defense_or_expertise -> contradiction -> judicial_correction -> appellate_precedent -> future_rule_change"
+
+  - id: ECO-003
+    name: finance_ecology
+    title_zh: "金融生态"
+    nodes:
+      - central_bank_regulator
+      - bank
+      - household_firm
+      - payment_capital_market
+      - depositor_investor
+      - rating_media_information
+    edges:
+      - {from: central_bank_regulator, to: bank, type: oversight, direction: forward, note: "supervision, rules, examinations"}
+      - {from: bank, to: central_bank_regulator, type: information, direction: forward, note: "risk and regulatory data"}
+      - {from: bank, to: household_firm, type: funds, direction: forward, note: "credit, lending, payment services"}
+      - {from: household_firm, to: bank, type: funds, direction: forward, note: "deposits, repayments, funding"}
+      - {from: payment_capital_market, to: bank, type: funds, direction: bidirectional, note: "market funding, liquidity, asset pricing"}
+      - {from: rating_media_information, to: depositor_investor, type: information, direction: forward, note: "risk narratives and signals"}
+      - {from: depositor_investor, to: bank, type: funds, direction: bidirectional, note: "stable deposits or withdrawals"}
+    drift_paths:
+      - "risk_signal -> expectation_change -> withdrawal_or_funding_shift -> liquidity_change -> stronger_risk_signal"
+    correction_paths:
+      - "timely_data -> supervisory_action -> buffer_or_liquidity_response -> reduced_uncertainty -> stabilized_expectations"
+
+  - id: ECO-004
+    name: science_ecology
+    title_zh: "科研生态"
+    nodes:
+      - funder
+      - university_lab
+      - researcher
+      - peer_review
+      - journal_repository
+      - research_community
+      - industry_policy_application
+    edges:
+      - {from: funder, to: university_lab, type: funds, direction: forward, note: "grant funding and research priorities"}
+      - {from: researcher, to: funder, type: information, direction: forward, note: "proposals, outputs, progress"}
+      - {from: peer_review, to: researcher, type: certification, direction: forward, note: "review, scoring, critique"}
+      - {from: researcher, to: journal_repository, type: information, direction: forward, note: "papers, data, methods"}
+      - {from: journal_repository, to: research_community, type: reputation, direction: forward, note: "visibility, citation, status"}
+      - {from: research_community, to: researcher, type: feedback, direction: reverse, note: "replication, criticism, extension"}
+      - {from: industry_policy_application, to: funder, type: feedback, direction: reverse, note: "societal demand and application pressure"}
+    drift_paths:
+      - "funding_preference -> topic_choice -> analysis_choice -> publication_selection -> citation_status -> next_funding_round"
+    correction_paths:
+      - "open_data -> independent_replication -> criticism_or_confirmation -> correction -> updated_shared_knowledge"
+
+  - id: ECO-005
+    name: infrastructure_ecology
+    title_zh: "基础设施生态"
+    nodes:
+      - fuel_gas_system
+      - power_generation
+      - electric_grid
+      - communications
+      - water_system
+      - healthcare_service
+      - transport_logistics
+      - emergency_government
+    edges:
+      - {from: fuel_gas_system, to: power_generation, type: dependency, direction: forward, note: "fuel supply"}
+      - {from: electric_grid, to: fuel_gas_system, type: dependency, direction: reverse, note: "power for production, processing, compression"}
+      - {from: electric_grid, to: communications, type: dependency, direction: forward, note: "power for network infrastructure"}
+      - {from: electric_grid, to: water_system, type: dependency, direction: forward, note: "pumping and treatment power"}
+      - {from: electric_grid, to: healthcare_service, type: dependency, direction: forward, note: "clinical equipment, cooling, IT"}
+      - {from: communications, to: emergency_government, type: information, direction: forward, note: "monitoring and coordination"}
+      - {from: transport_logistics, to: electric_grid, type: dependency, direction: forward, note: "repair crews, fuel, replacement parts"}
+    drift_paths:
+      - "fuel_failure -> generation_loss -> load_shedding -> fuel_facility_power_loss -> additional_fuel_failure"
+    correction_paths:
+      - "dependency_mapping -> critical_node_protection -> joint_exercises -> restoration_priority -> faster_cross_system_recovery"
+
+  - id: ECO-006
+    name: information_platform_ecology
+    title_zh: "信息平台生态"
+    nodes:
+      - creator_merchant
+      - platform
+      - recommender_system
+      - user
+      - advertiser_market
+      - regulator
+      - researcher_public_oversight
+    edges:
+      - {from: creator_merchant, to: platform, type: information, direction: forward, note: "content, metadata, behavioral signals"}
+      - {from: platform, to: creator_merchant, type: reputation, direction: reverse, note: "distribution, reach, monetization"}
+      - {from: recommender_system, to: user, type: information, direction: forward, note: "ranking and recommendation"}
+      - {from: user, to: recommender_system, type: feedback, direction: reverse, note: "click, watch, purchase, report, leave"}
+      - {from: advertiser_market, to: platform, type: funds, direction: forward, note: "advertising revenue and conversion targets"}
+      - {from: regulator, to: platform, type: oversight, direction: forward, note: "transparency, risk assessment, audit, redress rules"}
+      - {from: researcher_public_oversight, to: regulator, type: information, direction: forward, note: "independent analysis and issue discovery"}
+    drift_paths:
+      - "user_response -> recommender_learning -> supply_adaptation -> stronger_response -> further_creator_adaptation"
+    correction_paths:
+      - "transparency_or_data_access -> independent_scrutiny -> risk_detection -> governance_change -> altered_ranking_or_user_control"
+
+agent_query_template:
+  - "What are the nodes?"
+  - "What typed edges connect them?"
+  - "Where does money flow?"
+  - "Where does authority flow?"
+  - "Where does information degrade?"
+  - "Where is responsibility unowned?"
+  - "What is the fastest drift propagation path?"
+  - "What correction edge can interrupt that path?"
+  - "What evidence supports each edge?"
+  - "Which edges are inferred rather than externally verified?"
