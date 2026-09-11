@@ -1,0 +1,67 @@
+schema_version: "1.0"
+graph_id: HUMAN-INSTITUTION-TOPOLOGY-001
+version: "0.1.0"
+status: active_experimental
+created_at: "2026-09-11"
+author: "Lu Cheng / 卢成 / Jack Lu"
+
+source_atlas:
+  institution_count: 106
+  domain_count: 8
+  index: "books/human-groups-institutions/institution-atlas.yaml"
+  directory: "books/human-groups-institutions/institutions/README.md"
+
+files:
+  readme: "graphs/institution-topology/README.md"
+  nodes: "graphs/institution-topology/nodes.yaml"
+  edges: "graphs/institution-topology/edges.yaml"
+  agent_protocol: "agent/HUMAN_INSTITUTION_TOPOLOGY_LOAD.md"
+
+coverage:
+  registered_nodes: 106
+  backbone_edges: 48
+  node_coverage_ratio: 1.0
+  edge_coverage_status: sparse_backbone_only
+  jurisdiction_overlays: 0
+  temporal_overlays: 0
+  evidence_backed_edge_count: 11
+  generic_archetype_edge_count: 27
+  jurisdiction_dependent_edge_count: 7
+  hypothesis_edge_count: 3
+
+edge_types:
+  - funds
+  - authority
+  - information
+  - certification
+  - enforcement
+  - dependency
+  - oversight
+  - appeal
+  - reputation
+  - feedback
+  - representation
+  - standard_setting
+
+interpretation_rules:
+  - "absence_of_edge != absence_of_real_relation"
+  - "edge_presence != causal_strength"
+  - "centrality != importance_or_moral_value"
+  - "generic_archetype_edges_require_jurisdiction_check_for_specific_claims"
+  - "hypothesis_edges_must_not_be_presented_as_verified_fact"
+  - "crisis_analysis_requires_temporal_state_and_dependency_context"
+  - "always_map_correction_paths_not_only_failure_paths"
+  - "do_not_use_for_attack_target_ranking_sabotage_evasion_or_coercion"
+
+next_build:
+  phase_1: "map remaining high-confidence intra-domain edges"
+  phase_2: "connect all 106 nodes with at least one incoming or outgoing typed relation where justified"
+  phase_3: "add jurisdiction overlays instead of pretending one global institutional topology"
+  phase_4: "add time/state overlays: normal, crisis, reform, collapse, recovery"
+  phase_5: "derive safe structural queries and resilience analysis"
+
+acceptance:
+  - "106 canonical archetypes are registered"
+  - "each edge has type, evidence_status and note"
+  - "no numeric causal weight is fabricated"
+  - "specific real-world claims require external re-verification"
