@@ -7,7 +7,7 @@ note: "This atlas is a comprehensive first-pass taxonomy of major modern human i
 
 core_model: "mission + permission + scarcity + metrics + hierarchy + discretion + information_asymmetry + self_preservation + external_interests + path_dependence + group_norms -> actual_institutional_behavior"
 
-institution_count: 105
+institution_count: 106
 category_count: 8
 
 categories:
@@ -38,7 +38,7 @@ categories:
 
   information_platforms_culture:
     path: institutions/06-information-platforms-culture.yaml
-    count: 11
+    count: 12
     examples: [news_media, social_media_platforms, search_engines_information_gateways, telecom_carriers_isps, advertising_public_relations_industry, political_parties]
 
   infrastructure_utilities_public_services:
