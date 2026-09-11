@@ -1,0 +1,68 @@
+schema_version: "1.0"
+graph_id: HUMAN-INSTITUTION-TOPOLOGY-001
+status: active_experimental
+edge_count: 48
+
+edges:
+  - {id: E001, from: legislature_parliament, to: executive_leadership_cabinet, type: authority, evidence_status: generic_archetype, note: "law, budget, mandate and accountability interface varies by constitutional system"}
+  - {id: E002, from: legislature_parliament, to: regulatory_agency, type: authority, evidence_status: generic_archetype, note: "statutory mandate and delegated rulemaking"}
+  - {id: E003, from: executive_leadership_cabinet, to: ministries_departments_civil_service, type: authority, evidence_status: generic_archetype, note: "executive direction and implementation"}
+  - {id: E004, from: ministries_departments_civil_service, to: local_government_municipality, type: authority, evidence_status: jurisdiction_dependent, note: "administrative delegation, grant conditions, coordination"}
+  - {id: E005, from: tax_revenue_authority, to: executive_leadership_cabinet, type: funds, evidence_status: generic_archetype, note: "public revenue enters budgetary allocation system"}
+  - {id: E006, from: public_procurement_public_works, to: corporations_large_employers, type: funds, evidence_status: generic_archetype, note: "public purchasing and contracting"}
+  - {id: E007, from: statistics_census_office, to: ministries_departments_civil_service, type: information, evidence_status: generic_archetype, note: "population and economic statistics inform administration"}
+  - {id: E008, from: supreme_audit_ombudsman_anti_corruption, to: ministries_departments_civil_service, type: oversight, evidence_status: generic_archetype, note: "audit, complaint review, integrity oversight"}
+  - {id: E009, from: election_management_body, to: legislature_parliament, type: feedback, evidence_status: jurisdiction_dependent, note: "electoral results alter representative composition"}
+  - {id: E010, from: civil_registry_identity_passport, to: immigration_customs_border, type: information, evidence_status: generic_archetype, note: "identity and status verification"}
+
+  - {id: E011, from: police_law_enforcement, to: prosecutors_public_prosecution, type: information, evidence_status: evidence_backed, note: "investigative evidence and case referral"}
+  - {id: E012, from: prosecutors_public_prosecution, to: courts_judiciary, type: authority, evidence_status: evidence_backed, note: "charging and prosecution interface"}
+  - {id: E013, from: defense_bar_public_defenders_legal_aid, to: courts_judiciary, type: information, evidence_status: evidence_backed, note: "counterevidence, legal challenge, defense representation"}
+  - {id: E014, from: forensic_labs_medical_examiners, to: police_law_enforcement, type: information, evidence_status: evidence_backed, note: "technical forensic evidence"}
+  - {id: E015, from: courts_judiciary, to: corrections_prisons_detention, type: authority, evidence_status: evidence_backed, note: "sentence and detention authority"}
+  - {id: E016, from: courts_judiciary, to: probation_parole, type: authority, evidence_status: jurisdiction_dependent, note: "community supervision conditions and legal review"}
+  - {id: E017, from: disaster_management_civil_defense, to: fire_department, type: authority, evidence_status: jurisdiction_dependent, note: "incident coordination and emergency command"}
+  - {id: E018, from: emergency_medical_services_ambulance, to: hospitals, type: information, evidence_status: generic_archetype, note: "patient handoff and clinical information transfer"}
+  - {id: E019, from: intelligence_services, to: executive_leadership_cabinet, type: information, evidence_status: generic_archetype, note: "strategic intelligence briefing"}
+
+  - {id: E020, from: health_insurers_payers, to: hospitals, type: funds, evidence_status: evidence_backed, note: "reimbursement and payment incentives"}
+  - {id: E021, from: health_insurers_payers, to: hospitals, type: oversight, evidence_status: evidence_backed, note: "claims review and quality-linked payment"}
+  - {id: E022, from: pharmaceutical_companies, to: hospitals, type: dependency, evidence_status: generic_archetype, note: "medicine supply and clinical product dependence"}
+  - {id: E023, from: medical_device_companies, to: hospitals, type: dependency, evidence_status: generic_archetype, note: "equipment and device supply"}
+  - {id: E024, from: regulatory_agency, to: pharmaceutical_companies, type: oversight, evidence_status: jurisdiction_dependent, note: "market authorization and safety regulation"}
+  - {id: E025, from: medical_licensing_professional_boards, to: hospitals, type: certification, evidence_status: generic_archetype, note: "professional licensure and standards"}
+  - {id: E026, from: laboratories_diagnostic_centers, to: hospitals, type: information, evidence_status: generic_archetype, note: "diagnostic results"}
+  - {id: E027, from: public_health_agencies, to: hospitals, type: information, evidence_status: generic_archetype, note: "surveillance, guidance and outbreak information"}
+
+  - {id: E028, from: funding_agencies_foundations, to: universities, type: funds, evidence_status: generic_archetype, note: "research and education funding"}
+  - {id: E029, from: funding_agencies_foundations, to: research_institutes_laboratories, type: funds, evidence_status: generic_archetype, note: "research grants and program funding"}
+  - {id: E030, from: research_institutes_laboratories, to: academic_journals_publishers, type: information, evidence_status: generic_archetype, note: "research outputs submitted for review and publication"}
+  - {id: E031, from: academic_journals_publishers, to: research_institutes_laboratories, type: reputation, evidence_status: generic_archetype, note: "publication prestige feeds career and institutional reputation"}
+  - {id: E032, from: professional_accreditation_bodies, to: universities, type: certification, evidence_status: generic_archetype, note: "program and institutional accreditation"}
+  - {id: E033, from: standards_and_measurement_institutes, to: corporations_large_employers, type: standard_setting, evidence_status: generic_archetype, note: "technical standards and metrology"}
+
+  - {id: E034, from: central_bank, to: commercial_banks, type: oversight, evidence_status: generic_archetype, note: "prudential, monetary or supervisory interface varies by jurisdiction"}
+  - {id: E035, from: commercial_banks, to: corporations_large_employers, type: funds, evidence_status: generic_archetype, note: "credit and payment services"}
+  - {id: E036, from: commercial_banks, to: small_businesses_family_firms, type: funds, evidence_status: generic_archetype, note: "credit and payment services"}
+  - {id: E037, from: credit_rating_agencies, to: securities_exchanges_clearinghouses, type: information, evidence_status: generic_archetype, note: "credit assessments enter market information environment"}
+  - {id: E038, from: accounting_audit_firms, to: corporations_large_employers, type: oversight, evidence_status: generic_archetype, note: "financial audit and assurance"}
+  - {id: E039, from: labor_unions, to: corporations_large_employers, type: representation, evidence_status: jurisdiction_dependent, note: "collective bargaining and worker representation"}
+  - {id: E040, from: antitrust_competition_authority, to: corporations_large_employers, type: oversight, evidence_status: jurisdiction_dependent, note: "competition enforcement"}
+
+  - {id: E041, from: telecom_carriers_isps, to: social_media_platforms, type: dependency, evidence_status: generic_archetype, note: "network connectivity dependency"}
+  - {id: E042, from: search_engines_information_gateways, to: news_media, type: reputation, evidence_status: hypothesis, note: "visibility and referral can affect audience reach; strength varies by platform and market"}
+  - {id: E043, from: advertising_public_relations_industry, to: news_media, type: funds, evidence_status: generic_archetype, note: "advertising revenue and promotional markets"}
+  - {id: E044, from: social_media_platforms, to: polling_rating_reputation_institutions, type: information, evidence_status: hypothesis, note: "platform discourse can enter measurement and reputation systems; requires contextual validation"}
+
+  - {id: E045, from: gas_fuel_energy_suppliers, to: electric_utilities_grid_operators, type: dependency, evidence_status: evidence_backed, note: "fuel supply dependency for generation"}
+  - {id: E046, from: electric_utilities_grid_operators, to: telecom_carriers_isps, type: dependency, evidence_status: generic_archetype, note: "communications depend on electric power while retaining varying backup"}
+  - {id: E047, from: electric_utilities_grid_operators, to: water_sewer_utilities, type: dependency, evidence_status: generic_archetype, note: "pumping and treatment depend on power"}
+  - {id: E048, from: ports_shipping_logistics_hubs, to: corporations_large_employers, type: dependency, evidence_status: generic_archetype, note: "trade and supply-chain logistics dependency"}
+
+edge_policy:
+  default_weight: null
+  default_probability: null
+  causal_strength_inferred: false
+  jurisdiction_overlay_required_for_specific_claims: true
+  temporal_state_required_for_crisis_analysis: true
+  attack_target_ranking_prohibited: true
