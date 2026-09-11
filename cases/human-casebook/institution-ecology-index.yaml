@@ -1,0 +1,66 @@
+schema_version: "1.0"
+volume: 4
+volume_id: HUMAN-CASEBOOK-V004
+status: active
+created_at: "2026-09-11"
+entry: "cases/human-casebook/VOLUME-004.md"
+graph: "cases/human-casebook/institution-ecology-graph.yaml"
+ecology_count: 6
+
+edge_types: [funds, authority, information, certification, enforcement, dependency, oversight, appeal, reputation, feedback]
+
+ ecologies:
+  - id: ECO-001
+    name: healthcare_ecology
+    title: "医疗生态：患者→医院→支付方→药械→监管"
+    nodes: [patient, hospital_clinician, payer_insurer, pharmaceutical_device_supplier, regulator, professional_guideline_body]
+    key_drift: payment_rule_to_frontline_path
+    key_correction: safety_event_to_standard_change
+    evidence_level: E3
+  - id: ECO-002
+    name: justice_ecology
+    title: "司法生态：执法→检察→辩护→法院→矫正→复核"
+    nodes: [law_enforcement, prosecution, defense, court, corrections, appellate_review, forensic_expert]
+    key_drift: path_lock_in
+    key_correction: independent_review_and_appeal
+    evidence_level: E3
+  - id: ECO-003
+    name: finance_ecology
+    title: "金融生态：监管→银行→企业家庭→市场→公众预期"
+    nodes: [central_bank_regulator, bank, household_firm, payment_capital_market, depositor_investor, rating_media_information]
+    key_drift: expectation_liquidity_feedback
+    key_correction: timely_supervision_and_buffers
+    evidence_level: E3
+  - id: ECO-004
+    name: science_ecology
+    title: "科研生态：资助→大学实验室→同行评议→期刊数据→应用"
+    nodes: [funder, university_lab, researcher, peer_review, journal_repository, research_community, industry_policy_application]
+    key_drift: incentive_reputation_feedback
+    key_correction: open_data_replication_review
+    evidence_level: E3
+  - id: ECO-005
+    name: infrastructure_ecology
+    title: "基础设施生态：能源→电力→通信水务交通公共服务"
+    nodes: [fuel_gas_system, power_generation, electric_grid, communications, water_system, healthcare_service, transport_logistics, emergency_government]
+    key_drift: cross_system_cascade
+    key_correction: dependency_mapping_and_joint_recovery
+    evidence_level: E4
+  - id: ECO-006
+    name: information_platform_ecology
+    title: "信息平台生态：创作者→平台算法→用户→广告→监管研究者"
+    nodes: [creator_merchant, platform, recommender_system, user, advertiser_market, regulator, researcher_public_oversight]
+    key_drift: engagement_feedback_loop
+    key_correction: transparency_data_access_audit
+    evidence_level: E3
+
+cross_ecology_patterns:
+  handoff_loss: [ECO-001, ECO-002, ECO-004, ECO-006]
+  responsibility_gap: [ECO-001, ECO-002, ECO-005]
+  incentive_misalignment: [ECO-001, ECO-003, ECO-004, ECO-006]
+  feedback_delay: [ECO-001, ECO-003, ECO-004, ECO-005]
+  boundary_blindness: [ECO-002, ECO-005]
+  correction_amplification: [ECO-001, ECO-002, ECO-004, ECO-006]
+
+next_step:
+  target: "connect the 106 institution archetypes into a typed cross-domain graph"
+  constraint: "do not infer causal strength from edge presence alone"
