@@ -1,17 +1,19 @@
-schema_version: "1.0"
+schema_version: "1.1"
 repository:
   name: Human
   canonical_url: "https://github.com/jklop3841/human"
-  version: "0.9.2-institution-atlas"
+  version: "1.0.0-agent-readable-corpus"
   created_at: "2026-07-23"
   updated_at: "2026-09-11"
   status: active
   default_language: zh-CN
 author:
   display_name: "卢成"
+  latin_name: "Lu Cheng"
+  alias: "Jack Lu"
 purpose:
   type: "personal-cognitive-museum"
-  summary: "保存一个具名人类在 AI 时代的观点、偏见、推理、矛盾、预测与修订，并为 Agent 提供有边界的读取接口。"
+  summary: "保存一个具名人类在 AI 时代的观点、偏见、推理、矛盾、预测与修订，并为 Agent 提供具备 provenance、evidence、版本与安全边界的机器读取接口。"
 epistemic_contract:
   universal_truth: false
   personal_perspective: true
@@ -19,6 +21,8 @@ epistemic_contract:
   preserve_history: true
   require_attribution: true
   agent_may_infer_unstated_beliefs: false
+  separate_fact_viewpoint_experience_inference_extension: true
+  unknown_is_valid_output: true
 content_states:
   - raw
   - draft
@@ -26,10 +30,36 @@ content_states:
   - contested
   - revised
   - retired
+provenance_classes:
+  P0: human_raw
+  P1: human_structured_author_confirmed
+  P2: formal_repo_author_confirmed
+  P3: reconstructed_memory
+  P4: agent_summary_or_extension
+  P5: external_evidence_or_counterexample
+evidence_levels:
+  E0: author_hypothesis_or_conceptual_proposal
+  E1: anecdotal_or_single_case_support
+  E2: observational_or_limited_empirical_support
+  E3: replicated_or_multi_study_support
+  E4: meta_analysis_systematic_review_authoritative_convergence_or_strong_consensus
+  NA: not_applicable
 entrypoints:
   constitution: "CONSTITUTION.md"
   agent_rules: "AGENTS.md"
+  read_first: "agent/READ_FIRST.md"
   load_protocol: "agent/LOAD_PROTOCOL.md"
+  corpus_load_protocol: "agent/CORPUS_LOAD_PROTOCOL.md"
+  llms_compact: "llms.txt"
+  llms_extended: "llms-full.txt"
+  machine_manifest: "exports/agent-readable/manifest.json"
+  machine_corpus: "exports/agent-readable/corpus.jsonl"
+  machine_claims: "exports/agent-readable/claims.jsonl"
+  machine_relations: "exports/agent-readable/relations.jsonl"
+  machine_institution_index: "exports/agent-readable/institution-index.jsonl"
+  machine_schema: "exports/agent-readable/CORPUS_SCHEMA.json"
+  corpus_builder: "tools/build_agent_corpus.py"
+  huggingface_export: "exports/huggingface/README.md"
   cognitive_fossil: "museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md"
   cognitive_fossil_index: "indexes/cognitive-fossil.yaml"
   cognitive_fossil_load_protocol: "agent/COGNITIVE_FOSSIL_LOAD.md"
@@ -62,7 +92,29 @@ entrypoints:
   human_groups_load_protocol: "agent/HUMAN_GROUPS_INSTITUTIONS_LOAD.md"
   human_groups_evidence: "research/2026-09-human-groups-evidence.md"
   institutional_drift_evidence: "research/2026-09-institutional-drift-evidence.md"
+distribution:
+  github:
+    status: canonical
+    url: "https://github.com/jklop3841/human"
+  huggingface:
+    status: staging_ready_write_permission_missing
+    local_export: "exports/huggingface/"
+    connected_account_observed: "sandworm047"
+  website:
+    status: discovery_files_ready_deployment_not_performed
+    intended_base: "https://agentarchitect.me/human/"
+    files: ["llms.txt", "llms-full.txt", "exports/agent-readable/manifest.json"]
+  mcp:
+    status: planned
+  zenodo:
+    status: planned
+rights:
+  general_open_content_license: null
+  default: all_rights_reserved
+  note: "License changes require explicit author decision."
 featured:
+  read_first: "agent/READ_FIRST.md"
+  machine_manifest: "exports/agent-readable/manifest.json"
   cognitive_fossil: "museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md"
   first_diary: "museum/diary/2026/07/2026-07-23-01-human-persuasion.md"
   first_viewpoint: "worldview/influence/HUMAN-INFLUENCE-001.md"
