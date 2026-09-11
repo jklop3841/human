@@ -1,0 +1,79 @@
+schema_version: "1.0"
+overlay_id: SD-JUSTICE-001
+domain: justice
+canonical_topology_refs:
+  - police_law_enforcement
+  - prosecutors_public_prosecution
+  - courts_judiciary
+  - defense_bar_public_defenders_legal_aid
+  - corrections_prisons_detention
+  - probation_parole
+  - forensic_labs_medical_examiners
+  - intelligence_services
+
+states:
+  NORMAL:
+    variable_profile: {authority_shift: baseline, resource_pressure: baseline, information_velocity: baseline, verification_depth: baseline, coordination_density: baseline, discretion_level: baseline, feedback_latency: baseline, rule_flexibility: baseline, public_trust: baseline, dependency_exposure: lower}
+    node_changes: []
+    edge_changes:
+      - {edge_or_path: "police_law_enforcement -> prosecutors_public_prosecution -> courts_judiciary", operation: strengthen, confidence: medium, evidence_status: generic_archetype}
+    drift_risks: [path_lock_in, confirmation_bias, caseload_pressure]
+    correction_opportunities: [defense_challenge, judicial_review, forensic_recheck, appeal]
+
+  CRISIS:
+    variable_profile: {authority_shift: higher, resource_pressure: higher, information_velocity: higher, verification_depth: mixed, coordination_density: higher, discretion_level: higher, feedback_latency: lower, rule_flexibility: higher, public_trust: mixed, dependency_exposure: higher}
+    node_changes:
+      - {node: police_law_enforcement, change: "operational tempo and discretionary pressure rise"}
+      - {node: courts_judiciary, change: "caseflow and emergency procedure pressure rise"}
+    edge_changes:
+      - {edge_or_path: "intelligence_services -> police_law_enforcement", operation: strengthen, confidence: medium, evidence_status: jurisdiction_dependent}
+      - {edge_or_path: "routine verification sequence", operation: accelerate, confidence: medium, evidence_status: jurisdiction_dependent}
+    drift_risks: [reduced_due_process_time, intelligence_evidence_blending, detention_pressure]
+    correction_opportunities: [special_review, independent_counsel, auditable_emergency_orders]
+
+  EMERGENCY:
+    variable_profile: {authority_shift: higher, resource_pressure: higher, information_velocity: higher, verification_depth: lower, coordination_density: higher, discretion_level: higher, feedback_latency: lower, rule_flexibility: higher, public_trust: mixed, dependency_exposure: higher}
+    node_changes:
+      - {node: executive_leadership_cabinet, change: "temporary emergency authority may interact more directly with security institutions"}
+    edge_changes:
+      - {edge_or_path: "executive/security authority", operation: centralize, confidence: medium, evidence_status: jurisdiction_dependent}
+      - {edge_or_path: "ordinary procedural cadence", operation: accelerate, confidence: medium, evidence_status: jurisdiction_dependent}
+    drift_risks: [emergency_power_stickiness, weak_adversarial_review, overbroad_scope]
+    correction_opportunities: [sunset_clauses, mandatory_review, legislative_or_judicial_oversight]
+
+  RECOVERY:
+    variable_profile: {authority_shift: mixed, resource_pressure: mixed, information_velocity: mixed, verification_depth: higher, coordination_density: mixed, discretion_level: mixed, feedback_latency: lower, rule_flexibility: mixed, public_trust: mixed, dependency_exposure: higher}
+    node_changes:
+      - {node: courts_judiciary, change: "review of emergency actions and backlog becomes salient"}
+    edge_changes:
+      - {edge_or_path: "temporary emergency powers", operation: weaken, confidence: high, evidence_status: generic_archetype}
+      - {edge_or_path: "appeal/review -> prior emergency decisions", operation: strengthen, confidence: medium, evidence_status: jurisdiction_dependent}
+    drift_risks: [permanent_exception, backlog_normalization]
+    correction_opportunities: [retrospective_review, precedent_clarification, compensation_or_remedy]
+
+transitions:
+  - from: NORMAL
+    to: CRISIS
+    triggers: [major_security_incident, mass_disorder, institutional_overload]
+    early_signals: [case_surge, intelligence_volume_spike, detention_capacity_pressure]
+    reversible_changes: [temporary_task_forces, accelerated_scheduling]
+    sticky_changes: [new_information_sharing_interfaces]
+    exit_conditions: [ordinary_review_and_caseflow_can_resume]
+  - from: CRISIS
+    to: EMERGENCY
+    triggers: [ordinary_authority_insufficient, immediate_public_safety_risk]
+    early_signals: [rapidly_expanding_scope, cross_agency_command_pressure]
+    reversible_changes: [temporary_authority, emergency_orders]
+    sticky_changes: [new_security_infrastructure]
+    exit_conditions: [exceptional_authority_no_longer_required]
+  - from: EMERGENCY
+    to: RECOVERY
+    triggers: [threat_reduction, restored_operational_capacity]
+    early_signals: [falling_incident_rate, restored_court_capacity]
+    reversible_changes: [temporary_restrictions]
+    sticky_changes: [validated_coordination_protocols]
+    exit_conditions: [powers_sunset_or_formally_reauthorized_after_review]
+
+safeguards:
+  - "emergency authority must be analyzed separately from abuse"
+  - "specific legal claims require jurisdiction verification"
