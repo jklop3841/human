@@ -1,0 +1,74 @@
+schema_version: "1.0"
+schema_id: HUMAN-SOCIAL-DYNAMICS-STATE-SCHEMA-001
+
+required_fields:
+  - overlay_id
+  - domain
+  - canonical_topology_refs
+  - states
+  - transitions
+  - safeguards
+
+state_object:
+  required:
+    - state
+    - variable_profile
+    - node_changes
+    - edge_changes
+    - drift_risks
+    - correction_opportunities
+  variable_profile:
+    allowed_values: [lower, baseline, higher, mixed, unknown]
+    fields:
+      - authority_shift
+      - resource_pressure
+      - information_velocity
+      - verification_depth
+      - coordination_density
+      - discretion_level
+      - feedback_latency
+      - rule_flexibility
+      - public_trust
+      - dependency_exposure
+
+edge_change_object:
+  required: [edge_or_path, operation, confidence]
+  operation_allowed:
+    - strengthen
+    - weaken
+    - activate
+    - suspend
+    - reroute
+    - accelerate
+    - slow
+    - centralize
+    - decentralize
+    - increase_verification
+    - decrease_verification
+  confidence_allowed: [low, medium, high, unknown]
+  evidence_status_allowed:
+    - generic_archetype
+    - evidence_backed
+    - jurisdiction_dependent
+    - hypothesis
+
+transition_object:
+  required:
+    - from
+    - to
+    - triggers
+    - early_signals
+    - reversible_changes
+    - sticky_changes
+    - exit_conditions
+
+hard_rules:
+  - "state labels are analytical abstractions, not natural kinds"
+  - "states may overlap"
+  - "do not assign numeric weights without evidence"
+  - "do not infer emergency abuse from emergency authority alone"
+  - "do not infer legitimacy from effective crisis performance alone"
+  - "every emergency overlay must define exit conditions"
+  - "every crisis overlay must map both drift risks and correction opportunities"
+  - "jurisdiction-specific claims require external verification"
+  - "do not use state overlays for attack sequencing, sabotage or coercion"
