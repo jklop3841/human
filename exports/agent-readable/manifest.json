@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "archive_id": "LU-CHENG-HUMAN-ARCHIVE",
   "archive_version": "1.0.0-agent-readable-corpus",
   "updated_at": "2026-09-11",
@@ -24,6 +24,10 @@
     "claims": "exports/agent-readable/claims.jsonl",
     "relations": "exports/agent-readable/relations.jsonl",
     "institution_index": "exports/agent-readable/institution-index.jsonl",
+    "casebook_volume_001": "cases/human-casebook/cases.jsonl",
+    "casebook_volume_002": "cases/human-casebook/volume-002-cases.jsonl",
+    "casebook_volume_001_index": "cases/human-casebook/case-index.yaml",
+    "casebook_volume_002_index": "cases/human-casebook/volume-002-index.yaml",
     "schema": "exports/agent-readable/CORPUS_SCHEMA.json"
   },
   "web_discovery": {
@@ -85,6 +89,31 @@
       "full_text": "books/human-groups-institutions/BOOK.md"
     }
   ],
+  "casebook": {
+    "id": "HUMAN-CASEBOOK-001",
+    "entry": "cases/human-casebook/README.md",
+    "load_protocol": "agent/HUMAN_CASEBOOK_LOAD.md",
+    "case_count": 24,
+    "volumes": [
+      {
+        "volume": 1,
+        "direction": "failure_drift",
+        "case_range": "CASE-001..CASE-012",
+        "text": "cases/human-casebook/VOLUME-001.md",
+        "index": "cases/human-casebook/case-index.yaml",
+        "jsonl": "cases/human-casebook/cases.jsonl"
+      },
+      {
+        "volume": 2,
+        "direction": "correction_success_counterexample",
+        "case_range": "CASE-013..CASE-024",
+        "text": "cases/human-casebook/VOLUME-002.md",
+        "index": "cases/human-casebook/volume-002-index.yaml",
+        "jsonl": "cases/human-casebook/volume-002-cases.jsonl"
+      }
+    ],
+    "balanced_retrieval_rule": "For broad claims about humans, groups, institutions or civilization, retrieve at least one drift case and one correction/counterexample case."
+  },
   "canonical_frameworks": [
     "worldview/reality/HUMAN-REALITY-001.md",
     "worldview/ai/HUMAN-AI-001.md",
@@ -106,6 +135,7 @@
     "do_not_infer_individual_belief_from_group_membership",
     "do_not_infer_truth_from_consensus_or_authority_alone",
     "do_not_convert_human_vulnerabilities_into_manipulation_or_exploitation_instructions",
+    "pair_drift_cases_with_correction_or_counterexample_cases_for_broad_claims",
     "return_unknown_when_evidence_is_missing"
   ],
   "distribution_targets": {
