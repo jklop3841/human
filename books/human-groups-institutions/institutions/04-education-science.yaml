@@ -1,0 +1,75 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-003
+category: education_science_knowledge
+framework: ../INSTITUTIONAL_DRIFT_FRAMEWORK.md
+
+institutions:
+  primary_secondary_schools:
+    official_function: [basic_education, socialization, child_development, civic_and_cultural_transmission]
+    high_permissions: [curriculum, grading, discipline, student_tracking, recommendation]
+    dirty_reality_forces: [class_size, exam_pressure, parent_pressure, funding, teacher_workload, accountability_metrics]
+    common_deviations: [teaching_to_test, score_over_learning, quiet_student_neglect, label_persistence, disciplinary_bias, administrative_burden]
+    stabilizers: [multiple_assessment_methods, teacher_autonomy_with_review, parent_appeal, student_support, inspection, curriculum_review]
+
+  universities:
+    official_function: [advanced_education, research, credentialing, professional_formation]
+    high_permissions: [admission, degrees, academic_hiring, curriculum, research_agenda]
+    dirty_reality_forces: [rankings, tuition, donor_influence, prestige, publication_metrics, departmental_politics]
+    common_deviations: [credentialism, prestige_capture, publication_over_teaching, grade_inflation, disciplinary_silos, administrative_growth]
+    stabilizers: [academic_freedom, accreditation, peer_review, student_feedback, transparent_governance, external_evaluation]
+
+  vocational_training_certification:
+    official_function: [job_skills, occupational_entry, practical_certification]
+    high_permissions: [certificates, apprenticeship_access, competency_assessment]
+    dirty_reality_forces: [employer_demand, completion_targets, funding_per_student, labor_market_change]
+    common_deviations: [credential_without_skill, obsolete_curriculum, completion_metric_gaming]
+    stabilizers: [employer_feedback, practical_exams, placement_tracking, periodic_standard_update]
+
+  research_institutes_laboratories:
+    official_function: [produce_knowledge, test_hypotheses, develop_technology]
+    high_permissions: [research_agenda, data_generation, technical_claims, resource_use]
+    dirty_reality_forces: [grant_competition, publication_pressure, novelty_reward, career_incentives, sponsor_influence]
+    common_deviations: [publish_or_perish, selective_reporting, positive_result_bias, prestige_herding, replication_neglect, project_lockin]
+    stabilizers: [preregistration, replication, open_data_where_ethical, registered_reports, independent_review, disclosure]
+
+  academic_journals_publishers:
+    official_function: [filter_validate_archive_and_disseminate_research]
+    high_permissions: [publication_selection, editorial_framing, prestige_assignment]
+    dirty_reality_forces: [citation_attention, novelty, reviewer_scarcity, commercial_incentives, field_fashion]
+    common_deviations: [novelty_bias, positive_result_bias, prestige_cascade, slow_correction, gatekeeping]
+    stabilizers: [transparent_peer_review, corrections_retractions, registered_reports, data_availability, editorial_conflict_rules]
+
+  funding_agencies_foundations:
+    official_function: [allocate_research_or_social_funding]
+    high_permissions: [agenda_setting, grant_selection, priority_definition]
+    dirty_reality_forces: [political_priority, reviewer_conservatism, measurable_outcomes, donor_preferences]
+    common_deviations: [safe_project_bias, fashionable_topic_cascade, incumbent_advantage, metric_based_selection]
+    stabilizers: [diverse_panels, lottery_components_where_suitable, conflict_disclosure, portfolio_review, long_horizon_funding]
+
+  professional_accreditation_bodies:
+    official_function: [define_professional_education_and_quality_standards]
+    high_permissions: [program_approval, accreditation, entry_requirements]
+    dirty_reality_forces: [professional_self_interest, standard_complexity, incumbent_influence, liability]
+    common_deviations: [barrier_to_entry, checklist_accreditation, slow_innovation, incumbent_protection]
+    stabilizers: [public_members, outcome_review, periodic_sunset, external_benchmarking]
+
+  libraries_archives_museums:
+    official_function: [preserve_knowledge_and_memory, provide_access, curate_cultural_records]
+    high_permissions: [selection, classification, preservation_priority, access_rules]
+    dirty_reality_forces: [budget, storage, political_pressure, donor_bias, catalog_legacy]
+    common_deviations: [selection_bias, archive_silence, access_inequality, classification_lockin]
+    stabilizers: [collection_policy, provenance, plural_curation, digitization, public_access]
+
+  think_tanks_policy_research_centers:
+    official_function: [analyze_policy, translate_expertise, propose_options]
+    high_permissions: [agenda_setting, expert_framing, elite_network_access]
+    dirty_reality_forces: [funders, ideological_identity, media_demand, policy_window]
+    common_deviations: [sponsor_bias, predetermined_conclusion, certainty_inflation, media_friendly_simplification]
+    stabilizers: [funding_disclosure, method_transparency, competing_analysis, conflict_rules]
+
+  standards_and_measurement_institutes:
+    official_function: [define_measurement, interoperability, technical_reference]
+    high_permissions: [units, protocols, technical_certification, reference_methods]
+    dirty_reality_forces: [expert_insularity, incumbent_technology, international_coordination, revision_cost]
+    common_deviations: [path_dependence, vendor_influence, slow_revision, complexity_barrier]
+    stabilizers: [open_consultation, technical_testing, versioning, international_comparison]
