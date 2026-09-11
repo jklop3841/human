@@ -1,0 +1,131 @@
+schema_version: "1.0"
+graph_id: HUMAN-INSTITUTION-TOPOLOGY-001
+node_count: 106
+source: "books/human-groups-institutions/institutions/README.md"
+status: active_experimental
+
+nodes:
+  state_governance:
+    - legislature_parliament
+    - executive_leadership_cabinet
+    - ministries_departments_civil_service
+    - local_government_municipality
+    - tax_revenue_authority
+    - public_procurement_public_works
+    - election_management_body
+    - civil_registry_identity_passport
+    - statistics_census_office
+    - regulatory_agency
+    - supreme_audit_ombudsman_anti_corruption
+    - foreign_service_diplomacy
+    - immigration_customs_border
+    - land_registry_planning_zoning
+  justice_security_emergency:
+    - police_law_enforcement
+    - prosecutors_public_prosecution
+    - courts_judiciary
+    - defense_bar_public_defenders_legal_aid
+    - corrections_prisons_detention
+    - probation_parole
+    - forensic_labs_medical_examiners
+    - intelligence_services
+    - military
+    - fire_department
+    - emergency_medical_services_ambulance
+    - disaster_management_civil_defense
+    - coast_guard_search_and_rescue
+  health_care:
+    - hospitals
+    - emergency_departments
+    - primary_care_clinics
+    - public_health_agencies
+    - pharmacies
+    - pharmaceutical_companies
+    - medical_device_companies
+    - health_insurers_payers
+    - medical_licensing_professional_boards
+    - nursing_homes_long_term_care
+    - laboratories_diagnostic_centers
+    - blood_banks_transplant_networks
+    - mental_health_institutions
+    - medical_research_ethics_institutional_review
+  education_science_knowledge:
+    - primary_secondary_schools
+    - universities
+    - vocational_training_certification
+    - research_institutes_laboratories
+    - academic_journals_publishers
+    - funding_agencies_foundations
+    - professional_accreditation_bodies
+    - libraries_archives_museums
+    - think_tanks_policy_research_centers
+    - standards_and_measurement_institutes
+  economy_finance_labor:
+    - central_bank
+    - commercial_banks
+    - securities_exchanges_clearinghouses
+    - insurers
+    - pension_funds_asset_managers
+    - credit_rating_agencies
+    - accounting_audit_firms
+    - corporations_large_employers
+    - small_businesses_family_firms
+    - labor_unions
+    - employer_industry_associations_chambers
+    - employment_agencies_platform_labor_markets
+    - consumer_credit_bureaus
+    - antitrust_competition_authority
+  information_platforms_culture:
+    - news_media
+    - public_broadcasters
+    - social_media_platforms
+    - search_engines_information_gateways
+    - telecom_carriers_isps
+    - advertising_public_relations_industry
+    - book_publishers_streaming_entertainment
+    - religious_institutions
+    - sports_leagues_federations
+    - cultural_heritage_institutions
+    - political_parties
+    - polling_rating_reputation_institutions
+  infrastructure_public_services:
+    - electric_utilities_grid_operators
+    - water_sewer_utilities
+    - gas_fuel_energy_suppliers
+    - transportation_departments_roads
+    - rail_transit_operators
+    - aviation_airports_air_traffic
+    - ports_shipping_logistics_hubs
+    - postal_courier_services
+    - waste_management_sanitation
+    - food_safety_inspection_agencies
+    - agriculture_extension_supply_institutions
+    - housing_authorities_social_housing
+    - building_code_fire_safety_inspection
+    - environmental_protection_agencies
+  community_civil_transnational:
+    - family_kinship
+    - neighborhood_community_organizations
+    - charities_ngos
+    - social_welfare_agencies
+    - child_protection_services
+    - elder_disability_support_institutions
+    - professional_associations
+    - cooperatives_mutuals
+    - international_organizations
+    - humanitarian_relief_organizations
+    - development_banks_aid_agencies
+    - treaty_standard_setting_international_bodies
+    - civil_society_advocacy_movements
+    - arbitration_mediation_institutions
+    - private_security_firms
+
+domain_counts:
+  state_governance: 14
+  justice_security_emergency: 13
+  health_care: 14
+  education_science_knowledge: 10
+  economy_finance_labor: 14
+  information_platforms_culture: 12
+  infrastructure_public_services: 14
+  community_civil_transnational: 15
