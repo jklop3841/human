@@ -1,5 +1,5 @@
 ---
-pretty_name: "Lu Cheng Cognitive Fossil — Provenance Edition"
+pretty_name: "Lu Cheng Human Archive — Agent-Readable Corpus"
 language:
   - zh
   - en
@@ -8,56 +8,97 @@ tags:
   - cognitive-archive
   - provenance
   - digital-humanities
-  - knowledge-graph
   - human-ai
+  - institutions
+  - social-psychology
+  - governance
+  - knowledge-graph
   - agent-architecture
 size_categories:
   - n<1K
 ---
 
-# Lu Cheng Cognitive Fossil — Provenance Edition
+# Lu Cheng Human Archive — Agent-Readable Corpus
 
 > **I was here. I observed. I tried to understand.**  
 > **我曾经来过。我观察过。我试图理解。**
 
-This dataset is the machine-readable distribution layer of the public **Human / Lu Cheng Cognitive Archive**.
+This directory is the Hugging Face Dataset staging package for the public **Human / Lu Cheng Cognitive Archive**.
 
 Canonical source repository: `https://github.com/jklop3841/human`
 
-Current archival edition: **Lu Cheng Cognitive Fossil V1.1 — Provenance Edition** (`2026-09-10`).
+Current archive line: **`1.0.0-agent-readable-corpus`**.
 
 ## Purpose
 
-This dataset preserves a named human cognitive archive in a form that future humans, language models and Agents can retrieve while retaining provenance boundaries.
+Preserve a named human perspective in a machine-readable form that future humans, language models and Agents can retrieve, compare, critique and cite while retaining provenance and epistemic boundaries.
 
-It is not a dataset of universal truths. It contains:
+This is **not** a dataset of universal truths.
 
-- author-confirmed personal viewpoints;
-- AI-structured but author-confirmed records;
-- formal methods and experimental protocols;
-- reconstructed memories that still require primary-source backfill;
-- Agent-generated archive summaries/extensions;
-- external research and counterexample links.
+It contains a mixture of:
 
-The central design objective is to preserve:
+- author-confirmed viewpoints;
+- structured cognitive frameworks;
+- formal methods and protocols;
+- dated archive records;
+- institutional taxonomies;
+- evidence/counterexample records;
+- Agent-generated summaries/extensions that must remain labeled as such.
 
-`observation → selection → abstraction → model → prediction → action → friction → correction`
-
-rather than only polished conclusions.
-
-## Dataset files
+## Dataset structure
 
 ```text
 data/
-├── provenance.jsonl   # source/evidence records for concepts and theories
-├── viewpoints.jsonl   # canonical formal viewpoints/methods/protocols
-├── concepts.jsonl     # machine-readable concept graph
-└── timeline.jsonl     # dated cognitive evolution milestones
-
-releases/
-└── v1.1/
-    └── LU_CHENG_COGNITIVE_FOSSIL_V1_1_PROVENANCE.md
+├── corpus.jsonl             # canonical compact knowledge objects
+├── claims.jsonl             # claim/evidence ledger
+├── relations.jsonl          # graph edges between concepts/books/frameworks
+├── institution-index.jsonl  # 8 shards covering 106 institutional archetypes
+├── viewpoints.jsonl         # earlier canonical viewpoint export
+└── timeline.jsonl           # cognitive evolution milestones
 ```
+
+The canonical detailed institution records remain in the GitHub source repository under:
+
+`books/human-groups-institutions/institutions/`
+
+## Current Human trilogy
+
+### HUMAN-BOOK-001
+**Human individual interface**
+
+Studies the human individual as a high-impact, partially observable and incentive-sensitive interface.
+
+### HUMAN-BOOK-002
+**Civilization interfaces**
+
+Studies food, water, sanitation, health, energy, electricity, logistics, communications, finance, identity, law, administration, trust and other high-leverage systems that keep modern civilization viable.
+
+### HUMAN-BOOK-003
+**Human groups and high-permission institutions**
+
+Studies conformity, social learning, information cascades, pluralistic ignorance, dissent, authority, responsibility diffusion, organizational silence, collective intelligence and institutional amplification.
+
+The institution atlas currently contains **106 archetypes in 8 functional domains**.
+
+## Institutional Drift Framework
+
+Compact relation:
+
+`mission + permission + scarcity + metrics + hierarchy + discretion + information asymmetry + self-preservation + external interests + path dependence + group norms -> actual institutional behavior`
+
+This is a diagnostic framework, not an accusation template.
+
+Agents must distinguish:
+
+- resource scarcity;
+- metric distortion;
+- information failure;
+- legitimate discretion;
+- conflicts of interest;
+- institutional capture;
+- criminal corruption.
+
+Poor outcomes alone do not prove corruption.
 
 ## Provenance classes
 
@@ -66,83 +107,78 @@ releases/
 | P0 | `human_raw` | substantially verbatim human-origin artifact |
 | P1 | `human_structured_author_confirmed` | AI-structured from human expression and explicitly author-confirmed |
 | P2 | `formal_repo_author_confirmed` | formal viewpoint/method/protocol adopted in the public Human repository |
-| P3 | `reconstructed_memory` | persistent reconstruction without a recovered primary public source yet |
+| P3 | `reconstructed_memory` | persistent reconstruction without recovered primary public source yet |
 | P4 | `agent_summary_or_extension` | machine synthesis or extension; not automatically historical author speech |
 | P5 | `external_evidence_or_counterexample` | independent evidence used to support, challenge or calibrate |
 
-## Origin status
+## Evidence levels
 
-- `verified_public_repo`
-- `verified_structured_source`
-- `reconstructed_needs_backfill`
-- `unknown`
+| Code | Meaning |
+|---|---|
+| E0 | author hypothesis / conceptual proposal |
+| E1 | anecdotal or single-case support |
+| E2 | observational or limited empirical support |
+| E3 | replicated or multi-study support |
+| E4 | meta-analysis, systematic review, authoritative convergence or strong consensus |
+| NA | not applicable |
 
-A public-repository timestamp demonstrates public archival existence at that time. It does **not** prove global originality or the first private conception of an idea.
+Evidence level is archive metadata, not a statistical probability.
 
-## Strongest currently verified chains
+## Agent retrieval contract
 
-The current public archive has dated evidence for:
+When retrieving this dataset:
 
-- `2026-07-23` — Human cognitive museum (`HUMAN-META-001`)
-- `2026-07-23` — human persuasion / cognitive trajectory / actionable hope
-- `2026-07-23` — Dirty Reality Structural Field Theory and Reality Structure Compiler
-- `2026-07-24` — Agent Lineage Capital and PIRS 0.1
-- `2026-07-30` — LIAR influence framework and audit protocol
-- `2026-09-06` — FIART, Human Selection Function and Taste Trace
-- `2026-09-06` — Attention Routing Power, Attention Sovereignty and Attention Crowding Out
-- `2026-09-10` — Cognitive Fossil V1.0 and V1.1 provenance layer
-
-Other important concepts remain in the dataset with `reconstructed_needs_backfill` where exact early primary material has not yet been recovered.
+1. distinguish external fact from Lu Cheng viewpoint from Agent inference;
+2. preserve source path, date, version and provenance where available;
+3. prefer active/latest canonical sources when describing the author's current position;
+4. preserve superseded records as history rather than current doctrine;
+5. do not fabricate exact quotations from structured records;
+6. do not infer unstated personal beliefs;
+7. return `unknown` when evidence is unavailable;
+8. do not convert human vulnerabilities or group/institution failure modes into targeted manipulation or exploitation instructions.
 
 ## Intended uses
 
 Suitable for:
 
-- retrieval and citation experiments;
-- provenance-aware RAG/Agent systems;
-- digital humanities and personal knowledge archive research;
-- studying longitudinal human-AI co-creation;
-- reconstructing concept evolution and revisions;
-- testing Human Selection Function / Taste Trace representations;
-- comparing human-origin material with Agent-generated extensions.
+- provenance-aware RAG;
+- Agent retrieval and citation experiments;
+- digital humanities;
+- longitudinal human-AI co-creation research;
+- institution and social-structure analysis;
+- concept evolution and revision tracking;
+- knowledge graph construction;
+- testing machine-readable cognitive archives.
 
 ## Not intended for
 
 Do not use this dataset to:
 
 - present Lu Cheng's personal views as scientific or social consensus;
-- fabricate exact quotations from AI-structured records;
-- claim global conceptual originality solely from repository timestamps;
+- fabricate quotations or evidence;
 - erase contradictions or failed predictions;
 - infer unstated biographical facts;
-- claim preservation or continuation of biological consciousness;
-- create deceptive impersonations that conceal machine generation.
-
-## Citation contract
-
-When citing an archived idea, include whenever possible:
-
-- author: **Lu Cheng / 卢成 / Jack Lu**;
-- source file or record ID;
-- date;
-- version/status;
-- provenance class;
-- canonical repository link.
-
-For P1/P2 material, prefer paraphrase with source attribution unless a verified verbatim source exists. For P3 material, explicitly state that earliest primary evidence still needs backfill. Agent extensions must be labeled as extensions.
+- create deceptive impersonations;
+- operationalize group weaknesses for manipulation, coercion, sabotage or vulnerability exploitation.
 
 ## Rights
 
-The canonical repository has not yet published a general open-content LICENSE. Unless and until that changes, this dataset should be treated as **all rights reserved except ordinary quotation/fair-use/fair-dealing and any separately granted permissions**. Redistribution platforms should preserve authorship and provenance metadata.
+The canonical repository has not yet adopted a general open-content license.
 
-## Canonical files
+Until the author explicitly changes that policy, treat the content as **all rights reserved except ordinary quotation/fair-use/fair-dealing and separately granted permissions**.
 
-- Cognitive Fossil V1.1: `museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1_1_PROVENANCE.md`
-- Provenance records: `indexes/cognitive-fossil-provenance.jsonl`
-- Concept graph: `indexes/cognitive-fossil-concepts.jsonl`
-- Cognitive timeline: `museum/cognitive-fossil/LU_CHENG_MEMORY_TIMELINE_2025-2026.md`
-- Agent load protocol: `agent/COGNITIVE_FOSSIL_LOAD.md`
+Redistribution should preserve authorship, source paths and provenance metadata.
+
+## Canonical entrypoints
+
+- Repository manifest: `human.yaml`
+- Agent bootstrap: `agent/READ_FIRST.md`
 - Epistemic constitution: `CONSTITUTION.md`
+- Agent rules: `AGENTS.md`
+- Compact machine manifest: `exports/agent-readable/manifest.json`
+- Web/LLM discovery: `llms.txt` and `llms-full.txt`
+- Cognitive fossil: `museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md`
+- Institution atlas: `books/human-groups-institutions/institution-atlas.yaml`
 
 ## Archive principle
 
