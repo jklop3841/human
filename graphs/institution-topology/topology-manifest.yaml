@@ -1,8 +1,9 @@
-schema_version: "1.0"
+schema_version: "1.1"
 graph_id: HUMAN-INSTITUTION-TOPOLOGY-001
-version: "0.1.0"
+version: "0.2.0"
 status: active_experimental
 created_at: "2026-09-11"
+updated_at: "2026-09-11"
 author: "Lu Cheng / 卢成 / Jack Lu"
 
 source_atlas:
@@ -14,20 +15,21 @@ source_atlas:
 files:
   readme: "graphs/institution-topology/README.md"
   nodes: "graphs/institution-topology/nodes.yaml"
-  edges: "graphs/institution-topology/edges.yaml"
+  backbone_edges: "graphs/institution-topology/edges.yaml"
+  coverage_edges: "graphs/institution-topology/edges-coverage-002.yaml"
+  coverage_audit: "graphs/institution-topology/coverage-audit.yaml"
   agent_protocol: "agent/HUMAN_INSTITUTION_TOPOLOGY_LOAD.md"
 
 coverage:
   registered_nodes: 106
+  incident_nodes: 106
+  total_declared_edges: 106
   backbone_edges: 48
-  node_coverage_ratio: 1.0
-  edge_coverage_status: sparse_backbone_only
+  coverage_extension_edges: 58
+  node_incident_coverage_ratio: 1.0
+  edge_coverage_status: "all_nodes_incident_but_relation_set_still_sparse"
   jurisdiction_overlays: 0
   temporal_overlays: 0
-  evidence_backed_edge_count: 11
-  generic_archetype_edge_count: 27
-  jurisdiction_dependent_edge_count: 7
-  hypothesis_edge_count: 3
 
 edge_types:
   - funds
@@ -47,21 +49,25 @@ interpretation_rules:
   - "absence_of_edge != absence_of_real_relation"
   - "edge_presence != causal_strength"
   - "centrality != importance_or_moral_value"
+  - "node_incident_coverage != graph_completeness"
   - "generic_archetype_edges_require_jurisdiction_check_for_specific_claims"
   - "hypothesis_edges_must_not_be_presented_as_verified_fact"
   - "crisis_analysis_requires_temporal_state_and_dependency_context"
   - "always_map_correction_paths_not_only_failure_paths"
   - "do_not_use_for_attack_target_ranking_sabotage_evasion_or_coercion"
 
-next_build:
-  phase_1: "map remaining high-confidence intra-domain edges"
-  phase_2: "connect all 106 nodes with at least one incoming or outgoing typed relation where justified"
-  phase_3: "add jurisdiction overlays instead of pretending one global institutional topology"
-  phase_4: "add time/state overlays: normal, crisis, reform, collapse, recovery"
-  phase_5: "derive safe structural queries and resilience analysis"
+build_state:
+  phase_1_register_106_nodes: complete
+  phase_2_connect_each_node_at_least_once: complete
+  phase_3_evidence_audit: pending
+  phase_4_jurisdiction_overlays: pending
+  phase_5_temporal_overlays: pending
+  phase_6_safe_resilience_queries: pending
 
 acceptance:
   - "106 canonical archetypes are registered"
+  - "all 106 canonical nodes appear in at least one typed relation"
+  - "all current edge endpoints are canonical institution archetypes"
   - "each edge has type, evidence_status and note"
   - "no numeric causal weight is fabricated"
   - "specific real-world claims require external re-verification"
