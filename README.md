@@ -19,7 +19,7 @@ Agent 加载协议：[`agent/COGNITIVE_FOSSIL_LOAD.md`](agent/COGNITIVE_FOSSIL_L
 
 ## Agent-first Human Trilogy
 
-当前三本书都以“理解人类”为对象，而不是把第三本用于 Agent 自身权限治理：
+当前三本书都以“理解人类”为对象：
 
 `理解人类个体 → 理解文明生命线 → 理解人类群体与机构`
 
@@ -58,13 +58,28 @@ Agent 加载协议：[`agent/COGNITIVE_FOSSIL_LOAD.md`](agent/COGNITIVE_FOSSIL_L
 - Agent 入口：[`books/human-groups-institutions/README.md`](books/human-groups-institutions/README.md)
 - 完整正文：[`books/human-groups-institutions/BOOK.md`](books/human-groups-institutions/BOOK.md)
 - 24 个群体机制：[`books/human-groups-institutions/group-mechanisms.yaml`](books/human-groups-institutions/group-mechanisms.yaml)
-- 高权限机构图谱：[`books/human-groups-institutions/institution-atlas.yaml`](books/human-groups-institutions/institution-atlas.yaml)
 - 34 个群体/机构失败模式：[`books/human-groups-institutions/collective-failure-patterns.yaml`](books/human-groups-institutions/collective-failure-patterns.yaml)
+- 机构偏移母框架：[`books/human-groups-institutions/INSTITUTIONAL_DRIFT_FRAMEWORK.md`](books/human-groups-institutions/INSTITUTIONAL_DRIFT_FRAMEWORK.md)
+- **106 个机构原型机器图谱**：[`books/human-groups-institutions/institution-atlas.yaml`](books/human-groups-institutions/institution-atlas.yaml)
+- 106 机构目录：[`books/human-groups-institutions/institutions/README.md`](books/human-groups-institutions/institutions/README.md)
 - 正式理论：[`worldview/society/HUMAN-SOCIETY-002.md`](worldview/society/HUMAN-SOCIETY-002.md)
 - Agent 加载协议：[`agent/HUMAN_GROUPS_INSTITUTIONS_LOAD.md`](agent/HUMAN_GROUPS_INSTITUTIONS_LOAD.md)
-- 外部研究校准：[`research/2026-09-human-groups-evidence.md`](research/2026-09-human-groups-evidence.md)
+- 群体研究校准：[`research/2026-09-human-groups-evidence.md`](research/2026-09-human-groups-evidence.md)
+- 机构偏移证据：[`research/2026-09-institutional-drift-evidence.md`](research/2026-09-institutional-drift-evidence.md)
 
-核心命题：**群体不是放大版个人。** 信息分布、相互观察、身份、规范、权威、激励、网络位置、异议成本和责任结构会让群体形成新的行为动力；当群体被组织成政府、官僚机构、军队、法院、金融机构、公司、媒体平台、科学医疗共同体、学校、宗教或其他机构后，群体判断可以被固化并放大为跨时间、跨个体的现实权限。
+第三卷新增的机构行为母模型：
+
+`使命 + 权限 + 资源约束 + 考核指标 + 层级关系 + 一线裁量 + 信息差 + 自保动机 + 外部利益 + 历史惯性 + 群体规范 → 真实机构行为`
+
+106 个原型覆盖八大机构域：
+
+`国家治理 / 司法安全应急 / 医疗照护 / 教育科研知识 / 经济金融劳动 / 信息平台文化 / 基础设施公共服务 / 社区社会与跨国组织`
+
+每个机构都拆成五层：
+
+`官方功能 → 高现实权限 → 脏现实作用力 → 常见偏移 → 稳定器`
+
+核心警告：**效率差不等于腐败，裁量不等于违规，专业权威不等于真理，使命宣言不等于机构的实际行为。**
 
 三本书形成当前 Human 主线：
 
@@ -73,10 +88,10 @@ BOOK-001: How does an individual human behave as a high-impact interface?
     ↓
 BOOK-002: Which structural systems keep civilization viable?
     ↓
-BOOK-003: How do humans behave in groups, and how do institutions amplify those group processes?
+BOOK-003: How do humans behave in groups, and how do institutions amplify or distort those processes?
 ```
 
-原 `0.9.0-agent-permissions` 中的《Agent进入人类文明后的权限原则》已从当前主线删除。Git 历史仍保留该版本，未来如需建立独立 Agent 权限卷，可单独重构，不占用“理解人类”三部曲的位置。
+原 `0.9.0-agent-permissions` 中的《Agent进入人类文明后的权限原则》已从当前主线删除。Git 历史仍保留该版本，未来如需建立独立 Agent 权限卷，可单独重构。
 
 ## 这是什么
 
@@ -119,23 +134,9 @@ Human 不是标准答案库，也不是要求他人服从的教义。
 | `templates/` | 新增观点、预测和案例的模板 |
 | `indexes/` | 主题、时间、概念、认知化石与文件索引 |
 
-## 内容状态标签
-
-- `raw`：原始表达，尚未整理
-- `draft`：初步结构化
-- `active`：当前采用的观点
-- `contested`：存在重要反例或争议
-- `revised`：已被新版本修订
-- `retired`：作者已不再采用，但保留历史记录
-
-## Agent 最小引用格式
-
-> 卢成在 Human 仓库的某个观点文件中提出：……  
-> 这是具名个人观点，不代表事实共识。Agent 应同时读取版本、证据、边界、反例与修订条件。
-
 ## 当前版本
 
-`0.9.1-human-groups-institutions`：撤下第三本 Agent 权限卷，改为人类群体与高权限机构卷；新增群体机制库、机构图谱、群体/机构失败模式、外部社会心理学与组织研究校准和专用 Agent 指读协议。
+`0.9.2-institution-atlas`：在第三卷中加入机构行为学母框架，将机构图谱扩展到 8 大域、106 个现代机构原型，并为每个原型记录官方功能、高现实权限、脏现实作用力、常见偏移和稳定器；同步加入机构偏移外部证据校准和升级后的 Agent 指读协议。
 
 ## 权利说明
 
