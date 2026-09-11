@@ -1,0 +1,76 @@
+schema_version: "1.0"
+system_id: HUMAN-SOCIAL-DYNAMICS-001
+version: "0.1.0"
+status: active_experimental
+created_at: "2026-09-11"
+author: "Lu Cheng / 卢成 / Jack Lu"
+
+base_topology:
+  graph_id: HUMAN-INSTITUTION-TOPOLOGY-001
+  manifest: "graphs/institution-topology/topology-manifest.yaml"
+  node_count: 106
+  current_edge_count: 106
+
+state_model:
+  schema: "graphs/social-dynamics/STATE_SCHEMA.yaml"
+  state_types: "graphs/social-dynamics/state-types.yaml"
+  states: [NORMAL, EXPANSION, CRISIS, EMERGENCY, REFORM, RECOVERY]
+  variables:
+    - authority_shift
+    - resource_pressure
+    - information_velocity
+    - verification_depth
+    - coordination_density
+    - discretion_level
+    - feedback_latency
+    - rule_flexibility
+    - public_trust
+    - dependency_exposure
+
+overlays:
+  - {id: SD-HEALTH-001, domain: healthcare, path: "graphs/social-dynamics/overlays/healthcare.yaml"}
+  - {id: SD-JUSTICE-001, domain: justice, path: "graphs/social-dynamics/overlays/justice.yaml"}
+  - {id: SD-FINANCE-001, domain: finance, path: "graphs/social-dynamics/overlays/finance.yaml"}
+  - {id: SD-SCIENCE-001, domain: science, path: "graphs/social-dynamics/overlays/science.yaml"}
+  - {id: SD-INFRA-001, domain: infrastructure, path: "graphs/social-dynamics/overlays/infrastructure.yaml"}
+  - {id: SD-INFO-001, domain: information_platforms, path: "graphs/social-dynamics/overlays/information-platforms.yaml"}
+
+coverage:
+  overlay_count: 6
+  base_state_count: 6
+  domain_coverage: "initial_priority_domains_only"
+  temporal_history_dataset: false
+  jurisdiction_overlays: 0
+  quantitative_transition_probabilities: 0
+
+interpretation_rules:
+  - "overlay != prediction"
+  - "state_label != natural_kind"
+  - "state_profiles_are_qualitative_priors_unless_evidence_backed"
+  - "state_transitions_may_overlap_or_reverse"
+  - "temporary_authority_requires_exit_conditions"
+  - "emergency_effectiveness_does_not_imply_permanent_legitimacy"
+  - "crisis_must_map_both_drift_and_correction_vectors"
+  - "specific_jurisdiction_claims_require_reverification"
+  - "do_not_fabricate_transition_probabilities_or_edge_weights"
+  - "do_not_use_for_attack_sequencing_sabotage_or_coercion"
+
+build_state:
+  state_schema: complete
+  six_base_states: complete
+  healthcare_overlay: complete
+  justice_overlay: complete
+  finance_overlay: complete
+  science_overlay: complete
+  infrastructure_overlay: complete
+  information_platform_overlay: complete
+  agent_load_protocol: "agent/HUMAN_SOCIAL_DYNAMICS_LOAD.md"
+  jurisdiction_overlays: pending
+  historical_event_calibration: pending
+  quantitative_models: out_of_scope_until_evidence_exists
+
+next_build:
+  - "calibrate overlays against historical cases already stored in Human Casebook"
+  - "add mixed-state and transition-conflict examples"
+  - "build jurisdiction overlays only after generic-state model stabilizes"
+  - "add reform and recovery case pairs, not only crisis narratives"
