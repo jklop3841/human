@@ -1,0 +1,104 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-003
+category: state_governance
+framework: ../INSTITUTIONAL_DRIFT_FRAMEWORK.md
+note: "Archetypes vary across constitutions and jurisdictions. Drift patterns are hypotheses to inspect, not accusations against every institution."
+
+institutions:
+  legislature_parliament:
+    official_function: [make_laws, represent_constituencies, authorize_budget, oversee_executive]
+    high_permissions: [rule_making, taxation_authorization, budget_authorization, investigation]
+    dirty_reality_forces: [electoral_incentives, party_discipline, lobbying, media_cycles, coalition_bargaining, limited_attention]
+    common_deviations: [short_termism, symbolic_law_making, omnibus_complexity, party_over_policy, special_interest_capture, oversight_theater]
+    stabilizers: [public_record, committee_review, opposition, elections, judicial_review, conflict_disclosure]
+
+  executive_leadership_cabinet:
+    official_function: [set_government_direction, coordinate_departments, execute_law, crisis_decision]
+    high_permissions: [appointments, executive_orders_where_lawful, budget_execution, security_direction, agenda_setting]
+    dirty_reality_forces: [time_pressure, information_filtering, loyalty_selection, reputation_defense, crisis_pressure]
+    common_deviations: [centralization, yes_men_filter, emergency_persistence, narrative_management, decision_bottleneck]
+    stabilizers: [cabinet_process, legal_review, legislative_oversight, courts, inspectors, elections, transparent_records]
+
+  ministries_departments_civil_service:
+    official_function: [translate_law_into_programs, administer_services, maintain_state_continuity]
+    high_permissions: [administrative_rules, permits, grants, records, inspections, program_delivery]
+    dirty_reality_forces: [resource_limits, hierarchy, procedure, risk_aversion, career_incentives, silo_boundaries]
+    common_deviations: [process_over_outcome, paperwork_growth, upward_reality_filtering, silo_optimization, slow_revision, defensive_administration]
+    stabilizers: [professional_civil_service, audits, service_metrics, appeal, rotation, cross_agency_coordination]
+
+  local_government_municipality:
+    official_function: [local_services, zoning, sanitation, roads, local_permits, community_coordination]
+    high_permissions: [land_use, local_budget, local_enforcement, permits, service_allocation]
+    dirty_reality_forces: [small_networks, local_elite_pressure, tax_base_constraints, voter_visibility, patronage]
+    common_deviations: [favoritism, NIMBY_capture, uneven_service, maintenance_deferral, local_patronage]
+    stabilizers: [open_meetings, procurement_rules, audits, elections, participatory_budgeting, administrative_appeal]
+
+  tax_revenue_authority:
+    official_function: [collect_public_revenue, administer_tax_law, enforce_compliance]
+    high_permissions: [financial_information_access, assessment, penalties, liens_where_lawful, audits]
+    dirty_reality_forces: [revenue_targets, complexity, information_asymmetry, enforcement_cost, political_pressure]
+    common_deviations: [easy_target_selection, procedural_burden, aggressive_collection, selective_enforcement, complexity_lockin]
+    stabilizers: [appeals, judicial_review, published_guidance, taxpayer_rights, internal_audit]
+
+  public_procurement_public_works:
+    official_function: [buy_goods_services, build_public_assets, allocate_contracts]
+    high_permissions: [large_budget_allocation, vendor_selection, specification_setting]
+    dirty_reality_forces: [deadline_pressure, vendor_information_advantage, political_visibility, sunk_cost, revolving_doors]
+    common_deviations: [bid_tailoring, cost_overrun_normalization, incumbent_lockin, prestige_projects, maintenance_underfunding, corruption]
+    stabilizers: [competitive_tender, beneficial_ownership_disclosure, independent_audit, milestone_payment, open_contracting]
+
+  election_management_body:
+    official_function: [register_voters_or_candidates, administer_elections, count_or_certify_results_under_law]
+    high_permissions: [ballot_access, procedural_rules, certification, election_records]
+    dirty_reality_forces: [partisan_pressure, deadline_pressure, public_distrust, legal_ambiguity, staffing_constraints]
+    common_deviations: [procedural_inconsistency, communication_failure, politicization, overcorrection_to_fraud_fear]
+    stabilizers: [transparent_rules, observers, audits, recount_process, judicial_review, chain_of_custody]
+
+  civil_registry_identity_passport:
+    official_function: [record_legal_identity, births_deaths_marriage, issue_identity_documents]
+    high_permissions: [identity_creation, identity_correction, document_issuance, database_access]
+    dirty_reality_forces: [fraud_prevention_pressure, legacy_data, documentation_gaps, automation, backlog]
+    common_deviations: [false_rejection, identity_lockout, paperwork_escalation, database_error_persistence, unequal_access]
+    stabilizers: [appeal, correction_rights, redundant_evidence, audit_logs, privacy_controls]
+
+  statistics_census_office:
+    official_function: [measure_population_economy_society, produce_official_statistics]
+    high_permissions: [definition_setting, sampling, classification, official_measurement]
+    dirty_reality_forces: [political_pressure, budget_limits, response_bias, changing_reality, methodological_inertia]
+    common_deviations: [metric_reification, category_lockin, delayed_revision, undercount, selective_emphasis]
+    stabilizers: [methodological_independence, published_methods, revisions, external_peer_review, data_access]
+
+  regulatory_agency:
+    official_function: [set_or_enforce_rules_for_markets_safety_environment_or_networks]
+    high_permissions: [licensing, inspections, sanctions, standard_setting, market_access]
+    dirty_reality_forces: [industry_expertise_dependence, revolving_doors, lobbying, resource_gap, political_pressure]
+    common_deviations: [regulatory_capture, overregulation, selective_enforcement, incumbent_protection, checklist_compliance]
+    stabilizers: [role_clarity, conflict_rules, transparency, stakeholder_balance, judicial_review, independent_audit]
+
+  supreme_audit_ombudsman_anti_corruption:
+    official_function: [inspect_government, investigate_misconduct, protect_complaint_channels, audit_spending]
+    high_permissions: [document_access, investigation, referrals, public_reporting]
+    dirty_reality_forces: [political_retaliation, mandate_limits, case_overload, publicity_incentives, institutional_dependence]
+    common_deviations: [selective_case_focus, symbolic_enforcement, backlog, jurisdictional_gap, politicization]
+    stabilizers: [statutory_independence, protected_tenure, public_reports, whistleblower_protection, judicial_process]
+
+  foreign_service_diplomacy:
+    official_function: [represent_state_abroad, negotiate, gather_lawful_information, protect_nationals]
+    high_permissions: [official_representation, treaty_negotiation_under_mandate, consular_decisions]
+    dirty_reality_forces: [national_interest, secrecy, elite_networks, information_asymmetry, geopolitical_pressure]
+    common_deviations: [groupthink, capital_city_filtering, local_reality_misread, prestige_bias, risk_avoidance]
+    stabilizers: [professional_rotation, interagency_review, legislative_treaty_process, archival_record, dissent_channels]
+
+  immigration_customs_border:
+    official_function: [control_border_entry_exit, customs_collection, immigration_status_processing]
+    high_permissions: [admission_denial, detention_in_lawful_scope, search, seizure, visa_status, tariff_collection]
+    dirty_reality_forces: [security_pressure, throughput, fraud_fear, political_salience, frontline_discretion]
+    common_deviations: [overclassification_of_risk, unequal_discretion, procedural_burden, target_pressure, humanitarian_blind_spots]
+    stabilizers: [appeals, courts, inspection, written_criteria, body_records_where_applicable, external_monitoring]
+
+  land_registry_planning_zoning:
+    official_function: [record_property_rights, plan_land_use, issue_construction_or_land_permissions]
+    high_permissions: [title_recognition, zoning, development_approval, eminent_domain_where_lawful]
+    dirty_reality_forces: [real_estate_value, local_politics, developer_pressure, legacy_records, NIMBY_pressure]
+    common_deviations: [rent_seeking, exclusionary_zoning, record_disputes, favoritism, procedural_delay]
+    stabilizers: [public_maps, appeals, conflict_disclosure, court_review, transparent_planning]
