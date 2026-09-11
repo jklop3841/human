@@ -2,7 +2,7 @@ schema_version: "1.0"
 repository:
   name: Human
   canonical_url: "https://github.com/jklop3841/human"
-  version: "0.9.1-human-groups-institutions"
+  version: "0.9.2-institution-atlas"
   created_at: "2026-07-23"
   updated_at: "2026-09-11"
   status: active
@@ -55,10 +55,13 @@ entrypoints:
   human_groups_book: "books/human-groups-institutions/README.md"
   human_groups_book_full: "books/human-groups-institutions/BOOK.md"
   human_groups_mechanisms: "books/human-groups-institutions/group-mechanisms.yaml"
-  human_groups_institution_atlas: "books/human-groups-institutions/institution-atlas.yaml"
   human_groups_failure_patterns: "books/human-groups-institutions/collective-failure-patterns.yaml"
+  human_groups_institutional_drift_framework: "books/human-groups-institutions/INSTITUTIONAL_DRIFT_FRAMEWORK.md"
+  human_groups_institution_atlas: "books/human-groups-institutions/institution-atlas.yaml"
+  human_groups_institution_directory: "books/human-groups-institutions/institutions/README.md"
   human_groups_load_protocol: "agent/HUMAN_GROUPS_INSTITUTIONS_LOAD.md"
   human_groups_evidence: "research/2026-09-human-groups-evidence.md"
+  institutional_drift_evidence: "research/2026-09-institutional-drift-evidence.md"
 featured:
   cognitive_fossil: "museum/cognitive-fossil/LU_CHENG_COGNITIVE_FOSSIL_V1.md"
   first_diary: "museum/diary/2026/07/2026-07-23-01-human-persuasion.md"
@@ -68,6 +71,6 @@ featured:
   latest_viewpoint: "worldview/society/HUMAN-SOCIETY-002.md"
   latest_method: "reasoning/HUMAN-METHOD-003A.md"
   latest_protocol: "protocols/pirs/PIRS-0.1.md"
-  latest_research: "research/2026-09-human-groups-evidence.md"
+  latest_research: "research/2026-09-institutional-drift-evidence.md"
   latest_skill: "skills/audit-deceptive-influence/SKILL.md"
   latest_book: "books/human-groups-institutions/README.md"
