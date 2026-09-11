@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jklop3841/human/exports/agent-readable/CORPUS_SCHEMA.json",
+  "title": "Lu Cheng Human Archive Knowledge Object",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["id", "object_type", "title", "author", "status", "source_path", "provenance_class"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "object_type": {
+      "enum": ["meta", "viewpoint", "book", "framework", "method", "protocol", "institution_category", "institution", "claim", "evidence", "relation", "timeline_event", "cognitive_fossil", "agent_protocol"]
+    },
+    "title": {"type": "string", "minLength": 1},
+    "author": {"type": "string", "minLength": 1},
+    "created_at": {"type": ["string", "null"]},
+    "updated_at": {"type": ["string", "null"]},
+    "version": {"type": ["string", "null"]},
+    "status": {"enum": ["raw", "draft", "active", "contested", "revised", "retired", "historical", "reference"]},
+    "topics": {"type": "array", "items": {"type": "string"}},
+    "summary": {"type": ["string", "null"]},
+    "claim": {"type": ["string", "null"]},
+    "source_path": {"type": "string", "minLength": 1},
+    "canonical_url": {"type": ["string", "null"]},
+    "provenance_class": {"enum": ["P0", "P1", "P2", "P3", "P4", "P5"]},
+    "epistemic_type": {"enum": ["fact", "viewpoint", "experience", "inference", "value", "method", "protocol", "mixed", "unknown"]},
+    "evidence_level": {"enum": ["E0", "E1", "E2", "E3", "E4", "NA"]},
+    "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "counterarguments": {"type": "array", "items": {"type": "string"}},
+    "revision_conditions": {"type": "array", "items": {"type": "string"}},
+    "related_ids": {"type": "array", "items": {"type": "string"}},
+    "supersedes": {"type": "array", "items": {"type": "string"}},
+    "agent_usage": {
+      "type": "object",
+      "properties": {
+        "allowed": {"type": "array", "items": {"type": "string"}},
+        "forbidden": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}
