@@ -1,0 +1,98 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-003
+updated_at: 2026-09-11
+purpose: understand_institutional_amplification
+note: "High-permission is an analytic label for real-world leverage, not a claim of illegitimacy."
+
+institutions:
+  government_public_administration:
+    core_permissions: [rule_making, taxation, budgeting, licensing, public_service, enforcement, records]
+    amplification_channels: [law, bureaucracy, budget, administrative_procedure]
+    group_risks: [hierarchy_filtering, departmental_silos, organizational_silence, responsibility_fragmentation, inertia]
+    stabilizing_functions: [coordination, continuity, public_goods, dispute_processing]
+
+  military_police_emergency:
+    core_permissions: [command, coercive_force_in_lawful_scope, emergency_response, rapid_resource_mobilization]
+    amplification_channels: [chain_of_command, training, doctrine, logistics]
+    group_risks: [authority_pressure, information_filtering, role_conformity, emergency_persistence]
+    stabilizing_functions: [rapid_coordination, public_safety, crisis_response]
+
+  courts_legal_institutions:
+    core_permissions: [fact_finding, rule_interpretation, binding_judgment, rights_and_obligations]
+    amplification_channels: [procedure, precedent, enforcement, legal_records]
+    group_risks: [status_bias, institutional_path_dependence, information_asymmetry]
+    stabilizing_functions: [due_process, predictable_dispute_resolution, rights_protection]
+
+  central_banks_banks_financial_institutions:
+    core_permissions: [credit, liquidity, payment, settlement, risk_pricing, capital_allocation]
+    amplification_channels: [balance_sheets, payment_networks, market_expectations, regulation]
+    group_risks: [herding, informational_cascade, model_convergence, confidence_feedback]
+    stabilizing_functions: [intertemporal_coordination, savings, investment, payments]
+
+  corporations_large_employers:
+    core_permissions: [employment, investment, production, pricing, technology_deployment, supply_chain]
+    amplification_channels: [management, capital, contracts, software, scale]
+    group_risks: [kpi_distortion, hierarchy_filtering, local_knowledge_loss, group_conformity, sunk_cost]
+    stabilizing_functions: [production, specialization, innovation, coordination]
+
+  news_media:
+    core_permissions: [attention_selection, framing, verification, agenda_setting]
+    amplification_channels: [publication, repetition, editorial_selection, reputation]
+    group_risks: [herding, agenda_narrowing, sensational_selection, source_circularity]
+    stabilizing_functions: [public_information, accountability, common_reference]
+
+  digital_platforms:
+    core_permissions: [ranking, recommendation, moderation, account_access, distribution]
+    amplification_channels: [algorithms, network_effects, interface_defaults, scale]
+    group_risks: [social_proof_amplification, outrage_cascade, norm_feedback, perceived_majority_distortion]
+    stabilizing_functions: [coordination, discovery, communication, market_access]
+
+  science_engineering_professional_communities:
+    core_permissions: [knowledge_validation, measurement_standards, expert_advice, technical_norms]
+    amplification_channels: [peer_review, credentials, journals, standards, professional_reputation]
+    group_risks: [prestige_bias, disciplinary_lockin, publication_incentives, consensus_overreading]
+    stabilizing_functions: [error_correction, expertise, cumulative_knowledge, standards]
+
+  medical_health_institutions:
+    core_permissions: [diagnosis_frameworks, treatment_standards, professional_licensing, public_health_guidance]
+    amplification_channels: [clinical_guidelines, hospitals, professional_bodies, insurance_and_payment]
+    group_risks: [authority_overreach, hierarchy_silence, evidence_lag, institutional_inertia]
+    stabilizing_functions: [care_coordination, quality_control, expertise]
+
+  schools_universities:
+    core_permissions: [curriculum, credentialing, selection, knowledge_transmission]
+    amplification_channels: [teaching, exams, degrees, research, alumni_networks]
+    group_risks: [status_hierarchy, disciplinary_path_dependence, conformity, gatekeeping]
+    stabilizing_functions: [skill_transfer, cultural_memory, professional_formation]
+
+  religious_value_communities:
+    core_permissions: [norm_definition, meaning, identity, ritual, community_support]
+    amplification_channels: [shared_narrative, ritual, moral_authority, social_network]
+    group_risks: [identity_enclosure, authority_concentration, dissent_cost, outgroup_boundary]
+    stabilizing_functions: [mutual_aid, moral_coordination, belonging, meaning]
+
+  unions_industry_associations_professional_associations:
+    core_permissions: [representation, bargaining, standards, membership_rules, coordination]
+    amplification_channels: [collective_voice, certification, negotiation, industry_norms]
+    group_risks: [insider_outsider_bias, agenda_capture, incumbent_protection]
+    stabilizing_functions: [collective_bargaining, quality_standards, coordination]
+
+  standards_measurement_bodies:
+    core_permissions: [technical_definition, interoperability_rules, measurement_conventions]
+    amplification_channels: [protocols, certification, procurement, compliance]
+    group_risks: [path_dependence, expert_insularity, slow_revision]
+    stabilizing_functions: [interoperability, comparability, reliability]
+
+common_dimensions:
+  - legal_authority
+  - coercive_capacity
+  - capital_control
+  - information_control
+  - certification_power
+  - agenda_power
+  - rule_interpretation
+  - temporal_persistence
+  - scale
+  - exit_cost
+  - dissent_cost
+  - correction_capacity
