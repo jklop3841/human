@@ -1,0 +1,82 @@
+schema_version: "1.0"
+overlay_id: SD-SCIENCE-001
+domain: science
+canonical_topology_refs:
+  - universities
+  - research_institutes_laboratories
+  - academic_journals_publishers
+  - funding_agencies_foundations
+  - professional_accreditation_bodies
+  - libraries_archives_museums
+  - think_tanks_policy_research_centers
+  - standards_and_measurement_institutes
+
+states:
+  NORMAL:
+    variable_profile: {authority_shift: baseline, resource_pressure: baseline, information_velocity: baseline, verification_depth: baseline, coordination_density: baseline, discretion_level: baseline, feedback_latency: higher, rule_flexibility: baseline, public_trust: baseline, dependency_exposure: lower}
+    node_changes: []
+    edge_changes:
+      - {edge_or_path: "funding_agencies_foundations -> universities/research_institutes", operation: strengthen, confidence: medium, evidence_status: generic_archetype}
+    drift_risks: [publication_pressure, novelty_bias, funding_concentration]
+    correction_opportunities: [peer_review, replication, open_data, standards]
+
+  EXPANSION:
+    variable_profile: {authority_shift: mixed, resource_pressure: higher, information_velocity: higher, verification_depth: mixed, coordination_density: higher, discretion_level: higher, feedback_latency: higher, rule_flexibility: higher, public_trust: mixed, dependency_exposure: higher}
+    node_changes:
+      - {node: funding_agencies_foundations, change: "large programmatic funding can reshape research priorities"}
+      - {node: research_institutes_laboratories, change: "rapid hiring and collaboration increase coordination load"}
+    edge_changes:
+      - {edge_or_path: "funding -> research priorities", operation: strengthen, confidence: high, evidence_status: generic_archetype}
+    drift_risks: [fashion_cycles, duplication_without_coordination, weakened_reproducibility]
+    correction_opportunities: [shared_infrastructure, preregistration, common_standards]
+
+  CRISIS:
+    variable_profile: {authority_shift: higher, resource_pressure: higher, information_velocity: higher, verification_depth: mixed, coordination_density: higher, discretion_level: higher, feedback_latency: lower, rule_flexibility: higher, public_trust: mixed, dependency_exposure: higher}
+    node_changes:
+      - {node: funding_agencies_foundations, change: "priority-setting can become more concentrated around urgent missions"}
+      - {node: academic_journals_publishers, change: "publication cycle may accelerate"}
+    edge_changes:
+      - {edge_or_path: "research_institutes_laboratories -> academic_journals_publishers", operation: accelerate, confidence: medium, evidence_status: generic_archetype}
+      - {edge_or_path: "research outputs -> think_tanks_policy_research_centers", operation: accelerate, confidence: medium, evidence_status: generic_archetype}
+    drift_risks: [premature_claims, verification_compression, policy_overreach]
+    correction_opportunities: [rapid_open_data, living_reviews, coordinated_trials, independent_validation]
+
+  REFORM:
+    variable_profile: {authority_shift: mixed, resource_pressure: higher, information_velocity: higher, verification_depth: higher, coordination_density: higher, discretion_level: mixed, feedback_latency: lower, rule_flexibility: higher, public_trust: mixed, dependency_exposure: higher}
+    node_changes:
+      - {node: academic_journals_publishers, change: "incentive and disclosure rules may be redesigned"}
+      - {node: funding_agencies_foundations, change: "grant criteria may reward reproducibility and openness"}
+    edge_changes:
+      - {edge_or_path: "open_data/replication -> publication_and_funding", operation: strengthen, confidence: medium, evidence_status: hypothesis}
+    drift_risks: [compliance_theater, metric_substitution_in_open_science]
+    correction_opportunities: [registered_reports, data_sharing, replication_funding, negative_result_visibility]
+
+  RECOVERY:
+    variable_profile: {authority_shift: mixed, resource_pressure: mixed, information_velocity: mixed, verification_depth: higher, coordination_density: mixed, discretion_level: mixed, feedback_latency: lower, rule_flexibility: mixed, public_trust: mixed, dependency_exposure: higher}
+    node_changes:
+      - {node: research_institutes_laboratories, change: "urgent mission capacity transitions back to broader portfolio"}
+    edge_changes:
+      - {edge_or_path: "temporary rapid-publication norms", operation: weaken, confidence: medium, evidence_status: generic_archetype}
+      - {edge_or_path: "crisis datasets -> archives/repositories", operation: strengthen, confidence: high, evidence_status: generic_archetype}
+    drift_risks: [abandoned_replication, crisis_topic_lock_in]
+    correction_opportunities: [retrospective_validation, dataset_preservation, incentive_recalibration]
+
+transitions:
+  - from: NORMAL
+    to: CRISIS
+    triggers: [urgent_public_problem, strategic_science_mission, rapidly_emerging_threat]
+    early_signals: [funding_reprioritization, publication_acceleration, cross_lab_consortia]
+    reversible_changes: [fast_track_review, emergency_grants]
+    sticky_changes: [shared_data_infrastructure, collaboration_networks]
+    exit_conditions: [urgent_decision_pressure_falls_and_normal_validation_cycles_resume]
+  - from: CRISIS
+    to: RECOVERY
+    triggers: [problem_stabilization, evidence_maturation]
+    early_signals: [replication_increase, fewer_emergency_calls, slower_claim_cycle]
+    reversible_changes: [temporary_priority_programs]
+    sticky_changes: [validated_open_science_practices]
+    exit_conditions: [urgent_exceptions_reviewed_and_research_portfolio_rebalanced]
+
+safeguards:
+  - "faster science is not automatically lower-quality science"
+  - "open science mechanisms can themselves become proxy metrics"
