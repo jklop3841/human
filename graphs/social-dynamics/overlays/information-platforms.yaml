@@ -1,0 +1,83 @@
+schema_version: "1.0"
+overlay_id: SD-INFO-001
+domain: information_platforms
+canonical_topology_refs:
+  - news_media
+  - public_broadcasters
+  - social_media_platforms
+  - search_engines_information_gateways
+  - telecom_carriers_isps
+  - advertising_public_relations_industry
+  - polling_rating_reputation_institutions
+  - political_parties
+  - civil_society_advocacy_movements
+
+states:
+  NORMAL:
+    variable_profile: {authority_shift: baseline, resource_pressure: baseline, information_velocity: baseline, verification_depth: baseline, coordination_density: baseline, discretion_level: baseline, feedback_latency: baseline, rule_flexibility: baseline, public_trust: baseline, dependency_exposure: lower}
+    node_changes: []
+    edge_changes:
+      - {edge_or_path: "creators/news -> platforms/search -> users", operation: strengthen, confidence: medium, evidence_status: generic_archetype}
+    drift_risks: [engagement_bias, reputation_feedback, advertising_pressure]
+    correction_opportunities: [editorial_review, transparency, independent_research, user_choice]
+
+  CRISIS:
+    variable_profile: {authority_shift: higher, resource_pressure: higher, information_velocity: higher, verification_depth: lower, coordination_density: higher, discretion_level: higher, feedback_latency: lower, rule_flexibility: higher, public_trust: mixed, dependency_exposure: higher}
+    node_changes:
+      - {node: news_media, change: "verification and speed come into direct tension"}
+      - {node: social_media_platforms, change: "ranking, moderation and emergency-information responsibilities become more salient"}
+      - {node: public_broadcasters, change: "public information role may expand"}
+    edge_changes:
+      - {edge_or_path: "news_media/social_media_platforms -> users", operation: accelerate, confidence: high, evidence_status: generic_archetype}
+      - {edge_or_path: "government/emergency information -> platforms/broadcasters", operation: strengthen, confidence: medium, evidence_status: jurisdiction_dependent}
+    drift_risks: [rumor_cascade, verification_compression, panic_amplification, censorship_overreach]
+    correction_opportunities: [authoritative_alert_channels, friction_for_unverified_virality, provenance_labels, independent_fact_checking]
+
+  EMERGENCY:
+    variable_profile: {authority_shift: higher, resource_pressure: higher, information_velocity: higher, verification_depth: lower, coordination_density: higher, discretion_level: higher, feedback_latency: lower, rule_flexibility: higher, public_trust: mixed, dependency_exposure: higher}
+    node_changes:
+      - {node: telecom_carriers_isps, change: "continuity of connectivity becomes a direct emergency dependency"}
+      - {node: social_media_platforms, change: "content and account intervention may intensify"}
+    edge_changes:
+      - {edge_or_path: "emergency authorities -> platforms/carriers", operation: strengthen, confidence: medium, evidence_status: jurisdiction_dependent}
+      - {edge_or_path: "ordinary ranking/moderation cadence", operation: reroute, confidence: medium, evidence_status: jurisdiction_dependent}
+    drift_risks: [temporary_restriction_stickiness, opaque_moderation, single_source_dependency]
+    correction_opportunities: [emergency_alert_priority, crisis_data_sharing, public_audit_logs]
+
+  RECOVERY:
+    variable_profile: {authority_shift: mixed, resource_pressure: mixed, information_velocity: mixed, verification_depth: higher, coordination_density: mixed, discretion_level: mixed, feedback_latency: lower, rule_flexibility: mixed, public_trust: mixed, dependency_exposure: higher}
+    node_changes:
+      - {node: social_media_platforms, change: "temporary crisis interventions should be reviewed"}
+      - {node: news_media, change: "retrospective verification and correction become more important"}
+    edge_changes:
+      - {edge_or_path: "temporary emergency moderation/restrictions", operation: weaken, confidence: high, evidence_status: generic_archetype}
+      - {edge_or_path: "researcher/oversight access -> platform data", operation: strengthen, confidence: medium, evidence_status: jurisdiction_dependent}
+    drift_risks: [memory_hole, emergency_policy_persistence, trust_damage]
+    correction_opportunities: [post_event_transparency, correction_visibility, policy_rollback, archival_preservation]
+
+transitions:
+  - from: NORMAL
+    to: CRISIS
+    triggers: [war, disaster, election_shock, mass_casualty, major_public_health_event]
+    early_signals: [viral_claim_spike, conflicting_official_information, traffic_surge, trust_fragmentation]
+    reversible_changes: [crisis_labels, ranking_adjustments, emergency_channels]
+    sticky_changes: [new_moderation_infrastructure, public_expectations]
+    exit_conditions: [information_demand_and_threat_level_normalize]
+  - from: CRISIS
+    to: EMERGENCY
+    triggers: [immediate_life_safety_information_need, infrastructure_disruption, severe_information_disorder]
+    early_signals: [network_congestion, mass_false_alerts, official_channel_failure]
+    reversible_changes: [emergency_priority, exceptional_intervention]
+    sticky_changes: [new_alert_interfaces]
+    exit_conditions: [ordinary_information_governance_can_resume]
+  - from: EMERGENCY
+    to: RECOVERY
+    triggers: [threat_reduction, connectivity_restoration, stabilized_information_environment]
+    early_signals: [lower_traffic_spikes, fewer_false_alerts, restored_channel_diversity]
+    reversible_changes: [temporary_restrictions]
+    sticky_changes: [validated_emergency_alert_systems]
+    exit_conditions: [temporary_policies_reviewed_and_reversed_or_formally_reauthorized]
+
+safeguards:
+  - "misinformation risk does not by itself justify unlimited information control"
+  - "fast information and accurate information are separate variables"
