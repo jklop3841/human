@@ -1,4 +1,4 @@
-schema_version: "1.2"
+schema_version: "1.3"
 repository:
   name: Human
   canonical_url: "https://github.com/jklop3841/human"
@@ -85,6 +85,11 @@ entrypoints:
   institution_topology_coverage_edges: "graphs/institution-topology/edges-coverage-002.yaml"
   institution_topology_coverage_audit: "graphs/institution-topology/coverage-audit.yaml"
   institution_topology_load_protocol: "agent/HUMAN_INSTITUTION_TOPOLOGY_LOAD.md"
+  social_dynamics: "graphs/social-dynamics/README.md"
+  social_dynamics_manifest: "graphs/social-dynamics/dynamics-manifest.yaml"
+  social_dynamics_state_schema: "graphs/social-dynamics/STATE_SCHEMA.yaml"
+  social_dynamics_state_types: "graphs/social-dynamics/state-types.yaml"
+  social_dynamics_load_protocol: "agent/HUMAN_SOCIAL_DYNAMICS_LOAD.md"
   human_casebook_schema: "cases/human-casebook/CASE_SCHEMA.yaml"
   human_casebook_load_protocol: "agent/HUMAN_CASEBOOK_LOAD.md"
   human_interface_viewpoint: "worldview/ai/HUMAN-AI-001.md"
@@ -156,6 +161,9 @@ featured:
   institution_topology: "graphs/institution-topology/README.md"
   institution_topology_manifest: "graphs/institution-topology/topology-manifest.yaml"
   institution_topology_load_protocol: "agent/HUMAN_INSTITUTION_TOPOLOGY_LOAD.md"
+  social_dynamics: "graphs/social-dynamics/README.md"
+  social_dynamics_manifest: "graphs/social-dynamics/dynamics-manifest.yaml"
+  social_dynamics_load_protocol: "agent/HUMAN_SOCIAL_DYNAMICS_LOAD.md"
   candidate_difference_variables: "cases/human-casebook/candidate-difference-variables.yaml"
   first_diary: "museum/diary/2026/07/2026-07-23-01-human-persuasion.md"
   first_viewpoint: "worldview/influence/HUMAN-INFLUENCE-001.md"
