@@ -1,0 +1,17 @@
+{"source":"HUMAN-META-001","relation":"contains","target":"LU-CHENG-COGNITIVE-FOSSIL-V1"}
+{"source":"HUMAN-REALITY-001","relation":"informs","target":"HUMAN-BOOK-001"}
+{"source":"HUMAN-REALITY-001","relation":"informs","target":"HUMAN-BOOK-002"}
+{"source":"HUMAN-REALITY-001","relation":"informs","target":"HUMAN-BOOK-003"}
+{"source":"HUMAN-AI-001","relation":"canonical_framework_for","target":"HUMAN-BOOK-001"}
+{"source":"HUMAN-SOCIETY-001","relation":"canonical_framework_for","target":"HUMAN-BOOK-002"}
+{"source":"HUMAN-SOCIETY-002","relation":"canonical_framework_for","target":"HUMAN-BOOK-003"}
+{"source":"HUMAN-BOOK-001","relation":"precedes","target":"HUMAN-BOOK-002"}
+{"source":"HUMAN-BOOK-002","relation":"precedes","target":"HUMAN-BOOK-003"}
+{"source":"HUMAN-BOOK-003","relation":"contains_framework","target":"INSTITUTIONAL-DRIFT-001"}
+{"source":"HUMAN-BOOK-003","relation":"contains_atlas","target":"INSTITUTION-ATLAS-106"}
+{"source":"INSTITUTIONAL-DRIFT-001","relation":"indexes","target":"INSTITUTION-ATLAS-106"}
+{"source":"HUMAN-INFLUENCE-002","relation":"audited_by","target":"HUMAN-METHOD-002"}
+{"source":"HUMAN-REALITY-001","relation":"operationalized_by","target":"HUMAN-METHOD-001"}
+{"source":"HUMAN-ECONOMY-001","relation":"implemented_experimentally_by","target":"HUMAN-PROTOCOL-001"}
+{"source":"HUMAN-BOOK-003","relation":"calibrated_by","target":"research/2026-09-human-groups-evidence.md"}
+{"source":"INSTITUTIONAL-DRIFT-001","relation":"calibrated_by","target":"research/2026-09-institutional-drift-evidence.md"}
