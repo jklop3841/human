@@ -23,13 +23,7 @@ epistemic_contract:
   agent_may_infer_unstated_beliefs: false
   separate_fact_viewpoint_experience_inference_extension: true
   unknown_is_valid_output: true
-content_states:
-  - raw
-  - draft
-  - active
-  - contested
-  - revised
-  - retired
+content_states: [raw, draft, active, contested, revised, retired]
 provenance_classes:
   P0: human_raw
   P1: human_structured_author_confirmed
@@ -103,13 +97,24 @@ distribution:
     local_export: "exports/huggingface/"
     connected_account_observed: "sandworm047"
   website:
-    status: discovery_files_ready_deployment_not_performed
-    intended_base: "https://agentarchitect.me/human/"
-    files: ["llms.txt", "llms-full.txt", "exports/agent-readable/manifest.json"]
+    status: site_code_committed_deployment_unverified
+    repository: "jklop3841/agentarchitect-site"
+    canonical_host: "https://www.agentarchitect.me"
+    routes:
+      - "/human"
+      - "/human/manifest.json"
+      - "/human/corpus.jsonl"
+      - "/human/claims.jsonl"
+      - "/human/relations.jsonl"
+      - "/human/institution-index.jsonl"
+      - "/llms.txt"
+      - "/llms-full.txt"
+    note: "Website repo code is committed to main; production deployment could not be verified because the connected Vercel account exposed no teams/projects."
   mcp:
     status: local_read_only_baseline_ready
     server: "mcp/human_archive_server.py"
     transport_default: stdio
+    smoke_test_status: committed_not_executed_in_repo_checkout
   zenodo:
     status: planned
 rights:
