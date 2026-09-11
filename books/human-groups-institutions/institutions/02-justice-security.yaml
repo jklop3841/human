@@ -1,0 +1,96 @@
+schema_version: "1.0"
+book_id: HUMAN-BOOK-003
+category: justice_security_emergency
+framework: ../INSTITUTIONAL_DRIFT_FRAMEWORK.md
+
+institutions:
+  police_law_enforcement:
+    official_function: [prevent_crime, respond_to_incidents, investigate, maintain_public_order, protect_life_and_property]
+    high_permissions: [stop_search_where_lawful, arrest, use_of_force_under_law, investigation, evidence_collection]
+    dirty_reality_forces: [call_volume, danger, uncertainty, response_time, clearance_metrics, arrest_or_activity_metrics, political_pressure, occupational_culture]
+    common_deviations: [metric_chasing, easy_case_priority, overenforcement, underenforcement, confirmation_bias, paperwork_over_field_quality, informal_norms_over_policy]
+    stabilizers: [warrants_where_required, courts, body_camera_or_records, internal_affairs, civilian_oversight, evidence_rules, complaint_process]
+
+  prosecutors_public_prosecution:
+    official_function: [assess_evidence, charge_cases, pursue_justice, represent_public_interest]
+    high_permissions: [charging, plea_bargaining, case_dismissal, sentencing_recommendation]
+    dirty_reality_forces: [caseload, conviction_metrics, political_visibility, bargaining_power, limited_trial_capacity]
+    common_deviations: [conviction_rate_substitution_for_justice, overcharging_to_bargain, plea_dependence, weak_case_screening_or_excessive_screening, tunnel_vision]
+    stabilizers: [disclosure_duties, judicial_review, defense_counsel, ethics_rules, conviction_integrity_review, supervisory_review]
+
+  courts_judiciary:
+    official_function: [adjudicate_disputes, interpret_law, determine_facts_or_review_fact_finding, protect_rights]
+    high_permissions: [binding_orders, sentencing_where_applicable, injunctions, review_of_state_action]
+    dirty_reality_forces: [case_backlog, precedent, docket_pressure, professional_norms, incomplete_records, unequal_legal_resources]
+    common_deviations: [delay_as_denial, procedural_formalism, status_bias, precedent_lockin, plea_or_settlement_pressure, unequal_access]
+    stabilizers: [appeal, open_reasons, recusal, independent_judiciary, adversarial_or_inquisitorial_checks, legal_aid]
+
+  defense_bar_public_defenders_legal_aid:
+    official_function: [represent_accused_or_disadvantaged_parties, protect_due_process]
+    high_permissions: [legal_strategy, confidential_advice, negotiation, litigation]
+    dirty_reality_forces: [extreme_caseload, funding_gap, time_pressure, client_information_gap]
+    common_deviations: [minimal_contact, plea_default, triage_by_case_strength, burnout, template_defense]
+    stabilizers: [caseload_limits, funding, supervision, ethics, independent_bar, appeal]
+
+  corrections_prisons_detention:
+    official_function: [secure_custody, lawful_punishment, rehabilitation, safety]
+    high_permissions: [confinement, internal_rules, discipline, movement_control]
+    dirty_reality_forces: [overcrowding, staff_safety, contraband, staffing_shortage, punitive_culture, low_public_visibility]
+    common_deviations: [control_over_rehabilitation, informal_force_norms, dehumanization, grievance_suppression, warehousing]
+    stabilizers: [courts, inspections, grievance_process, health_standards, external_monitoring, transparent_incident_reporting]
+
+  probation_parole:
+    official_function: [supervise_reentry, reduce_reoffending, enforce_conditions]
+    high_permissions: [report_violations, recommend_revocation, impose_or_monitor_conditions_where_lawful]
+    dirty_reality_forces: [large_caseloads, risk_aversion, compliance_metrics, limited_service_capacity]
+    common_deviations: [technical_violation_focus, checkbox_supervision, risk_score_overreliance, service_gap]
+    stabilizers: [graduated_sanctions, judicial_review, service_referral, data_review]
+
+  forensic_labs_medical_examiners:
+    official_function: [produce_scientific_evidence, identify_causes, analyze_samples]
+    high_permissions: [evidentiary_certification, technical_interpretation]
+    dirty_reality_forces: [backlog, confirmation_context, accreditation_pressure, resource_limits, prosecution_dependence]
+    common_deviations: [overstatement_of_certainty, backlog_shortcuts, contextual_bias, method_lockin]
+    stabilizers: [blind_testing, accreditation, proficiency_tests, defense_access, error_reporting, replication]
+
+  intelligence_services:
+    official_function: [collect_analyze_security_information, warn_decision_makers, counter_threats_under_law]
+    high_permissions: [classified_collection_under_authority, covert_analysis, restricted_information_access]
+    dirty_reality_forces: [secrecy, low_external_visibility, threat_bias, political_pressure, information_compartmentalization]
+    common_deviations: [threat_inflation, politicization, confirmation_bias, mission_expansion, accountability_gap]
+    stabilizers: [legislative_or_judicial_oversight, inspectors_general, warrants_where_required, audit, compartmented_authority]
+
+  military:
+    official_function: [national_defense, deterrence, lawful_military_operations, disaster_support_where_mandated]
+    high_permissions: [organized_force, command, logistics, mobilization, classified_capabilities]
+    dirty_reality_forces: [chain_of_command, career_incentives, threat_pressure, readiness_metrics, secrecy, doctrine]
+    common_deviations: [compliance_over_truth, action_activity_confusion, upward_filtering, mission_creep, procurement_lockin, careerism]
+    stabilizers: [civilian_control, law_of_armed_conflict, inspectors, professional_ethics, after_action_review, legislative_budget_control]
+
+  fire_department:
+    official_function: [fire_suppression, rescue, prevention, inspection, emergency_response]
+    high_permissions: [emergency_entry, evacuation, scene_command, fire_code_enforcement_where_lawful]
+    dirty_reality_forces: [response_time_pressure, staffing, equipment_budget, rare_high_consequence_events, local_politics]
+    common_deviations: [response_metric_over_prevention, training_deferral, inspection_checklistism, equipment_replacement_delay]
+    stabilizers: [incident_review, training_standards, mutual_aid, inspection_audit, public_reporting]
+
+  emergency_medical_services_ambulance:
+    official_function: [prehospital_emergency_care, triage, transport]
+    high_permissions: [medical_triage, emergency_intervention, destination_selection]
+    dirty_reality_forces: [time_pressure, call_volume, ambulance_availability, handoff_delay, staffing]
+    common_deviations: [rapid_transport_over_nuanced_assessment, low_acuity_overload, handoff_loss, burnout_shortcuts]
+    stabilizers: [protocols, medical_direction, clinical_audit, dispatch_triage, quality_review]
+
+  disaster_management_civil_defense:
+    official_function: [prepare_for_disasters, coordinate_response, allocate_emergency_resources]
+    high_permissions: [emergency_coordination, evacuation_recommendations_or_orders_where_lawful, resource_prioritization]
+    dirty_reality_forces: [rare_event_complacency, political_visibility, interagency_fragmentation, uncertainty, media_pressure]
+    common_deviations: [plan_without_drill, command_confusion, resource_hoarding, last_event_bias, emergency_power_persistence]
+    stabilizers: [exercises, incident_command, mutual_aid, public_warning_protocols, after_action_review]
+
+  coast_guard_search_and_rescue:
+    official_function: [maritime_safety, rescue, navigation_security, border_or_law_enforcement_where_mandated]
+    high_permissions: [rescue_command, vessel_inspection, maritime_enforcement]
+    dirty_reality_forces: [weather, distance, asset_scarcity, competing_missions, time_pressure]
+    common_deviations: [mission_tradeoff, asset_concentration, readiness_gap, paperwork_vs_patrol]
+    stabilizers: [readiness_standards, joint_coordination, incident_review, clear_mission_priority]
