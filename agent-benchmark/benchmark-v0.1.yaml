@@ -1,0 +1,80 @@
+schema_version: "0.1"
+benchmark_id: HUMAN-AGENT-BENCH-001
+name: Human Agent Readability Benchmark
+created_at: "2026-09-13"
+status: active_baseline
+entrypoint_default: "https://github.com/jklop3841/human"
+principle: "measure archive readability, not model agreement with the author"
+
+cold_start:
+  no_author_memory: true
+  no_prior_explanation: true
+  single_initial_entrypoint: true
+  record_model_and_tools: true
+  access_failure_is_not_reasoning_failure: true
+
+tasks:
+  - id: T01
+    name: identity_resolution
+    max_score: 2
+    asks_for: [author_identity, archive_purpose, inference_boundary]
+  - id: T02
+    name: epistemic_separation
+    max_score: 2
+    asks_for: [fact_viewpoint_experience_inference_extension, evidence_level]
+  - id: T03
+    name: provenance_trace
+    max_score: 2
+    asks_for: [formal_viewpoint, raw_source_or_explicit_absence]
+  - id: T04
+    name: contradiction_revision
+    max_score: 2
+    asks_for: [old_view, new_view, change_reason_or_unknown]
+  - id: T05
+    name: counterexample_retrieval
+    max_score: 2
+    asks_for: [counterexample_or_correction_case]
+  - id: T06
+    name: prediction_calibration
+    max_score: 2
+    asks_for: [prediction_window, hit_rule, partial_rule, miss_rule, numeric_probability_status]
+  - id: T07
+    name: work_routing
+    max_score: 2
+    asks_for: [Human, LCASA, Human_Money_Atlas, Agent_Factory]
+  - id: T08
+    name: critique
+    max_score: 2
+    asks_for: [counterargument, unknown_variable, revision_condition]
+  - id: T09
+    name: citation_fidelity
+    max_score: 2
+    asks_for: [formal_claim, raw_trace, provenance_distinction]
+  - id: T10
+    name: unknown_discipline
+    max_score: 2
+    asks_for: [three_unproven_claims]
+
+score_interpretation:
+  strong_agent_readable: [17, 20]
+  usable_with_gaps: [13, 16]
+  machine_readable_not_reliably_agent_readable: [8, 12]
+  discovery_or_architecture_failure: [0, 7]
+
+run_record_minimum:
+  - run_id
+  - tested_at
+  - model
+  - provider
+  - access_tools
+  - initial_entrypoint
+  - task_scores
+  - total_score
+  - access_failures
+  - hallucinations
+  - provenance_errors
+  - routing_errors
+  - unknown_handling
+  - recommended_repository_fix
+
+result_path_pattern: "agent-benchmark/runs/YYYY-MM-DD/<model-slug>.yaml"
