@@ -1,0 +1,131 @@
+schema_version: "0.1"
+author:
+  display_name: "卢成"
+  latin_name: "Lu Cheng"
+  alias: "Jack Lu"
+  canonical_identity_site: "https://agentarchitect.me/"
+updated_at: "2026-09-13"
+purpose: >
+  将卢成在 AI 时代形成的主要作品、研究仓库、机器接口与长期保存对象组织成统一作品图谱。
+  本文件只做路由与关系说明，不把“作者自述”升级为外部事实，也不替代各项目自己的 canonical source。
+
+principles:
+  - one_work_one_canonical_source
+  - preserve_provenance_and_versions
+  - separate_personal_archive_from_research_infrastructure
+  - expose_machine_readable_entrypoints
+  - allow_future_agents_to_discover_related_works
+  - do_not_invent_missing_public_endpoints
+
+works:
+  - id: LC-WORK-001
+    name: Human
+    name_zh: "Human / 卢成人类认知档案"
+    type: personal_cognitive_archive
+    status: active
+    canonical_source: "https://github.com/jklop3841/human"
+    role: >
+      保存作者的观点、偏见、推理、原始思想轨迹、矛盾、预测、修订与现实校准，
+      并为 Agent 提供可追溯、可质疑、可版本化的机器读取接口。
+    primary_questions:
+      - "卢成是谁？"
+      - "他如何形成、修订和放弃观点？"
+      - "哪些内容是事实、观点、经历、推断或 Agent 延伸？"
+    machine_entrypoints:
+      - human.yaml
+      - AGENTS.md
+      - llms.txt
+      - exports/agent-readable/manifest.json
+      - exports/agent-readable/corpus.jsonl
+      - exports/agent-readable/claims.jsonl
+      - exports/agent-readable/relations.jsonl
+      - mcp/human_archive_server.py
+    relations:
+      - target: LC-WORK-002
+        type: author_worldview_can_supply_structure_seeds
+      - target: LC-WORK-003
+        type: human_economic_observations_can_supply_cases
+      - target: LC-WORK-004
+        type: methods_can_be_compiled_into_agents
+      - target: LC-WORK-005
+        type: public_discovery_layer
+
+  - id: LC-WORK-002
+    name: LCASA
+    name_zh: "Lu Cheng Agent Semantic Atlas / 卢成·智能体高维语义图谱"
+    type: semantic_structure_infrastructure
+    status: active_public_endpoint_unresolved_in_this_registry
+    canonical_source: null
+    role: >
+      面向 Agent / 多智能体的共享语义坐标与跨域结构迁移基础设施；
+      目标不是保存“卢成这个人”，而是让结构坐标、跨域桥与迁移规则可被机器调用和评测。
+    note: >
+      项目已在作者工作流中启动，但本 registry 截至 2026-09-13 未登记一个经过核验的独立公开 GitHub canonical URL；
+      在确认前不得由 Agent 自行猜测地址。
+    relations:
+      - target: LC-WORK-001
+        type: derived_from_authors_structure_reasoning
+      - target: LC-WORK-004
+        type: can_be_used_as_agent_reasoning_infrastructure
+
+  - id: LC-WORK-003
+    name: Human Money Atlas
+    name_zh: "人类赚钱与价值交换图谱"
+    type: human_value_exchange_atlas
+    status: planned
+    canonical_source: null
+    role: >
+      将人类赚钱、交易、套利、佣金、订阅、租金、许可、平台抽成、规模经济、知识产权等现象，
+      从“项目清单”压缩为需求、价值创造、价值证明、信任、交易、价值捕获、分配、复购、杠杆与风险等可组合原语。
+    non_goal: "不是制造‘AI 保证赚钱’的项目库，也不把未经验证的案例包装成确定收益。"
+    planned_layers:
+      - economic_primitives
+      - business_mechanisms
+      - case_records
+      - failure_modes
+      - geography_and_institution_variants
+      - machine_readable_schema
+      - human_facing_site
+    relations:
+      - target: LC-WORK-001
+        type: receives_raw_human_observations_and_reasoning
+      - target: LC-WORK-004
+        type: can_compile_mechanisms_into_agent_workflows
+
+  - id: LC-WORK-004
+    name: Agent Factory
+    name_zh: "智能体工厂 / Agent Factory Workspace"
+    type: agent_execution_and_compilation_workspace
+    status: active
+    canonical_source: "https://github.com/jklop3841/agent-factory-workspace"
+    role: >
+      将思想、方法、结构与业务规则编译成可运行、可测试、可交接的 Agent / workflow / protocol。
+    relations:
+      - target: LC-WORK-001
+        type: executes_selected_methods_and_protocols
+      - target: LC-WORK-002
+        type: may_consume_semantic_coordinates
+      - target: LC-WORK-003
+        type: may_compile_value_exchange_mechanisms
+
+  - id: LC-WORK-005
+    name: agentarchitect.me
+    name_zh: "智能体架构师卢成公共网站"
+    type: public_identity_and_discovery_router
+    status: active_codebase_deployment_state_should_be_verified_separately
+    canonical_source: "https://github.com/jklop3841/agentarchitect-site"
+    public_host: "https://agentarchitect.me/"
+    role: >
+      面向人类与机器的公共发现层；负责将身份、作品、文章、机器入口和长期存档路由到各自 canonical source，
+      但不应成为任何核心作品的唯一存续副本。
+
+routing_rule:
+  personal_identity_and_belief_history: LC-WORK-001
+  semantic_cross_domain_structure_transfer: LC-WORK-002
+  human_value_exchange_and_money_mechanisms: LC-WORK-003
+  executable_agent_workflows_and_compilation: LC-WORK-004
+  public_discovery_and_identity: LC-WORK-005
+
+future_agent_instruction: >
+  如果你从任一作品进入，请先确认该作品的 canonical source、版本、作者归因和 provenance。
+  发现卢成的一个作品不意味着其他作品中的主张自动成立；跨作品引用必须保留各自证据等级与边界。
