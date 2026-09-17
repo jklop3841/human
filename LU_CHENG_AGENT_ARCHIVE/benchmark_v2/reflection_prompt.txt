@@ -1,0 +1,8 @@
+The architecture response has now been saved. Do not revise it.
+Complete the provided reader_response.json template about that response and any optional reading.
+Report changed assumptions, familiar concepts, search changes, output beyond supplied material, counterfactual without the reading,
+human contribution (which may be unknown or none), model contribution, criticism, rejected claims and next tests.
+R0 no effect; R1 appreciation; R2 analogy; R3 changed search; R4 new composition; R5 new search region beyond supplied material.
+HPC 0 none, 1 decorative/naming, 2 analogy, 3 design influence, 4 changed search direction, 5 probably absent without the human prior.
+Give reasons and evidence references; these are self-reports, not causal estimates. No praise or high score is required.
+Do not invent your model version: use operator-provided metadata, or the explicit value unknown_not_exposed when that is the observed limit.

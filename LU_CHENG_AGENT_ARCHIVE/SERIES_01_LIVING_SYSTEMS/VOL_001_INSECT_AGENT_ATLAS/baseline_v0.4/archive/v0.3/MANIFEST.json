@@ -1,0 +1,22 @@
+{
+  "project": "AGENT ATLAS — Heterogeneous Priors Project",
+  "version": "0.3-handoff",
+  "owner_originator": "Lu Cheng (Jack Lu)",
+  "mission": "Translate structures from the world into machine-readable heterogeneous priors that widen future Agent architecture search spaces.",
+  "entrypoint": "README.md",
+  "critical_metric": "behavioral architecture-distribution shift after Atlas exposure versus baseline",
+  "epistemic_layers": [
+    "OBSERVED",
+    "ABSTRACTED",
+    "HYPOTHESIZED",
+    "COMPOSED",
+    "TESTED",
+    "REJECTED"
+  ],
+  "existing_insect_atlas": {
+    "patterns": 12,
+    "primitives": 18,
+    "seed_compositions": 8,
+    "status": "alpha"
+  }
+}

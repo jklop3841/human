@@ -1,0 +1,16 @@
+test_dpd_null_and_threshold_boundaries (test_migration.MigrationTests.test_dpd_null_and_threshold_boundaries) ... ok
+test_freeze_projection_and_all_references (test_migration.MigrationTests.test_freeze_projection_and_all_references) ... ok
+test_frozen_original_tamper_rejected_before_projection (test_migration.MigrationTests.test_frozen_original_tamper_rejected_before_projection) ... ok
+test_human_seed_example_never_promoted (test_migration.MigrationTests.test_human_seed_example_never_promoted) ... ok
+test_raw_lock_detects_wording_change (test_migration.MigrationTests.test_raw_lock_detects_wording_change) ... ok
+test_real_intake_rejects_fixtures_and_empty_evidence (test_migration.MigrationTests.test_real_intake_rejects_fixtures_and_empty_evidence) ... ok
+test_record_round_trip_and_claim_scope (test_migration.MigrationTests.test_record_round_trip_and_claim_scope) ... ok
+test_template_conflicts_and_nested_adapter (test_migration.MigrationTests.test_template_conflicts_and_nested_adapter) ... ok
+test_v2_controlled_intake_rejects_fixture (test_migration.MigrationTests.test_v2_controlled_intake_rejects_fixture) ... ok
+test_v2_import_and_reviewer_export_in_temporary_test_only_campaign (test_migration.MigrationTests.test_v2_import_and_reviewer_export_in_temporary_test_only_campaign) ... ok
+test_v2_preparation_preserves_old_policy_and_blinding (test_migration.MigrationTests.test_v2_preparation_preserves_old_policy_and_blinding) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 4.430s
+
+OK

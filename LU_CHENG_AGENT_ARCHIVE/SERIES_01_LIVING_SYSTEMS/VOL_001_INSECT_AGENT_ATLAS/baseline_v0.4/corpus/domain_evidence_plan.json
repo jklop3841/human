@@ -1,0 +1,112 @@
+[
+  {
+    "domain_id": "FUNGI-001",
+    "domain": "Fungi / resource-routing networks",
+    "source_refs": [
+      "SRC-FUNGI"
+    ],
+    "candidate_primitive_id": "budgeted_edge_remodeling",
+    "evidence_required_before_strong_abstraction": [
+      "Time series of weighted topology",
+      "Resource layout and transport measurements",
+      "Damage model, edge cost definition and controls",
+      "Species identity and replicated environments"
+    ],
+    "current_gate": "qualitative_provisional_abstraction_only",
+    "selection_basis": "Existing v0.3 roadmap; diversity relative to the 18 inherited primitives, not a biological novelty ranking.",
+    "reviewer_estimate_0_to_5": {
+      "mechanism_difference": 3,
+      "evidence_access": 3,
+      "transfer_testability": 4
+    },
+    "score_status": "curator_estimate_not_measured_prior_gain"
+  },
+  {
+    "domain_id": "IMMUNE-001",
+    "domain": "Immune system / stimulus-independent retention",
+    "source_refs": [
+      "SRC-IMMUNE"
+    ],
+    "candidate_primitive_id": "trigger_independent_retention",
+    "evidence_required_before_strong_abstraction": [
+      "Read the linked erratum",
+      "Cell identity and exact genetic manipulation",
+      "Duration, survival comparison and uncertainty",
+      "Separate measurements of persistence, maintenance and recall"
+    ],
+    "current_gate": "qualitative_provisional_abstraction_only",
+    "selection_basis": "Existing v0.3 roadmap; diversity relative to the 18 inherited primitives, not a biological novelty ranking.",
+    "reviewer_estimate_0_to_5": {
+      "mechanism_difference": 4,
+      "evidence_access": 3,
+      "transfer_testability": 4
+    },
+    "score_status": "curator_estimate_not_measured_prior_gain"
+  },
+  {
+    "domain_id": "OCTOPUS-001",
+    "domain": "Octopus / peripheral motor programs",
+    "source_refs": [
+      "SRC-OCTOPUS"
+    ],
+    "candidate_primitive_id": "local_program_autonomy",
+    "evidence_required_before_strong_abstraction": [
+      "Stimulus protocol and sample size",
+      "Intact versus disconnected kinematic traces",
+      "Range of preserved and lost behaviors",
+      "Sensory feedback and initiation/termination boundaries"
+    ],
+    "current_gate": "qualitative_provisional_abstraction_only",
+    "selection_basis": "Existing v0.3 roadmap; diversity relative to the 18 inherited primitives, not a biological novelty ranking.",
+    "reviewer_estimate_0_to_5": {
+      "mechanism_difference": 4,
+      "evidence_access": 3,
+      "transfer_testability": 4
+    },
+    "score_status": "curator_estimate_not_measured_prior_gain"
+  },
+  {
+    "domain_id": "FOREST-001",
+    "domain": "Forests / dormant seed reserves",
+    "source_refs": [
+      "SRC-FOREST"
+    ],
+    "candidate_primitive_id": "dormant_reserve",
+    "evidence_required_before_strong_abstraction": [
+      "Species and burial-site provenance",
+      "Dating uncertainty and germination assay",
+      "Dormant death rate and storage cost",
+      "Specific activation cues tested independently of persistence"
+    ],
+    "current_gate": "qualitative_provisional_abstraction_only",
+    "selection_basis": "Existing v0.3 roadmap; diversity relative to the 18 inherited primitives, not a biological novelty ranking.",
+    "reviewer_estimate_0_to_5": {
+      "mechanism_difference": 4,
+      "evidence_access": 3,
+      "transfer_testability": 5
+    },
+    "score_status": "curator_estimate_not_measured_prior_gain"
+  },
+  {
+    "domain_id": "INSTITUTION-001",
+    "domain": "Human institutions / common-pool self-governance",
+    "source_refs": [
+      "SRC-INSTITUTION"
+    ],
+    "candidate_primitive_id": "endogenous_sanction",
+    "evidence_required_before_strong_abstraction": [
+      "Full treatment instructions and payoff matrix",
+      "Communication-only, sanction-only and combined controls",
+      "Enforcement costs, free riding and retaliation outcomes",
+      "Repeated-game versus single-shot results"
+    ],
+    "current_gate": "qualitative_provisional_abstraction_only",
+    "selection_basis": "Existing v0.3 roadmap; diversity relative to the 18 inherited primitives, not a biological novelty ranking.",
+    "reviewer_estimate_0_to_5": {
+      "mechanism_difference": 5,
+      "evidence_access": 2,
+      "transfer_testability": 3
+    },
+    "score_status": "curator_estimate_not_measured_prior_gain"
+  }
+]

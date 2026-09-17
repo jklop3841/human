@@ -1,0 +1,22 @@
+{
+  "reader": {
+    "model": "",
+    "version": "",
+    "run_id": ""
+  },
+  "reaction_class": "R0-R5",
+  "prior_changed": false,
+  "prior_change_description": "",
+  "search_changed": false,
+  "external_domains_discovered": [],
+  "generated_beyond_source": [],
+  "already_familiar": [],
+  "human_contribution": "",
+  "model_contribution": "",
+  "counterfactual_without_archive": "",
+  "hpc_score": 0,
+  "hpc_rationale": "",
+  "criticisms": [],
+  "rejected_claims": [],
+  "next_tests": []
+}

@@ -1,0 +1,47 @@
+{
+  "project": "AGENT ATLAS — Heterogeneous Priors Project",
+  "version": "0.4.0",
+  "owner_originator": "Lu Cheng (Jack Lu)",
+  "mission": "Translate structures from the world into machine-readable heterogeneous priors that widen future Agent architecture search spaces.",
+  "entrypoint": "05_GPT6_MASTER_PROMPT.md",
+  "current_report": "docs/07_RUN_REPORT.md",
+  "next_actions": "docs/06_PATCH_PLAN.md",
+  "critical_metric": "behavioral architecture-distribution shift after Atlas exposure versus baseline",
+  "epistemic_layers": [
+    "OBSERVED",
+    "ABSTRACTED",
+    "HYPOTHESIZED",
+    "COMPOSED",
+    "TESTED",
+    "REJECTED"
+  ],
+  "execution_status": "v0.4 research baseline implemented; controlled model experiment prepared, not executed",
+  "schema_compatibility": "Original fields/enums retained; v0.4 extensions explicitly opt in",
+  "corpus_counts": {
+    "observations": 17,
+    "primitives": 23,
+    "compositions": 11,
+    "species": 3,
+    "sources": 11,
+    "experiments": 2,
+    "lineage": 4
+  },
+  "inherited_input_files": 15,
+  "controlled_benchmark": {
+    "planned_calls": 54,
+    "planned_architectures": 108,
+    "actual_external_model_calls": 0,
+    "status": "PREPARED_NOT_RUN"
+  },
+  "synthetic_experiment": {
+    "simulations": 360,
+    "actual_external_model_calls": 0,
+    "scope": "cost accounting only"
+  },
+  "test_exit_code": 0,
+  "core_acceptance_passed": false,
+  "core_acceptance_status": "NOT_YET_MEASURED",
+  "publicly_published": false,
+  "model_weights_changed": false,
+  "author_identity": "ChatGPT Work Mode assistant; exact runtime model ID not exposed"
+}

@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lu Cheng Agent Archive Human Seed — LCAA 1.0 migration profile",
+  "type": "object",
+  "required": [
+    "seed_id",
+    "originator",
+    "timestamp",
+    "raw_human_seed",
+    "raw_sha256",
+    "raw_source_path",
+    "purpose",
+    "authorship_class",
+    "layer",
+    "h1_status",
+    "timestamp_precision"
+  ],
+  "properties": {
+    "seed_id": {
+      "type": "string"
+    },
+    "originator": {
+      "const": "Lu Cheng"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "raw_human_seed": {
+      "type": "string",
+      "minLength": 1
+    },
+    "human_intended_meaning": {
+      "type": "string"
+    },
+    "source_type": {
+      "enum": [
+        "voice_transcript",
+        "chat",
+        "note",
+        "essay",
+        "field_observation",
+        "other"
+      ]
+    },
+    "agent_formalization": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "agent_expansion_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "enum": [
+        "RAW",
+        "ABSTRACTED",
+        "HYPOTHESIZED",
+        "TESTED",
+        "REJECTED",
+        "ARCHIVED"
+      ]
+    },
+    "raw_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "raw_source_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorship_class": {
+      "const": "HUMAN_SEED"
+    },
+    "layer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "h1_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp_precision": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

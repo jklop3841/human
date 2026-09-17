@@ -1,0 +1,1 @@
+完整读取这个升级补丁。你当前接近完成的 Insect Agent Atlas v0.4 不推倒重做，而是按照 migration/08_GPT6_UPGRADE_INSTRUCTIONS.md 将其迁移为 Lu Cheng Agent Archive 的 Series 01 / Volume 001。执行 templates/16_GPT6_ONE_SHOT_HANDOFF_PROMPT.txt。同时写入 @GitHub

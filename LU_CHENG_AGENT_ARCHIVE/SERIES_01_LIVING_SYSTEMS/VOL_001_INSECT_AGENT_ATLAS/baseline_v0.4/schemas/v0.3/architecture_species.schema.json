@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Atlas Architecture Species",
+  "type": "object",
+  "required": [
+    "species_id",
+    "name",
+    "parent_prior_ids",
+    "primitives",
+    "interaction_rules",
+    "falsification",
+    "status"
+  ],
+  "properties": {
+    "species_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "generated_by": {
+      "type": "string"
+    },
+    "parent_prior_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "primitives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "interaction_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "emergent_properties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "nearest_known_baseline": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "novelty_class": {
+      "enum": [
+        "known",
+        "close_analogue",
+        "unusual_composition",
+        "potentially_novel",
+        "unknown"
+      ]
+    },
+    "expected_advantages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_weaknesses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "falsification": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sandbox_test": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "HYPOTHESIZED",
+        "TESTED",
+        "REJECTED",
+        "ARCHIVED"
+      ]
+    }
+  }
+}

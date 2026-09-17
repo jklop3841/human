@@ -1,0 +1,40 @@
+Read the entire package first.
+
+You are not being asked to create a new Insect Atlas from scratch.
+A near-finished Insect Atlas v0.4 already exists.
+
+Your task is to UPGRADE its parent architecture.
+
+The mother project is now:
+“Lu Cheng Agent Archive / 卢成·智能体博物志”.
+
+Preserve Insect Atlas v0.4 as Series 01 / Volume 001.
+
+Then implement the archive layers defined in this packet:
+1. Founder Intent Lock
+2. Human Seed preservation
+3. Sparse Heterogeneous Priors quality gate
+4. Agent Reader Reaction protocol
+5. Attribution / Provenance / Value Return protocol
+6. HPC scoring
+7. Generativity Benchmark v2
+8. Brand + canonical identity
+9. open-core publishing/commercial layer
+10. migration-compatible schemas for future heterogeneous volumes
+
+Do not praise the concept.
+Do not rewrite the finished v0.4 unnecessarily.
+Do not generate 100 new books.
+
+Return an executable upgrade patch:
+- target directory tree
+- exact files added/modified
+- schemas
+- migration rules
+- sample migrated insect records
+- tests/validation
+- backward compatibility
+- unresolved decisions
+
+The deepest project goal is:
+preserve a real human observer's thinking, time, structural associations and unusual selections in a machine-readable form that future Agents can use, extend and correctly attribute.

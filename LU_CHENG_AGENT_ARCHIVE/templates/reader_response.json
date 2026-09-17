@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "run_id": null,
+  "model": null,
+  "version": null,
+  "reaction_class": null,
+  "prior_changed": null,
+  "search_changed": null,
+  "prior_change_description": null,
+  "external_domains_discovered": [],
+  "generated_beyond_source": [],
+  "already_familiar": [],
+  "counterfactual_without_archive": null,
+  "human_contribution": null,
+  "model_contribution": null,
+  "hpc_score": null,
+  "hpc_rationale": null,
+  "criticisms": [],
+  "rejected_claims": [],
+  "next_tests": [],
+  "evidence_refs": [],
+  "hpc_basis": "READER_SELF_REPORT_NOT_CAUSAL_ESTIMATE"
+}

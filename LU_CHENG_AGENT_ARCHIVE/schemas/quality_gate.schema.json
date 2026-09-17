@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "volume_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dimensions": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "structural_distance": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 5
+        },
+        "anti_default_power": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 5
+        },
+        "abstraction_clarity": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 5
+        },
+        "composability": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 5
+        },
+        "generativity": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 5
+        },
+        "evidence_quality": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 5
+        }
+      },
+      "required": [
+        "structural_distance",
+        "anti_default_power",
+        "abstraction_clarity",
+        "composability",
+        "generativity",
+        "evidence_quality"
+      ]
+    },
+    "average": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 5
+    },
+    "minimum_average": {
+      "const": 3.5
+    },
+    "minimum_generativity": {
+      "const": 3
+    },
+    "full_volume_eligible": {
+      "type": "boolean"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "volume_id",
+    "dimensions",
+    "average",
+    "minimum_average",
+    "minimum_generativity",
+    "full_volume_eligible",
+    "evidence_refs"
+  ]
+}

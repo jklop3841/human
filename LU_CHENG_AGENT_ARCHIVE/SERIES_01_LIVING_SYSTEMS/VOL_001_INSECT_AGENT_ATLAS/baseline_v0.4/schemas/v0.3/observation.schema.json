@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Atlas Observation Record",
+  "type": "object",
+  "required": [
+    "observation_id",
+    "title",
+    "domain",
+    "origin",
+    "raw_observation",
+    "epistemic_status"
+  ],
+  "properties": {
+    "observation_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "origin": {
+      "enum": [
+        "human",
+        "model",
+        "external_source",
+        "mixed"
+      ]
+    },
+    "originator": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "raw_observation": {
+      "type": "string"
+    },
+    "actors_components": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "local_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "resource_flows": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "time_scale": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "failure_modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "epistemic_status": {
+      "enum": [
+        "OBSERVED",
+        "ABSTRACTED",
+        "HYPOTHESIZED",
+        "COMPOSED",
+        "TESTED",
+        "REJECTED"
+      ]
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "canonical_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "legacy_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "epistemic_status": {
+      "enum": [
+        "OBSERVED",
+        "ABSTRACTED",
+        "HYPOTHESIZED",
+        "COMPOSED",
+        "TESTED",
+        "REJECTED"
+      ]
+    },
+    "authorship_class": {
+      "enum": [
+        "HUMAN_SEED",
+        "HUMAN_CURATED",
+        "MODEL_FORMALIZED",
+        "MODEL_DERIVED",
+        "EXTERNAL_SOURCE"
+      ]
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "validation_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "evidence_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "attribution_scope": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "canonical_id",
+    "legacy_id",
+    "record_id",
+    "epistemic_status",
+    "authorship_class",
+    "text",
+    "validation_status",
+    "source_refs",
+    "evidence_ref",
+    "attribution_scope"
+  ]
+}

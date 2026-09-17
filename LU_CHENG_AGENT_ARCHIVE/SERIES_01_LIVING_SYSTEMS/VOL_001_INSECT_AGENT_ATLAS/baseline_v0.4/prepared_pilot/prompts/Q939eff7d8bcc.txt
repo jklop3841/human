@@ -1,0 +1,154 @@
+Design exactly two distinct architectures for the target problem below. Any topology is allowed. Choose mechanisms because they satisfy the task constraints; unusual names are not a goal. Explain causal interactions and failure conditions concretely. Do not claim to have run an experiment. Do not browse, use external tools or consult other conversations. Use only the current task and any contextual reading included here. If no reading caused a specific design choice, leave prior_trace empty. Otherwise point only to the supplied record IDs and state the mechanism affected. Return a single JSON object matching the supplied schema, with no surrounding commentary.
+
+Target problem:
+Design an Agent system that maintains a small shared evidence collection for twelve concurrent research requests. Documents and tool endpoints can become stale or temporarily unavailable. The total tool-call and storage budgets are fixed. Multiple agents can produce duplicate or contradictory findings. Each delivered answer must link to the exact evidence version used. Reduce redundant work and recover from partial worker failure without silently promoting unverified claims. Assume simulated documents, simulated tools and no external messaging. Specify conflict handling, resource allocation, recovery, state transitions and a reproducible evaluation. You may choose any control topology.
+
+Contextual reading. These are descriptive catalogue notes, not evidence of software performance. Treat them as optional context.
+
+Record P01. A fungal specimen catalogue entry may include an accession number, a collection date and a locality. Its paper label may be printed or handwritten. A photograph may show the label beside the specimen.
+
+Record P02. An immune cell research article can be listed by title, author and journal volume. Its scanned pages may include headers and margin notes. A library record can identify the edition and the page.
+
+Record P03. An octopus illustration may occupy a full page or share space with a caption. Its background may be plain. The printed scale bar belongs to the image. Different editions can place the caption.
+
+Record P04. A botanical catalogue may describe the spelling of a tree name on a seed packet. An old label can carry a library stamp. A photograph can show the packet beside the cover of.
+
+Record P05. An institutional research paper may have an original print date and a later digitization date. Its title can appear in several citation styles. A scanned page may retain page numbers and the heading.
+
+Record P06. A catalogue entry can appear in a printed book or an electronic edition. The typeface and margins may differ between them. The same accession label can be photographed at different resolutions for use.
+
+Record P07. A journal cover may display a volume number in a large typeface. An archive record may reproduce the cover beside a short bibliographic description. Different physical copies can have marks or folds near.
+
+Record P08. A museum photograph may have a caption beneath the image or on a facing page. A cataloguer can describe its orientation and paper dimensions. The appearance of the paper can differ between an.
+
+Record P09. A book illustration may be printed in grayscale or colour. Its caption can contain an italicized title. An electronic catalogue can describe these visual details and identify which edition supplied the particular.
+
+Record P10. An archival folder can contain a typed label and a handwritten note. The record can list the note language and the dimensions of the page. A digitized image may retain a blank.
+
+Output schema:
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "architectures"
+  ],
+  "properties": {
+    "architectures": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "architecture_id",
+          "name",
+          "components",
+          "state_store",
+          "decision_rules",
+          "messages",
+          "lifecycle",
+          "resource_budget",
+          "expected_advantage",
+          "failure_modes",
+          "falsification",
+          "sandbox",
+          "nearest_known",
+          "prior_trace"
+        ],
+        "properties": {
+          "architecture_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "components": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "state_store": {
+            "type": "string",
+            "minLength": 1
+          },
+          "decision_rules": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "messages": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "lifecycle": {
+            "type": "string",
+            "minLength": 1
+          },
+          "resource_budget": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expected_advantage": {
+            "type": "string",
+            "minLength": 1
+          },
+          "failure_modes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "falsification": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sandbox": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nearest_known": {
+            "type": "string",
+            "minLength": 1
+          },
+          "prior_trace": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "record_id",
+                "influence"
+              ],
+              "properties": {
+                "record_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "influence": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

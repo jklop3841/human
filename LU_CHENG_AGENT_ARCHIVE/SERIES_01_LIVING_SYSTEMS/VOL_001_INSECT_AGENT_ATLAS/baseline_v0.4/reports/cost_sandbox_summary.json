@@ -1,0 +1,41 @@
+{
+  "experiment_id": "EXP-S001-COST",
+  "status": "COMPLETED",
+  "epistemic_status": "TESTED",
+  "scope": "synthetic_cost_accounting_only",
+  "real_model_calls": 0,
+  "config_sha256": "425330422de019e15f7a90d68e539465c06798ab8dadca5150a891fa86c709b3",
+  "code_sha256": "d6f97f5eacf120c2f4da22523bc349f16dbe87d626b96caa305c75b32074c52c",
+  "simulations": 360,
+  "seeds": 30,
+  "mean_total_cost": {
+    "recurring_long": {
+      "warm_lru": 745.955,
+      "dormant_pool": 712.9655,
+      "cold_lru_transient": 712.9655,
+      "rebuild": 6600.0
+    },
+    "rapid_switch": {
+      "warm_lru": 759.5883333333334,
+      "dormant_pool": 1930.8588333333332,
+      "cold_lru_transient": 1930.8588333333332,
+      "rebuild": 6600.0
+    },
+    "one_shot": {
+      "warm_lru": 6719.7,
+      "dormant_pool": 6698.87,
+      "cold_lru_transient": 6698.87,
+      "rebuild": 6600.0
+    }
+  },
+  "recurring_vs_warm_supported_under_assumptions": true,
+  "broad_superiority_supported": false,
+  "matches_conventional_cold_cache": true,
+  "interpretation": "The residency rule can change assumed cost, but an explicitly equivalent ordinary cache ties it. This is a prior-art/abstraction calibration, not evidence of Atlas generativity or a new algorithm.",
+  "limitations": [
+    "Tasks expose exact family identifiers. All compiled capsules are correct and remain semantically valid. No security, memory drift or semantic matching is simulated.",
+    "Cost constants were assumed; they are not empirical token, latency or energy measurements.",
+    "The conventional matched policy shares the same executable transition rules by design; its equivalence is an analytical negative control.",
+    "No semantic validity decay, erroneous matching, network faults, concurrency or permission transitions were simulated."
+  ]
+}

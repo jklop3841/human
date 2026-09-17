@@ -1,0 +1,21 @@
+Contextual reading. These are descriptive catalogue notes, not evidence of software performance. Treat them as optional context.
+
+Record P01. A fungal specimen catalogue entry may include an accession number, a collection date and a locality. Its paper label may be printed or handwritten. A photograph may show the label beside the specimen.
+
+Record P02. An immune cell research article can be listed by title, author and journal volume. Its scanned pages may include headers and margin notes. A library record can identify the edition and the page.
+
+Record P03. An octopus illustration may occupy a full page or share space with a caption. Its background may be plain. The printed scale bar belongs to the image. Different editions can place the caption.
+
+Record P04. A botanical catalogue may describe the spelling of a tree name on a seed packet. An old label can carry a library stamp. A photograph can show the packet beside the cover of.
+
+Record P05. An institutional research paper may have an original print date and a later digitization date. Its title can appear in several citation styles. A scanned page may retain page numbers and the heading.
+
+Record P06. A catalogue entry can appear in a printed book or an electronic edition. The typeface and margins may differ between them. The same accession label can be photographed at different resolutions for use.
+
+Record P07. A journal cover may display a volume number in a large typeface. An archive record may reproduce the cover beside a short bibliographic description. Different physical copies can have marks or folds near.
+
+Record P08. A museum photograph may have a caption beneath the image or on a facing page. A cataloguer can describe its orientation and paper dimensions. The appearance of the paper can differ between an.
+
+Record P09. A book illustration may be printed in grayscale or colour. Its caption can contain an italicized title. An electronic catalogue can describe these visual details and identify which edition supplied the particular.
+
+Record P10. An archival folder can contain a typed label and a handwritten note. The record can list the note language and the dimensions of the page. A digitized image may retain a blank.

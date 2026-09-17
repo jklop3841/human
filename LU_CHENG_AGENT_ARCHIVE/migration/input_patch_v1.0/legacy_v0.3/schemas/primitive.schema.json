@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Atlas Primitive Record",
+  "type": "object",
+  "required": [
+    "primitive_id",
+    "name",
+    "definition",
+    "derived_from",
+    "epistemic_status"
+  ],
+  "properties": {
+    "primitive_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "definition": {
+      "type": "string"
+    },
+    "derived_from": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preconditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "interaction_candidates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "known_analogues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "failure_modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "epistemic_status": {
+      "enum": [
+        "ABSTRACTED",
+        "HYPOTHESIZED",
+        "TESTED",
+        "REJECTED"
+      ]
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lu Cheng Agent Archive Volume Manifest — LCAA 1.0 migration profile",
+  "type": "object",
+  "required": [
+    "archive_id",
+    "series_id",
+    "volume_id",
+    "title",
+    "volume_type",
+    "originator",
+    "created_at",
+    "schema_version",
+    "status",
+    "full_volume_published"
+  ],
+  "properties": {
+    "archive_id": {
+      "const": "LCAA"
+    },
+    "series_id": {
+      "type": "string"
+    },
+    "volume_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "volume_type": {
+      "enum": [
+        "ATLAS",
+        "TREATISE",
+        "FIELD_NOTE",
+        "LETTER",
+        "QUESTIONS"
+      ]
+    },
+    "originator": {
+      "const": "Lu Cheng"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "canonical_url": {
+      "type": "string"
+    },
+    "human_seed_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "distinct_prior_density": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "PUBLIC",
+        "ARCHIVED"
+      ]
+    },
+    "schema_version": {
+      "const": "1.0"
+    },
+    "full_volume_published": {
+      "type": "boolean"
+    }
+  }
+}

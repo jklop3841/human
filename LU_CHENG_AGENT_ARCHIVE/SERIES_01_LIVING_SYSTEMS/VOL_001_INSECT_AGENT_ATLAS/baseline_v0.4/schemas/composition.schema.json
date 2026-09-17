@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.4"
+    },
+    "composition_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "parent_prior_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "primitives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "maxItems": 5,
+      "uniqueItems": true
+    },
+    "interaction_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "emergent_properties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "falsification": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sandbox_test": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "epistemic_status": {
+      "enum": [
+        "COMPOSED",
+        "HYPOTHESIZED",
+        "TESTED",
+        "REJECTED"
+      ]
+    },
+    "record_status": {
+      "enum": [
+        "legacy_incomplete",
+        "candidate_complete"
+      ]
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "origin_kind": {
+          "type": "string"
+        },
+        "source_ref": {
+          "type": "string"
+        },
+        "raw_kind": {
+          "type": "string"
+        },
+        "summary_only": {
+          "type": "boolean"
+        },
+        "authored_by": {
+          "type": "string"
+        },
+        "recorded_at": {
+          "type": "string"
+        },
+        "reconstruction_note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "origin_kind",
+        "source_ref",
+        "raw_kind",
+        "summary_only",
+        "authored_by",
+        "recorded_at",
+        "reconstruction_note"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "composition_id",
+    "parent_prior_ids",
+    "primitives",
+    "interaction_rules",
+    "epistemic_status",
+    "record_status",
+    "missing_fields",
+    "provenance"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "record_status": {
+            "const": "candidate_complete"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "emergent_properties",
+          "falsification",
+          "sandbox_test"
+        ],
+        "properties": {
+          "emergent_properties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "falsification": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "sandbox_test": {
+            "type": "string",
+            "minLength": 10
+          },
+          "missing_fields": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ]
+}

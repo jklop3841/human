@@ -1,0 +1,20 @@
+{
+  "volume_id": "LCAA-S01-V001",
+  "scoring_status": "UNSCORED",
+  "dimensions": {
+    "structural_distance": null,
+    "anti_default_power": null,
+    "abstraction_clarity": null,
+    "composability": null,
+    "generativity": null,
+    "evidence_quality": null
+  },
+  "average": null,
+  "minimum_average": 3.5,
+  "minimum_generativity": 3,
+  "full_volume_eligible": false,
+  "evidence_refs": [],
+  "rationale": "No independent DPD review or controlled reader outcomes exist; synthetic cost accounting cannot fill generativity.",
+  "deposit_status": "RESEARCH_DRAFT_ALLOWED",
+  "scope": "Gate applies to full-volume publication, not storage of a clearly labeled research draft."
+}

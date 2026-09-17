@@ -1,0 +1,12 @@
+test_blinding_paired_aggregation_and_fixture_isolation (test_integrity.IntegrityTests.test_blinding_paired_aggregation_and_fixture_isolation) ... ok
+test_corpus_references_layers_and_raw_fidelity (test_integrity.IntegrityTests.test_corpus_references_layers_and_raw_fidelity) ... ok
+test_legacy_status_and_fields_remain_accepted (test_integrity.IntegrityTests.test_legacy_status_and_fields_remain_accepted) ... ok
+test_real_run_rejects_fixture_and_preserves_zero_calls (test_integrity.IntegrityTests.test_real_run_rejects_fixture_and_preserves_zero_calls) ... ok
+test_reused_context_detected_in_tooling_run (test_integrity.IntegrityTests.test_reused_context_detected_in_tooling_run) ... ok
+test_sandbox_equality_and_adverse_regime (test_integrity.IntegrityTests.test_sandbox_equality_and_adverse_regime) ... ok
+test_stimuli_balanced_and_seed_species_excluded (test_integrity.IntegrityTests.test_stimuli_balanced_and_seed_species_excluded) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.057s
+
+OK

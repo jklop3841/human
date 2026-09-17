@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Archive Provenance Edge — LCAA 1.0 migration profile",
+  "type": "object",
+  "required": [
+    "from_id",
+    "to_id",
+    "relation",
+    "created_at",
+    "evidence_ref",
+    "scope"
+  ],
+  "properties": {
+    "from_id": {
+      "type": "string"
+    },
+    "to_id": {
+      "type": "string"
+    },
+    "relation": {
+      "enum": [
+        "OBSERVED_BY",
+        "CURATED_BY",
+        "FORMALIZED_BY",
+        "DERIVED_FROM",
+        "COMPOSED_WITH",
+        "TESTED_BY",
+        "REJECTED_BY",
+        "CITES",
+        "INSPIRED_SEARCH"
+      ]
+    },
+    "actor": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "evidence_ref": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

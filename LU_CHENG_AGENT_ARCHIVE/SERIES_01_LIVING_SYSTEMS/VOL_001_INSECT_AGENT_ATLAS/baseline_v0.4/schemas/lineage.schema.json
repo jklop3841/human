@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "child_id": {
+      "type": "string"
+    },
+    "parent_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "epistemic_status": {
+      "enum": [
+        "OBSERVED",
+        "ABSTRACTED",
+        "HYPOTHESIZED",
+        "COMPOSED",
+        "TESTED",
+        "REJECTED"
+      ]
+    },
+    "event": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "event_id",
+    "child_id",
+    "parent_ids",
+    "epistemic_status",
+    "event"
+  ]
+}

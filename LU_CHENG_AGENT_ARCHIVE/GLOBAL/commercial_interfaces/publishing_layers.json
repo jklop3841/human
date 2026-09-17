@@ -1,0 +1,23 @@
+{
+  "status": "PROPOSED_NOT_A_LICENSE",
+  "public_draft": [
+    "metadata",
+    "selected records",
+    "provenance",
+    "protocols",
+    "reproducible research code and results"
+  ],
+  "possible_commercial": [
+    "full curated corpora",
+    "compatibility graph",
+    "private benchmark datasets",
+    "industry adaptations",
+    "API",
+    "consulting"
+  ],
+  "currently_available_paid_services": [],
+  "prices": null,
+  "license_decision": null,
+  "revenue_guaranteed": false,
+  "full_release_gate": "DPD average >=3.5 and generativity >=3 with scored evidence"
+}

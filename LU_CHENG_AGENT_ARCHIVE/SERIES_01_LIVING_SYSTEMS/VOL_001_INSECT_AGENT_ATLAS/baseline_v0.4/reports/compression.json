@@ -1,0 +1,9 @@
+{
+  "full_primitive_bytes": 38649,
+  "compact_primitive_bytes": 12620,
+  "byte_reduction_fraction": 0.6735,
+  "primitive_count": 23,
+  "tokens_measured": false,
+  "semantic_equivalence_tested": false,
+  "interpretation": "Byte compaction with explicit expansion pointers; no measured claim of optimal semantic compression."
+}

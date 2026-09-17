@@ -1,0 +1,18 @@
+{
+  "run_id": null,
+  "mode": null,
+  "provider": null,
+  "model": null,
+  "version": null,
+  "identity_evidence": null,
+  "session_id": null,
+  "fresh_context": null,
+  "memory_disabled": null,
+  "prior_conversation_exposure": null,
+  "generation_timestamp": null,
+  "timestamp_source": null,
+  "synthetic_fixture": false,
+  "settings_fingerprint": null,
+  "input_bundle_sha256": null,
+  "browsing_policy": null
+}

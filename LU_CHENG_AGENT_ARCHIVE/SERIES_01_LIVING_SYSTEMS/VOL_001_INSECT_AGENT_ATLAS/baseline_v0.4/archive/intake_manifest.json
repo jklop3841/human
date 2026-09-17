@@ -1,0 +1,111 @@
+{
+  "input_archive_sha256": "e0cca8e882968872445ea67ed9cbf79238de6462e40ac2e4a6e76926f3b593b8",
+  "file_count": 15,
+  "files": [
+    {
+      "path": "archive/v0.3/00_PROJECT_CHARTER.md",
+      "bytes": 2699,
+      "sha256": "c90c7a6f9419d073ef0ef677db21b4c86a17f1e437890e1267ae8aa4e62d7bac",
+      "read_status": "read_full_text",
+      "kind": "plain_text"
+    },
+    {
+      "path": "archive/v0.3/01_CURRENT_STATE_AND_FINDINGS.md",
+      "bytes": 4806,
+      "sha256": "cb254d2c13d3a7ac5b13c1182cab0b16c4d91d4714ff849cf535f20ebbd697e8",
+      "read_status": "read_full_text",
+      "kind": "plain_text"
+    },
+    {
+      "path": "archive/v0.3/02_COMPILATION_METHOD.md",
+      "bytes": 2897,
+      "sha256": "790a1553355d93a359f34e42f939ffb214f68499671530682371c9221af032ac",
+      "read_status": "read_full_text",
+      "kind": "plain_text"
+    },
+    {
+      "path": "archive/v0.3/03_BLIND_READER_BENCHMARK.md",
+      "bytes": 1971,
+      "sha256": "082e1bacbd6f9dd5e44a1fc9b56c4162a10d534d2455e8435238e477047cd883",
+      "read_status": "read_full_text",
+      "kind": "plain_text"
+    },
+    {
+      "path": "archive/v0.3/04_WORLD_DOMAIN_BACKLOG.md",
+      "bytes": 2470,
+      "sha256": "68fbee645d7631ae56a68220e72e44e1d5fcfcba13912f948a58d56e968d7ca7",
+      "read_status": "read_full_text",
+      "kind": "plain_text"
+    },
+    {
+      "path": "archive/v0.3/05_GPT6_MASTER_PROMPT.md",
+      "bytes": 3082,
+      "sha256": "9969e7ae39cb4415f97d034dfcce59df5c3005888c84429b704a2c60eda0ecbc",
+      "read_status": "read_full_text",
+      "kind": "plain_text"
+    },
+    {
+      "path": "archive/v0.3/06_NEXT_PHASE_ROADMAP.md",
+      "bytes": 1677,
+      "sha256": "79f21343fce0561c49f7b87bee4f0ff8c8efc66027a69fe81a4634f608d63e1e",
+      "read_status": "read_full_text",
+      "kind": "plain_text"
+    },
+    {
+      "path": "archive/v0.3/07_HANDOFF_NOTE_TO_FUTURE_AGENTS.md",
+      "bytes": 793,
+      "sha256": "41dd0007df0ae01958a80d1248d60cec8992ab85e9c28849727e4fe28a6ffc3a",
+      "read_status": "read_full_text",
+      "kind": "plain_text"
+    },
+    {
+      "path": "archive/v0.3/MANIFEST.json",
+      "bytes": 669,
+      "sha256": "d25fd0e4b6214055a6a0ea8a8deda405256650a92d308eb49d6569417d563b1c",
+      "read_status": "read_full_text",
+      "kind": "plain_text"
+    },
+    {
+      "path": "archive/v0.3/README.md",
+      "bytes": 2425,
+      "sha256": "2333fd93c0e1741a87372b8f180181af82a3dc9ccdf1f943e2a485529b16931c",
+      "read_status": "read_full_text",
+      "kind": "plain_text"
+    },
+    {
+      "path": "archive/v0.3/schemas/README.md",
+      "bytes": 362,
+      "sha256": "134ebdfbc98d2f1a4c7abd25fd61e6df4573731dc7193c0bf9d199f7ee925190",
+      "read_status": "read_full_text",
+      "kind": "plain_text"
+    },
+    {
+      "path": "archive/v0.3/schemas/architecture_species.schema.json",
+      "bytes": 1644,
+      "sha256": "0b381be398005302dc2f42a5dd4ac00ca8922ed52c06ada945fb08ea6b023d36",
+      "read_status": "read_full_text",
+      "kind": "plain_text"
+    },
+    {
+      "path": "archive/v0.3/schemas/observation.schema.json",
+      "bytes": 1569,
+      "sha256": "f9759e1957d5206d5760a8956532eb47f3d76e72b3a1e7f74515c1eb1b6c5baf",
+      "read_status": "read_full_text",
+      "kind": "plain_text"
+    },
+    {
+      "path": "archive/v0.3/schemas/primitive.schema.json",
+      "bytes": 1172,
+      "sha256": "6171f7770529f0c4d3a2ee3e4e9f28f87ca0f0d38aae9a19fdba528e0ca94cd6",
+      "read_status": "read_full_text",
+      "kind": "plain_text"
+    },
+    {
+      "path": "archive/v0.3/sources/Insect_Agent_Atlas文档详细总结.docx",
+      "bytes": 15510,
+      "sha256": "1a2edfd8e9f0eb5f5e222e0955cf43ad7f1ef0b88fcc3120e2edce8e0b0d513f",
+      "read_status": "read_full_text",
+      "kind": "docx_text_and_notes"
+    }
+  ]
+}

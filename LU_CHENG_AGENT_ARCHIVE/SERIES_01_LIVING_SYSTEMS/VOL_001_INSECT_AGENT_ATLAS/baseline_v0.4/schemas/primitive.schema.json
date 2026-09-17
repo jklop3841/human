@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Atlas Primitive Record — v0.4 opt-in extension (legacy fields preserved)",
+  "type": "object",
+  "required": [
+    "primitive_id",
+    "name",
+    "definition",
+    "derived_from",
+    "epistemic_status"
+  ],
+  "properties": {
+    "primitive_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "definition": {
+      "type": "string"
+    },
+    "derived_from": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preconditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "interaction_candidates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "known_analogues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "failure_modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "epistemic_status": {
+      "enum": [
+        "ABSTRACTED",
+        "HYPOTHESIZED",
+        "TESTED",
+        "REJECTED"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "schema_version"
+        ],
+        "properties": {
+          "schema_version": {
+            "const": "0.4"
+          }
+        }
+      },
+      "then": {
+        "type": "object",
+        "properties": {
+          "schema_version": {
+            "const": "0.4"
+          },
+          "provenance": {
+            "type": "object",
+            "properties": {
+              "origin_kind": {
+                "type": "string"
+              },
+              "source_ref": {
+                "type": "string"
+              },
+              "raw_kind": {
+                "type": "string"
+              },
+              "summary_only": {
+                "type": "boolean"
+              },
+              "authored_by": {
+                "type": "string"
+              },
+              "recorded_at": {
+                "type": "string"
+              },
+              "reconstruction_note": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "origin_kind",
+              "source_ref",
+              "raw_kind",
+              "summary_only",
+              "authored_by",
+              "recorded_at",
+              "reconstruction_note"
+            ]
+          },
+          "claims": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "claim_id": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "epistemic_status": {
+                  "enum": [
+                    "OBSERVED",
+                    "ABSTRACTED",
+                    "HYPOTHESIZED",
+                    "COMPOSED",
+                    "TESTED",
+                    "REJECTED"
+                  ]
+                },
+                "source_refs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "validation_status": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "claim_id",
+                "text",
+                "epistemic_status",
+                "source_refs",
+                "validation_status"
+              ]
+            }
+          },
+          "parents": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "required_environmental_conditions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "analogue_source_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "schema_version",
+          "provenance",
+          "claims",
+          "parents",
+          "required_environmental_conditions",
+          "failure_modes",
+          "known_analogues"
+        ]
+      }
+    }
+  ]
+}

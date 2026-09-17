@@ -1,0 +1,11 @@
+{
+  "session_id": "REPLACE_WITH_UNIQUE_OPERATOR_SESSION_ID",
+  "fresh_context": true,
+  "memory_disabled": true,
+  "prior_conversation_exposure": false,
+  "browsing_disabled": true,
+  "metadata_source": "operator_observation",
+  "settings_fingerprint": "REPLACE_WITH_SAME_SETTINGS_DESCRIPTION_FOR_THIS_MODEL",
+  "generation_timestamp": "REPLACE_WITH_ACTUAL_TIME",
+  "notes": "Do not let the model invent its backend version or sampling parameters."
+}

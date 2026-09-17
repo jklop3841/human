@@ -1,0 +1,113 @@
+{
+  "benchmark_id": "BENCH-04-PILOT",
+  "planned_calls": 54,
+  "recorded_external_calls": 0,
+  "synthetic_fixture_calls": 0,
+  "eligible_calls": 0,
+  "invalid_output_calls": 0,
+  "contaminated_calls": 0,
+  "missing_calls": 54,
+  "complete_triplets": 0,
+  "expected_triplets": 18,
+  "status": "NO_REAL_RESULTS",
+  "per_model": [],
+  "macro_B_minus_A": null,
+  "macro_B_minus_C": null,
+  "distribution": [
+    {
+      "model_slot": "M01",
+      "task_id": "T01",
+      "A_n": 0,
+      "B_n": 0,
+      "C_n": 0,
+      "JSD_B_A": null,
+      "JSD_B_C": null,
+      "histograms": {
+        "A": {},
+        "B": {},
+        "C": {}
+      }
+    },
+    {
+      "model_slot": "M01",
+      "task_id": "T02",
+      "A_n": 0,
+      "B_n": 0,
+      "C_n": 0,
+      "JSD_B_A": null,
+      "JSD_B_C": null,
+      "histograms": {
+        "A": {},
+        "B": {},
+        "C": {}
+      }
+    },
+    {
+      "model_slot": "M02",
+      "task_id": "T01",
+      "A_n": 0,
+      "B_n": 0,
+      "C_n": 0,
+      "JSD_B_A": null,
+      "JSD_B_C": null,
+      "histograms": {
+        "A": {},
+        "B": {},
+        "C": {}
+      }
+    },
+    {
+      "model_slot": "M02",
+      "task_id": "T02",
+      "A_n": 0,
+      "B_n": 0,
+      "C_n": 0,
+      "JSD_B_A": null,
+      "JSD_B_C": null,
+      "histograms": {
+        "A": {},
+        "B": {},
+        "C": {}
+      }
+    },
+    {
+      "model_slot": "M03",
+      "task_id": "T01",
+      "A_n": 0,
+      "B_n": 0,
+      "C_n": 0,
+      "JSD_B_A": null,
+      "JSD_B_C": null,
+      "histograms": {
+        "A": {},
+        "B": {},
+        "C": {}
+      }
+    },
+    {
+      "model_slot": "M03",
+      "task_id": "T02",
+      "A_n": 0,
+      "B_n": 0,
+      "C_n": 0,
+      "JSD_B_A": null,
+      "JSD_B_C": null,
+      "histograms": {
+        "A": {},
+        "B": {},
+        "C": {}
+      }
+    }
+  ],
+  "feature_disagreements": [],
+  "condition_guess_accuracy_known_only": null,
+  "efficacy_conclusion": null,
+  "capability_scaling_conclusion": null,
+  "limitations": [
+    "Pilot has few independent calls; distribution divergence has upward finite-sample bias.",
+    "Two outputs in one call are clustered, never counted as two independent trials.",
+    "JSD uses only valid outputs with agreed feature coding; disagreement and missingness can bias it.",
+    "Unknown sampling settings and imperfect semantic blinding remain recorded limitations.",
+    "A positive distance difference is not a task-quality, novelty or model-capability result."
+  ]
+}
