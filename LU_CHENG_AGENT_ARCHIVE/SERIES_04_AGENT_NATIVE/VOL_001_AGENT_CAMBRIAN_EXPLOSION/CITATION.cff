@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: "The Agent Cambrian Explosion: From Recursive Self-Improvement to Artificial Agent Ecologies"
+message: "If you use this manuscript or its proposed framework, please cite this work and the primary sources relevant to the empirical claim you rely on."
+type: book
+authors:
+  - family-names: "Cheng"
+    given-names: "Lu"
+    alias: "Jack Lu"
+version: "0.1"
+date-released: "2026-10-11"
+url: "https://github.com/jklop3841/human"
+abstract: >-
+  A research book proposing a population-level framework for AI takeoff in which
+  environmental inheritance, lineage recursive improvement, low-cost agent
+  replication, functional specialization, coordination, and AI-R&D automation
+  can jointly produce an Agent Cambrian Explosion and ecological intelligence
+  takeoff before or alongside full singleton recursive self-improvement.
+keywords:
+  - AI agents
+  - recursive self-improvement
+  - lineage recursive improvement
+  - agent ecology
+  - multi-agent systems
+  - digital evolution
+  - stigmergy
+  - environmental inheritance
+  - intelligence explosion
+  - AI safety
