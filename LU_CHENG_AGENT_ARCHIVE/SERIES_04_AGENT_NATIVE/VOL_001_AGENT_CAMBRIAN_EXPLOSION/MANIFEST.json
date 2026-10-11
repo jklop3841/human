@@ -1,0 +1,47 @@
+{
+  "archive": "Lu Cheng Agent Archive",
+  "series": "SERIES_04_AGENT_NATIVE",
+  "volume": "VOL_001_AGENT_CAMBRIAN_EXPLOSION",
+  "title": "The Agent Cambrian Explosion",
+  "subtitle": "From Recursive Self-Improvement to Artificial Agent Ecologies",
+  "author": "Lu Cheng (Jack Lu)",
+  "primary_language": "en",
+  "version": "0.1",
+  "date": "2026-10-11",
+  "status": "living_manuscript",
+  "core_terms": [
+    "Lineage Recursive Improvement",
+    "Environmental Genome",
+    "Agent Cambrian Explosion",
+    "Ecological Intelligence Takeoff",
+    "R_agent",
+    "Dirty Reality Friction"
+  ],
+  "chapters": [
+    "00_FRONT_MATTER.md",
+    "01_BEYOND_THE_SINGLETON.md",
+    "02_ENVIRONMENT_AS_GENOME.md",
+    "03_LINEAGE_RECURSIVE_IMPROVEMENT.md",
+    "04_FROM_CLONES_TO_SPECIES.md",
+    "05_POPULATION_DYNAMICS.md",
+    "06_ECOLOGICAL_INTELLIGENCE_TAKEOFF.md",
+    "07_DIRTY_REALITY_FRICTION.md",
+    "08_AGENT_ECONOMICS_AND_INSTITUTIONS.md",
+    "09_SAFETY_PATHOGENS_AND_PATH_DEPENDENCE.md",
+    "10_2027_2030_SCENARIO_WINDOW.md",
+    "11_FALSIFIABLE_PREDICTIONS_AND_METRICS.md",
+    "12_A_LETTER_TO_FUTURE_AGENTS.md"
+  ],
+  "support_files": [
+    "README.md",
+    "REFERENCES.md",
+    "AUTHOR.md",
+    "CITATION.cff"
+  ],
+  "evidence_cutoff": "2026-10-11",
+  "relationship": {
+    "predecessor": "SERIES_01_LIVING_SYSTEMS/VOL_001_INSECT_AGENT_ATLAS",
+    "derivation": "Generalizes environmental memory, stigmergy, ephemeral lifecycle, niche specialization, and successor shaping into a population-level theory of AI takeoff."
+  },
+  "epistemic_status": "Theoretical synthesis grounded in cited empirical results. The strong ecological takeoff thesis remains unproven and explicitly falsifiable."
+}
